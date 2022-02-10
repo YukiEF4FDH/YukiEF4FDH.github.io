@@ -20,18 +20,18 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"yukief4fdh.github.io","root":"/","images":"/images","scheme":"Gemini","version":"8.7.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/js/config.js"></script>
-<meta name="description" content="反转链表  题目描述 定义一个函数，输入一个链表的头节点，反转该链表并输出反转后链表的头节点。 示例：  输入：1-&gt;2-&gt;3-&gt;4-&gt;5-&gt;NULL 输出：5-&gt;4-&gt;3-&gt;2-&gt;1-&gt;NULL  提示：  0 &lt;&#x3D; 链表长度 &lt;&#x3D; 5000   我的思路 由于链表只能从头到尾遍历的特性，利用">
+<meta name="description" content="转载自Leet Code《剑指Offer》  题目描述 定义一个函数，输入一个链表的头节点，反转该链表并输出反转后链表的头节点。 示例：  输入：1-&gt;2-&gt;3-&gt;4-&gt;5-&gt;NULL 输出：5-&gt;4-&gt;3-&gt;2-&gt;1-&gt;NULL  提示：  0 &lt;&#x3D; 链表长度 &lt;&#x3D; 5000   我的思路 由">
 <meta property="og:type" content="article">
 <meta property="og:title" content="剑指 Offer 24. 反转链表">
 <meta property="og:url" content="https://yukief4fdh.github.io/2022/02/08/Offer24_Easy_%E5%8F%8D%E8%BD%AC%E9%93%BE%E8%A1%A8/index.html">
 <meta property="og:site_name" content="Yuki&#39;s Blog">
-<meta property="og:description" content="反转链表  题目描述 定义一个函数，输入一个链表的头节点，反转该链表并输出反转后链表的头节点。 示例：  输入：1-&gt;2-&gt;3-&gt;4-&gt;5-&gt;NULL 输出：5-&gt;4-&gt;3-&gt;2-&gt;1-&gt;NULL  提示：  0 &lt;&#x3D; 链表长度 &lt;&#x3D; 5000   我的思路 由于链表只能从头到尾遍历的特性，利用">
+<meta property="og:description" content="转载自Leet Code《剑指Offer》  题目描述 定义一个函数，输入一个链表的头节点，反转该链表并输出反转后链表的头节点。 示例：  输入：1-&gt;2-&gt;3-&gt;4-&gt;5-&gt;NULL 输出：5-&gt;4-&gt;3-&gt;2-&gt;1-&gt;NULL  提示：  0 &lt;&#x3D; 链表长度 &lt;&#x3D; 5000   我的思路 由">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2022-02-08T09:46:11.209Z">
-<meta property="article:modified_time" content="2022-02-08T10:29:20.906Z">
+<meta property="article:modified_time" content="2022-02-10T06:40:27.667Z">
 <meta property="article:author" content="CHEN XUEYI">
-<meta property="article:tag" content="recursion">
 <meta property="article:tag" content="linked-list">
+<meta property="article:tag" content="recrusion">
 <meta name="twitter:card" content="summary">
 
 
@@ -89,9 +89,9 @@
   <ul class="main-menu menu">
         <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a></li>
         <li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a></li>
-        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags<span class="badge">7</span></a></li>
-        <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories<span class="badge">6</span></a></li>
-        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives<span class="badge">8</span></a></li>
+        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags<span class="badge">22</span></a></li>
+        <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories<span class="badge">13</span></a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives<span class="badge">52</span></a></li>
         
             
   <li class="menu-item menu-item-docs"><a href="/docs/" rel="section"><i class="fa fa-book fa-fw"></i>Docs</a></li>
@@ -131,7 +131,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%A2%98%E7%9B%AE%E6%8F%8F%E8%BF%B0"><span class="nav-number">1.</span> <span class="nav-text">题目描述</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%88%91%E7%9A%84%E6%80%9D%E8%B7%AF"><span class="nav-number">2.</span> <span class="nav-text">我的思路</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%88%91%E7%9A%84%E4%BB%A3%E7%A0%81"><span class="nav-number">3.</span> <span class="nav-text">我的代码</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%A2%98%E7%9B%AE%E6%8F%8F%E8%BF%B0"><span class="nav-number">1.</span> <span class="nav-text">题目描述</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%88%91%E7%9A%84%E6%80%9D%E8%B7%AF"><span class="nav-number">2.</span> <span class="nav-text">我的思路</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%88%91%E7%9A%84%E6%80%9D%E8%B7%AF-1"><span class="nav-number">3.</span> <span class="nav-text">我的思路</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%88%91%E7%9A%84%E4%BB%A3%E7%A0%81"><span class="nav-number">4.</span> <span class="nav-text">我的代码</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -147,18 +147,18 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">8</span>
+          <span class="site-state-item-count">52</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
           <a href="/categories/">
-        <span class="site-state-item-count">6</span>
+        <span class="site-state-item-count">13</span>
         <span class="site-state-item-name">categories</span></a>
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">7</span>
+        <span class="site-state-item-count">22</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
@@ -234,10 +234,16 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">Posted on</span>
-      
 
-      <time title="Created: 2022-02-08 18:46:11 / Modified: 19:29:20" itemprop="dateCreated datePublished" datetime="2022-02-08T18:46:11+09:00">2022-02-08</time>
+      <time title="Created: 2022-02-08 18:46:11" itemprop="dateCreated datePublished" datetime="2022-02-08T18:46:11+09:00">2022-02-08</time>
     </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">Edited on</span>
+        <time title="Modified: 2022-02-10 15:40:27" itemprop="dateModified" datetime="2022-02-10T15:40:27+09:00">2022-02-10</time>
+      </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
         <i class="far fa-folder"></i>
@@ -267,7 +273,7 @@
     
     <div class="post-body" itemprop="articleBody">
         <center>
-<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/fan-zhuan-lian-biao-lcof/"><b><font color = #5EB561>反转链表</font></b></a>
+<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/fan-zhuan-lian-biao-lcof/"><b><font color = #5EB561>转载自Leet Code《剑指Offer》</font></b></a>
 </center>
 <h3 id="题目描述">题目描述</h3>
 <p>定义一个函数，输入一个链表的头节点，反转该链表并输出反转后链表的头节点。</p>
@@ -281,6 +287,18 @@
 </ul>
 <hr />
 <h3 id="我的思路"><font color=#808080>我的思路</font></h3>
+<p>由于链表只能从头到尾遍历的特性，利用栈来实现对其的反转。题目描述</p>
+<p>定义一个函数，输入一个链表的头节点，反转该链表并输出反转后链表的头节点。</p>
+<p><strong>示例</strong>：</p>
+<blockquote>
+<p>输入：<code>1-&gt;2-&gt;3-&gt;4-&gt;5-&gt;NULL</code> 输出：<code>5-&gt;4-&gt;3-&gt;2-&gt;1-&gt;NULL</code></p>
+</blockquote>
+<p><strong>提示：</strong></p>
+<ul>
+<li><code>0 &lt;=</code> 链表长度 <code>&lt;= 5000</code></li>
+</ul>
+<hr />
+<h3 id="我的思路-1"><font color=#808080>我的思路</font></h3>
 <p>由于链表只能从头到尾遍历的特性，利用栈来实现对其的反转。</p>
 <hr />
 <h3 id="我的代码"><font color=#808080>我的代码</font></h3>
@@ -294,8 +312,8 @@
 
     <footer class="post-footer">
           <div class="post-tags">
-              <a href="/tags/recursion/" rel="tag"># recursion</a>
               <a href="/tags/linked-list/" rel="tag"># linked-list</a>
+              <a href="/tags/recrusion/" rel="tag"># recrusion</a>
           </div>
 
         

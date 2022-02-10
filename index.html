@@ -85,9 +85,9 @@
   <ul class="main-menu menu">
         <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a></li>
         <li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a></li>
-        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags<span class="badge">7</span></a></li>
-        <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories<span class="badge">6</span></a></li>
-        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives<span class="badge">8</span></a></li>
+        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags<span class="badge">22</span></a></li>
+        <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories<span class="badge">13</span></a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives<span class="badge">52</span></a></li>
         
             
   <li class="menu-item menu-item-docs"><a href="/docs/" rel="section"><i class="fa fa-book fa-fw"></i>Docs</a></li>
@@ -142,18 +142,18 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">8</span>
+          <span class="site-state-item-count">52</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
           <a href="/categories/">
-        <span class="site-state-item-count">6</span>
+        <span class="site-state-item-count">13</span>
         <span class="site-state-item-name">categories</span></a>
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">7</span>
+        <span class="site-state-item-count">22</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
@@ -205,7 +205,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://yukief4fdh.github.io/2022/02/08/Offer35_Medium_%E5%A4%8D%E6%9D%82%E9%93%BE%E8%A1%A8%E7%9A%84%E5%A4%8D%E5%88%B6/">
+    <link itemprop="mainEntityOfPage" href="https://yukief4fdh.github.io/2022/02/10/Offer53II_Easy_0%EF%BD%9En-1%E4%B8%AD%E7%BC%BA%E5%A4%B1%E7%9A%84%E6%95%B0%E5%AD%97/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/yuki.gif">
@@ -218,7 +218,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2022/02/08/Offer35_Medium_%E5%A4%8D%E6%9D%82%E9%93%BE%E8%A1%A8%E7%9A%84%E5%A4%8D%E5%88%B6/" class="post-title-link" itemprop="url">剑指 Offer 35. 复杂链表的复制</a>
+          <a href="/2022/02/10/Offer53II_Easy_0%EF%BD%9En-1%E4%B8%AD%E7%BC%BA%E5%A4%B1%E7%9A%84%E6%95%B0%E5%AD%97/" class="post-title-link" itemprop="url">剑指 Offer 53 - II. 0～n-1中缺失的数字</a>
         </h2>
 
         <div class="post-meta-container">
@@ -230,151 +230,7 @@
       <span class="post-meta-item-text">Posted on</span>
       
 
-      <time title="Created: 2022-02-08 18:46:11 / Modified: 19:30:34" itemprop="dateCreated datePublished" datetime="2022-02-08T18:46:11+09:00">2022-02-08</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/LeetCode/" itemprop="url" rel="index"><span itemprop="name">LeetCode</span></a>
-        </span>
-          , 
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/LeetCode/Medium/" itemprop="url" rel="index"><span itemprop="name">Medium</span></a>
-        </span>
-          , 
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/LeetCode/Medium/Half-done/" itemprop="url" rel="index"><span itemprop="name">Half-done</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <center>
-<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/fu-za-lian-biao-de-fu-zhi-lcof/"><b><font color = "orange">复杂链表的复制</font></b></a>
-</center>
-<h3 id="题目描述">题目描述</h3>
-<p>请实现 <code>copyRandomList</code> 函数，复制一个复杂链表。在复杂链表中，每个节点除了有一个 <code>next</code> 指针指向下一个节点，还有一个 <code>random</code> 指针指向链表中的任意节点或者 <code>null</code>。</p>
-<p><strong>示例</strong>： <img src="https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2020/01/09/e1.png" /></p>
-<blockquote>
-<p>输入：<code>head = [[7,null],[13,0],[11,4],[10,2],[1,0]]</code> 输出：<code>[[7,null],[13,0],[11,4],[10,2],[1,0]]</code></p>
-</blockquote>
-<p><img src="https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2020/01/09/e2.png" /></p>
-<blockquote>
-<p>输入：<code>head = [[1,1],[2,1]]</code> 输出：<code>[[1,1],[2,1]]</code></p>
-</blockquote>
-<p><img src="https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2020/01/09/e3.png" /></p>
-<blockquote>
-<p>输入：<code>head = [[3,null],[3,0],[3,null]]</code> 输出：<code>[[3,null],[3,0],[3,null]]</code></p>
-</blockquote>
-<blockquote>
-<p>输入：<code>head = []</code> 输出：<code>[]</code></p>
-</blockquote>
-<p><strong>提示：</strong></p>
-<ul>
-<li><code>-10000 &lt;= Node.val &lt;= 10000</code></li>
-<li><code>Node.random</code> 为空（<code>null</code>）或指向链表中的节点。</li>
-<li>节点数目不超过 <code>1000</code> 。</li>
-</ul>
-<hr />
-<h3 id="我的思路"><font color=#808080>我的思路</font></h3>
-<p>由于链表中的值不唯一、链表只能从前往后依次遍历，再加上<code>random</code>可能指向当前节点的前方/后方/<code>null</code>的特性， 考虑使用<code>map</code>和哈希表来实现。 思路是，考虑在常规链表复制 (一次遍历) 的基础上，如何复制<code>random</code>指针。</p>
-<p>由于原始链表的每个节点和常规链表的每个节点都会对应新的数据域， 且链表复制的时候对于<code>random</code>部分，本质上是需要对链表内的各个节点之间的联系进行复制， 因此希望由<code>i</code>找到原始节点、由</p>
-<p>在常规复制链表时，会对链表进行一次遍历。在遍历的同时：</p>
-<ul>
-<li>在<code>map1</code>内记录原始节点<code>p</code>对应的原始<code>random</code>节点；</li>
-<li>在<code>map2</code>内记录原始节点<code>p</code>对应的下标<code>i</code>；</li>
-<li>在哈希表<code>map3</code>记录下标<code>i</code>对应的原始节点<code>p</code>；</li>
-<li>在哈希表<code>map4</code>记录下标<code>i</code>对应的新节点<code>p</code>。</li>
-</ul>
-<p>区分<code>map3</code>和<code>map4</code>的原因是链表节点指向的是数据域 (某个地址) 的特性。</p>
-<p>当常规复制完成后，再回到新的链表头复制<code>random</code>部分。 对于第<code>i</code>个新节点<code>p</code>，由哈希表<code>map3</code>找到原链表中对应的第<code>i</code>个原始节点<code>map3[i]</code>，再通过<code>map1</code>找到其对应的原始<code>random</code>节点。 如果原始<code>random</code>节点不指向<code>null</code>的话，则先由<code>map2</code>找到原始<code>random</code>节点对应的下标<code>i</code>， 再由<code>map4</code>找到其对应的新的<code>random</code>节点<code>map4[i]</code>，就是新节点<code>p</code>的<code>random</code>指针应该指向的地方。</p>
-<hr />
-<h3 id="我的代码"><font color=#808080>我的代码</font></h3>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MySolutionOffer35</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> Node <span class="title">copyRandomList</span><span class="params">(Node head)</span> </span>&#123;</span><br><span class="line">		</span><br><span class="line">		<span class="keyword">int</span> N = <span class="number">1000</span>;</span><br><span class="line"></span><br><span class="line">		<span class="keyword">if</span> (head==<span class="keyword">null</span>) </span><br><span class="line">			<span class="keyword">return</span> <span class="keyword">null</span>;</span><br><span class="line">		</span><br><span class="line">	     Node newHead = <span class="keyword">null</span>;</span><br><span class="line">	     Node p = head; Node pre = newHead;</span><br><span class="line">	     </span><br><span class="line">	     HashMap&lt;Node, Node&gt; map1 = <span class="keyword">new</span> HashMap();</span><br><span class="line">	     HashMap&lt;Node, Integer&gt; map2 = <span class="keyword">new</span> HashMap();</span><br><span class="line">	     Node []map3 = <span class="keyword">new</span> Node[N];</span><br><span class="line">	     Node []map4 = <span class="keyword">new</span> Node[N];</span><br><span class="line">	     </span><br><span class="line">	     <span class="keyword">int</span> i = <span class="number">0</span>;</span><br><span class="line">	     <span class="keyword">while</span> (p!=<span class="keyword">null</span>)</span><br><span class="line">	     &#123;</span><br><span class="line">	    	 map1.put(p, p.random);</span><br><span class="line">	    	 map2.put(p, i); </span><br><span class="line">	    	 map3[i] = p;</span><br><span class="line">	    	 </span><br><span class="line">	    	 <span class="keyword">if</span> (newHead==<span class="keyword">null</span>) </span><br><span class="line">	    	 &#123;</span><br><span class="line">	    		 newHead = <span class="keyword">new</span> Node(p.val);</span><br><span class="line">	    		 pre = newHead;</span><br><span class="line">			 &#125;</span><br><span class="line">	    	 <span class="keyword">else</span></span><br><span class="line">	    	 &#123;</span><br><span class="line">	    		 pre.next = <span class="keyword">new</span> Node(p.val);</span><br><span class="line">	    		 pre = pre.next;</span><br><span class="line">	    	 &#125;</span><br><span class="line">	    	 map4[i] = pre;</span><br><span class="line">	    	 </span><br><span class="line">	    	 p = p.next; i+=<span class="number">1</span>;</span><br><span class="line">	     &#125;</span><br><span class="line">	     pre.next = <span class="keyword">null</span>;</span><br><span class="line">	     </span><br><span class="line">	     p = newHead; </span><br><span class="line">	     i = <span class="number">0</span>;</span><br><span class="line">	     </span><br><span class="line">	     <span class="keyword">while</span> (p!=<span class="keyword">null</span>)</span><br><span class="line">	     &#123;</span><br><span class="line">            Node randomNode = map1.get(map3[i]);</span><br><span class="line">	    	<span class="keyword">if</span>(randomNode==<span class="keyword">null</span>)</span><br><span class="line">	    		p.random = <span class="keyword">null</span>;</span><br><span class="line">	    	<span class="keyword">else</span> </span><br><span class="line">	    	&#123;</span><br><span class="line">	    		<span class="keyword">int</span> randomI = map2.get(randomNode);</span><br><span class="line">	    		p.random = map4[randomI];</span><br><span class="line">	    	&#125;</span><br><span class="line">	        p = p.next; </span><br><span class="line">	        i++;</span><br><span class="line">	     &#125;</span><br><span class="line">	     </span><br><span class="line">	     <span class="keyword">return</span> newHead;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<hr />
-<h3 id="方法一回溯-哈希表">方法一：回溯 + 哈希表</h3>
-<p><strong>思路</strong>：利用回溯的方式，让每个节点的拷贝操作相互独立。</p>
-<p>对于当前节点，首先对其进行拷贝， 然后进行「当前节点的后继节点」和「当前节点的随机指针指向的节点」拷贝， 拷贝完成后将创建的新节点的指针返回，即可完成当前节点的两指针的赋值。</p>
-<p>具体地，用哈希表记录每一个节点对应新节点的创建情况。 遍历时，检查「当前节点的后继节点」和「当前节点的随机指针指向的节点」的创建情况。 如果这两个节点中的任何一个节点的新节点没有被创建，都立刻递归地进行创建。 当拷贝完成，回溯到当前层时，即可完成当前节点的指针赋值。</p>
-<p>注意一个节点可能被多个其他节点指向，因此可能递归地多次尝试拷贝某个节点。 为了防止重复拷贝，需要首先检查当前节点是否被拷贝过。 如果已经拷贝过，可以直接从哈希表中取出拷贝后的节点的指针并返回即可。</p>
-<p>在实际代码中，我们需要特别判断给定节点为空节点的情况。</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution1</span> </span>&#123;</span><br><span class="line">    Map&lt;Node, Node&gt; cachedNode = <span class="keyword">new</span> HashMap&lt;Node, Node&gt;();</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> Node <span class="title">copyRandomList</span><span class="params">(Node head)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (head == <span class="keyword">null</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">null</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (!cachedNode.containsKey(head)) &#123;</span><br><span class="line">            Node headNew = <span class="keyword">new</span> Node(head.val);</span><br><span class="line">            cachedNode.put(head, headNew);</span><br><span class="line">            headNew.next = copyRandomList(head.next);</span><br><span class="line">            headNew.random = copyRandomList(head.random);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> cachedNode.get(head);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p><strong>时间复杂度</strong>: <span class="math inline">\(O(N)\)</span>. 对于每个节点，我们至多访问其「后继节点」和「随机指针指向的节点」各一次，均摊每个点至多被访问两次。</p>
-<p><strong>空间复杂度</strong>: <span class="math inline">\(O(N)\)</span>. 哈希表的空间开销。</p>
-<hr />
-<h3 id="方法二迭代-节点拆分">方法二：迭代 + 节点拆分</h3>
-<p><strong>思路</strong>：希望省去方法一当中哈希表所消耗的空间。</p>
-<p>首先，将该链表中每一个节点拆分为两个相连的节点。 例如，对于链表<span class="math inline">\(A→B→C\)</span>， 我们可以将其拆分为<span class="math inline">\(A→A&#39;→B→B&#39;→C→C&#39;\)</span>。 即，对于任意一个原节点<span class="math inline">\(S\)</span>，其拷贝节点 <span class="math inline">\(S&#39;\)</span> 即为其后继节点。</p>
-<p>这样，我们可以直接找到每一个拷贝节点 <span class="math inline">\(S&#39;\)</span> 的随机指针应当指向的节点， 即为其原节点 <span class="math inline">\(S\)</span> 的随机指针指向的节点 <span class="math inline">\(T\)</span> 的后继节点 <span class="math inline">\(T&#39;\)</span> 。</p>
-<p>需要注意原节点的随机指针可能为空。</p>
-<p>当完成了拷贝节点 <span class="math inline">\(S&#39;\)</span> 的随机指针 <span class="math inline">\(T&#39;\)</span> 的赋值， 就只需要将这个链表按照原节点 <span class="math inline">\(S\)</span> 与拷贝节点 <span class="math inline">\(S&#39;\)</span> 的种类进行拆分即可，只需要遍历一次。</p>
-<p>同样需要注意最后一个拷贝节点的后继节点为空的情况。</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution2</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> Node <span class="title">copyRandomList</span><span class="params">(Node head)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (head == <span class="keyword">null</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">null</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span> (Node node = head; node != <span class="keyword">null</span>; node = node.next.next) &#123;</span><br><span class="line">            Node nodeNew = <span class="keyword">new</span> Node(node.val);</span><br><span class="line">            nodeNew.next = node.next;</span><br><span class="line">            node.next = nodeNew;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span> (Node node = head; node != <span class="keyword">null</span>; node = node.next.next) &#123;</span><br><span class="line">            Node nodeNew = node.next;</span><br><span class="line">            nodeNew.random = (node.random != <span class="keyword">null</span>) ? node.random.next : <span class="keyword">null</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        Node headNew = head.next;</span><br><span class="line">        <span class="keyword">for</span> (Node node = head; node != <span class="keyword">null</span>; node = node.next) &#123;</span><br><span class="line">            Node nodeNew = node.next;</span><br><span class="line">            node.next = node.next.next;</span><br><span class="line">            nodeNew.next = (nodeNew.next != <span class="keyword">null</span>) ? nodeNew.next.next : <span class="keyword">null</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> headNew;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p><strong>时间复杂度</strong>：<span class="math inline">\(O(N)\)</span>. 只需要遍历三次。(如果在计算拷贝节点的随机指针的同时计算其后继指针，则只需要遍历两次。)</p>
-<p><strong>空间复杂度</strong>：<span class="math inline">\(O(1)\)</span>. 注意返回值不计入空间复杂度的计算。</p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://yukief4fdh.github.io/2022/02/08/Offer30_Easy_%E5%8C%85%E5%90%ABmin%E5%87%BD%E6%95%B0%E7%9A%84%E6%A0%88/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/yuki.gif">
-      <meta itemprop="name" content="CHEN XUEYI">
-      <meta itemprop="description" content="Call me Yuki (JPN) or Chloe (ENG).<br> Nice to meet you :)<br><hr style="margin:3px;"> Tokyo Institute of Technology (M1)<br> Rearch Interest: Visualization">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Yuki's Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2022/02/08/Offer30_Easy_%E5%8C%85%E5%90%ABmin%E5%87%BD%E6%95%B0%E7%9A%84%E6%A0%88/" class="post-title-link" itemprop="url">剑指 Offer 30. 包含min函数的栈</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-      
-
-      <time title="Created: 2022-02-08 18:46:11 / Modified: 19:29:52" itemprop="dateCreated datePublished" datetime="2022-02-08T18:46:11+09:00">2022-02-08</time>
+      <time title="Created: 2022-02-10 16:04:04 / Modified: 16:21:38" itemprop="dateCreated datePublished" datetime="2022-02-10T16:04:04+09:00">2022-02-10</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -405,27 +261,25 @@
     
     <div class="post-body" itemprop="articleBody">
           <center>
-<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/bao-han-minhan-shu-de-zhan-lcof/"><b><font color = #5EB561>包含min函数的栈</font></b></a>
+<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/que-shi-de-shu-zi-lcof/"><b><font color = #5EB561>转载自Leet Code《剑指Offer》</font></b></a>
 </center>
 <h3 id="题目描述">题目描述</h3>
-<p>定义栈的数据结构，请在该类型中实现一个能够得到栈的最小元素的 <code>min</code> 函数在该栈中，调用 <code>min</code>、<code>push</code> 及 <code>pop</code> 的时间复杂度都是 <code>O(1)</code>。</p>
-<p><strong>示例</strong>：</p>
+<p>一个长度为<code>n-1</code>的递增排序数组中的所有数字都是唯一的，并且每个数字都在范围<code>0～n-1</code>之内。 在范围<code>0～n-1</code>内的<code>n</code>个数字中有且只有一个数字不在该数组中，请找出这个数字。</p>
+<p><strong>示例 1</strong>：</p>
 <blockquote>
-<p><code>MinStack minStack = new MinStack(); minStack.push(-2); minStack.push(0); minStack.push(-3); minStack.min();   --&gt; 返回 -3. minStack.pop(); minStack.top();      --&gt; 返回 0. minStack.min();   --&gt; 返回 -2.</code></p>
+<p>输入：<code>[0,1,3]</code> 输出：<code>2</code></p>
+</blockquote>
+<p><strong>示例 2</strong>：</p>
+<blockquote>
+<p>输入：<code>[0,1,2,3,4,5,6,7,9]</code> 输出：<code>8</code></p>
 </blockquote>
 <p><strong>提示：</strong></p>
 <ul>
-<li>各函数的调用总次数不超过 <code>20000</code> 次。</li>
+<li><code>1 &lt;= 数组长度 &lt;= 10000</code></li>
 </ul>
 <hr />
-<h3 id="我的思路"><font color=#808080>我的思路</font></h3>
-<p>考虑在普通栈之外增加一个辅助栈<code>minStack</code>来实现。 思路是，普通栈<code>stack</code>的每个元素都对应一个存储在<code>minStack</code>中的<strong>当前最小值</strong>。 在调用<code>min()</code>函数时，只需要查看当前<code>stack</code>的栈顶对应的<code>minStack</code>的栈顶即可。 即，牺牲空间来换取<span class="math inline">\(O(1)\)</span>的时间。</p>
-<p>首先考虑新元素入栈<code>push(x)</code>。 对于普通栈<code>stack</code>，此时无论如何都正常入栈。 对于辅助栈<code>minStack</code>，当<code>minStack</code>为空时，表示目前没有备选的<code>min</code>，因此将其入栈<code>minStack</code>。 而当<code>minStack</code>不为空时，如果其栈顶<code>peek</code>大于新元素<code>x</code>，则说明此处 (<code>stack</code>的栈顶<code>x</code>处) 对应的最小值应该是<code>x</code>，因此也将其入栈<code>minStack</code>。 但是，当<code>minStack</code>的栈顶<code>peek</code>小于新元素<code>x</code>时，说明此处 (<code>stack</code>的栈顶<code>x</code>处) 对应的最小值还是<code>peek</code>而不是新元素<code>x</code>。因此<code>minStack</code>中入栈的还是自己的栈顶。</p>
-<p>接下来考虑出栈<code>pop()</code>。 由于普通栈<code>stack</code>和辅助栈<code>minStack</code>中的元素一一对应，因此出栈时两个栈都要进行弹出操作。</p>
-<p>最后，取栈顶<code>top()</code>时看普通栈<code>stack</code>，取最小值<code>min()</code>时看辅助栈<code>minStack</code>即可。</p>
-<hr />
 <h3 id="我的代码"><font color=#808080>我的代码</font></h3>
-<figure class="highlight java"><figcaption><span>&#123;.line-numbers&#125;</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MyMinStack</span> </span>&#123;</span><br><span class="line">	Stack&lt;Integer&gt; stack;</span><br><span class="line">	Stack&lt;Integer&gt; minStack;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/** initialize your data structure here. */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">MyMinStack</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    	stack = <span class="keyword">new</span> Stack();</span><br><span class="line">    	minStack  = <span class="keyword">new</span> Stack();</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">push</span><span class="params">(<span class="keyword">int</span> x)</span> </span>&#123;</span><br><span class="line">    	</span><br><span class="line">    	<span class="keyword">if</span> (minStack.isEmpty()||minStack.peek()&gt;x) </span><br><span class="line">            minStack.push(x);</span><br><span class="line">    	<span class="keyword">else</span> minStack.push(minStack.peek());</span><br><span class="line">    	</span><br><span class="line">    	stack.push(x);</span><br><span class="line">    	</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">pop</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    	minStack.pop();</span><br><span class="line">    	stack.pop();</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">top</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    	<span class="keyword">return</span> stack.peek();</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">min</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    	<span class="keyword">return</span> minStack.peek();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Your MinStack object will be instantiated and called as such:</span></span><br><span class="line"><span class="comment"> * MinStack obj = new MinStack();</span></span><br><span class="line"><span class="comment"> * obj.push(x);</span></span><br><span class="line"><span class="comment"> * obj.pop();</span></span><br><span class="line"><span class="comment"> * int param_3 = obj.top();</span></span><br><span class="line"><span class="comment"> * int param_4 = obj.min();</span></span><br><span class="line"><span class="comment"> */</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><figcaption><span>&#123;.line-numbers&#125;</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MySolution53II</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">missingNumber</span><span class="params">(<span class="keyword">int</span>[] nums)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> sum = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> num:nums)</span><br><span class="line">        sum+=num;</span><br><span class="line">        <span class="keyword">int</span> sum0 = (nums.length+<span class="number">1</span>)*nums.length/<span class="number">2</span>;</span><br><span class="line">        <span class="keyword">return</span> sum0-sum;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -452,7 +306,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://yukief4fdh.github.io/2022/02/08/Offer24_Easy_%E5%8F%8D%E8%BD%AC%E9%93%BE%E8%A1%A8/">
+    <link itemprop="mainEntityOfPage" href="https://yukief4fdh.github.io/2022/02/10/Offer53I_Easy_%E5%9C%A8%E6%8E%92%E5%BA%8F%E6%95%B0%E7%BB%84%E4%B8%AD%E6%9F%A5%E6%89%BE%E6%95%B0%E5%AD%97I/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/yuki.gif">
@@ -465,7 +319,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2022/02/08/Offer24_Easy_%E5%8F%8D%E8%BD%AC%E9%93%BE%E8%A1%A8/" class="post-title-link" itemprop="url">剑指 Offer 24. 反转链表</a>
+          <a href="/2022/02/10/Offer53I_Easy_%E5%9C%A8%E6%8E%92%E5%BA%8F%E6%95%B0%E7%BB%84%E4%B8%AD%E6%9F%A5%E6%89%BE%E6%95%B0%E5%AD%97I/" class="post-title-link" itemprop="url">剑指 Offer 53 - I. 在排序数组中查找数字 I</a>
         </h2>
 
         <div class="post-meta-container">
@@ -477,7 +331,7 @@
       <span class="post-meta-item-text">Posted on</span>
       
 
-      <time title="Created: 2022-02-08 18:46:11 / Modified: 19:29:20" itemprop="dateCreated datePublished" datetime="2022-02-08T18:46:11+09:00">2022-02-08</time>
+      <time title="Created: 2022-02-10 16:00:09 / Modified: 16:03:51" itemprop="dateCreated datePublished" datetime="2022-02-10T16:00:09+09:00">2022-02-10</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -508,24 +362,28 @@
     
     <div class="post-body" itemprop="articleBody">
           <center>
-<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/fan-zhuan-lian-biao-lcof/"><b><font color = #5EB561>反转链表</font></b></a>
+<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/zai-pai-xu-shu-zu-zhong-cha-zhao-shu-zi-lcof/"><b><font color = #5EB561>转载自Leet Code《剑指Offer》</font></b></a>
 </center>
 <h3 id="题目描述">题目描述</h3>
-<p>定义一个函数，输入一个链表的头节点，反转该链表并输出反转后链表的头节点。</p>
-<p><strong>示例</strong>：</p>
+<p>统计一个数字在排序数组中出现的次数。</p>
+<p><strong>示例 1</strong>：</p>
 <blockquote>
-<p>输入：<code>1-&gt;2-&gt;3-&gt;4-&gt;5-&gt;NULL</code> 输出：<code>5-&gt;4-&gt;3-&gt;2-&gt;1-&gt;NULL</code></p>
+<p>输入：<code>nums = [5,7,7,8,8,10], target = 8</code> 输出：<code>2</code></p>
+</blockquote>
+<p><strong>示例 2</strong>：</p>
+<blockquote>
+<p>输入：<code>nums = [5,7,7,8,8,10], target = 6</code> 输出：<code>0</code></p>
 </blockquote>
 <p><strong>提示：</strong></p>
 <ul>
-<li><code>0 &lt;=</code> 链表长度 <code>&lt;= 5000</code></li>
+<li><code>0 &lt;= nums.length &lt;= 105</code></li>
+<li><code>-109 &lt;= nums[i] &lt;= 109</code></li>
+<li><code>nums</code>是一个非递减数组</li>
+<li><code>-109 &lt;= target &lt;= 109</code></li>
 </ul>
 <hr />
-<h3 id="我的思路"><font color=#808080>我的思路</font></h3>
-<p>由于链表只能从头到尾遍历的特性，利用栈来实现对其的反转。</p>
-<hr />
 <h3 id="我的代码"><font color=#808080>我的代码</font></h3>
-<figure class="highlight java"><figcaption><span>&#123;.line-numbers&#125;</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Definition for singly-linked list.</span></span><br><span class="line"><span class="comment"> * public class ListNode &#123;</span></span><br><span class="line"><span class="comment"> *     int val;</span></span><br><span class="line"><span class="comment"> *     ListNode next;</span></span><br><span class="line"><span class="comment"> *     ListNode(int x) &#123; val = x; &#125;</span></span><br><span class="line"><span class="comment"> * &#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MySolutionOffer24</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> ListNode <span class="title">reverseList</span><span class="params">(ListNode head)</span> </span>&#123;</span><br><span class="line">    	<span class="keyword">if</span> (head==<span class="keyword">null</span>) <span class="keyword">return</span> <span class="keyword">null</span>;</span><br><span class="line">    	</span><br><span class="line">    	Stack&lt;ListNode&gt; stack = <span class="keyword">new</span> Stack();</span><br><span class="line">    	ListNode newHead = <span class="keyword">null</span>;</span><br><span class="line">    	ListNode p = head;</span><br><span class="line">    	</span><br><span class="line">    	<span class="keyword">while</span> (p!=<span class="keyword">null</span>)</span><br><span class="line">    	&#123;</span><br><span class="line">    		stack.push(p); </span><br><span class="line">            p = p.next;</span><br><span class="line">    	&#125;</span><br><span class="line">    	</span><br><span class="line">    	ListNode pre = newHead;</span><br><span class="line">        </span><br><span class="line">    	<span class="keyword">while</span> (!stack.isEmpty())</span><br><span class="line">    	&#123;</span><br><span class="line">    		p = stack.pop();</span><br><span class="line">            </span><br><span class="line">    		<span class="keyword">if</span> (newHead==<span class="keyword">null</span>)</span><br><span class="line">    		&#123;</span><br><span class="line">    			newHead = p; </span><br><span class="line">                pre = newHead;</span><br><span class="line">    		&#125;</span><br><span class="line">    		<span class="keyword">else</span></span><br><span class="line">    		&#123;</span><br><span class="line">    			pre.next = p;</span><br><span class="line">    			pre = p;</span><br><span class="line">    		&#125;</span><br><span class="line">    	&#125;</span><br><span class="line">        p.next = <span class="keyword">null</span>;</span><br><span class="line">        </span><br><span class="line">    	<span class="keyword">return</span> newHead;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><figcaption><span>&#123;.line-numbers&#125;</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MySolutionOffer53I</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">search</span><span class="params">(<span class="keyword">int</span>[] nums, <span class="keyword">int</span> target)</span> </span>&#123;</span><br><span class="line">        </span><br><span class="line">    	<span class="keyword">int</span> count = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">if</span> (nums==<span class="keyword">null</span>||nums.length==<span class="number">0</span>) <span class="keyword">return</span> count;</span><br><span class="line">    	</span><br><span class="line">    	<span class="keyword">int</span> index0 = BinarySearch(nums, <span class="number">0</span>, nums.length, target);</span><br><span class="line">    	<span class="keyword">if</span> (index0&gt;=nums.length||nums[index0]!=target) <span class="keyword">return</span> count;</span><br><span class="line">    	</span><br><span class="line">    	<span class="keyword">int</span> index1 = BinarySearch(nums,index0,nums.length,target+<span class="number">1</span>);</span><br><span class="line">    	<span class="keyword">return</span> index1-index0;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">	<span class="comment">// array[first, last); array[index]&gt;=value</span></span><br><span class="line">	<span class="function"><span class="keyword">static</span> <span class="keyword">int</span> <span class="title">BinarySearch</span><span class="params">(<span class="keyword">int</span> []array, <span class="keyword">int</span> first, <span class="keyword">int</span> last, <span class="keyword">int</span> value)</span></span></span><br><span class="line"><span class="function">	</span>&#123;</span><br><span class="line">		<span class="keyword">while</span> (first&lt;last)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">int</span> mid = first+(last-first)/<span class="number">2</span>;</span><br><span class="line">			<span class="keyword">if</span> (array[mid]&lt;value)</span><br><span class="line">				first = mid+<span class="number">1</span>;</span><br><span class="line">			<span class="keyword">else</span></span><br><span class="line">				last=mid;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">return</span> first; <span class="comment">//or last.</span></span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -552,7 +410,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://yukief4fdh.github.io/2022/02/08/Offer09_Easy_%E7%94%A8%E4%B8%A4%E4%B8%AA%E6%A0%88%E5%AE%9E%E7%8E%B0%E9%98%9F%E5%88%97/">
+    <link itemprop="mainEntityOfPage" href="https://yukief4fdh.github.io/2022/02/10/Offer58II_Easy_%E5%B7%A6%E6%97%8B%E8%BD%AC%E5%AD%97%E7%AC%A6%E4%B8%B2/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/yuki.gif">
@@ -565,7 +423,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2022/02/08/Offer09_Easy_%E7%94%A8%E4%B8%A4%E4%B8%AA%E6%A0%88%E5%AE%9E%E7%8E%B0%E9%98%9F%E5%88%97/" class="post-title-link" itemprop="url">剑指 Offer 09. 用两个栈实现队列</a>
+          <a href="/2022/02/10/Offer58II_Easy_%E5%B7%A6%E6%97%8B%E8%BD%AC%E5%AD%97%E7%AC%A6%E4%B8%B2/" class="post-title-link" itemprop="url">剑指 Offer 58 - II. 左旋转字符串</a>
         </h2>
 
         <div class="post-meta-container">
@@ -577,7 +435,108 @@
       <span class="post-meta-item-text">Posted on</span>
       
 
-      <time title="Created: 2022-02-08 18:46:11 / Modified: 19:28:35" itemprop="dateCreated datePublished" datetime="2022-02-08T18:46:11+09:00">2022-02-08</time>
+      <time title="Created: 2022-02-10 15:51:24 / Modified: 15:55:53" itemprop="dateCreated datePublished" datetime="2022-02-10T15:51:24+09:00">2022-02-10</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/LeetCode/" itemprop="url" rel="index"><span itemprop="name">LeetCode</span></a>
+        </span>
+          , 
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/LeetCode/Easy/" itemprop="url" rel="index"><span itemprop="name">Easy</span></a>
+        </span>
+          , 
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/LeetCode/Easy/Half-done/" itemprop="url" rel="index"><span itemprop="name">Half-done</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <center>
+<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/zuo-xuan-zhuan-zi-fu-chuan-lcof/"><b><font color = #5EB561>转载自Leet Code《剑指Offer》</font></b></a>
+</center>
+<h3 id="题目描述">题目描述</h3>
+<p>字符串的左旋转操作是把字符串前面的若干个字符转移到字符串的尾部。 请定义一个函数实现字符串左旋转操作的功能。 比如，输入字符串<code>"abcdefg"</code>和数字<code>2</code>，该函数将返回左旋转两位得到的结果<code>"cdefgab"</code>。</p>
+<p><strong>示例 1</strong>：</p>
+<blockquote>
+<p>输入: <code>s = "abcdefg", k = 2</code> 输出: <code>"cdefgab"</code></p>
+</blockquote>
+<p><strong>示例 1</strong>：</p>
+<blockquote>
+<p>输入: <code>s = "lrloseumgh", k = 6</code> 输出: <code>"umghlrlose"</code></p>
+</blockquote>
+<p><strong>提示：</strong></p>
+<ul>
+<li><code>1 &lt;= k &lt; s.length &lt;= 10000</code></li>
+</ul>
+<hr />
+<h3 id="我的代码"><font color=#808080>我的代码</font></h3>
+<figure class="highlight java"><figcaption><span>&#123;.line-numbers&#125;</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MySolutionOffer58II</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">reverseLeftWords</span><span class="params">(String s, <span class="keyword">int</span> n)</span> </span>&#123;</span><br><span class="line">    	<span class="keyword">if</span> (s.length()==<span class="number">1</span>) <span class="keyword">return</span> s;</span><br><span class="line">    	</span><br><span class="line">    	String s1 = s.substring(<span class="number">0</span>,n);</span><br><span class="line">    	String s2 = s.substring(n);</span><br><span class="line">    	<span class="keyword">return</span> s2+s1; </span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://yukief4fdh.github.io/2022/02/10/Offer03_Easy_%E6%95%B0%E7%BB%84%E4%B8%AD%E9%87%8D%E5%A4%8D%E7%9A%84%E6%95%B0%E5%AD%97/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/yuki.gif">
+      <meta itemprop="name" content="CHEN XUEYI">
+      <meta itemprop="description" content="Call me Yuki (JPN) or Chloe (ENG).<br> Nice to meet you :)<br><hr style="margin:3px;"> Tokyo Institute of Technology (M1)<br> Rearch Interest: Visualization">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Yuki's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2022/02/10/Offer03_Easy_%E6%95%B0%E7%BB%84%E4%B8%AD%E9%87%8D%E5%A4%8D%E7%9A%84%E6%95%B0%E5%AD%97/" class="post-title-link" itemprop="url">剑指 Offer 03. 数组中重复的数字</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2022-02-10 15:15:46 / Modified: 15:58:10" itemprop="dateCreated datePublished" datetime="2022-02-10T15:15:46+09:00">2022-02-10</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -608,35 +567,22 @@
     
     <div class="post-body" itemprop="articleBody">
           <center>
-<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/yong-liang-ge-zhan-shi-xian-dui-lie-lcof/"><b><font color = #5EB561>用两个栈实现队列</font></b></a>
+<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/shu-zu-zhong-zhong-fu-de-shu-zi-lcof/"><b><font color = #5EB561>转载自Leet Code《剑指Offer》</font></b></a>
 </center>
 <h3 id="题目描述">题目描述</h3>
-<p>用两个栈实现一个队列。队列的声明如下，请实现它的两个函数 <code>appendTail</code> 和 <code>deleteHead</code> ，分别完成在队列尾部插入整数和在队列头部删除整数的功能。(若队列中没有元素，<code>deleteHead</code> 操作返回 <code>-1</code> )</p>
+<p>找出数组中重复的数字。</p>
+<p>在一个长度为 <code>n</code> 的数组 <code>nums</code> 里的所有数字都在 <code>0～n-1</code> 的范围内。 数组中某些数字是重复的，但不知道有几个数字重复了，也不知道每个数字重复了几次。 请找出数组中任意一个重复的数字。</p>
 <p><strong>示例</strong>：</p>
 <blockquote>
-<p>输入：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt;[&quot;CQueue&quot;,&quot;appendTail&quot;,&quot;deleteHead&quot;,&quot;deleteHead&quot;]</span><br><span class="line">&gt;[[],[3],[],[]]</span><br></pre></td></tr></table></figure>
-<p>输出：<code>[null,null,3,-1]</code></p>
-</blockquote>
-<blockquote>
-<p>输入：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[&quot;CQueue&quot;,&quot;deleteHead&quot;,&quot;appendTail&quot;,&quot;appendTail&quot;,&quot;deleteHead&quot;,&quot;deleteHead&quot;]</span><br><span class="line">[[],[],[5],[2],[],[]]</span><br></pre></td></tr></table></figure>
-<p>输出：<code>[null,-1,null,null,5,2]</code></p>
+<p>输入：<code>[2, 3, 1, 0, 2, 5, 3]</code> 输出：<code>2</code> 或 <code>3</code></p>
 </blockquote>
 <p><strong>提示：</strong></p>
 <ul>
-<li><code>1 &lt;= values &lt;= 10000</code></li>
-<li>最多会对 <code>appendTail</code>、<code>deleteHead</code> 进行 <code>10000</code> 次调用</li>
+<li><code>2 &lt;= n &lt;= 100000</code></li>
 </ul>
 <hr />
-<h3 id="我的思路"><font color=#808080>我的思路</font></h3>
-<p>用两个栈<code>stackA</code>和<code>stackB</code>来实现队列的先进先出特性。 思路是：总是从<code>stackA</code>中出队，即保持<code>stackA</code>的栈顶总是队首元素。</p>
-<p>首先考虑入队。 如果栈<code>stackA</code>和<code>stackB</code>都是空的情况下，则将新的值压入栈<code>stackA</code>；否则压入栈<code>stackB</code>。</p>
-<p>接下来考虑出队。 如果两个栈都为空，则表明已经到达队尾，返回<code>-1</code>。 如果栈<code>stackA</code>不为空，则<code>stackA</code>的栈顶元素应该是当前的队首元素，将其弹出。</p>
-<p>在出队操作后，<code>stackA</code>可能为空。 此时，若<code>stackB</code>中还有元素，则将其依次弹出并压入栈<code>stackA</code>中。 由于栈先进后出的特性，被压入<code>stackA</code>中的元素序列再一次被弹出时，将会符合队列先进先出的顺序。</p>
-<hr />
 <h3 id="我的代码"><font color=#808080>我的代码</font></h3>
-<figure class="highlight java"><figcaption><span>&#123;.line-numbers&#125;</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MyCQueue</span> </span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">	Stack&lt;Integer&gt; stackA;</span><br><span class="line">	Stack&lt;Integer&gt; stackB;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">MyCQueue</span><span class="params">()</span> </span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">    	stackA = <span class="keyword">new</span> Stack(); stackB = <span class="keyword">new</span> Stack();</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">appendTail</span><span class="params">(<span class="keyword">int</span> value)</span> </span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">    	<span class="keyword">if</span> (stackA.isEmpty()&amp;&amp;stackB.isEmpty())</span><br><span class="line">    		stackA.add(value);</span><br><span class="line">    	<span class="keyword">else</span> </span><br><span class="line">    		stackB.add(value);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">deleteHead</span><span class="params">()</span> </span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">    	<span class="keyword">int</span> val = -<span class="number">1</span>;</span><br><span class="line">    	</span><br><span class="line">    	<span class="keyword">if</span> (stackA.isEmpty()&amp;&amp;stackB.isEmpty())</span><br><span class="line">    		val = -<span class="number">1</span>;</span><br><span class="line">    	<span class="keyword">else</span> <span class="keyword">if</span> (!stackA.isEmpty())</span><br><span class="line">    		val = stackA.pop();</span><br><span class="line">        </span><br><span class="line">    	<span class="keyword">if</span> (stackA.isEmpty())</span><br><span class="line">    		<span class="keyword">while</span> (!stackB.isEmpty())</span><br><span class="line">    			stackA.push(stackB.pop());</span><br><span class="line">    	</span><br><span class="line">    	<span class="keyword">return</span> val;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><figcaption><span>&#123;.line-numbers&#125;</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MySolutionOffer03</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">findRepeatNumber</span><span class="params">(<span class="keyword">int</span>[] nums)</span> </span>&#123;</span><br><span class="line">    	<span class="keyword">if</span> (nums.length&lt;=<span class="number">2</span>) <span class="keyword">return</span> nums[<span class="number">0</span>];</span><br><span class="line">    	HashSet&lt;Integer&gt; set = <span class="keyword">new</span> HashSet();</span><br><span class="line">    	<span class="keyword">for</span> (<span class="keyword">int</span> num:nums)</span><br><span class="line">    		<span class="keyword">if</span> (set.contains(num)) <span class="keyword">return</span> num;</span><br><span class="line">    		<span class="keyword">else</span> set.add(num);</span><br><span class="line">    	<span class="keyword">return</span> -<span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -663,7 +609,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://yukief4fdh.github.io/2022/02/08/Offer06_Easy_%E4%BB%8E%E5%B0%BE%E5%88%B0%E5%A4%B4%E6%89%93%E5%8D%B0%E9%93%BE%E8%A1%A8/">
+    <link itemprop="mainEntityOfPage" href="https://yukief4fdh.github.io/2022/02/10/Offer05_Easy_%E6%9B%BF%E6%8D%A2%E7%A9%BA%E6%A0%BC/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/yuki.gif">
@@ -676,7 +622,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2022/02/08/Offer06_Easy_%E4%BB%8E%E5%B0%BE%E5%88%B0%E5%A4%B4%E6%89%93%E5%8D%B0%E9%93%BE%E8%A1%A8/" class="post-title-link" itemprop="url">剑指 Offer 06. 从尾到头打印链表</a>
+          <a href="/2022/02/10/Offer05_Easy_%E6%9B%BF%E6%8D%A2%E7%A9%BA%E6%A0%BC/" class="post-title-link" itemprop="url">剑指 Offer 05. 替换空格</a>
         </h2>
 
         <div class="post-meta-container">
@@ -688,7 +634,7 @@
       <span class="post-meta-item-text">Posted on</span>
       
 
-      <time title="Created: 2022-02-08 18:09:20 / Modified: 19:27:52" itemprop="dateCreated datePublished" datetime="2022-02-08T18:09:20+09:00">2022-02-08</time>
+      <time title="Created: 2022-02-10 15:15:46 / Modified: 15:42:36" itemprop="dateCreated datePublished" datetime="2022-02-10T15:15:46+09:00">2022-02-10</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -704,7 +650,7 @@
         </span>
           , 
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/LeetCode/Easy/Done/" itemprop="url" rel="index"><span itemprop="name">Done</span></a>
+          <a href="/categories/LeetCode/Easy/Half-done/" itemprop="url" rel="index"><span itemprop="name">Half-done</span></a>
         </span>
     </span>
 
@@ -719,25 +665,21 @@
     
     <div class="post-body" itemprop="articleBody">
           <center>
-<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/cong-wei-dao-tou-da-yin-lian-biao-lcof/"><b><font color = #5EB561>从尾到头打印链表</font></b></a>
+<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/ti-huan-kong-ge-lcof/"><b><font color = #5EB561>转载自Leet Code《剑指Offer》</font></b></a>
 </center>
 <h3 id="题目描述">题目描述</h3>
-<p>输入一个链表的头节点，从尾到头反过来返回每个节点的值（用数组返回）。</p>
+<p>请实现一个函数，把字符串 <code>s</code> 中的每个空格替换成"%20"。</p>
 <p><strong>示例</strong>：</p>
 <blockquote>
-<p>输入：<code>head = [1,3,2]</code> 输出：<code>[2,3,1]</code></p>
+<p>输入：<code>s = "We are happy."</code> 输出：<code>"We%20are%20happy."</code></p>
 </blockquote>
 <p><strong>提示：</strong></p>
 <ul>
-<li><code>0 &lt;=</code> 链表长度 <code>&lt;= 10000</code></li>
+<li><code>0 &lt;= s 的长度 &lt;= 10000</code></li>
 </ul>
 <hr />
-<h3 id="我的思路"><font color=#808080>我的思路</font></h3>
-<p>由于链表只能从头到尾遍历的特性，利用栈来实现对其从尾到头的打印。</p>
-<p>首先，如果链表头指向<code>NULL</code>的话，返回一个长度为<code>0</code>的数组。 否则，为其准备一个栈<code>stack</code>，将遍历的每一个链表值入栈。 最后准备一个和栈大小相同的数组，将栈中元素逐一弹出并放入数组，将数组返回。</p>
-<hr />
 <h3 id="我的代码"><font color=#808080>我的代码</font></h3>
-<figure class="highlight java"><figcaption><span>&#123;.line-numbers&#125;</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Definition for singly-linked list.</span></span><br><span class="line"><span class="comment"> * public class ListNode &#123;</span></span><br><span class="line"><span class="comment"> *     int val;</span></span><br><span class="line"><span class="comment"> *     ListNode next;</span></span><br><span class="line"><span class="comment"> *     ListNode(int x) &#123; val = x; &#125;</span></span><br><span class="line"><span class="comment"> * &#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MySolutionOffer06</span> </span>&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">int</span>[] reversePrint(ListNode head) &#123;</span><br><span class="line">    	<span class="keyword">if</span> (head==<span class="keyword">null</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">int</span> []ans = <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">0</span>];</span><br><span class="line">            <span class="keyword">return</span> ans;</span><br><span class="line">        &#125;</span><br><span class="line">    	</span><br><span class="line">    	Stack&lt;Integer&gt; stack = <span class="keyword">new</span> Stack();</span><br><span class="line">    	ListNode p = head;</span><br><span class="line">    	<span class="keyword">while</span>(p!=<span class="keyword">null</span>)</span><br><span class="line">    	&#123;</span><br><span class="line">    		stack.push(p.val);</span><br><span class="line">    		p = p.next;</span><br><span class="line">    	&#125;</span><br><span class="line">    	</span><br><span class="line">    	<span class="keyword">int</span> []ans = <span class="keyword">new</span> <span class="keyword">int</span>[stack.size()];</span><br><span class="line">    	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;ans.length; i++)</span><br><span class="line">    		ans[i]=stack.pop();</span><br><span class="line">    	</span><br><span class="line">    	<span class="keyword">return</span> ans;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><figcaption><span>&#123;.line-numbers&#125;</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">SolutionOffer05</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">replaceSpace</span><span class="params">(String s)</span> </span>&#123;</span><br><span class="line">    	String str = s.replaceAll(<span class="string">&quot; &quot;</span>, <span class="string">&quot;%20&quot;</span>);</span><br><span class="line">    	<span class="keyword">return</span> str;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -757,7 +699,7 @@
 
 
   <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/11/">11</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
   </nav>
 
 </div>

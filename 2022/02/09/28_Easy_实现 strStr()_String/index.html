@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-yuki.PNG">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-yuki.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-yuki.png">
+  <link rel="mask-icon" href="/images/logo-yuki.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/all.min.css" integrity="sha256-2H3fkXt6FEmrReK448mDVGKb3WW2ZZw35gI7vqHOE4Y=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"yukief4fdh.github.io","root":"/","images":"/images","scheme":"Gemini","version":"8.7.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/js/config.js"></script>
+<meta name="description" content="转载自Leet Code  题目描述 实现 strStr() 函数。 给定一个 haystack 字符串和一个 needle 字符串，在 haystack 字符串中找出 needle 字符串出现的第一个位置 (从0开始)。如果不存在，则返回 -1。 示例 1: &gt;输入: haystack &#x3D; &quot;hello&quot;, needle &#x3D; &quot;ll&quot; &gt;输出: 2 示例 2: &gt;">
+<meta property="og:type" content="article">
+<meta property="og:title" content="28. 实现 strStr()">
+<meta property="og:url" content="https://yukief4fdh.github.io/2022/02/09/28_Easy_%E5%AE%9E%E7%8E%B0%20strStr()_String/index.html">
+<meta property="og:site_name" content="Yuki&#39;s Blog">
+<meta property="og:description" content="转载自Leet Code  题目描述 实现 strStr() 函数。 给定一个 haystack 字符串和一个 needle 字符串，在 haystack 字符串中找出 needle 字符串出现的第一个位置 (从0开始)。如果不存在，则返回 -1。 示例 1: &gt;输入: haystack &#x3D; &quot;hello&quot;, needle &#x3D; &quot;ll&quot; &gt;输出: 2 示例 2: &gt;">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2022-02-09T06:16:54.918Z">
+<meta property="article:modified_time" content="2022-02-09T15:17:14.705Z">
+<meta property="article:author" content="CHEN XUEYI">
+<meta property="article:tag" content="two-pointers">
+<meta property="article:tag" content="string">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://yukief4fdh.github.io/2022/02/09/28_Easy_%E5%AE%9E%E7%8E%B0%20strStr()_String/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"https://yukief4fdh.github.io/2022/02/09/28_Easy_%E5%AE%9E%E7%8E%B0%20strStr()_String/","path":"2022/02/09/28_Easy_实现 strStr()_String/","title":"28. 实现 strStr()"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>28. 实现 strStr() | Yuki's Blog</title>
+  
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">Yuki's Blog</h1>
+      <i class="logo-line"></i>
+    </a>
+      <img class="custom-logo-image" src="/uploads/test.png" alt="Yuki's Blog">
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a></li>
+        <li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a></li>
+        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags<span class="badge">22</span></a></li>
+        <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories<span class="badge">13</span></a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives<span class="badge">52</span></a></li>
+        
+            
+  <li class="menu-item menu-item-docs"><a href="/docs/" rel="section"><i class="fa fa-book fa-fw"></i>Docs</a></li>
+
+
+      
+        <li class="menu-item menu-item-schedule"><a href="/schedule/" rel="section"><i class="fa fa-calendar fa-fw"></i>Schedule</a></li>
+        <li class="menu-item menu-item-sitemap"><a href="/sitemap.xml" rel="section"><i class="fa fa-sitemap fa-fw"></i>Sitemap</a></li>
+        <li class="menu-item menu-item-commonweal"><a href="/404/" rel="section"><i class="fa fa-heartbeat fa-fw"></i>Commonweal 404</a></li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%A2%98%E7%9B%AE%E6%8F%8F%E8%BF%B0"><span class="nav-number">1.</span> <span class="nav-text">题目描述</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%88%91%E7%9A%84%E4%BB%A3%E7%A0%81"><span class="nav-number">2.</span> <span class="nav-text">我的代码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%96%B9%E6%B3%95rabin-karp---%E5%B8%B8%E6%95%B0%E5%A4%8D%E6%9D%82%E5%BA%A6"><span class="nav-number">3.</span> <span class="nav-text">方法：Rabin Karp - 常数复杂度</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-overview">
+            <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="CHEN XUEYI"
+      src="/images/yuki.gif">
+  <p class="site-author-name" itemprop="name">CHEN XUEYI</p>
+  <div class="site-description" itemprop="description">Call me Yuki (JPN) or Chloe (ENG).<br> Nice to meet you :)<br><hr style="margin:3px;"> Tokyo Institute of Technology (M1)<br> Rearch Interest: Visualization</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">52</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">13</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">22</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author site-overview-item animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/YukiEF4FDH" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;YukiEF4FDH" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="/xueyichen_980221@outlook.com" title="E-Mail → xueyichen_980221@outlook.com"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://twitter.com/YukiEF4FDH" title="Twitter → https:&#x2F;&#x2F;twitter.com&#x2F;YukiEF4FDH" rel="noopener" target="_blank"><i class="fab fa-twitter fa-fw"></i>Twitter</a>
+      </span>
+  </div>
+
+
+
+          </div>
+        </div>
+      </div>
+
+      <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=591027&auto=1&height=66"></iframe>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button" aria-label="Back to top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://yukief4fdh.github.io/2022/02/09/28_Easy_%E5%AE%9E%E7%8E%B0%20strStr()_String/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/yuki.gif">
+      <meta itemprop="name" content="CHEN XUEYI">
+      <meta itemprop="description" content="Call me Yuki (JPN) or Chloe (ENG).<br> Nice to meet you :)<br><hr style="margin:3px;"> Tokyo Institute of Technology (M1)<br> Rearch Interest: Visualization">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Yuki's Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          28. 实现 strStr()
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2022-02-09 15:16:54" itemprop="dateCreated datePublished" datetime="2022-02-09T15:16:54+09:00">2022-02-09</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">Edited on</span>
+        <time title="Modified: 2022-02-10 00:17:14" itemprop="dateModified" datetime="2022-02-10T00:17:14+09:00">2022-02-10</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/LeetCode/" itemprop="url" rel="index"><span itemprop="name">LeetCode</span></a>
+        </span>
+          , 
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/LeetCode/Easy/" itemprop="url" rel="index"><span itemprop="name">Easy</span></a>
+        </span>
+          , 
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/LeetCode/Easy/Half-done/" itemprop="url" rel="index"><span itemprop="name">Half-done</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <center>
+<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/implement-strstr/"><b><font color = #5EB561>转载自Leet Code</font></b></a>
+</center>
+<h3 id="题目描述">题目描述</h3>
+<p>实现 <code>strStr()</code> 函数。 给定一个 <code>haystack</code> 字符串和一个 <code>needle</code> 字符串，在 <code>haystack</code> 字符串中找出 <code>needle</code> 字符串出现的第一个位置 (从<code>0</code>开始)。如果不存在，则返回 <code>-1</code>。</p>
+<p>示例 1: &gt;输入: <code>haystack = "hello"</code>, <code>needle = "ll"</code> &gt;输出: <code>2</code></p>
+<p>示例 2: &gt;输入: <code>haystack = "aaaaa"</code>, <code>needle = "bba"</code> &gt;输出: <code>-1</code></p>
+<p><strong>说明:</strong> 当 <code>needle</code> 是空字符串时，我们应当返回什么值呢？这是一个在面试中很好的问题。 对于本题而言，当 <code>needle</code> 是空字符串时我们应当返回 <code>0</code> 。 这与C语言的 <code>strstr()</code> 以及 Java的 <code>indexOf()</code> 定义相符。</p>
+<p><strong>提示：</strong></p>
+<ul>
+<li><code>0 &lt;= haystack.length, needle.length &lt;= 5 * 10^4</code></li>
+<li><code>haystack</code> 和 <code>needle</code> 仅由小写英文字符组成</li>
+</ul>
+<hr />
+<h3 id="我的代码"><font color=#808080>我的代码</font></h3>
+<p><span class="math inline">\(T(N,L)_{worst} = O((N-L)L)\)</span>, <span class="math inline">\(S(N,L) = O(1)\)</span></p>
+<figure class="highlight java"><figcaption><span>&#123;.line-numbers&#125;</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MySolution28</span> </span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">strStr</span><span class="params">(String haystack, String needle)</span> </span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">    	<span class="keyword">if</span> (needle==<span class="keyword">null</span>||needle.length()==<span class="number">0</span>) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    	<span class="keyword">else</span> <span class="keyword">if</span> (haystack==<span class="keyword">null</span>||needle.length()==<span class="number">0</span>) <span class="keyword">return</span> -<span class="number">1</span>;</span><br><span class="line">    	</span><br><span class="line">    	<span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;haystack.length(); i++)</span><br><span class="line">    	&#123;</span><br><span class="line">    		<span class="keyword">if</span> (haystack.substring(i).length()&lt;needle.length()) <span class="keyword">return</span> -<span class="number">1</span>;</span><br><span class="line">    		</span><br><span class="line">    		<span class="keyword">else</span> <span class="keyword">if</span> (haystack.charAt(i)==needle.charAt(<span class="number">0</span>)) </span><br><span class="line">    			<span class="keyword">if</span> (haystack.substring(i,i+needle.length()).equals(needle))</span><br><span class="line">    				<span class="keyword">return</span> i;</span><br><span class="line">    	&#125;</span><br><span class="line">    	<span class="keyword">return</span> -<span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>时空复杂度</strong>：</p>
+<ul>
+<li><span class="math inline">\(T(N,L)_{worst} = O((N-L)L)\)</span>，其中<em>N</em>为<code>haystack</code>串的长度; <em>L</em>为<code>needle</code>串的长度； 内循环中比较子串的复杂度为<em>L</em>, 总共需要比较 <em>(N-L)</em> 次； <span class="math inline">\(T(N,L)_{best} = O(N)\)</span>。</li>
+<li><span class="math inline">\(S(N,L) = O(1)\)</span>.</li>
+</ul>
+<hr />
+<h3 id="方法rabin-karp---常数复杂度">方法：Rabin Karp - 常数复杂度</h3>
+<p><span class="math inline">\(T(M,N)_{worst} = O(N)\)</span>, <span class="math inline">\(S(M,N) = O(1)\)</span></p>
+<p>首先生成滑窗内子串的哈希码，然后再跟<code>needle</code>的哈希码作比较。 需要解决的问题是：如何在常数时间内生成子串的哈希码？</p>
+<p><strong>滚动哈希: 常数时间内生成哈希码</strong></p>
+<p>生成一个长度为<span class="math inline">\(L\)</span>的数组的哈希码，需要<span class="math inline">\(O(L)\)</span>的时间。 想要在常数时间内生成滑窗数组的哈希码，可以利用滑窗的特性: 每次滑动有一个元素进、一个元素出。</p>
+<p>由于只会出现小写英文字母，因此可以将字符串转化成值为0到25的整数数组<code>arr[i]=(int)S.charAt(i)-(int)'a'</code>。 例如，<code>abcd</code>的整数数组形式就是<code>[0, 1, 2, 3]</code>，转换公式如下所示: <span class="math display">\[
+h_0=0×26^3+1×26^2+2×26^1+3×26^0
+\]</span></p>
+<p>将上述公式写成通式如下。其中<span class="math inline">\(c_i\)</span>为字符串转化而来的整数数组<code>arr</code>中的元素，<span class="math inline">\(a=26\)</span>为字符集的个数，<span class="math inline">\(L\)</span>为数组<code>arr</code>的长度。</p>
+<p><span class="math display">\[
+\begin{aligned}
+h_0
+&amp; = c_0a^{L-1}+c_1a^{L-2}+...+c_ia^{L-1-i}+...+c_{L-1}a^1+c_La^0 \\
+&amp; = \sum_{i=0}^{L-1} c_ia^{L-1-i}
+\end{aligned}
+\]</span></p>
+<p>接下来考虑窗口从<code>abcd</code>滑动到<code>bcde</code>的情况。 此时，整数数组从<code>[0,1,2,3]</code>变成了<code>[1,2,3,4]</code>，最左边的<code>0</code>被移除，同时最右边新添了<code>4</code>。 滑动后数组的哈希值可以依据滑动前数组的哈希值来计算，公式如下: <span class="math display">\[
+h_1=(h_0-0×26^3)×26+4×26^0
+\]</span></p>
+<p>写成通式如下所示:</p>
+<p><span class="math display">\[
+h_1=(h_0a-c_0a^L)+c_{L+1}
+\]</span></p>
+<p><strong>如何避免溢出</strong></p>
+<p><span class="math inline">\(a^L\)</span>可能是一个很大的数字，因此需要设置数值的上限来避免溢出。 设置数值上限可以采用取模的方式，即用<code>h % modulus</code>来代替原本的哈希值。 理论上，<code>modulus</code>应该取一个很大的数，但是具体应该取多大的数呢？ <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Linear_congruential_generator#Parameters_in_common_use">详见这篇文章</a>，对于该问题而言<span class="math inline">\(2^{31}\)</span>就够了。</p>
+<p><strong>算法</strong></p>
+<ul>
+<li>计算子串<code>haystack.substring(0, L)</code>和<code>needle.substring(0,L)</code>的哈希值;</li>
+<li>从起始位置开始遍历到第<code>N-L</code>个字符:
+<ul>
+<li>根据前一个哈希值计算滚动哈希;</li>
+<li>如果子串哈希值与<code>needle</code>的哈希值相等，则返回滑窗的起始位置;</li>
+</ul></li>
+<li><code>haystack</code>串中不存在<code>needle</code>串，返回<code>-1</code>。</li>
+</ul>
+<p><strong>时空复杂度</strong></p>
+<ul>
+<li><span class="math inline">\(T(N,L) = O(N)\)</span>，其中<em>N</em>为<code>haystack</code>串的长度; <em>L</em>为<code>needle</code>串的长度； 计算<code>needle</code>串的哈希值需要<span class="math inline">\(O(L)\)</span>的时间，之后需要执行<span class="math inline">\((N-L)\)</span>次循环，每次循环的计算复杂度为常数。</li>
+<li><span class="math inline">\(S(N,L) = O(1)\)</span>。</li>
+</ul>
+<figure class="highlight java"><figcaption><span>&#123;.line-numbers&#125;</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution28</span> </span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">charToInt</span><span class="params">(<span class="keyword">int</span> i, String s)</span></span></span><br><span class="line"><span class="function">	</span>&#123;</span><br><span class="line">		<span class="keyword">return</span> (<span class="keyword">int</span>)s.charAt(i)-(<span class="keyword">int</span>)<span class="string">&#x27;a&#x27;</span>;</span><br><span class="line">	&#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">strStr</span><span class="params">(String haystack, String needle)</span> </span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">    	<span class="keyword">int</span> L = needle.length(); <span class="keyword">int</span> N = haystack.length();</span><br><span class="line">    	<span class="keyword">if</span> (L&gt;N) <span class="keyword">return</span> -<span class="number">1</span>;</span><br><span class="line">    	</span><br><span class="line">    	<span class="keyword">int</span> a = <span class="number">26</span>; <span class="comment">// 滚动哈希的base value: 字符集的个数</span></span><br><span class="line">    	<span class="keyword">long</span> modulus = (<span class="keyword">long</span>)Math.pow(<span class="number">2</span>, <span class="number">31</span>); <span class="comment">// 滚动哈希的modulus value: 避免溢出</span></span><br><span class="line">    	</span><br><span class="line">    	<span class="keyword">long</span> hash = <span class="number">0</span>; <span class="keyword">long</span> ref_hash = <span class="number">0</span>;</span><br><span class="line">    	<span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;L; i++) <span class="comment">// 计算haystack[:L]和needle[:L]的hash值</span></span><br><span class="line">    	&#123;</span><br><span class="line">    		hash = (hash*a+charToInt(i,haystack)) % modulus;</span><br><span class="line">    		ref_hash = (ref_hash*a+charToInt(i,needle)) % modulus;</span><br><span class="line">    	&#125;</span><br><span class="line">    	<span class="keyword">if</span> (hash == ref_hash) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    	</span><br><span class="line">    	<span class="keyword">long</span> aL = <span class="number">1</span>; <span class="comment">// 常用常量: a**L % modulus</span></span><br><span class="line">    	<span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">1</span>; i&lt;=L; i++) aL = (aL*a)%modulus;</span><br><span class="line">    	</span><br><span class="line">    	<span class="keyword">for</span> (<span class="keyword">int</span> start=<span class="number">1</span>; start&lt;N-L+<span class="number">1</span>; start++) <span class="comment">// 计算滚动哈希（复杂度为常数）</span></span><br><span class="line">    	&#123;</span><br><span class="line">    		hash = (hash*a-charToInt(start-<span class="number">1</span>,haystack)*aL+charToInt(start+L-<span class="number">1</span>,haystack)) % modulus;</span><br><span class="line">    		<span class="keyword">if</span> (hash==ref_hash) <span class="keyword">return</span> start;</span><br><span class="line">    	&#125;</span><br><span class="line">    	</span><br><span class="line">    	<span class="keyword">return</span> -<span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/two-pointers/" rel="tag"># two-pointers</a>
+              <a href="/tags/string/" rel="tag"># string</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2022/02/09/27_Easy_%E7%A7%BB%E9%99%A4%E5%85%83%E7%B4%A0_Array/" rel="prev" title="27. 移除元素">
+                  <i class="fa fa-chevron-left"></i> 27. 移除元素
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2022/02/09/35_Easy_%E6%90%9C%E7%B4%A2%E6%8F%92%E5%85%A5%E4%BD%8D%E7%BD%AE_Array/" rel="next" title="35. 搜索插入位置">
+                  35. 搜索插入位置 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">CHEN XUEYI</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a>
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+  
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">true</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"all","js":{"url":"https://cdn.jsdelivr.net/npm/mathjax@3.2.0/es5/tex-mml-chtml.js","integrity":"sha256-r+3itOMtGGjap0x+10hu6jW/gZCzxHsoKrOd7gyRSGY="}}</script>
+<script src="/js/third-party/math/mathjax.js"></script>
+
+
+
+</body>
+</html>

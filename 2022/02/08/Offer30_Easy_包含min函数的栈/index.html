@@ -20,15 +20,15 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"yukief4fdh.github.io","root":"/","images":"/images","scheme":"Gemini","version":"8.7.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/js/config.js"></script>
-<meta name="description" content="包含min函数的栈  题目描述 定义栈的数据结构，请在该类型中实现一个能够得到栈的最小元素的 min 函数在该栈中，调用 min、push 及 pop 的时间复杂度都是 O(1)。 示例：  MinStack minStack &#x3D; new MinStack(); minStack.push(-2); minStack.push(0); minStack.push(-3); minS">
+<meta name="description" content="转载自Leet Code《剑指Offer》  题目描述 定义栈的数据结构，请在该类型中实现一个能够得到栈的最小元素的 min 函数在该栈中，调用 min、push 及 pop 的时间复杂度都是 O(1)。 示例：  MinStack minStack &#x3D; new MinStack(); minStack.push(-2); minStack.push(0); minStack.pu">
 <meta property="og:type" content="article">
 <meta property="og:title" content="剑指 Offer 30. 包含min函数的栈">
 <meta property="og:url" content="https://yukief4fdh.github.io/2022/02/08/Offer30_Easy_%E5%8C%85%E5%90%ABmin%E5%87%BD%E6%95%B0%E7%9A%84%E6%A0%88/index.html">
 <meta property="og:site_name" content="Yuki&#39;s Blog">
-<meta property="og:description" content="包含min函数的栈  题目描述 定义栈的数据结构，请在该类型中实现一个能够得到栈的最小元素的 min 函数在该栈中，调用 min、push 及 pop 的时间复杂度都是 O(1)。 示例：  MinStack minStack &#x3D; new MinStack(); minStack.push(-2); minStack.push(0); minStack.push(-3); minS">
+<meta property="og:description" content="转载自Leet Code《剑指Offer》  题目描述 定义栈的数据结构，请在该类型中实现一个能够得到栈的最小元素的 min 函数在该栈中，调用 min、push 及 pop 的时间复杂度都是 O(1)。 示例：  MinStack minStack &#x3D; new MinStack(); minStack.push(-2); minStack.push(0); minStack.pu">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2022-02-08T09:46:11.214Z">
-<meta property="article:modified_time" content="2022-02-08T10:29:52.085Z">
+<meta property="article:modified_time" content="2022-02-09T06:14:45.921Z">
 <meta property="article:author" content="CHEN XUEYI">
 <meta property="article:tag" content="stack">
 <meta property="article:tag" content="recursion">
@@ -89,9 +89,9 @@
   <ul class="main-menu menu">
         <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a></li>
         <li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a></li>
-        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags<span class="badge">7</span></a></li>
-        <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories<span class="badge">6</span></a></li>
-        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives<span class="badge">8</span></a></li>
+        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags<span class="badge">22</span></a></li>
+        <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories<span class="badge">13</span></a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives<span class="badge">52</span></a></li>
         
             
   <li class="menu-item menu-item-docs"><a href="/docs/" rel="section"><i class="fa fa-book fa-fw"></i>Docs</a></li>
@@ -147,18 +147,18 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">8</span>
+          <span class="site-state-item-count">52</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
           <a href="/categories/">
-        <span class="site-state-item-count">6</span>
+        <span class="site-state-item-count">13</span>
         <span class="site-state-item-name">categories</span></a>
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">7</span>
+        <span class="site-state-item-count">22</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
@@ -234,10 +234,16 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">Posted on</span>
-      
 
-      <time title="Created: 2022-02-08 18:46:11 / Modified: 19:29:52" itemprop="dateCreated datePublished" datetime="2022-02-08T18:46:11+09:00">2022-02-08</time>
+      <time title="Created: 2022-02-08 18:46:11" itemprop="dateCreated datePublished" datetime="2022-02-08T18:46:11+09:00">2022-02-08</time>
     </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">Edited on</span>
+        <time title="Modified: 2022-02-09 15:14:45" itemprop="dateModified" datetime="2022-02-09T15:14:45+09:00">2022-02-09</time>
+      </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
         <i class="far fa-folder"></i>
@@ -267,7 +273,7 @@
     
     <div class="post-body" itemprop="articleBody">
         <center>
-<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/bao-han-minhan-shu-de-zhan-lcof/"><b><font color = #5EB561>包含min函数的栈</font></b></a>
+<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/bao-han-minhan-shu-de-zhan-lcof/"><b><font color = #5EB561>转载自Leet Code《剑指Offer》</font></b></a>
 </center>
 <h3 id="题目描述">题目描述</h3>
 <p>定义栈的数据结构，请在该类型中实现一个能够得到栈的最小元素的 <code>min</code> 函数在该栈中，调用 <code>min</code>、<code>push</code> 及 <code>pop</code> 的时间复杂度都是 <code>O(1)</code>。</p>
