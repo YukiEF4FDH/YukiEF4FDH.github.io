@@ -190,6 +190,8 @@
     <span>0%</span>
   </div>
 
+  <a href="https://github.com/YukiEF4FDH" class="github-corner" title="Follow me on GitHub" aria-label="Follow me on GitHub" rel="noopener" target="_blank"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
+
 <noscript>
   <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
 </noscript>
@@ -236,7 +238,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2022-02-11 15:16:32" itemprop="dateModified" datetime="2022-02-11T15:16:32+09:00">2022-02-11</time>
+        <time title="Modified: 2022-02-11 17:31:20" itemprop="dateModified" datetime="2022-02-11T17:31:20+09:00">2022-02-11</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -271,15 +273,14 @@
 </center>
 <h3 id="题目描述">题目描述</h3>
 <p>给你一个由大小写英文字母组成的字符串 <code>s</code> 。 一个整理好的字符串中，两个相邻字符 <code>s[i]</code> 和 <code>s[i+1]</code>，其中 <code>0&lt;= i &lt;= s.length-2</code> ，要满足如下条件: 若 <code>s[i]</code> 是小写字符，则 <code>s[i+1]</code> 不可以是相同的大写字符。 若 <code>s[i]</code> 是大写字符，则 <code>s[i+1]</code> 不可以是相同的小写字符。 请你将字符串整理好，每次你都可以从字符串中选出满足上述条件的 <strong>两个相邻</strong> 字符并删除，直到字符串整理好为止。 请返回整理好的 <strong>字符串</strong> 。题目保证在给出的约束条件下，测试样例对应的答案是唯一的。 注意：空字符串也属于整理好的字符串，尽管其中没有任何字符。</p>
-<p>示例 1： &gt;输入：<code>s = "leEeetcode"</code> &gt;输出：<code>"leetcode"</code> &gt;解释：无论你第一次选的是 <code>i = 1</code> 还是 <code>i = 2</code>，都会使 <code>"leEeetcode"</code> 缩减为 <code>"leetcode"</code> 。</p>
-<p>示例 2： &gt;输入：<code>s = "abBAcC"</code> &gt;输出：<code>""</code> &gt;解释：存在多种不同情况，但所有的情况都会导致相同的结果。例如： &gt;<code>"abBAcC" --&gt; "aAcC" --&gt; "cC" --&gt; ""</code> &gt;<code>"abBAcC" --&gt; "abBA" --&gt; "aA" --&gt; ""</code></p>
-<p>示例 3： &gt;输入：<code>s = "s"</code> &gt;输出：<code>"s"</code></p>
-<p>提示： - <code>1 &lt;= s.length &lt;= 100</code> - <code>s</code> 只包含小写和大写英文字母</p>
-<hr />
-<h3 id="我的代码"><font color=#808080>我的代码</font></h3>
-<p><span class="math inline">\(T(N) = O(N)\)</span>, <span class="math inline">\(S(N) = O(N)\)</span></p>
-<figure class="highlight java"><figcaption><span>&#123;.line-numbers&#125;</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MySolution1544</span> </span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">makeGood</span><span class="params">(String s)</span> </span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">    	Stack&lt;Character&gt; stack = <span class="keyword">new</span> Stack();</span><br><span class="line">    	</span><br><span class="line">    	<span class="keyword">for</span> (<span class="keyword">char</span> ch:s.toCharArray())</span><br><span class="line">    	&#123;</span><br><span class="line">    		<span class="keyword">if</span> (stack.isEmpty()) </span><br><span class="line">    			stack.push(ch);</span><br><span class="line">    		<span class="keyword">else</span> <span class="keyword">if</span> ((Character.isLowerCase(ch)&amp;&amp;Character.isUpperCase(stack.peek())&amp;&amp;ch==Character.toLowerCase(stack.peek()))||</span><br><span class="line">    				(Character.isUpperCase(ch)&amp;&amp;Character.isLowerCase(stack.peek())&amp;&amp;ch==Character.toUpperCase(stack.peek())))</span><br><span class="line">    			stack.pop();</span><br><span class="line">    		<span class="keyword">else</span> </span><br><span class="line">    			stack.push(ch);</span><br><span class="line">    	&#125;</span><br><span class="line">    	</span><br><span class="line">    	StringBuilder sb = <span class="keyword">new</span> StringBuilder();</span><br><span class="line">    	<span class="keyword">while</span> (!stack.isEmpty())</span><br><span class="line">    		sb.append(stack.pop());</span><br><span class="line">    	<span class="keyword">return</span> sb.reverse().toString();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2022/02/09/LeetCode/1544_Easy_%E6%95%B4%E7%90%86%E5%AD%97%E7%AC%A6%E4%B8%B2_Stack/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -336,7 +337,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2022-02-11 15:15:14" itemprop="dateModified" datetime="2022-02-11T15:15:14+09:00">2022-02-11</time>
+        <time title="Modified: 2022-02-11 17:31:13" itemprop="dateModified" datetime="2022-02-11T17:31:13+09:00">2022-02-11</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -378,16 +379,14 @@
 <li>如果目标数组构建完成，就停止读取更多元素。</li>
 </ul>
 <p>题目数据保证目标数组严格递增，并且只包含<code>1</code>到<code>n</code>之间的数字。 请返回构建目标数组所用的操作序列。 题目数据保证答案是唯一的。</p>
-<p>示例 1： &gt;输入：<code>target = [1,3]</code>, <code>n = 3</code> &gt;输出：<code>["Push","Push","Pop","Push"]</code> &gt;解释： &gt;读取 <code>1</code> 并自动推入数组 -&gt; <code>[1]</code> &gt;读取 <code>2</code> 并自动推入数组，然后删除它 -&gt; <code>[1]</code> &gt;读取 <code>3</code> 并自动推入数组 -&gt; <code>[1,3]</code></p>
-<p>示例 2： &gt;输入：<code>target = [1,2,3], n = 3</code> &gt;输出：<code>["Push","Push","Push"]</code></p>
-<p>示例 3： &gt;输入：<code>target = [1,2]</code>, <code>n = 4</code> &gt;输出：<code>["Push","Push"]</code> &gt;解释：只需要读取前 <code>2</code> 个数字就可以停止。</p>
-<p>示例 4： &gt;输入：<code>target = [2,3,4], n = 4</code> &gt;输出：<code>["Push","Pop","Push","Push","Push"]</code></p>
-<p>提示： - <code>1 &lt;= target.length &lt;= 100</code> - <code>1 &lt;= target[i] &lt;= 100</code> - <code>1 &lt;= n &lt;= 100</code> - <code>target</code>是严格递增的</p>
-<hr />
-<h3 id="我的代码"><font color=#808080>我的代码</font></h3>
-<p><span class="math inline">\(T(N) = O(N)\)</span>, <span class="math inline">\(S(N) = O(N)\)</span></p>
-<figure class="highlight java"><figcaption><span>&#123;.line-numbers&#125;</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MySolution1441</span> </span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> List&lt;String&gt; <span class="title">buildArray</span><span class="params">(<span class="keyword">int</span>[] target, <span class="keyword">int</span> n)</span> </span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">    	List&lt;String&gt; ans = <span class="keyword">new</span> LinkedList();</span><br><span class="line">    	Stack&lt;Integer&gt; stack = <span class="keyword">new</span> Stack();</span><br><span class="line">    	</span><br><span class="line">    	<span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>, count=<span class="number">1</span>; i&lt;target.length; )</span><br><span class="line">    	&#123;</span><br><span class="line">    		<span class="keyword">if</span> (target[i]==count)</span><br><span class="line">    		&#123;</span><br><span class="line">    			ans.add(<span class="string">&quot;Push&quot;</span>);</span><br><span class="line">    			count++;</span><br><span class="line">    			i++;</span><br><span class="line">    		&#125;</span><br><span class="line">    		<span class="keyword">else</span></span><br><span class="line">    		&#123;</span><br><span class="line">        		<span class="keyword">while</span> (target[i]&gt;count)</span><br><span class="line">        		&#123;</span><br><span class="line">        			ans.add(<span class="string">&quot;Push&quot;</span>); ans.add(<span class="string">&quot;Pop&quot;</span>);</span><br><span class="line">        			count++;</span><br><span class="line">        		&#125;</span><br><span class="line">    		&#125;</span><br><span class="line">    	&#125;</span><br><span class="line">    	</span><br><span class="line">    	<span class="keyword">return</span> ans;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2022/02/09/LeetCode/1441_Easy_%E7%94%A8%E6%A0%88%E6%93%8D%E4%BD%9C%E6%9E%84%E5%BB%BA%E6%95%B0%E7%BB%84_Stack/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -444,7 +443,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2022-02-11 15:13:29" itemprop="dateModified" datetime="2022-02-11T15:13:29+09:00">2022-02-11</time>
+        <time title="Modified: 2022-02-11 17:31:08" itemprop="dateModified" datetime="2022-02-11T17:31:08+09:00">2022-02-11</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -482,41 +481,14 @@
 <p>其中<code>paths[i] = [cityAi, cityBi]</code>表示该线路将会从<code>cityAi</code>直达<code>cityBi</code>。</p>
 <p>请找出这次旅行的终点站，即没有任何可以通往其他城市的线路的城市。</p>
 <p>(测试数据保证会形成一条不存在循环的线路，因此恰有一个旅行终点站。)</p>
-<p><strong>示例1:</strong></p>
-<blockquote>
-<p>输入: <code>paths = [["London","New York"],["New York","Lima"],["Lima","Sao Paulo"]]</code></p>
-<p>输出: <code>"Sao Paulo"</code></p>
-</blockquote>
-<p><strong>示例2:</strong></p>
-<blockquote>
-<p>输入: <code>paths = [["B","C"],["D","B"],["C","A"]]</code></p>
-<p>输出: <code>"A"</code></p>
-</blockquote>
-<p><strong>示例3:</strong></p>
-<blockquote>
-<p>输入：<code>paths = [["A","Z"]]</code> 输出：<code>"Z"</code></p>
-</blockquote>
-<p><strong>提示</strong>：</p>
-<ul>
-<li><code>1 &lt;= paths.length &lt;= 100</code></li>
-<li><code>paths[i].length == 2</code></li>
-<li><code>1 &lt;= cityAi.length, cityBi.length &lt;= 10</code></li>
-<li><code>cityAi != cityBi</code></li>
-<li>所有字符串均由大小写英文字母和空格字符组成。</li>
-</ul>
-<hr />
-<h4 id="我的代码">我的代码</h4>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MySolution1436</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">destCity</span><span class="params">(List&lt;List&lt;String&gt;&gt; paths)</span> </span>&#123;</span><br><span class="line">    	HashSet&lt;String&gt; set = <span class="keyword">new</span> HashSet(); <span class="comment">// HashMap-&gt;Set</span></span><br><span class="line">    	HashSet&lt;String&gt; ans = <span class="keyword">new</span> HashSet();</span><br><span class="line">    	<span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;paths.size(); i++)</span><br><span class="line">    	&#123;</span><br><span class="line">    		String key = paths.get(i).get(<span class="number">0</span>);</span><br><span class="line">    		set.add(key);</span><br><span class="line">    		<span class="keyword">if</span> (ans.contains(key)) ans.remove(key); </span><br><span class="line">    		</span><br><span class="line">    		String val = paths.get(i).get(<span class="number">1</span>);</span><br><span class="line">    		<span class="keyword">if</span> (!set.contains(val)) &#123;</span><br><span class="line">    			ans.add(val);</span><br><span class="line">    			set.add(val);</span><br><span class="line">    		&#125;</span><br><span class="line">    	&#125;</span><br><span class="line">    	<span class="keyword">return</span> ans.iterator().next();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<hr />
-<h4 id="方法哈希表">方法：哈希表</h4>
-<p>根据定义，终点站不可能出现在<code>cityAi</code>中，而必然出现在<code>cityBi</code>中。</p>
-<p>因此可以遍历<code>cityBi</code>、返回不在<code>cityAi</code>中的城市。</p>
-<p><strong>实现:</strong> 先把所有<code>cityAi</code> 存在哈希表中，然后遍历<code>cityBi</code>并查询<code>cityBi</code>是否存在于哈希表中。</p>
-<hr />
-<h4 id="代码">代码</h4>
-<p><span class="math inline">\(T(N) = O(MN), S(N) = O(MN); (N: 数组paths的长度; M: 最长的paths[i]的长度)\)</span></p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution1436</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">destCity</span><span class="params">(List&lt;List&lt;String&gt;&gt; paths)</span> </span>&#123;</span><br><span class="line">    	String str = <span class="string">&quot;&quot;</span>;</span><br><span class="line">    	HashSet&lt;String&gt; set = <span class="keyword">new</span> HashSet();</span><br><span class="line">    	<span class="keyword">for</span> (List&lt;String&gt; list:paths)</span><br><span class="line">    		set.add(list.get(<span class="number">0</span>));</span><br><span class="line">    	<span class="keyword">for</span> (List&lt;String&gt; list:paths) &#123;</span><br><span class="line">    		<span class="keyword">if</span> (!set.contains(list.get(<span class="number">1</span>))) &#123;</span><br><span class="line">    			str = list.get(<span class="number">1</span>); <span class="keyword">break</span>;</span><br><span class="line">			&#125;</span><br><span class="line">    	&#125;</span><br><span class="line">    	<span class="keyword">return</span> str;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2022/02/09/LeetCode/1436_Easy_%E6%97%85%E8%A1%8C%E7%BB%88%E7%82%B9%E7%AB%99/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -573,7 +545,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2022-02-11 15:11:38" itemprop="dateModified" datetime="2022-02-11T15:11:38+09:00">2022-02-11</time>
+        <time title="Modified: 2022-02-11 17:31:03" itemprop="dateModified" datetime="2022-02-11T17:31:03+09:00">2022-02-11</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -608,23 +580,14 @@
 </center>
 <h3 id="题目描述">题目描述</h3>
 <p>给你一个单链表的引用结点 <code>head</code>。链表中每个结点的值不是 0 就是 1。 已知此链表是一个整数数字的二进制表示形式。 请你返回该链表所表示数字的 <strong>十进制值</strong> 。</p>
-<p>示例 1：</p>
-<center>
-<img src="https://gyazo.com/09e39a1c3d0a1ab36505f60aeb69aff2.png" style="zoom:67%;" />
-</center>
-<blockquote>
-<p>输入：<code>head = [1,0,1]</code> 输出：<code>5</code> 解释：二进制数 (101) 转化为十进制数 (5)</p>
-</blockquote>
-<p>示例 2： &gt;输入：<code>head = [0]</code> &gt;输出：<code>0</code></p>
-<p>示例 3： &gt;输入：<code>head = [1]</code> &gt;输出：<code>1</code></p>
-<p>示例 4： &gt;输入：<code>head = [1,0,0,1,0,0,1,1,1,0,0,0,0,0,0]</code> &gt;输出：<code>18880</code></p>
-<p>示例 5： &gt;输入：<code>head = [0,0]</code> &gt;输出：<code>0</code></p>
-<p>提示： - 链表不为空。 - 链表的结点总数不超过 <code>30</code>。 - 每个结点的值不是 <code>0</code> 就是 <code>1</code>。</p>
-<hr />
-<h3 id="我的代码"><font color=#808080>我的代码</font></h3>
-<p><span class="math inline">\(T(N) = O(N)\)</span>, <span class="math inline">\(S(N) = O(1)\)</span></p>
-<figure class="highlight java"><figcaption><span>&#123;.line-numbers&#125;</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Definition for singly-linked list.</span></span><br><span class="line"><span class="comment"> * public class ListNode &#123;</span></span><br><span class="line"><span class="comment"> *     int val;</span></span><br><span class="line"><span class="comment"> *     ListNode next;</span></span><br><span class="line"><span class="comment"> *     ListNode() &#123;&#125;</span></span><br><span class="line"><span class="comment"> *     ListNode(int val) &#123; this.val = val; &#125;</span></span><br><span class="line"><span class="comment"> *     ListNode(int val, ListNode next) &#123; this.val = val; this.next = next; &#125;</span></span><br><span class="line"><span class="comment"> * &#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MySolution1290</span> // 其实一次遍历就可以了…</span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">getDecimalValue</span><span class="params">(ListNode head)</span> </span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">    	<span class="keyword">int</span> power = <span class="number">0</span>; <span class="keyword">boolean</span> meetOne = <span class="keyword">false</span>;</span><br><span class="line">    	<span class="keyword">for</span> (ListNode p = head; p.next!=<span class="keyword">null</span>; p=p.next)</span><br><span class="line">    	&#123;</span><br><span class="line">    		<span class="keyword">if</span> (!meetOne&amp;&amp;p.val==<span class="number">0</span>) head = head.next;</span><br><span class="line">    		<span class="keyword">else</span> <span class="keyword">if</span> (!meetOne&amp;&amp;p.val==<span class="number">1</span>) meetOne = <span class="keyword">true</span>;</span><br><span class="line">    		</span><br><span class="line">    		<span class="keyword">if</span> (meetOne) power++;</span><br><span class="line">    	&#125;</span><br><span class="line">    	</span><br><span class="line">    	<span class="keyword">int</span> ans = <span class="number">0</span>;</span><br><span class="line">    	<span class="keyword">for</span> (ListNode p = head; p!=<span class="keyword">null</span>; p=p.next)</span><br><span class="line">    	&#123;</span><br><span class="line">    		<span class="keyword">if</span> (p.val!=<span class="number">0</span>)</span><br><span class="line">    			ans+=(<span class="keyword">int</span>)Math.pow(<span class="number">2</span>, power);</span><br><span class="line">    		power--;</span><br><span class="line">    	&#125;</span><br><span class="line">    	</span><br><span class="line">    	<span class="keyword">return</span> ans;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2022/02/09/LeetCode/1290_Easy_%E4%BA%8C%E8%BF%9B%E5%88%B6%E9%93%BE%E8%A1%A8%E8%BD%AC%E6%95%B4%E6%95%B0_LinkedList/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -681,7 +644,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2022-02-11 15:09:32" itemprop="dateModified" datetime="2022-02-11T15:09:32+09:00">2022-02-11</time>
+        <time title="Modified: 2022-02-11 17:30:57" itemprop="dateModified" datetime="2022-02-11T17:30:57+09:00">2022-02-11</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -716,23 +679,14 @@
 </center>
 <h3 id="题目描述">题目描述</h3>
 <p>给出由小写字母组成的字符串<code>S</code>，重复项删除操作会选择两个相邻且相同的字母，并删除它们。 在<code>S</code>上反复执行重复项删除操作，直到无法继续删除。 在完成所有重复项删除操作后返回最终的字符串。答案保证唯一。</p>
-<p>示例： &gt;输入：<code>"abbaca"</code> &gt;输出：<code>"ca"</code> &gt;解释： &gt;例如，在<code>"abbaca"</code>中，我们可以删除<code>"bb"</code>由于两字母相邻且相同，这是此时唯一可以执行删除操作的重复项。之后我们得到字符串<code>"aaca"</code>，其中又只有<code>"aa"</code>可以执行重复项删除操作，所以最后的字符串为<code>"ca"</code>。</p>
-<p>提示：</p>
-<ul>
-<li>`1 &lt;= S.length &lt;= 20000``</li>
-<li>`<code>S</code>仅由小写英文字母组成。</li>
-</ul>
-<hr />
-<h3 id="我的代码"><font color=#808080>我的代码</font></h3>
-<p><span class="math inline">\(T(N) = O(N)\)</span>, <span class="math inline">\(S(N) = O(N)\)</span></p>
-<figure class="highlight java"><figcaption><span>&#123;.line-numbers&#125;</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MySolution1047</span> </span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">	Stack&lt;Character&gt; stack = <span class="keyword">new</span> Stack();</span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">removeDuplicates</span><span class="params">(String S)</span> </span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">    	String ans = <span class="string">&quot;&quot;</span>;</span><br><span class="line">    	<span class="keyword">for</span> (<span class="keyword">char</span> ch:S.toCharArray())</span><br><span class="line">    	&#123;</span><br><span class="line">    		<span class="keyword">if</span> (stack.isEmpty()||stack.peek()!=ch)</span><br><span class="line">    			stack.push(ch);</span><br><span class="line">    		<span class="keyword">else</span> </span><br><span class="line">    			<span class="keyword">while</span> (!stack.isEmpty()&amp;&amp;stack.peek()==ch)</span><br><span class="line">    				stack.pop();</span><br><span class="line">    	&#125;</span><br><span class="line">    	</span><br><span class="line">    	<span class="keyword">char</span> []arr = <span class="keyword">new</span> <span class="keyword">char</span>[stack.size()];</span><br><span class="line">    	<span class="keyword">for</span> (<span class="keyword">int</span> i=stack.size()-<span class="number">1</span>; i&gt;=<span class="number">0</span>; i--)</span><br><span class="line">    		arr[i]=stack.pop();</span><br><span class="line">    	<span class="keyword">for</span> (<span class="keyword">char</span> ch:arr)</span><br><span class="line">    		ans+=ch;</span><br><span class="line">    	<span class="keyword">return</span> ans;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<hr />
-<h3 id="思路stringbuilder">思路:StringBuilder</h3>
-<p><span class="math inline">\(T(N) = O(N)\)</span>, <span class="math inline">\(S(N) = O(N)\)</span></p>
-<hr />
-<h3 id="代码">代码</h3>
-<figure class="highlight java"><figcaption><span>&#123;.line-numbers&#125;</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution1047</span> </span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">removeDuplicates</span><span class="params">(String S)</span> </span></span><br><span class="line"><span class="function">	</span>&#123;</span><br><span class="line">        StringBuilder sb = <span class="keyword">new</span> StringBuilder();</span><br><span class="line">        <span class="keyword">int</span> sbLength = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">char</span> ch : S.toCharArray()) </span><br><span class="line">		&#123;</span><br><span class="line">            <span class="keyword">if</span> (sbLength != <span class="number">0</span> &amp;&amp; ch == sb.charAt(sbLength - <span class="number">1</span>))</span><br><span class="line">                sb.deleteCharAt(sbLength-- - <span class="number">1</span>);</span><br><span class="line">            <span class="keyword">else</span> </span><br><span class="line">			&#123;</span><br><span class="line">                sb.append(ch);</span><br><span class="line">                sbLength++;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> sb.toString();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2022/02/09/LeetCode/1047_Easy_%E5%88%A0%E9%99%A4%E5%AD%97%E7%AC%A6%E4%B8%B2%E4%B8%AD%E7%9A%84%E6%89%80%E6%9C%89%E7%9B%B8%E9%82%BB%E9%87%8D%E5%A4%8D%E9%A1%B9_Stack/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -770,7 +724,7 @@
   <span class="author" itemprop="copyrightHolder">CHEN XUEYI</span>
 </div>
   <div class="powered-by">Powered by <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a>
-  </div>
+  </div><script defer src="/lib/three.js"></script><script color="100,100,100" opacity="0.7" zIndex="-1" count="99" src="https://cdn.jsdelivr.net/npm/canvas-nest.js@1/dist/canvas-nest.js"></script>
 
     </div>
   </footer>

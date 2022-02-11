@@ -190,6 +190,8 @@
     <span>0%</span>
   </div>
 
+  <a href="https://github.com/YukiEF4FDH" class="github-corner" title="Follow me on GitHub" aria-label="Follow me on GitHub" rel="noopener" target="_blank"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
+
 <noscript>
   <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
 </noscript>
@@ -236,7 +238,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2022-02-11 14:08:38" itemprop="dateModified" datetime="2022-02-11T14:08:38+09:00">2022-02-11</time>
+        <time title="Modified: 2022-02-11 17:29:19" itemprop="dateModified" datetime="2022-02-11T17:29:19+09:00">2022-02-11</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -271,12 +273,14 @@
 </center>
 <h3 id="题目描述">题目描述</h3>
 <p>给定两个字符串形式的非负整数 <code>num1</code> 和<code>num2</code> ，计算它们的和。</p>
-<p>提示： - <code>num1</code> 和<code>num2</code> 的长度都小于 5100 - <code>num1</code> 和<code>num2</code> 都只包含数字 <code>0-9</code> - <code>num1</code> 和<code>num2</code> 都不包含任何前导零 - <strong>你不能使用任何內建 <code>BigInteger</code> 库， 也不能直接将输入的字符串转换为整数形式</strong></p>
-<hr />
-<h3 id="我的代码"><font color=#808080>我的代码</font></h3>
-<p><span class="math inline">\(T(M,N) = O(max(M,N))\)</span>, <span class="math inline">\(S(M,N) = O(max(M,N))\)</span></p>
-<figure class="highlight java"><figcaption><span>&#123;.line-numbers&#125;</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MySolution415</span> </span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">addStrings</span><span class="params">(String num1, String num2)</span> </span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">    	<span class="keyword">if</span> (num1==<span class="keyword">null</span>||num1.length()&lt;=<span class="number">0</span>) <span class="keyword">return</span> num2;</span><br><span class="line">    	<span class="keyword">if</span> (num2==<span class="keyword">null</span>||num2.length()&lt;=<span class="number">0</span>) <span class="keyword">return</span> num1;</span><br><span class="line">    	</span><br><span class="line">    	<span class="keyword">int</span> i = num1.length()-<span class="number">1</span>; <span class="keyword">int</span> j = num2.length()-<span class="number">1</span>;</span><br><span class="line">    	<span class="keyword">int</span> add = <span class="number">0</span>;</span><br><span class="line">    	StringBuilder sb = <span class="keyword">new</span> StringBuilder();</span><br><span class="line">    	</span><br><span class="line">    	<span class="keyword">for</span> (; i&gt;=<span class="number">0</span>&amp;&amp;j&gt;=<span class="number">0</span>; i--,j--)</span><br><span class="line">    	&#123;</span><br><span class="line">    		<span class="keyword">int</span> a1 = (<span class="keyword">int</span>)num1.charAt(i)-<span class="number">48</span>;</span><br><span class="line">    		<span class="keyword">int</span> a2 = (<span class="keyword">int</span>)num2.charAt(j)-<span class="number">48</span>;</span><br><span class="line">    		</span><br><span class="line">    		<span class="keyword">int</span> sum = (a1+a2+add)%<span class="number">10</span>;</span><br><span class="line">    		add = (a1+a2+add)/<span class="number">10</span>;</span><br><span class="line">    		sb.append(sum);</span><br><span class="line">    	&#125;</span><br><span class="line">    	<span class="keyword">while</span>(i&gt;=<span class="number">0</span>)</span><br><span class="line">    	&#123;</span><br><span class="line">    		<span class="keyword">int</span> a = (<span class="keyword">int</span>)num1.charAt(i--)-<span class="number">48</span>;</span><br><span class="line">    		<span class="keyword">int</span> sum = (a+add)%<span class="number">10</span>;</span><br><span class="line">    		add = (a+add)/<span class="number">10</span>;</span><br><span class="line">    		sb.append(sum);</span><br><span class="line">    	&#125;</span><br><span class="line">    	<span class="keyword">while</span>(j&gt;=<span class="number">0</span>)</span><br><span class="line">    	&#123;</span><br><span class="line">    		<span class="keyword">int</span> a = (<span class="keyword">int</span>)num2.charAt(j--)-<span class="number">48</span>;</span><br><span class="line">    		<span class="keyword">int</span> sum = (a+add)%<span class="number">10</span>;</span><br><span class="line">    		add = (a+add)/<span class="number">10</span>;</span><br><span class="line">    		sb.append(sum);</span><br><span class="line">    	&#125;</span><br><span class="line">    	<span class="keyword">if</span> (add!=<span class="number">0</span>) sb.append(add);</span><br><span class="line">    	<span class="keyword">return</span> sb.reverse().toString();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2022/02/09/LeetCode/415_Easy_%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%9B%B8%E5%8A%A0_String/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -302,7 +306,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://yukief4fdh.github.io/2022/02/09/LeetCode/414_(X)_Easy_%E7%AC%AC%E4%B8%89%E5%A4%A7%E7%9A%84%E6%95%B0_Array/">
+    <link itemprop="mainEntityOfPage" href="https://yukief4fdh.github.io/2022/02/09/LeetCode/414_Easy_%E7%AC%AC%E4%B8%89%E5%A4%A7%E7%9A%84%E6%95%B0_Array/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/yuki.gif">
@@ -315,7 +319,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2022/02/09/LeetCode/414_(X)_Easy_%E7%AC%AC%E4%B8%89%E5%A4%A7%E7%9A%84%E6%95%B0_Array/" class="post-title-link" itemprop="url">414. 第三大的数</a>
+          <a href="/2022/02/09/LeetCode/414_Easy_%E7%AC%AC%E4%B8%89%E5%A4%A7%E7%9A%84%E6%95%B0_Array/" class="post-title-link" itemprop="url">414. 第三大的数</a>
         </h2>
 
         <div class="post-meta-container">
@@ -333,7 +337,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2022-02-11 14:07:16" itemprop="dateModified" datetime="2022-02-11T14:07:16+09:00">2022-02-11</time>
+        <time title="Modified: 2022-02-11 17:29:13" itemprop="dateModified" datetime="2022-02-11T17:29:13+09:00">2022-02-11</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -367,20 +371,15 @@
 <a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/third-maximum-number/"><b><font color = #5EB561>转载自Leet Code</font></b></a>
 </center>
 <h3 id="题目描述">题目描述</h3>
-<p>给定一个非空数组，返回此数组中第三大的数。 如果不存在，则返回数组中最大的数。要求算法时间复杂度必须是<span class="math inline">\(O(n)\)</span>。</p>
-<p>示例 1: &gt;输入: <code>[3, 2, 1]</code> &gt;输出: <code>1</code> &gt;解释: 第三大的数是 <code>1</code>.</p>
-<p>示例 2: &gt;输入: <code>[1, 2]</code> &gt;输出: <code>2</code> &gt;解释: 第三大的数不存在, 所以返回最大的数 <code>2</code> .</p>
-<p>示例 3: &gt;输入: <code>[2, 2, 3, 1]</code> &gt;输出: <code>1</code> &gt;解释: 注意，要求返回第三大的数，是指第三大且唯一出现的数。 &gt;存在两个值为<code>2</code>的数，它们都排第二。</p>
-<p><strong>提示：</strong></p>
-<ul>
-<li><code>1 &lt;= nums.length &lt;= 104</code></li>
-<li><code>-231 &lt;= nums[i] &lt;= 231 - 1</code></li>
-</ul>
-<hr />
-<h3 id="代码"><font color=#808080>代码</font></h3>
-<p><span class="math inline">\(T(N) = O(N)\)</span>, <span class="math inline">\(S(N) = O(1)\)</span></p>
-<figure class="highlight java"><figcaption><span>&#123;.line-numbers&#125;</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution414</span> </span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">thirdMax</span><span class="params">(<span class="keyword">int</span>[] nums)</span> </span></span><br><span class="line"><span class="function">	</span>&#123;</span><br><span class="line">		<span class="comment">// 注意必须要用Long的MIN而不是Integer的MIN</span></span><br><span class="line">    	<span class="keyword">long</span> max1 = Long.MIN_VALUE;</span><br><span class="line">    	<span class="keyword">long</span> max2 = Long.MIN_VALUE;</span><br><span class="line">    	<span class="keyword">long</span> max3 = Long.MIN_VALUE;</span><br><span class="line">    	</span><br><span class="line">    	<span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;nums.length; i++)</span><br><span class="line">    	&#123;</span><br><span class="line">			<span class="comment">// 避免重复元素占位置</span></span><br><span class="line">    		<span class="keyword">if</span> (nums[i]==max1||nums[i]==max2||nums[i]==max3) <span class="keyword">continue</span>;</span><br><span class="line"></span><br><span class="line">    		<span class="keyword">if</span> (nums[i]&gt;max1)</span><br><span class="line">    		&#123;</span><br><span class="line">    			max3 = max2;</span><br><span class="line">    			max2 = max1;</span><br><span class="line">    			max1 = nums[i];</span><br><span class="line">    		&#125;</span><br><span class="line">    		<span class="keyword">else</span> <span class="keyword">if</span> (nums[i]&gt;max2)</span><br><span class="line">    		&#123;</span><br><span class="line">    			max3 = max2;</span><br><span class="line">    			max2 = nums[i];</span><br><span class="line">    		&#125;</span><br><span class="line">    		<span class="keyword">else</span> <span class="keyword">if</span> (nums[i]&gt;max3)</span><br><span class="line">    			max3 = nums[i];</span><br><span class="line">    	&#125;</span><br><span class="line">    	</span><br><span class="line">		<span class="comment">// 不够三个元素的情况</span></span><br><span class="line">    	<span class="keyword">if</span> (max3==Long.MIN_VALUE) <span class="keyword">return</span> (<span class="keyword">int</span>)max1;</span><br><span class="line">    	</span><br><span class="line">    	<span class="keyword">return</span> (<span class="keyword">int</span>)max3;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
+<p>给定一个非空数组，返回此数组中第三大的数。 如果不存在，则返回数组中最大的数。要求算法时间复杂度必须是<span class="math inline">\(O(n)\)</span>​。</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2022/02/09/LeetCode/414_Easy_%E7%AC%AC%E4%B8%89%E5%A4%A7%E7%9A%84%E6%95%B0_Array/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -437,7 +436,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2022-02-11 13:53:31" itemprop="dateModified" datetime="2022-02-11T13:53:31+09:00">2022-02-11</time>
+        <time title="Modified: 2022-02-11 17:29:08" itemprop="dateModified" datetime="2022-02-11T17:29:08+09:00">2022-02-11</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -473,33 +472,14 @@
 <h4 id="题目描述">题目描述</h4>
 <p>给定一个整数，编写一个算法将这个数转换为十六进制数。</p>
 <p>对于负整数，通常使用 <a target="_blank" rel="noopener" href="https://baike.baidu.com/item/补码/6854613?fr=aladdin">补码运算</a> 方法。</p>
-<p><strong>注意:</strong></p>
-<ol type="1">
-<li><p>十六进制中所有字母(<code>a-f</code>)都必须是小写。</p></li>
-<li><p>十六进制字符串中不能包含多余的前导零。</p>
-<p>如果要转化的数为0，那么以单个字符<code>'0'</code>来表示；</p></li>
-<li><p>给定的数确保在32位有符号整数范围内。</p></li>
-<li><p><strong>不能使用任何由库提供的将数字直接转换或格式化为十六进制的方法。</strong></p></li>
-</ol>
-<p><strong>示例1:</strong></p>
-<blockquote>
-<p>输入: <code>paths = [["London","New York"],["New York","Lima"],["Lima","Sao Paulo"]]</code></p>
-<p>输出: <code>"Sao Paulo"</code></p>
-</blockquote>
-<p><strong>示例2:</strong></p>
-<blockquote>
-<p>输入: <code>paths = [["B","C"],["D","B"],["C","A"]]</code></p>
-<p>输入: <code>26</code></p>
-<p>输出: <code>"la"</code></p>
-</blockquote>
-<p><strong>示例2:</strong></p>
-<blockquote>
-<p>输入：<code>-1</code> 输出：<code>"ffffffff"</code></p>
-</blockquote>
-<hr />
-<h4 id="我的代码">我的代码</h4>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MySolution405</span> </span>&#123;</span><br><span class="line">	<span class="keyword">public</span> <span class="keyword">static</span> HashMap&lt;Integer, String&gt; mapDH;</span><br><span class="line">	</span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">toHex</span><span class="params">(<span class="keyword">int</span> num)</span> </span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">    	mapDH = <span class="keyword">new</span> HashMap();</span><br><span class="line">    	mapDH.put(<span class="number">10</span>, <span class="string">&quot;a&quot;</span>); mapDH.put(<span class="number">11</span>, <span class="string">&quot;b&quot;</span>); mapDH.put(<span class="number">12</span>, <span class="string">&quot;c&quot;</span>);</span><br><span class="line">    	mapDH.put(<span class="number">13</span>, <span class="string">&quot;d&quot;</span>); mapDH.put(<span class="number">14</span>, <span class="string">&quot;e&quot;</span>); mapDH.put(<span class="number">15</span>, <span class="string">&quot;f&quot;</span>);</span><br><span class="line">    	</span><br><span class="line">    	<span class="keyword">if</span> (num==<span class="number">0</span>) <span class="keyword">return</span> <span class="string">&quot;0&quot;</span>;</span><br><span class="line">    	<span class="keyword">else</span> <span class="keyword">if</span> (num&gt;<span class="number">0</span>) <span class="keyword">return</span> DtoBase(num, <span class="number">16</span>);</span><br><span class="line">    	<span class="keyword">else</span> <span class="comment">// num&lt;0</span></span><br><span class="line">    	&#123;</span><br><span class="line">    		String newStr = <span class="keyword">new</span> String(Integer.toString(num));</span><br><span class="line">    		<span class="keyword">if</span> (newStr.equals(<span class="string">&quot;-2147483648&quot;</span>)) <span class="keyword">return</span> <span class="string">&quot;80000000&quot;</span>;</span><br><span class="line">    		String biStr = DtoBase(Math.abs(num), <span class="number">2</span>);</span><br><span class="line">    		<span class="keyword">while</span> (biStr.length()&lt;<span class="number">32</span>) biStr = <span class="string">&quot;0&quot;</span>+biStr;</span><br><span class="line">    		</span><br><span class="line">    		String r_biStr = <span class="string">&quot;&quot;</span>; <span class="keyword">char</span> []biStrArr = biStr.toCharArray();</span><br><span class="line">    		<span class="keyword">for</span> (<span class="keyword">char</span> ch:biStrArr) </span><br><span class="line">    		&#123; </span><br><span class="line">    			String newCh = (ch==<span class="string">&#x27;0&#x27;</span>)?<span class="string">&quot;1&quot;</span>:<span class="string">&quot;0&quot;</span>;</span><br><span class="line">    			r_biStr += newCh;</span><br><span class="line">    		&#125;</span><br><span class="line">    		</span><br><span class="line">    		r_biStr = AddOne(r_biStr);</span><br><span class="line">    		</span><br><span class="line">    		<span class="keyword">return</span> BtoH32(r_biStr);</span><br><span class="line">    	&#125;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> String <span class="title">DtoBase</span><span class="params">(<span class="keyword">int</span> num, <span class="keyword">int</span> base)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">    	StringBuilder sb = <span class="keyword">new</span> StringBuilder();</span><br><span class="line">    	</span><br><span class="line">    	<span class="keyword">while</span>(<span class="keyword">true</span>)</span><br><span class="line">    	&#123;</span><br><span class="line">    		<span class="keyword">int</span> rem = num%base;</span><br><span class="line">    		<span class="keyword">if</span> (rem&gt;=<span class="number">10</span>)</span><br><span class="line">    			sb.append(mapDH.get(rem));</span><br><span class="line">    		<span class="keyword">else</span> </span><br><span class="line">    			sb.append(rem);</span><br><span class="line">    		</span><br><span class="line">    		<span class="keyword">int</span> quo = num/base;</span><br><span class="line">    		<span class="keyword">if</span> (quo==<span class="number">0</span>) <span class="keyword">break</span>;</span><br><span class="line">    		num = quo;</span><br><span class="line">    	&#125;</span><br><span class="line">    	</span><br><span class="line">    	<span class="keyword">return</span> sb.reverse().toString();</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> String <span class="title">AddOne</span> <span class="params">(String biStr)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">    	<span class="keyword">int</span> car = <span class="number">1</span>; StringBuilder sb = <span class="keyword">new</span> StringBuilder();</span><br><span class="line">    	</span><br><span class="line">    	<span class="keyword">for</span> (<span class="keyword">int</span> i = biStr.length()-<span class="number">1</span>; i&gt;=<span class="number">0</span>; i--)</span><br><span class="line">    	&#123;</span><br><span class="line">    		<span class="keyword">int</span> vali = biStr.charAt(i)==<span class="string">&#x27;0&#x27;</span>?<span class="number">0</span>:<span class="number">1</span>;</span><br><span class="line">    		<span class="keyword">int</span> sum = vali+car;</span><br><span class="line">    		<span class="keyword">int</span> val = sum%<span class="number">2</span>;</span><br><span class="line">    		sb.append(val);</span><br><span class="line">    		car = sum/<span class="number">2</span>;</span><br><span class="line">    		<span class="keyword">if</span> (car==<span class="number">0</span>&amp;&amp;(i-<span class="number">1</span>)&gt;=<span class="number">0</span>)</span><br><span class="line">    		&#123;</span><br><span class="line">    			sb.append(<span class="keyword">new</span> StringBuilder(biStr.substring(<span class="number">0</span>, i)).reverse().toString());</span><br><span class="line">    			<span class="keyword">break</span>;</span><br><span class="line">    		&#125;</span><br><span class="line">    	&#125;</span><br><span class="line">    	<span class="keyword">return</span> sb.reverse().toString();</span><br><span class="line">    	</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> String <span class="title">BtoH32</span> <span class="params">(String biStr)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">    	StringBuilder sb = <span class="keyword">new</span> StringBuilder();</span><br><span class="line">    	<span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>,j=<span class="number">0</span>; i&lt;<span class="number">8</span>; i++,j+=<span class="number">4</span>)</span><br><span class="line">    	&#123;</span><br><span class="line">    		String num = biStr.substring(j,j+<span class="number">4</span>);</span><br><span class="line">    		<span class="keyword">int</span> val = <span class="number">1</span>*(num.charAt(<span class="number">3</span>)==<span class="string">&#x27;1&#x27;</span>?<span class="number">1</span>:<span class="number">0</span>)+<span class="number">2</span>*(num.charAt(<span class="number">2</span>)==<span class="string">&#x27;1&#x27;</span>?<span class="number">1</span>:<span class="number">0</span>)+<span class="number">4</span>*(num.charAt(<span class="number">1</span>)==<span class="string">&#x27;1&#x27;</span>?<span class="number">1</span>:<span class="number">0</span>)+<span class="number">8</span>*(num.charAt(<span class="number">0</span>)==<span class="string">&#x27;1&#x27;</span>?<span class="number">1</span>:<span class="number">0</span>);</span><br><span class="line">    		<span class="keyword">if</span> (val&gt;=<span class="number">10</span>)</span><br><span class="line">    			sb.append(mapDH.get(val));</span><br><span class="line">    		<span class="keyword">else</span> </span><br><span class="line">    			sb.append(val);</span><br><span class="line">    	&#125;</span><br><span class="line">    	<span class="keyword">return</span> sb.toString();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2022/02/09/LeetCode/405_Easy_%E6%95%B0%E5%AD%97%E8%BD%AC%E6%8D%A2%E4%B8%BA%E5%8D%81%E5%85%AD%E8%BF%9B%E5%88%B6%E6%95%B0/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -556,7 +536,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2022-02-11 13:47:02" itemprop="dateModified" datetime="2022-02-11T13:47:02+09:00">2022-02-11</time>
+        <time title="Modified: 2022-02-11 17:28:59" itemprop="dateModified" datetime="2022-02-11T17:28:59+09:00">2022-02-11</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -591,28 +571,14 @@
 </center>
 <h3 id="题目描述">题目描述</h3>
 <p>给定一个字符串 <code>s</code> ，找到 它的第一个不重复的字符，并返回它的索引 。 如果不存在，则返回 <code>-1</code> 。</p>
-<p>示例 1：</p>
-<blockquote>
-<p>输入: <code>s = "leetcode"</code> 输出: <code>0</code></p>
-</blockquote>
-<p>示例 2:</p>
-<blockquote>
-<p>输入:<code>s = "loveleetcode"</code> 输出: <code>2</code></p>
-</blockquote>
-<p>示例 3:</p>
-<blockquote>
-<p>输入: <code>s = "aabb"</code> 输出: <code>-1</code></p>
-</blockquote>
-<p><strong>提示</strong>:</p>
-<ul>
-<li><code>1 &lt;= s.length &lt;= 105</code></li>
-<li><code>s</code> 只包含小写字母</li>
-</ul>
-<hr />
-<h3 id="我的代码"><font color=#808080>我的代码</font></h3>
-<p><span class="math inline">\(T(N) = O(N)\)</span>, <span class="math inline">\(S(N) = O(N)\)</span></p>
-<figure class="highlight java"><figcaption><span>&#123;.line-numbers&#125;</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MySolution387</span>  </span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">firstUniqChar</span><span class="params">(String s)</span> </span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">    	<span class="keyword">if</span> (s==<span class="keyword">null</span>||s.length()&lt;=<span class="number">0</span>) <span class="keyword">return</span> -<span class="number">1</span>;</span><br><span class="line">    	<span class="keyword">else</span> <span class="keyword">if</span> (s.length()==<span class="number">1</span>) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    	</span><br><span class="line">     	HashMap&lt;Character, Integer&gt; map = <span class="keyword">new</span> HashMap();</span><br><span class="line">    	<span class="keyword">int</span> minIndex = Integer.MAX_VALUE;</span><br><span class="line">    	</span><br><span class="line">    	<span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;s.length(); i++)</span><br><span class="line">    	&#123;</span><br><span class="line">    		<span class="keyword">char</span> ch = s.charAt(i);</span><br><span class="line">    		</span><br><span class="line">    		<span class="keyword">if</span> (map.containsKey(ch)&amp;&amp;!(map.get(ch)==-<span class="number">1</span>))</span><br><span class="line">    			map.replace(ch, -<span class="number">1</span>);</span><br><span class="line">    		</span><br><span class="line">    		<span class="keyword">else</span> <span class="keyword">if</span> (!map.containsKey(ch))</span><br><span class="line">    			map.put(ch, i);</span><br><span class="line">    	&#125;</span><br><span class="line">    	</span><br><span class="line">    	Iterator it = map.keySet().iterator();</span><br><span class="line">    	<span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;map.size(); i++)</span><br><span class="line">    	&#123;</span><br><span class="line">    		<span class="keyword">int</span> index = map.get(it.next());</span><br><span class="line">    		<span class="keyword">if</span> (index!=-<span class="number">1</span>&amp;&amp;index&lt;minIndex)</span><br><span class="line">    			minIndex = index;</span><br><span class="line">    	&#125;</span><br><span class="line">    	<span class="keyword">if</span> (minIndex==Integer.MAX_VALUE) <span class="keyword">return</span> -<span class="number">1</span>;</span><br><span class="line">    	<span class="keyword">else</span> <span class="keyword">return</span> minIndex;</span><br><span class="line">    	</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2022/02/09/LeetCode/387_Easy_%E5%AD%97%E7%AC%A6%E4%B8%B2%E4%B8%AD%E7%9A%84%E7%AC%AC%E4%B8%80%E4%B8%AA%E5%94%AF%E4%B8%80%E5%AD%97%E7%AC%A6_String/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -669,7 +635,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2022-02-11 13:44:39" itemprop="dateModified" datetime="2022-02-11T13:44:39+09:00">2022-02-11</time>
+        <time title="Modified: 2022-02-11 17:28:52" itemprop="dateModified" datetime="2022-02-11T17:28:52+09:00">2022-02-11</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -704,28 +670,14 @@
 </center>
 <h3 id="题目描述">题目描述</h3>
 <p>给定一个赎金信 (<code>ransom</code>) 字符串和一个杂志(<code>magazine</code>)字符串， 判断第一个字符串 <code>ransom</code> 能不能由第二个字符串 <code>magazines</code> 里面的字符构成。 如果可以构成，返回 <code>true</code> ；否则返回 <code>false</code>。 (题目说明：为了不暴露赎金信字迹，要从杂志上搜索各个需要的字母，组成单词来表达意思。 杂志字符串中的每个字符只能在赎金信字符串中使用一次。)</p>
-<p>示例 1：</p>
-<blockquote>
-<p>输入：<code>ransomNote = "a", magazine = "b"</code> 输出：<code>false</code></p>
-</blockquote>
-<p>示例 2：</p>
-<blockquote>
-<p>输入：<code>ransomNote = "aa", magazine = "ab"</code> 输出：<code>false</code></p>
-</blockquote>
-<p>示例 3：</p>
-<blockquote>
-<p>输入：<code>ransomNote = "aa", magazine = "aab"</code> 输出：<code>true</code></p>
-</blockquote>
-<p>提示：</p>
-<ul>
-<li><code>1 &lt;= ransomNote.length, magazine.length &lt;= 105</code></li>
-<li><code>ransomNote</code> 和 <code>magazine</code>由小写英文字母组成</li>
-</ul>
-<hr />
-<h3 id="我的代码"><font color=#808080>我的代码</font></h3>
-<p><span class="math inline">\(T(M,N) = O(M+N)\)</span>, <span class="math inline">\(S(M,N) = O(max(M,N))\)</span></p>
-<figure class="highlight java"><figcaption><span>&#123;.line-numbers&#125;</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MySolution383</span> </span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">canConstruct</span><span class="params">(String ransomNote, String magazine)</span> </span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">    	HashMap&lt;Character, Integer&gt; set = <span class="keyword">new</span> HashMap();</span><br><span class="line">    	<span class="keyword">for</span> (<span class="keyword">char</span> ch:magazine.toCharArray())</span><br><span class="line">    	&#123;</span><br><span class="line">    		<span class="keyword">if</span> (set.containsKey(ch))</span><br><span class="line">    			set.replace(ch, set.get(ch)+<span class="number">1</span>);</span><br><span class="line">    		<span class="keyword">else</span> set.put(ch, <span class="number">1</span>);</span><br><span class="line">    	&#125;</span><br><span class="line">    	<span class="keyword">for</span> (<span class="keyword">char</span> ch:ransomNote.toCharArray())</span><br><span class="line">    	&#123;</span><br><span class="line">    		<span class="keyword">if</span> (set.containsKey(ch)&amp;&amp;set.get(ch)&gt;<span class="number">0</span>)</span><br><span class="line">    			set.replace(ch, set.get(ch)-<span class="number">1</span>);</span><br><span class="line">    		<span class="keyword">else</span> <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">    	&#125;</span><br><span class="line">    	<span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2022/02/09/LeetCode/383_Easy_%E8%B5%8E%E9%87%91%E4%BF%A1_String/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -763,7 +715,7 @@
   <span class="author" itemprop="copyrightHolder">CHEN XUEYI</span>
 </div>
   <div class="powered-by">Powered by <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a>
-  </div>
+  </div><script defer src="/lib/three.js"></script><script color="100,100,100" opacity="0.7" zIndex="-1" count="99" src="https://cdn.jsdelivr.net/npm/canvas-nest.js@1/dist/canvas-nest.js"></script>
 
     </div>
   </footer>

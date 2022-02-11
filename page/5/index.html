@@ -190,6 +190,8 @@
     <span>0%</span>
   </div>
 
+  <a href="https://github.com/YukiEF4FDH" class="github-corner" title="Follow me on GitHub" aria-label="Follow me on GitHub" rel="noopener" target="_blank"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
+
 <noscript>
   <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
 </noscript>
@@ -236,7 +238,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2022-02-11 14:41:47" itemprop="dateModified" datetime="2022-02-11T14:41:47+09:00">2022-02-11</time>
+        <time title="Modified: 2022-02-11 17:29:51" itemprop="dateModified" datetime="2022-02-11T17:29:51+09:00">2022-02-11</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -277,18 +279,14 @@
 <li>如果单词不只含有一个字母，只有首字母大写， 比如 <code>"Google"</code>。</li>
 </ul>
 <p>否则，我们定义这个单词没有正确使用大写字母。</p>
-<p>示例 1: &gt;输入: <code>"USA"</code> &gt;输出: <code>True</code></p>
-<p>示例 2: &gt;输入: <code>"FlaG"</code> &gt;输出: <code>False</code></p>
-<p><strong>提示：</strong></p>
-<ul>
-<li><code>1 &lt;= word.length &lt;= 100</code></li>
-<li><code>word</code> 由小写和大写英文字母组成</li>
-</ul>
-<hr />
-<h3 id="我的代码"><font color=#808080>我的代码</font></h3>
-<p><span class="math inline">\(T(N) = O(N)\)</span>, <span class="math inline">\(S(N) = O(1)\)</span></p>
-<figure class="highlight java"><figcaption><span>&#123;.line-numbers&#125;</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MySolution520</span> </span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">detectCapitalUse</span><span class="params">(String word)</span> </span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">    	<span class="keyword">if</span> (word==<span class="keyword">null</span>||word.length()&lt;=<span class="number">1</span>) <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">    	</span><br><span class="line">    	<span class="keyword">boolean</span> firstIsUpper = Character.isUpperCase(word.charAt(<span class="number">0</span>));</span><br><span class="line">    	<span class="keyword">boolean</span> secondIsUpper = Character.isUpperCase(word.charAt(<span class="number">1</span>));</span><br><span class="line">    	<span class="keyword">if</span> (!firstIsUpper&amp;&amp;secondIsUpper) <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">    	</span><br><span class="line">    	<span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">2</span>; i&lt;word.length(); i++)</span><br><span class="line">    	&#123;</span><br><span class="line">    		<span class="keyword">if</span> (firstIsUpper&amp;&amp;secondIsUpper)</span><br><span class="line">    		&#123;</span><br><span class="line">    			<span class="keyword">if</span> (!Character.isUpperCase(word.charAt(i)))</span><br><span class="line">    				<span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">    		&#125;</span><br><span class="line">    		<span class="keyword">else</span> <span class="keyword">if</span> ((!firstIsUpper&amp;&amp;!secondIsUpper)||(firstIsUpper&amp;&amp;!secondIsUpper))</span><br><span class="line">    		&#123;</span><br><span class="line">    			<span class="keyword">if</span> (Character.isUpperCase(word.charAt(i)))</span><br><span class="line">    				<span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">    		&#125;</span><br><span class="line">    	&#125;</span><br><span class="line">    	<span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2022/02/09/LeetCode/520_Easy_%E6%A3%80%E6%B5%8B%E5%A4%A7%E5%86%99%E5%AD%97%E6%AF%8D_String/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -345,7 +343,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2022-02-11 14:40:09" itemprop="dateModified" datetime="2022-02-11T14:40:09+09:00">2022-02-11</time>
+        <time title="Modified: 2022-02-11 17:29:47" itemprop="dateModified" datetime="2022-02-11T17:29:47+09:00">2022-02-11</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -381,25 +379,14 @@
 <h3 id="题目描述">题目描述</h3>
 <p>给定两个<strong>没有重复元素</strong>的数组 <code>nums1</code> 和 <code>nums2</code> ，其中<code>nums1</code> 是 <code>nums2</code> 的子集。 找到 <code>nums1</code> 中每个元素在 <code>nums2</code> 中的下一个比其大的值。</p>
 <p><code>nums1</code> 中数字 <strong>x</strong> 的下一个更大元素是指 <strong>x</strong> 在<code> nums2 </code>中对应位置的右边的第一个比 <strong>x</strong> 大的元素。 如果不存在，对应位置输出 -1 。</p>
-<p>示例 1: &gt;输入: <code>nums1 = [4,1,2], nums2 = [1,3,4,2].</code> &gt;输出:<code>[-1,3,-1]</code> &gt;解释: &gt; 对于<code>num1</code>中的数字4，你无法在第二个数组中找到下一个更大的数字，因此输出 -1。 &gt; 对于<code>num1</code>中的数字1，第二个数组中数字1右边的下一个较大数字是 3。 &gt; 对于<code>num1</code>中的数字2，第二个数组中没有下一个更大的数字，因此输出 -1。</p>
-<p>示例 2: &gt;输入: <code>nums1 = [2,4], nums2 = [1,2,3,4].</code> &gt;输出: <code>[3,-1]</code> &gt;解释: &gt; 对于 <code>num1</code> 中的数字 2 ，第二个数组中的下一个较大数字是 3 。 &gt; 对于 <code>num1</code> 中的数字 4 ，第二个数组中没有下一个更大的数字，因此输出 -1 。</p>
-<p>提示：</p>
-<ul>
-<li><code>nums1</code>和<code>nums2</code>中所有元素是唯一的。</li>
-<li><code>nums1</code>和<code>nums2</code> 的数组大小都不超过1000。</li>
-</ul>
-<hr />
-<h3 id="我的代码"><font color=#808080>我的代码</font></h3>
-<figure class="highlight java"><figcaption><span>&#123;.line-numbers&#125;</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MySolution496</span> </span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">int</span>[] nextGreaterElement(<span class="keyword">int</span>[] nums1, <span class="keyword">int</span>[] nums2) </span><br><span class="line">	&#123;</span><br><span class="line">    	HashMap&lt;Integer, Integer&gt; nums2IndexMap = <span class="keyword">new</span> HashMap();</span><br><span class="line">    	<span class="keyword">int</span> []nums2Max = <span class="keyword">new</span> <span class="keyword">int</span>[nums2.length];</span><br><span class="line">    	</span><br><span class="line">    	<span class="keyword">int</span> max = -<span class="number">1</span>;</span><br><span class="line">    	<span class="keyword">for</span> (<span class="keyword">int</span> i=nums2.length-<span class="number">1</span>; i&gt;=<span class="number">0</span>; i--)</span><br><span class="line">    	&#123;</span><br><span class="line">    		nums2IndexMap.put(nums2[i], i);</span><br><span class="line">    		</span><br><span class="line">			<span class="keyword">int</span> j=i+<span class="number">1</span>;</span><br><span class="line">			<span class="keyword">for</span> (; j&lt;nums2.length; j++)</span><br><span class="line">				<span class="keyword">if</span> (nums2[j]&gt;nums2[i])</span><br><span class="line">				&#123;</span><br><span class="line">					nums2Max[i] = nums2[j];</span><br><span class="line">					<span class="keyword">break</span>;</span><br><span class="line">				&#125;</span><br><span class="line">			<span class="keyword">if</span> (j&gt;=nums2.length) nums2Max[i] = -<span class="number">1</span>;</span><br><span class="line">    	&#125;</span><br><span class="line">    	</span><br><span class="line">    	<span class="keyword">int</span> []result = <span class="keyword">new</span> <span class="keyword">int</span>[nums1.length];</span><br><span class="line">    	<span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;nums1.length; i++)</span><br><span class="line">    		result[i] = nums2Max[nums2IndexMap.get(nums1[i])];</span><br><span class="line">    	<span class="keyword">return</span> result;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<hr />
-<h3 id="方法一-单调栈">方法一: 单调栈</h3>
-<p><span class="math inline">\(T(M,N) = O(M+N)\)</span>, <span class="math inline">\(S(N) = O(N)\)</span></p>
-<p>我们可以先对 <code>nums2</code> 中的每一个元素，求出其下一个更大的元素。 将这些答案放入哈希映射（<code>HashMap</code>）中，再遍历数组 <code>nums1</code>，并直接找出答案。 对于 <code>nums2</code>，我们可以使用单调栈来解决这个问题。</p>
-<p>我们维护了一个单调栈，栈中的元素从栈顶到栈底是单调不降的。 当我们遇到一个新的元素 <code>nums2[i]</code> 时，我们判断栈顶元素是否小于<code>nums2[i]</code>， 如果是，那么栈顶元素的下一个更大元素即为 <code>nums2[i]</code>，我们将栈顶元素出栈。 重复这一操作，直到栈为空或者栈顶元素大于 <code>nums2[i]</code>。 此时我们将 <code>nums2[i]</code>入栈，保持栈的单调性， 并对接下来的 <code>nums2[i + 1],</code> <code>nums2[i + 2]</code> ... 执行同样的操作。</p>
-<hr />
-<h3 id="代码">代码</h3>
-<figure class="highlight java"><figcaption><span>&#123;.line-numbers&#125;</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution496</span> </span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">	Stack&lt;Integer&gt; stack;</span><br><span class="line">	HashMap&lt;Integer, Integer&gt; map;</span><br><span class="line">	</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">int</span>[] nextGreaterElement(<span class="keyword">int</span>[] nums1, <span class="keyword">int</span>[] nums2) </span><br><span class="line">    &#123;</span><br><span class="line">	Stack&lt;Integer&gt; stack;</span><br><span class="line">	HashMap&lt;Integer, Integer&gt; map;</span><br><span class="line">	</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">int</span>[] nextGreaterElement(<span class="keyword">int</span>[] nums1, <span class="keyword">int</span>[] nums2) </span><br><span class="line">    &#123;</span><br><span class="line">    	stack = <span class="keyword">new</span> Stack(); <span class="comment">// stack: 暂时还没找到nums2里位于他们右边又大于他们的</span></span><br><span class="line">        map = <span class="keyword">new</span> HashMap();</span><br><span class="line">    	</span><br><span class="line">    	<span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;nums2.length; i++)</span><br><span class="line">    	&#123;</span><br><span class="line">			<span class="keyword">while</span> (!stack.isEmpty()&amp;&amp;nums2[i]&gt;stack.peek())</span><br><span class="line">				map.put(stack.pop(), nums2[i]);</span><br><span class="line">            stack.push(nums2[i]);</span><br><span class="line">    	&#125;</span><br><span class="line">        <span class="keyword">while</span> (!stack.isEmpty())</span><br><span class="line">            map.put(stack.pop(), -<span class="number">1</span>);</span><br><span class="line">    	</span><br><span class="line">    	<span class="keyword">int</span> []ans = <span class="keyword">new</span> <span class="keyword">int</span>[nums1.length];</span><br><span class="line">    	</span><br><span class="line">    	<span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;nums1.length; i++)</span><br><span class="line">    		ans[i] = map.get(nums1[i]);</span><br><span class="line">    	</span><br><span class="line">    	<span class="keyword">return</span> ans;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2022/02/09/LeetCode/496_Easy_%E4%B8%8B%E4%B8%80%E4%B8%AA%E6%9B%B4%E5%A4%A7%E7%9A%84%E5%85%83%E7%B4%A0I_Stack/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -456,7 +443,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2022-02-11 14:18:14" itemprop="dateModified" datetime="2022-02-11T14:18:14+09:00">2022-02-11</time>
+        <time title="Modified: 2022-02-11 17:29:42" itemprop="dateModified" datetime="2022-02-11T17:29:42+09:00">2022-02-11</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -491,42 +478,14 @@
 </center>
 <h3 id="题目描述">题目描述</h3>
 <p>给定一个非空的字符串 <code>s</code> ，检查是否可以通过由它的一个子串重复多次构成。</p>
-<p>示例 1: &gt;输入: <code>"abab"</code> &gt;输出: <code>True</code> &gt;解释: 可由子字符串 "ab" 重复两次构成。</p>
-<p>示例 2: &gt;输入: <code>"aba"</code> &gt;输出: <code>False</code></p>
-<p>示例 3: &gt;输入: <code>"abcabcabcabc"</code> &gt;输出: <code>True</code> &gt;解释: 可由子字符串 "abc" 重复四次构成。 (或者子字符串 "abcabc" 重复两次构成。)</p>
-<p><strong>提示：</strong></p>
-<ul>
-<li><code>1 &lt;= s.length &lt;= 104</code></li>
-<li><code>s</code> 由小写英文字母组成</li>
-</ul>
-<hr />
-<h3 id="我的代码-timeout"><font color=#808080>我的代码 (Timeout)</font></h3>
-<h2 id="section"><figure class="highlight java"><figcaption><span>&#123;.line-numbers&#125;</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MySolution459</span> </span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">repeatedSubstringPattern</span><span class="params">(String s)</span> </span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">    	<span class="keyword">if</span> (s==<span class="keyword">null</span>||s.length()&lt;=<span class="number">1</span>) <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">    	</span><br><span class="line">    	<span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;s.length(); i++)</span><br><span class="line">    		<span class="keyword">if</span> (s.split(s.substring(<span class="number">0</span>,i)).length==<span class="number">0</span>) </span><br><span class="line">    			<span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">    	<span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></h2>
-<h3 id="方法一-枚举">方法一: 枚举</h3>
-<p><span class="math inline">\(T(N) = O(N^2)\)</span>, <span class="math inline">\(S(N) = O(1)\)</span></p>
-<p>如果一个长度为 <span class="math inline">\(n\)</span> 的字符串 <span class="math inline">\(s\)</span> 可以由它的一个长度为 <span class="math inline">\(n&#39;\)</span> 的子串 <span class="math inline">\(s&#39;\)</span> 重复多次构成，那么: - <span class="math inline">\(n\)</span> 一定是 <span class="math inline">\(n&#39;\)</span> 的倍数； - <span class="math inline">\(s&#39;\)</span> 一定是 <span class="math inline">\(s\)</span> 的前缀； - 对于任意的 <span class="math inline">\(i∈[n&#39;,n)\)</span>, 有 <span class="math inline">\(s[i]=s[i-n&#39;]\)</span></p>
-<p>即: <span class="math inline">\(s\)</span> 中长度为 <span class="math inline">\(n&#39;\)</span> 的前缀就是 <span class="math inline">\(s&#39;\)</span> ，并且在这之后的每一个位置上的字符 <span class="math inline">\(s[i]\)</span> ，都需要与其之前的第 <span class="math inline">\(n&#39;\)</span> 个字符 <span class="math inline">\(s[i-n&#39;]\)</span> 相同。</p>
-<p>因此，我们可以从小到大枚举 <span class="math inline">\(n&#39;\)</span> ，并且字符串 <span class="math inline">\(s\)</span> 进行遍历，进行上述的判断。 可以进行的一个小优化是，因为子串至少重复一次，因此 <span class="math inline">\(n&#39;\)</span> 不会大于 <span class="math inline">\(n\)</span> 的一半，我们只需要在 <span class="math inline">\([1,\frac{n}{2}]\)</span> 的范围内枚举 <span class="math inline">\(n&#39;\)</span> 即可。</p>
-<hr />
-<h3 id="代码">代码</h3>
-<h2 id="section-1"><figure class="highlight java"><figcaption><span>&#123;.line-numbers&#125;</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//即 从i=1开始不断假设子串的长度为i++（要成为子串的话必须n%i==0），</span></span><br><span class="line"><span class="comment">//然后从字符串的i位置j开始验证往后每个子串是否在重复上个子串的内容(s[j]是否等于s[j-i]).</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution459</span> </span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">repeatedSubstringPattern</span><span class="params">(String s)</span> </span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> n = s.length();</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i * <span class="number">2</span> &lt;= n; ++i) </span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span> (n % i == <span class="number">0</span>) </span><br><span class="line">            &#123;</span><br><span class="line">                <span class="keyword">boolean</span> match = <span class="keyword">true</span>;</span><br><span class="line">                <span class="keyword">for</span> (<span class="keyword">int</span> j = i; j &lt; n &amp;&amp; match; j++) </span><br><span class="line">                    <span class="keyword">if</span> (s.charAt(j) != s.charAt(j - i)) </span><br><span class="line">                        match = <span class="keyword">false</span>;</span><br><span class="line">                <span class="keyword">if</span> (match) </span><br><span class="line">                    <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></h2>
-<h3 id="方法二-字符串匹配">方法二: 字符串匹配</h3>
-<p>我们可以把符合要求的字符串<span class="math inline">\(s\)</span>写成<span class="math inline">\(s&#39;s&#39;...s&#39;s&#39;\)</span>的形式，总计<span class="math inline">\(\frac{n}{n&#39;}\)</span>个<span class="math inline">\(s&#39;\)</span>。 但我们如何在不枚举<span class="math inline">\(n&#39;\)</span>的前提下，判断<span class="math inline">\(s\)</span>是否能写成上述的形式呢？</p>
-<p>如果我们移除字符串<span class="math inline">\(s\)</span>的前<span class="math inline">\(n&#39;\)</span>个字符（也就是一个完整的<span class="math inline">\(s&#39;\)</span>），再将这些移除掉的字符保持原顺序添加到剩余字符串的末尾，那么得到的字符串依然是<span class="math inline">\(s\)</span>。 由于<span class="math inline">\(1≤n&#39;＜n\)</span>，如果将两个<span class="math inline">\(s\)</span>连接在一起，并且移除第一个和最后一个字符，那么得到的字符串一定包含<span class="math inline">\(s\)</span>，即<span class="math inline">\(s\)</span>是它的一个子串。</p>
-<p>因此我们可以考虑这种方法： 将两个<span class="math inline">\(s\)</span>连接在一起，并移除第一个和最后一个字符。 如果<span class="math inline">\(s\)</span>是该字符串的子串，那么<span class="math inline">\(s\)</span>就满足题目要求。</p>
-<p>注意：我们证明的是<strong>如果<span class="math inline">\(s\)</span>满足题目要求，那么<span class="math inline">\(s\)</span>会具有这样的性质</strong>； 但我们的方法使用的却是<strong>如果<span class="math inline">\(s\)</span>具有这样的性质，那么<span class="math inline">\(s\)</span>就会满足题目要求</strong>。 因此，光证明充分性是不够的，我们还需要证明其必要性。 必要性的证明可见KMP思路的正确性证明部分。</p>
-<p>实现: 我们可以从位置 <span class="math inline">\(1\)</span> 开始查询，并且希望查询结果不为位置 <span class="math inline">\(n\)</span>。 这与移除字符串的第一个和最后一个字符是一样的。</p>
-<hr />
-<h3 id="代码-1">代码</h3>
-<h2 id="section-2"><figure class="highlight java"><figcaption><span>&#123;.line-numbers&#125;</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution459</span> </span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">repeatedSubstringPattern</span><span class="params">(String s)</span> </span></span><br><span class="line"><span class="function">	</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> (s + s).indexOf(s, <span class="number">1</span>) != s.length();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></h2>
-<h3 id="方法三-kmp算法">方法三: KMP算法</h3>
-<p>上一个方法中我们使用了内置的字符串查找函数，而这个函数可以用KMP算法实现。</p>
-<p>需要注意以下几点: - KMP算法虽然具有良好的理论时间复杂度上限，但是大部分语言内置的字符串查找函数并不是用KMP算法实现的。 这是因为在实现API时，我们需要在平均时间复杂度和最坏时间复杂度两者之间进行权衡。 普通的暴力匹配算法，以及优化过的BM算法，都拥有比KMP算法更加优秀的平均时间复杂度。 - 学习KMP算法时，一定要理解其本质。 如果放弃阅读晦涩难懂的材料而直接去阅读代码，是永远无法学会KMP算法的。甚至很难理解KMP算法中的任意一行。</p>
-<p>由于本体就是在一个字符串中查找另一个字符串是否出现，因此可以直接套用KMP算法。 这里不再对KMP算法进行赘述。 以下留下三个思考题，以检验学习成果: - 假设查询串的长度为<span class="math inline">\(n\)</span>，模式串的长度为<span class="math inline">\(m\)</span>，我们需要判断模式串是否为查询串的子串。 使用KMP算法处理该问题时的时间复杂度是多少？在分析时间复杂度时使用了哪一种方法？ - 如果有多个查询串，平均长度为<span class="math inline">\(n\)</span>，数量为<span class="math inline">\(k\)</span>，那么总的时间复杂度是多少？ - 在KMP算法中，对于模式串，我们需要预处理出一个<code>fail</code>数组（有时也称为<code>next</code>数组、<code>π</code>数组等）。这个数组到底代表了什么？</p>
-<hr />
-<h3 id="代码-2">代码</h3>
-<figure class="highlight java"><figcaption><span>&#123;.line-numbers&#125;</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution459</span> </span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">repeatedSubstringPattern</span><span class="params">(String s)</span> </span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> kmp(s + s, s);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">kmp</span><span class="params">(String query, String pattern)</span> </span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> n = query.length();</span><br><span class="line">        <span class="keyword">int</span> m = pattern.length();</span><br><span class="line">        <span class="keyword">int</span>[] fail = <span class="keyword">new</span> <span class="keyword">int</span>[m];</span><br><span class="line">        Arrays.fill(fail, -<span class="number">1</span>);</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; m; ++i) </span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">int</span> j = fail[i - <span class="number">1</span>];</span><br><span class="line">            <span class="keyword">while</span> (j != -<span class="number">1</span> &amp;&amp; pattern.charAt(j + <span class="number">1</span>) != pattern.charAt(i)) </span><br><span class="line">                j = fail[j];</span><br><span class="line">            <span class="keyword">if</span> (pattern.charAt(j + <span class="number">1</span>) == pattern.charAt(i)) </span><br><span class="line">                fail[i] = j + <span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">int</span> match = -<span class="number">1</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; n - <span class="number">1</span>; ++i) </span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">while</span> (match != -<span class="number">1</span> &amp;&amp; pattern.charAt(match + <span class="number">1</span>) != query.charAt(i)) </span><br><span class="line">                match = fail[match];</span><br><span class="line">            <span class="keyword">if</span> (pattern.charAt(match + <span class="number">1</span>) == query.charAt(i)) </span><br><span class="line">                <span class="keyword">if</span> (++match == m - <span class="number">1</span>) </span><br><span class="line">                    <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2022/02/09/LeetCode/459_Easy_%E9%87%8D%E5%A4%8D%E7%9A%84%E5%AD%90%E5%AD%97%E7%AC%A6%E4%B8%B2_String/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -583,7 +542,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2022-02-11 14:15:05" itemprop="dateModified" datetime="2022-02-11T14:15:05+09:00">2022-02-11</time>
+        <time title="Modified: 2022-02-11 17:29:37" itemprop="dateModified" datetime="2022-02-11T17:29:37+09:00">2022-02-11</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -617,29 +576,15 @@
 <a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/find-all-numbers-disappeared-in-an-array/"><b><font color = #5EB561>转载自Leet Code</font></b></a>
 </center>
 <h3 id="题目描述">题目描述</h3>
-<p>给定一个范围在 $ 1 ≤ a[i] ≤ n$ ( n = 数组大小 ) 的 整型数组，数组中的元素一些出现了两次，另一些只出现一次。 找到所有在 <span class="math inline">\([1, n]\)</span> 范围之间没有出现在数组中的数字。 您能在不使用额外空间且时间复杂度为<span class="math inline">\(O(n)\)</span>的情况下完成这个任务吗? 你可以假定返回的数组不算在额外空间内。</p>
-<p><strong>示例 1：</strong> 输入：<code>nums = [4,3,2,7,8,2,3,1]</code> 输出：<code>[5,6]</code></p>
-<p><strong>示例 2：</strong></p>
-<p>输入：<code>nums = [1,1]</code> 输出：<code>[2]</code></p>
-<p><strong>提示：</strong></p>
-<ul>
-<li><code>n == nums.length</code></li>
-<li><code>1 &lt;= n &lt;= 105</code></li>
-<li><code>1 &lt;= nums[i] &lt;= n</code></li>
-</ul>
-<hr />
-<h3 id="我的代码"><font color=#808080>我的代码</font></h3>
-<p><span class="math inline">\(T(N) = O(N)\)</span>, <span class="math inline">\(S(N) = O(N)\)</span></p>
-<figure class="highlight java"><figcaption><span>&#123;.line-numbers&#125;</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MySolution448</span> </span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> List&lt;Integer&gt; <span class="title">findDisappearedNumbers</span><span class="params">(<span class="keyword">int</span>[] nums)</span> </span></span><br><span class="line"><span class="function">	</span>&#123;</span><br><span class="line">    	HashSet&lt;Integer&gt; set = <span class="keyword">new</span> HashSet();</span><br><span class="line">    	<span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;nums.length; i++)</span><br><span class="line">    		set.add(nums[i]);</span><br><span class="line">    	</span><br><span class="line">    	LinkedList&lt;Integer&gt; list = <span class="keyword">new</span> LinkedList();</span><br><span class="line">    	<span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;nums.length; i++)</span><br><span class="line">    	&#123;</span><br><span class="line">    		<span class="keyword">if</span> (!set.contains(i+<span class="number">1</span>))</span><br><span class="line">    			list.add(i+<span class="number">1</span>);</span><br><span class="line">    	&#125;</span><br><span class="line">    	<span class="keyword">return</span> list;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<hr />
-<h3 id="方法原地修改">方法：原地修改</h3>
-<p><span class="math inline">\(T(N) = O(N)\)</span>, <span class="math inline">\(S(N) = O(1)\)</span></p>
-<p>我们可以在输入数组本身以某种方法标记已经访问过的数字，然后再去找到缺失的数字。 （利用了数组下标与数组中应有元素之间的关系）</p>
-<p>首先遍历一次数组，将索引<span class="math inline">\(|nums[i]|-1\)</span>处的元素设置为其负值， 即 <span class="math inline">\(nums[|nums[i]|-1] ×= -1\)</span>; 注意如果已经是负值则说明这个元素已经标记过了，略过； 然后再遍历一次数组，若发现元素<code>nums[i]</code>仍为正数则说明其对应下标<code>i+1</code>是缺失的数字。</p>
-<hr />
-<h3 id="代码">代码</h3>
-<figure class="highlight java"><figcaption><span>&#123;.line-numbers&#125;</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution448</span> </span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> List&lt;Integer&gt; <span class="title">findDisappearedNumbers</span><span class="params">(<span class="keyword">int</span>[] nums)</span> </span></span><br><span class="line"><span class="function">	</span>&#123;</span><br><span class="line">    	LinkedList&lt;Integer&gt; list = <span class="keyword">new</span> LinkedList();</span><br><span class="line">    	<span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;nums.length; i++)</span><br><span class="line">		    <span class="comment">// 如果已经&lt;0则说明这个元素已经出现过（标记过）了</span></span><br><span class="line">    		<span class="keyword">if</span> (nums[Math.abs(nums[i])-<span class="number">1</span>]&gt;<span class="number">0</span>)</span><br><span class="line">    			nums[Math.abs(nums[i])-<span class="number">1</span>] *= (-<span class="number">1</span>);</span><br><span class="line">    	</span><br><span class="line">    	<span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;nums.length; i++)</span><br><span class="line">    		<span class="keyword">if</span> (nums[i]&gt;<span class="number">0</span>)</span><br><span class="line">    			list.add(i+<span class="number">1</span>);</span><br><span class="line">    	</span><br><span class="line">    	<span class="keyword">return</span> list;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
+<p>给定一个范围在 $ 1 ≤ a[i] ≤ n$ ( n = 数组大小 ) 的 整型数组，数组中的元素一些出现了两次，另一些只出现一次。 找到所有在 <span class="math inline">\([1, n]\)</span> 范围之间没有出现在数组中的数字。 您能在不使用额外空间且时间复杂度为<span class="math inline">\(O(n)\)</span>​的情况下完成这个任务吗? 你可以假定返回的数组不算在额外空间内。</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2022/02/09/LeetCode/448_Easy_%E6%89%BE%E5%88%B0%E6%89%80%E6%9C%89%E6%95%B0%E7%BB%84%E4%B8%AD%E6%B6%88%E5%A4%B1%E7%9A%84%E6%95%B0%E5%AD%97_Array/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -696,7 +641,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2022-02-11 14:09:56" itemprop="dateModified" datetime="2022-02-11T14:09:56+09:00">2022-02-11</time>
+        <time title="Modified: 2022-02-11 17:29:30" itemprop="dateModified" datetime="2022-02-11T17:29:30+09:00">2022-02-11</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -731,23 +676,14 @@
 </center>
 <h3 id="题目描述">题目描述</h3>
 <p>统计字符串中的单词个数，这里的单词指的是连续的不是空格的字符。 请注意，你可以假定字符串里不包括任何不可打印的字符。</p>
-<p>示例: &gt;输入:<code>"Hello, my name is John"</code> &gt;输出:<code>5</code> &gt;解释: 这里的单词是指连续的不是空格的字符，所以 <code>"Hello,"</code> 算作 1 个单词。</p>
-<hr />
-<h3 id="我的代码"><font color=#808080>我的代码</font></h3>
-<p><span class="math inline">\(T(N) = O(N)\)</span>, <span class="math inline">\(S(N) = O(1)\)</span></p>
-<h2 id="section"><figure class="highlight java"><figcaption><span>&#123;.line-numbers&#125;</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MySolution434</span> </span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">countSegments</span><span class="params">(String s)</span> </span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">    	<span class="keyword">if</span> (s==<span class="keyword">null</span>||s.length()&lt;=<span class="number">0</span>) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    	<span class="keyword">int</span> count = <span class="number">0</span>;</span><br><span class="line">    	<span class="keyword">boolean</span> inBlank = <span class="keyword">false</span>;</span><br><span class="line">    	</span><br><span class="line">    	<span class="keyword">if</span> (s.charAt(<span class="number">0</span>)!=<span class="string">&#x27; &#x27;</span>) count++; </span><br><span class="line">    	<span class="keyword">for</span> (<span class="keyword">char</span> ch:s.toCharArray())</span><br><span class="line">    	&#123;</span><br><span class="line">    		<span class="keyword">if</span> (ch==<span class="string">&#x27; &#x27;</span>&amp;&amp;!inBlank)</span><br><span class="line">    		&#123;</span><br><span class="line">    			inBlank = <span class="keyword">true</span>; <span class="keyword">continue</span>;</span><br><span class="line">    		&#125;</span><br><span class="line">    		<span class="keyword">else</span> <span class="keyword">if</span> (ch==<span class="string">&#x27; &#x27;</span>&amp;&amp;inBlank) <span class="keyword">continue</span>;</span><br><span class="line">    		<span class="keyword">else</span> <span class="keyword">if</span> (ch!=<span class="string">&#x27; &#x27;</span>&amp;&amp;inBlank)</span><br><span class="line">    		&#123;</span><br><span class="line">    			inBlank = <span class="keyword">false</span>; count++; <span class="keyword">continue</span>;</span><br><span class="line">    		&#125;</span><br><span class="line">    		<span class="keyword">else</span> <span class="keyword">if</span> (ch!=<span class="string">&#x27; &#x27;</span>&amp;&amp;!inBlank) <span class="keyword">continue</span>;</span><br><span class="line">    	&#125;</span><br><span class="line">    	<span class="keyword">return</span> count;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></h2>
-<h3 id="方法使用语言的内置函数">方法：使用语言的内置函数</h3>
-<p><span class="math inline">\(T(N) = O(N)\)</span>, <span class="math inline">\(S(N) = O(N)\)</span></p>
-<p>在<strong>执行效率</strong>不如<strong>代码可读性</strong>重要的情况下，使用语言内置的函数解决问题更好些。</p>
-<p>在Java中会需要考虑一些边缘情况： 首先，开头的一个或多个空格会导致<code>split</code>函数在字符串的开头产生一个错误的<code>""</code>，因此我们使用内置的<code>trim</code>函数来移除这些空格； 其次，如果结果为空串的情况下，可以直接返回<code>0</code>。 由于split函数的下述特性，这一点很重要：</p>
-<blockquote>
-<p>String[] tokens = "".split("\s++"); tokens.length; // 1 tokens[0]; // ""</p>
-</blockquote>
-<p>当抵达最后的 <code>return</code> 语句，我们将<code>trim</code>过的字符串以一个或多个空格字符切分（split 函数可以使用正则表达式），并返回结果数组的长度。</p>
-<hr />
-<h3 id="代码">代码</h3>
-<figure class="highlight java"><figcaption><span>&#123;.line-numbers&#125;</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution434</span> </span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">countSegments</span><span class="params">(String s)</span> </span></span><br><span class="line"><span class="function">	</span>&#123;</span><br><span class="line">        String trimmed = s.trim(); <span class="comment">// trim() 方法用于删除字符串的头尾空白符。</span></span><br><span class="line">        <span class="keyword">if</span> (trimmed.equals(<span class="string">&quot;&quot;</span>)) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> trimmed.split(<span class="string">&quot;\\s+&quot;</span>).length;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2022/02/09/LeetCode/434_Easy_%E5%AD%97%E7%AC%A6%E4%B8%B2%E4%B8%AD%E7%9A%84%E5%8D%95%E8%AF%8D%E6%95%B0_String/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -785,7 +721,7 @@
   <span class="author" itemprop="copyrightHolder">CHEN XUEYI</span>
 </div>
   <div class="powered-by">Powered by <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a>
-  </div>
+  </div><script defer src="/lib/three.js"></script><script color="100,100,100" opacity="0.7" zIndex="-1" count="99" src="https://cdn.jsdelivr.net/npm/canvas-nest.js@1/dist/canvas-nest.js"></script>
 
     </div>
   </footer>
