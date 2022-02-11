@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-yuki.PNG">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-yuki.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-yuki.png">
+  <link rel="mask-icon" href="/images/logo-yuki.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/all.min.css" integrity="sha256-2H3fkXt6FEmrReK448mDVGKb3WW2ZZw35gI7vqHOE4Y=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"yukief4fdh.github.io","root":"/","images":"/images","scheme":"Gemini","version":"8.7.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/js/config.js"></script>
+<meta name="description" content="第一章 面试的流程 1.1 面试官谈到 初级程序员: 偏向考察&#x3D;&#x3D;算法&#x3D;&#x3D;和&#x3D;&#x3D;数据结构&#x3D;&#x3D;; 对&#x3D;&#x3D;公司近况&#x3D;&#x3D;和&#x3D;&#x3D;项目情况&#x3D;&#x3D;应该有所了解; 1.2 面试的三种形式  1.2.1 电话面试 (略) 1.2.2 共享桌面远程面试 (Phone-Screen Interview) 此时，面试官最关心的是应聘者的&#x3D;&#x3D;编程习惯&#x3D;&#x3D;及&#x3D;&#x3D;调试能力&#x3D;&#x3D;。  思考清楚再开始编码。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="《剑指Offer》第一章 笔记">
+<meta property="og:url" content="https://yukief4fdh.github.io/2022/01/12/Test/%E5%89%91%E6%8C%87Offer%20%E7%AC%AC%E4%B8%80%E7%AB%A0%20%E9%9D%A2%E8%AF%95%E7%9A%84%E6%B5%81%E7%A8%8B/index.html">
+<meta property="og:site_name" content="Yuki&#39;s Blog">
+<meta property="og:description" content="第一章 面试的流程 1.1 面试官谈到 初级程序员: 偏向考察&#x3D;&#x3D;算法&#x3D;&#x3D;和&#x3D;&#x3D;数据结构&#x3D;&#x3D;; 对&#x3D;&#x3D;公司近况&#x3D;&#x3D;和&#x3D;&#x3D;项目情况&#x3D;&#x3D;应该有所了解; 1.2 面试的三种形式  1.2.1 电话面试 (略) 1.2.2 共享桌面远程面试 (Phone-Screen Interview) 此时，面试官最关心的是应聘者的&#x3D;&#x3D;编程习惯&#x3D;&#x3D;及&#x3D;&#x3D;调试能力&#x3D;&#x3D;。  思考清楚再开始编码。">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="c:/Users/Yuki_/AppData/Roaming/Typora/typora-user-images/image-20220111172848268.png">
+<meta property="og:image" content="c:/Users/Yuki_/AppData/Roaming/Typora/typora-user-images/image-20220111180526677.png">
+<meta property="og:image" content="c:/Users/Yuki_/AppData/Roaming/Typora/typora-user-images/image-20220111182434319.png">
+<meta property="article:published_time" content="2022-01-11T16:12:22.856Z">
+<meta property="article:modified_time" content="2022-02-11T07:08:23.394Z">
+<meta property="article:author" content="CHEN XUEYI">
+<meta property="article:tag" content="剑指Offer">
+<meta property="article:tag" content="读书笔记">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="c:/Users/Yuki_/AppData/Roaming/Typora/typora-user-images/image-20220111172848268.png">
+
+
+<link rel="canonical" href="https://yukief4fdh.github.io/2022/01/12/Test/%E5%89%91%E6%8C%87Offer%20%E7%AC%AC%E4%B8%80%E7%AB%A0%20%E9%9D%A2%E8%AF%95%E7%9A%84%E6%B5%81%E7%A8%8B/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"https://yukief4fdh.github.io/2022/01/12/Test/%E5%89%91%E6%8C%87Offer%20%E7%AC%AC%E4%B8%80%E7%AB%A0%20%E9%9D%A2%E8%AF%95%E7%9A%84%E6%B5%81%E7%A8%8B/","path":"2022/01/12/Test/剑指Offer 第一章 面试的流程/","title":"《剑指Offer》第一章 笔记"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>《剑指Offer》第一章 笔记 | Yuki's Blog</title>
+  
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">Yuki's Blog</h1>
+      <i class="logo-line"></i>
+    </a>
+      <img class="custom-logo-image" src="/uploads/test.png" alt="Yuki's Blog">
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a></li>
+        <li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a></li>
+        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags<span class="badge">28</span></a></li>
+        <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories<span class="badge">15</span></a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives<span class="badge">83</span></a></li>
+        
+            
+  <li class="menu-item menu-item-docs"><a href="/docs/" rel="section"><i class="fa fa-book fa-fw"></i>Docs</a></li>
+
+
+      
+        <li class="menu-item menu-item-schedule"><a href="/schedule/" rel="section"><i class="fa fa-calendar fa-fw"></i>Schedule</a></li>
+        <li class="menu-item menu-item-sitemap"><a href="/sitemap.xml" rel="section"><i class="fa fa-sitemap fa-fw"></i>Sitemap</a></li>
+        <li class="menu-item menu-item-commonweal"><a href="/404/" rel="section"><i class="fa fa-heartbeat fa-fw"></i>Commonweal 404</a></li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AC%AC%E4%B8%80%E7%AB%A0-%E9%9D%A2%E8%AF%95%E7%9A%84%E6%B5%81%E7%A8%8B"><span class="nav-number">1.</span> <span class="nav-text">第一章 面试的流程</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%9D%A2%E8%AF%95%E5%AE%98%E8%B0%88%E5%88%B0"><span class="nav-number">1.1.</span> <span class="nav-text">1.1 面试官谈到</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%9D%A2%E8%AF%95%E7%9A%84%E4%B8%89%E7%A7%8D%E5%BD%A2%E5%BC%8F"><span class="nav-number">1.2.</span> <span class="nav-text">1.2 面试的三种形式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%94%B5%E8%AF%9D%E9%9D%A2%E8%AF%95-%E7%95%A5"><span class="nav-number">1.2.1.</span> <span class="nav-text">1.2.1 电话面试 (略)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%B1%E4%BA%AB%E6%A1%8C%E9%9D%A2%E8%BF%9C%E7%A8%8B%E9%9D%A2%E8%AF%95-phone-screen-interview"><span class="nav-number">1.2.2.</span> <span class="nav-text">1.2.2 共享桌面远程面试 (Phone-Screen Interview)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%8E%B0%E5%9C%BA%E9%9D%A2%E8%AF%95-onsite-interview"><span class="nav-number">1.2.3.</span> <span class="nav-text">1.2.3 现场面试 (Onsite Interview)</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%9D%A2%E8%AF%95%E7%9A%84%E4%B8%89%E4%B8%AA%E7%8E%AF%E8%8A%82"><span class="nav-number">1.3.</span> <span class="nav-text">1.3 面试的三个环节</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%A1%8C%E4%B8%BA%E9%9D%A2%E8%AF%95%E7%8E%AF%E8%8A%82"><span class="nav-number">1.3.1.</span> <span class="nav-text">1.3.1 行为面试环节</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%A1%B9%E7%9B%AE%E7%BB%8F%E5%8E%86"><span class="nav-number">1.3.1.1.</span> <span class="nav-text">1. 项目经历</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%BA%94%E8%81%98%E8%80%85%E6%8E%8C%E6%8F%A1%E7%9A%84%E6%8A%80%E8%83%BD"><span class="nav-number">1.3.1.2.</span> <span class="nav-text">2. 应聘者掌握的技能</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%9B%9E%E7%AD%94%E4%B8%BA%E4%BB%80%E4%B9%88%E8%B7%B3%E6%A7%BD"><span class="nav-number">1.3.1.3.</span> <span class="nav-text">3. 回答&quot;为什么跳槽&quot;</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8A%80%E6%9C%AF%E9%9D%A2%E8%AF%95%E7%8E%AF%E8%8A%82"><span class="nav-number">1.3.2.</span> <span class="nav-text">1.3.2 技术面试环节</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%89%8E%E5%AE%9E%E7%9A%84%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86"><span class="nav-number">1.3.2.1.</span> <span class="nav-text">1. 扎实的基础知识</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%AB%98%E8%B4%A8%E9%87%8F%E7%9A%84%E4%BB%A3%E7%A0%81"><span class="nav-number">1.3.2.2.</span> <span class="nav-text">2. 高质量的代码</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%B8%85%E6%99%B0%E7%9A%84%E6%80%9D%E8%B7%AF"><span class="nav-number">1.3.2.3.</span> <span class="nav-text">3. 清晰的思路</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BC%98%E5%8C%96%E6%95%88%E7%8E%87%E7%9A%84%E8%83%BD%E5%8A%9B"><span class="nav-number">1.3.2.4.</span> <span class="nav-text">4. 优化效率的能力</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BC%98%E7%A7%80%E7%9A%84%E7%BB%BC%E5%90%88%E8%83%BD%E5%8A%9B"><span class="nav-number">1.3.2.5.</span> <span class="nav-text">5. 优秀的综合能力</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BA%94%E8%81%98%E8%80%85%E6%8F%90%E9%97%AE%E7%8E%AF%E8%8A%82"><span class="nav-number">1.3.3.</span> <span class="nav-text">1.3.3 应聘者提问环节</span></a></li></ol></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-overview">
+            <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="CHEN XUEYI"
+      src="/images/yuki.gif">
+  <p class="site-author-name" itemprop="name">CHEN XUEYI</p>
+  <div class="site-description" itemprop="description">Call me Yuki (JPN) or Chloe (ENG).<br> Nice to meet you :)<br><hr style="margin:3px;"> Tokyo Institute of Technology (M1)<br> Rearch Interest: Visualization</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">83</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">15</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">28</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author site-overview-item animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/YukiEF4FDH" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;YukiEF4FDH" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="/xueyichen_980221@outlook.com" title="E-Mail → xueyichen_980221@outlook.com"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://twitter.com/YukiEF4FDH" title="Twitter → https:&#x2F;&#x2F;twitter.com&#x2F;YukiEF4FDH" rel="noopener" target="_blank"><i class="fab fa-twitter fa-fw"></i>Twitter</a>
+      </span>
+  </div>
+
+
+
+          </div>
+        </div>
+      </div>
+
+      <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=591027&auto=1&height=66"></iframe>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button" aria-label="Back to top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://yukief4fdh.github.io/2022/01/12/Test/%E5%89%91%E6%8C%87Offer%20%E7%AC%AC%E4%B8%80%E7%AB%A0%20%E9%9D%A2%E8%AF%95%E7%9A%84%E6%B5%81%E7%A8%8B/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/yuki.gif">
+      <meta itemprop="name" content="CHEN XUEYI">
+      <meta itemprop="description" content="Call me Yuki (JPN) or Chloe (ENG).<br> Nice to meet you :)<br><hr style="margin:3px;"> Tokyo Institute of Technology (M1)<br> Rearch Interest: Visualization">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Yuki's Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          《剑指Offer》第一章 笔记
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2022-01-12 01:12:22" itemprop="dateCreated datePublished" datetime="2022-01-12T01:12:22+09:00">2022-01-12</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">Edited on</span>
+        <time title="Modified: 2022-02-11 16:08:23" itemprop="dateModified" datetime="2022-02-11T16:08:23+09:00">2022-02-11</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Books/" itemprop="url" rel="index"><span itemprop="name">Books</span></a>
+        </span>
+          , 
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Books/Computer-Science/" itemprop="url" rel="index"><span itemprop="name">Computer Science</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <h1 id="第一章-面试的流程">第一章 面试的流程</h1>
+<h2 id="面试官谈到">1.1 面试官谈到</h2>
+<p>初级程序员: 偏向考察==算法==和==数据结构==; 对==公司近况==和==项目情况==应该有所了解;</p>
+<h2 id="面试的三种形式">1.2 面试的三种形式</h2>
+<p><img src="C:\Users\Yuki_\AppData\Roaming\Typora\typora-user-images\image-20220111172848268.png" alt="image-20220111172848268" style="zoom: 33%;" /></p>
+<h3 id="电话面试-略">1.2.1 电话面试 (略)</h3>
+<h3 id="共享桌面远程面试-phone-screen-interview">1.2.2 共享桌面远程面试 (Phone-Screen Interview)</h3>
+<p>此时，面试官最关心的是应聘者的==编程习惯==及==调试能力==。</p>
+<ul>
+<li><strong>思考清楚再开始编码</strong>。
+<ul>
+<li>不要一听到题目就匆忙打开编程软件开始编码，因为这样写出来的代码通常漏洞百出。</li>
+<li>应先想清楚==解决问题的思路，算法的时空复杂度，需要处理的特殊情况==等，再开始动手。</li>
+</ul></li>
+<li><strong>良好的代码命名和缩进对齐习惯</strong>。
+<ul>
+<li>一目了然的==变量和函数名==、合理的==缩进==和括号==对齐==。</li>
+</ul></li>
+<li><strong>能够单元测试</strong>。
+<ul>
+<li>在定义函数后==立即对函数进行全面的单元测试==。</li>
+<li>或者，先写单元测试用例，再写解决问题的函数。</li>
+</ul></li>
+</ul>
+<p>通常我们写的代码都会有各种问题，当我们发现运行结果不对之后的表现也是面试官关注的重点。 熟练地==设置断点、单步跟踪、查看内存、分析调用栈==。</p>
+<h3 id="现场面试-onsite-interview">1.2.3 现场面试 (Onsite Interview)</h3>
+<p>整场面试中的重头戏。</p>
+<h2 id="面试的三个环节">1.3 面试的三个环节</h2>
+<p>首先是行为面试，参照简历了解应聘者的过往经验; 然后是技术面试，可能要求应聘者现场写代码; 最后是应聘者的提问时间。</p>
+<p><img src="C:\Users\Yuki_\AppData\Roaming\Typora\typora-user-images\image-20220111180526677.png" alt="image-20220111180526677" style="zoom:33%;" /></p>
+<h3 id="行为面试环节">1.3.1 行为面试环节</h3>
+<p>面试的一开始，面试官会注意应聘者的性格特点、深入了解==简历中的项目经历==。 不少面试官也会要求应聘者做一个简短的==自我介绍==。</p>
+<h4 id="项目经历">1. 项目经历</h4>
+<p>建议采用STAR模型描述自己的每一个项目经历。</p>
+<p><img src="C:\Users\Yuki_\AppData\Roaming\Typora\typora-user-images\image-20220111182434319.png" alt="image-20220111182434319" style="zoom:33%;" /></p>
+<ul>
+<li><p><strong>Situation:</strong> 简短的==项目背景==。项目规模、软件的功能、目标用户等。</p></li>
+<li><p><strong>Task:</strong> 自己的==任务==。注意"参与"和"负责"的区别。</p>
+<p>负责: 项目的 总体框架设计、核心算法、团队合作等问题。</p></li>
+<li><p><strong>Action: </strong>为了完成任务 自己做了哪些工作，==怎么去做的==。</p>
+<p>系统设计: 系统架构；软件开发: 平台、工具、技术；软件测试: 手工/自动化测试、白盒/黑盒 等。</p></li>
+<li><p><strong>Result:</strong> 自己的==贡献==。可以用具体的==数字==来说明。</p>
+<p>功能开发: 按时完成了多少功能；优化: 性能提高的百分比；维护: 修改了多少个BUG。</p></li>
+</ul>
+<p>本书作者在微软项目组经历的例子：</p>
+<blockquote>
+<p>Winforms是微软.NET中的一个成熟的UI平台（<strong>Situation</strong>）。本人的工作是在添加少量新功能之外主要负责维护已有的功能（<strong>Task</strong>）。新的功能主要是让Winforms的控件的风格和Vista、Windows 7的风格保持一致。在维护方面，对于较难的问题我用WinDbg等工具进行调试（<strong>Action</strong>）。在过去两年中我总共修改了超过200个Bug（<strong>Result</strong>）。</p>
+</blockquote>
+<p>除此之外面试官可能会追问的问题:</p>
+<ul>
+<li>你在该项目中==碰到的最大的问题是什么，怎么解决的==？</li>
+<li>你从这个项目中==学到了什么==？</li>
+<li>什么时候会和其他==团队成员== (开发人员、测试人员、设计人员、项目经理等) 有什么样的==冲突==，怎么解决的？</li>
+</ul>
+<h4 id="应聘者掌握的技能">2. 应聘者掌握的技能</h4>
+<p>注意"了解"、"熟悉"和"精通"的区别。</p>
+<p><strong>"了解"</strong>: 指对某一种技术==只是上过课或者看过书==，但没有做过实际的项目。 通常不建议在简历中列出只是肤浅了解的技能，除非所应聘的职位的确需要这项技术。</p>
+<p>简历中我们所描述技能的掌握程度大部分应该是<strong>"熟悉"</strong>。 即==在实际项目中使用某一项技术已经有较长时间==，通过==查阅相关的文档可以独立解决大部分问题==。 对应届毕业生而言，毕设中所用到的技能可以用"熟悉"；对工作过的而言，在项目开发中用到的技能也可以用"熟悉"。</p>
+<p><strong>"精通"</strong>: 对一项技术已经得心应手。(应该谨慎使用) 在开发过程中当同学或同事向我们请教这个领域的问题时我们有信心和能力解决。</p>
+<h4 id="回答为什么跳槽">3. 回答"为什么跳槽"</h4>
+<p>面试官希望通过这个问题了解应聘者的==性格==。</p>
+<p>==不要抱怨，也不要流露出负面情绪==，以免被当做负面情绪的传染源，从而影响到团队士气。 应该避免以下四个原因：老板太苛刻、同事太难相处、加班太频繁、工资太低。</p>
+<p>通常给出的答案可以是：现在的工作做了一段时间，已经没有太多的激情了，因此希望寻找一份更有挑战的工作。 然后具体论述为什么有些厌倦现在的职位，以及面试的职位我为什么会有兴趣。</p>
+<p>本书作者给出的两个例子:</p>
+<blockquote>
+<p>Civil 3D是一款面向土木行业的设计软件。如果我想在现在的职位上得到提升，就必须加强土木行业的学习，可我对诸如计算土方量、道路设计等没有太多兴趣，因此出来寻找机会。</p>
+</blockquote>
+<blockquote>
+<p>我在微软的主要工作是开发和维护.NET的UI平台Winforms。由于Winforms已经非常成熟，不需要添加多少新功能，因此我的大部分工作都是维护和修改BUG。两年下来，调试的能力得到了很大的提高，但长期如此自己的软件开发和设计能力将不能得到提高，因此想出来寻找可以设计和开发系统的职位。同时，我在过去几年里的工作都是开发桌面软件，对网络了解甚少，因此希望下一个工作能与网络相关。众所周知，思科是个网络公司，这里的软件和系统或多或少都离不开网络，因此我对思科的职位很感兴趣。</p>
+</blockquote>
+<h3 id="技术面试环节">1.3.2 技术面试环节</h3>
+<p>这是面试的重头戏。面试官通常会关注应聘者的5种素质。</p>
+<h4 id="扎实的基础知识">1. 扎实的基础知识</h4>
+<p>通常体现在3个方面: ==编程语言、数据结构和算法==。</p>
+<p>首先应该掌握一两门编程语言。面试官从面试过程中应聘者写的代码和跟进的提问中，能看出其掌握的熟练程度。 数据结构：链表、二叉树等。 算法：查找、排序、动态规划、贪婪等。</p>
+<h4 id="高质量的代码">2. 高质量的代码</h4>
+<p>简单的问题：面试官的期待会很高。 基本功能之外：==边界条件、特殊输入、错误处理、程序鲁棒性==等。</p>
+<p>应该：在==动手写代码之前想好测试用例==，事先考虑好各种可能的输入。 写完代码后也==不要立即提交==，而是在心里默默地运行。 当预想的所有测试用例都能得到合理的输出时，再将代码提交给面试官。</p>
+<h4 id="清晰的思路">3. 清晰的思路</h4>
+<p>复杂的问题: 面试官甚至不期待给出完整的答案，可能更看重是否思路清晰。 面试官通常不喜欢应聘者在没有形成清晰的思路之前就开始草率地写代码。</p>
+<p>形成清晰的思路的几个简单的方法: 首先是举几个简单的==例子==让自己==理解问题==，寻找其中隐藏的抽象==规律==； 其次可以试着用==图形==表示抽象的==数据结构==。 最后可以试着把复杂的问题==分解==成若干个简单的子问题，再一一解决。</p>
+<h4 id="优化效率的能力">4. 优化效率的能力</h4>
+<p>当问题有多种解法的时候，面试官通常期待应聘者能最终找到==最优解==。 当面试官提示还有更好的解法时，应聘者不能放弃思考，而是努力寻找在时间或者空间消耗上可以优化的地方。</p>
+<p>要优化时空效率，首先需要知道如何==分析效率==。 另外，我们还需要熟知==各种数据结构的优缺点==。 当然，还需要熟练掌握==常用的算法==，例如查找和排序。</p>
+<h4 id="优秀的综合能力">5. 优秀的综合能力</h4>
+<p><strong>软技能 (Soft Skills):</strong> ==沟通能力和学习能力==。</p>
+<p><strong>沟通能力</strong>: 在介绍项目经验或者算法思路时，面试官会观察应聘者是否==观点明确、逻辑清晰==； 另外，也会从==神态和语气==判断他是否有团队合作意识。</p>
+<p><strong>学习能力</strong>: IT行业知识更新很快。面试官通常有两种方法考察这一点。 首先是询问应聘者==最近在看什么书、从中学到了哪些技术==。 其次是抛出一个==新的概念==，观察应聘者能否短时间内通过==提问、思考、再提问==的过程理解这个概念并解决相关问题。</p>
+<p><strong>知识迁移能力</strong>的考察: 通常会先问一个简单的问题，再问一个复杂但和前面的问题相关的问题。</p>
+<p><strong>抽象建模能力和发散思维能力</strong>的考察: 从日常生活中提炼问题、限制应聘者不能使用常规方法来考察创新精神等。</p>
+<h3 id="应聘者提问环节">1.3.3 应聘者提问环节</h3>
+<p>面试官想要了解应聘者最关心的问题有哪些。 应该提前做好功课，为每一轮面试准备至少==2~3个==问题。</p>
+<p>有些问题不适合在技术面试环节问。 首先，==不要问和自己的职位没有关系的问题==，例如"公司未来五年的发展策略是什么"。 其次，不要问薪水。 再者，不要立即打听面试结果。</p>
+<p>推荐的问题是==与招聘的职位或者项目相关的问题==。 应该对所应聘的职位或者项目的背景有一定的了解。 有两种方法做到这一点: 提前在网上搜集信息，或者留心面试过程中面试官说的话。</p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E5%89%91%E6%8C%87Offer/" rel="tag"># 剑指Offer</a>
+              <a href="/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/" rel="tag"># 读书笔记</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2021/12/09/Test/%E5%9F%BA%E4%BA%8EFlask+Vue%E7%9A%84%E5%8D%95%E9%A1%B5%E9%9D%A2%E5%BA%94%E7%94%A8%E6%9E%84%E5%BB%BA/" rel="prev" title="基于Flask和Vue.js的单页面应用构建">
+                  <i class="fa fa-chevron-left"></i> 基于Flask和Vue.js的单页面应用构建
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2022/02/08/Offer06_Easy_%E4%BB%8E%E5%B0%BE%E5%88%B0%E5%A4%B4%E6%89%93%E5%8D%B0%E9%93%BE%E8%A1%A8/" rel="next" title="剑指 Offer 06. 从尾到头打印链表">
+                  剑指 Offer 06. 从尾到头打印链表 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">CHEN XUEYI</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a>
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+  
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">false</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"all","js":{"url":"https://cdn.jsdelivr.net/npm/mathjax@3.2.0/es5/tex-mml-chtml.js","integrity":"sha256-r+3itOMtGGjap0x+10hu6jW/gZCzxHsoKrOd7gyRSGY="}}</script>
+<script src="/js/third-party/math/mathjax.js"></script>
+
+
+
+</body>
+</html>
