@@ -85,9 +85,9 @@
   <ul class="main-menu menu">
         <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a></li>
         <li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a></li>
-        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags<span class="badge">22</span></a></li>
+        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags<span class="badge">26</span></a></li>
         <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories<span class="badge">13</span></a></li>
-        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives<span class="badge">52</span></a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives<span class="badge">82</span></a></li>
         
             
   <li class="menu-item menu-item-docs"><a href="/docs/" rel="section"><i class="fa fa-book fa-fw"></i>Docs</a></li>
@@ -142,7 +142,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">52</span>
+          <span class="site-state-item-count">82</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -153,7 +153,7 @@
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">22</span>
+        <span class="site-state-item-count">26</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
@@ -205,7 +205,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://yukief4fdh.github.io/2022/02/09/27_Easy_%E7%A7%BB%E9%99%A4%E5%85%83%E7%B4%A0_Array/">
+    <link itemprop="mainEntityOfPage" href="https://yukief4fdh.github.io/2022/02/09/237_Easy_%E5%88%A0%E9%99%A4%E9%93%BE%E8%A1%A8%E4%B8%AD%E7%9A%84%E8%8A%82%E7%82%B9_LinkedList/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/yuki.gif">
@@ -218,7 +218,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2022/02/09/27_Easy_%E7%A7%BB%E9%99%A4%E5%85%83%E7%B4%A0_Array/" class="post-title-link" itemprop="url">27. 移除元素</a>
+          <a href="/2022/02/09/237_Easy_%E5%88%A0%E9%99%A4%E9%93%BE%E8%A1%A8%E4%B8%AD%E7%9A%84%E8%8A%82%E7%82%B9_LinkedList/" class="post-title-link" itemprop="url">237. 删除链表中的节点</a>
         </h2>
 
         <div class="post-meta-container">
@@ -229,129 +229,15 @@
       </span>
       <span class="post-meta-item-text">Posted on</span>
 
-      <time title="Created: 2022-02-09 15:16:54" itemprop="dateCreated datePublished" datetime="2022-02-09T15:16:54+09:00">2022-02-09</time>
+      <time title="Created: 2022-02-09 15:16:55" itemprop="dateCreated datePublished" datetime="2022-02-09T15:16:55+09:00">2022-02-09</time>
     </span>
       <span class="post-meta-item">
         <span class="post-meta-item-icon">
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2022-02-10 00:06:43" itemprop="dateModified" datetime="2022-02-10T00:06:43+09:00">2022-02-10</time>
+        <time title="Modified: 2022-02-10 23:08:35" itemprop="dateModified" datetime="2022-02-10T23:08:35+09:00">2022-02-10</time>
       </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/LeetCode/" itemprop="url" rel="index"><span itemprop="name">LeetCode</span></a>
-        </span>
-          , 
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/LeetCode/Easy/" itemprop="url" rel="index"><span itemprop="name">Easy</span></a>
-        </span>
-          , 
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/LeetCode/Easy/Half-done/" itemprop="url" rel="index"><span itemprop="name">Half-done</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <center>
-<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/remove-element/"><b><font color = #5EB561>转载自Leet Code</font></b></a>
-</center>
-<h3 id="题目描述">题目描述</h3>
-<p>给你一个数组<code>nums</code>和一个值<code>val</code>，你需要<strong>原地</strong>移除所有数值等于<code>val</code>的元素，并返回移除后数组的新长度。</p>
-<p>不要使用额外的数组空间，你必须仅使用<span class="math inline">\(O(1)\)</span>额外空间并<strong>原地</strong>修改输入数组。</p>
-<p>元素的顺序可以改变。你不需要考虑数组中超出新长度后面的元素。</p>
-<p>示例1: &gt;输入：<code>nums = [3,2,2,3]</code>, <code>val = 3</code> &gt;输出：<code>2</code>, <code>nums = [2,2]</code> &gt;解释：函数应该返回新的长度 <code>2</code>, 并且 <code>nums</code> 中的前两个元素均为 <code>2</code>。你不需要考虑数组中超出新长度后面的元素。例如，函数返回的新长度为 <code>2</code> ，而 <code>nums = [2,2,3,3]</code> 或 <code>nums = [2,2,0,0]</code>，也会被视作正确答案。</p>
-<p>示例2: &gt;输入：<code>nums = [0,1,2,2,3,0,4,2]</code>, <code>val = 2</code> &gt;输出：<code>5</code>, <code>nums = [0,1,4,0,3]</code> &gt;解释：函数应该返回新的长度 <code>5</code>, 并且 <code>nums</code> 中的前五个元素为 <code>0, 1, 3, 0, 4</code>。注意这五个元素可为任意顺序。你不需要考虑数组中超出新长度后面的元素。</p>
-<p><strong>提示：</strong></p>
-<ul>
-<li><code>0 &lt;= nums.length &lt;= 100</code></li>
-<li><code>0 &lt;= nums[i] &lt;= 50</code></li>
-<li><code>0 &lt;= val &lt;= 100</code></li>
-</ul>
-<hr />
-<h3 id="我的代码"><font color=#808080>我的代码</font></h3>
-<p><span class="math inline">\(T(N) = O(N)\)</span>, <span class="math inline">\(S(N) = O(1)\)</span></p>
-<figure class="highlight java"><figcaption><span>&#123;.line-numbers&#125;</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MySolution27</span></span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">removeElement</span><span class="params">(<span class="keyword">int</span>[] nums, <span class="keyword">int</span> val)</span> </span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">    	<span class="keyword">int</span> move  = <span class="number">0</span>;</span><br><span class="line">    	<span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;nums.length; i++)</span><br><span class="line">    	&#123;</span><br><span class="line">            <span class="keyword">if</span> (nums[i]==val)</span><br><span class="line">            &#123;</span><br><span class="line">                move++; <span class="keyword">continue</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            nums[i-move] = nums[i];</span><br><span class="line">    	&#125;</span><br><span class="line">    	<span class="keyword">return</span> nums.length-move;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<hr />
-<h3 id="方法一双指针">方法一：双指针</h3>
-<p><span class="math inline">\(T(N) = O(N)\)</span>, <span class="math inline">\(S(N) = O(1)\)</span></p>
-<p><code>i</code>为快指针，<code>j</code>为慢指针。 当<code>nums[j]=val</code>时，递增<code>j</code>跳过该元素，<code>i</code>不动。 当<code>nums[j]≠val</code>时，就将<code>nums[j]</code>复制到<code>nums[i]</code>，并同时递增<code>i</code>和<code>j</code>。 直到j到达数组末尾，则新数组长度为<code>i</code>。</p>
-<p>假设数组总共有 <code>n</code> 个元素，<code>i</code> 和 <code>j</code>至少遍历 <code>2n</code> 步。</p>
-<figure class="highlight java"><figcaption><span>&#123;.line-numbers&#125;</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span></span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">removeElement</span><span class="params">(<span class="keyword">int</span>[] nums, <span class="keyword">int</span> val)</span> </span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> i = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; nums.length; j++)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span> (nums[j] != val)</span><br><span class="line">                nums[i++] = nums[j];</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> i;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<hr />
-<h3 id="方法二双指针---当要删除的元素很少时">方法二：双指针 - 当要删除的元素很少时</h3>
-<p><span class="math inline">\(T(N) = O(N)\)</span>, <span class="math inline">\(S(N) = O(1)\)</span></p>
-<p>现在考虑数组包含很少的要删除的元素的情况。 例如，<code>num=[1，2，3，5，4]</code>，<code>val=4</code>。 之前的算法会对前四个元素做不必要的复制操作。 另一个例子是 <code>num=[4，1，2，3，5]</code>，<code>val=4</code>。 似乎没有必要将 <code>[1，2，3，5]</code> 这几个元素左移一步，因为问题描述中提到元素的顺序可以更改。</p>
-<p>当我们遇到 <code>nums[i] = val</code> 时， 我们可以将当前元素与最后一个元素进行交换，并释放最后一个元素。 这实际上使数组的大小减少了 <code>1</code>。</p>
-<p>请注意，被交换的最后一个元素可能是您想要移除的值。 但是不要担心，在下一次迭代中，我们仍然会检查这个元素。</p>
-<p>在这个方法中，赋值操作的次数等于要删除的元素的数量。 因此，如果要移除的元素很少，效率会更高。</p>
-<figure class="highlight java"><figcaption><span>&#123;.line-numbers&#125;</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span></span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">removeElement</span><span class="params">(<span class="keyword">int</span>[] nums, <span class="keyword">int</span> val)</span> </span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> tail = nums.length-<span class="number">1</span>; </span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;=tail; i++)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span> (nums[i]==val)</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="keyword">int</span> tmp = nums[i];</span><br><span class="line">                nums[i] = nums[tail];</span><br><span class="line">                nums[tail] = tmp;</span><br><span class="line">                i--; tail--;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> tail+<span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://yukief4fdh.github.io/2022/02/09/26_Easy_%E5%88%A0%E9%99%A4%E6%8E%92%E5%BA%8F%E6%95%B0%E7%BB%84%E4%B8%AD%E7%9A%84%E9%87%8D%E5%A4%8D%E9%A1%B9_Array/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/yuki.gif">
-      <meta itemprop="name" content="CHEN XUEYI">
-      <meta itemprop="description" content="Call me Yuki (JPN) or Chloe (ENG).<br> Nice to meet you :)<br><hr style="margin:3px;"> Tokyo Institute of Technology (M1)<br> Rearch Interest: Visualization">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Yuki's Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2022/02/09/26_Easy_%E5%88%A0%E9%99%A4%E6%8E%92%E5%BA%8F%E6%95%B0%E7%BB%84%E4%B8%AD%E7%9A%84%E9%87%8D%E5%A4%8D%E9%A1%B9_Array/" class="post-title-link" itemprop="url">26. 删除排序数组中的重复项</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-      
-
-      <time title="Created: 2022-02-09 15:16:54 / Modified: 20:52:32" itemprop="dateCreated datePublished" datetime="2022-02-09T15:16:54+09:00">2022-02-09</time>
-    </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
         <i class="far fa-folder"></i>
@@ -381,22 +267,42 @@
     
     <div class="post-body" itemprop="articleBody">
           <center>
-<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/remove-duplicates-from-sorted-array/"><b><font color = #5EB561>转载自Leet Code</font></b></a>
+<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/delete-node-in-a-linked-list/"><b><font color = #5EB561>转载自Leet Code</font></b></a>
 </center>
 <h3 id="题目描述">题目描述</h3>
-<p>给定一个排序数组，你需要在<strong>原地</strong>删除重复出现的元素，使得每个元素只出现一次，返回移除后数组的新长度。 不要使用额外的数组空间，你必须在<strong>原地</strong> <strong>修改输入数组</strong> 并在使用<span class="math inline">\(O(1)\)</span>额外空间的条件下完成。</p>
-<p>示例1: &gt;给定数组<code>nums = [1,1,2]</code>, &gt;函数应该返回新的长度<code>2</code>, 并且原数组<em>nums</em>的前两个元素被修改为<strong>1, 2</strong>。 &gt;你不需要考虑数组中超出新长度后面的元素。</p>
-<p>示例2: &gt;给定数组<code>nums = [0,0,1,1,1,2,2,3,3,4]</code>, &gt;函数应该返回新的长度<code>5</code>, 并且原数组<em>nums</em>的前两个元素被修改为<strong>0, 1, 2, 3, 4</strong>。 &gt;你不需要考虑数组中超出新长度后面的元素。</p>
-<p>说明： &gt;为什么返回数值是整数，但输出的答案是数组呢?</p>
-<p>请注意，输入数组是以「引用」方式传递的，这意味着在函数里修改输入数组对于调用者是可见的。 你可以想象内部操作如下:</p>
+<p>请编写一个函数，用于 <strong>删除单链表中某个特定节点</strong> 。在设计函数时需要注意，你无法访问链表的头节点 <code>head</code> ，只能直接访问 <strong>要被删除的节点</strong> 。</p>
+<p>题目数据保证需要删除的节点 <strong>不是末尾节点</strong> 。</p>
+<p><strong>示例 1：</strong></p>
 <blockquote>
-<p>// <code>nums</code> 是以“引用”方式传递的。也就是说，不对实参做任何拷贝 <code>int len = removeDuplicates(nums);</code></p>
-<p>// 在函数里修改输入数组对于调用者是可见的。 // 根据你的函数返回的长度, 它会打印出数组中该长度范围内的所有元素。 <code>for (int i = 0; i &lt; len; i++) &#123;     print(nums[i]); &#125;</code></p>
+<p>输入：<code>head = [4,5,1,9], node = 5</code> 输出：<code>[4,1,9]</code> 解释：指定链表中值为 5 的第二个节点，那么在调用了你的函数之后，该链表应变为 4 -&gt; 1 -&gt; 9</p>
 </blockquote>
+<p><strong>示例 2</strong>：</p>
+<blockquote>
+<p>输入：<code>head = [4,5,1,9], node = 1</code> 输出：<code>[4,5,9]</code> 解释：指定链表中值为 1 的第三个节点，那么在调用了你的函数之后，该链表应变为 4 -&gt; 5 -&gt; 9</p>
+</blockquote>
+<p><strong>示例 3</strong>：</p>
+<blockquote>
+<p>输入：<code>head = [1,2,3,4], node = 3</code> 输出：<code>[1,2,4]</code></p>
+</blockquote>
+<p><strong>示例 4</strong>：</p>
+<blockquote>
+<p>输入：<code>head = [0,1], node = 0</code> 输出：<code>[1]</code></p>
+</blockquote>
+<p><strong>示例 5</strong>：</p>
+<blockquote>
+<p>输入：<code>head = [-3,5,-99], node = -3</code> 输出：<code>[5,-99]</code></p>
+</blockquote>
+<p><strong>提示</strong>：</p>
+<ul>
+<li>链表中节点的数目范围是 <code>[2, 1000]</code></li>
+<li><code>-1000 &lt;= Node.val &lt;= 1000</code></li>
+<li>链表中每个节点的值都是唯一的</li>
+<li>需要删除的节点 <code>node</code> 是 链表中的一个有效节点 ，且 不是末尾节点</li>
+</ul>
 <hr />
 <h3 id="我的代码"><font color=#808080>我的代码</font></h3>
-<p><span class="math inline">\(T(N) = O(N)\)</span>, <span class="math inline">\(S(n) = O(1)\)</span></p>
-<figure class="highlight java"><figcaption><span>&#123;.line-numbers&#125;</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MySolution26</span></span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (nums.length&lt;=<span class="number">1</span>) <span class="keyword">return</span> nums.length;</span><br><span class="line">    	</span><br><span class="line">    <span class="keyword">int</span> move = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">1</span>; i&lt;nums.length; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span> (nums[i-<span class="number">1</span>]==nums[i])</span><br><span class="line">        &#123;</span><br><span class="line">            move++; <span class="keyword">continue</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        nums[i-move] = nums[i];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> nums.length-move;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><span class="math inline">\(T(N) = O(1)\)</span>, <span class="math inline">\(S(N) = O(1)\)</span></p>
+<figure class="highlight java"><figcaption><span>&#123;.line-numbers&#125;</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Definition for singly-linked list.</span></span><br><span class="line"><span class="comment"> * public class ListNode &#123;</span></span><br><span class="line"><span class="comment"> *     int val;</span></span><br><span class="line"><span class="comment"> *     ListNode next;</span></span><br><span class="line"><span class="comment"> *     ListNode() &#123;&#125;</span></span><br><span class="line"><span class="comment"> *     ListNode(int val) &#123; this.val = val; &#125;</span></span><br><span class="line"><span class="comment"> *     ListNode(int val, ListNode next) &#123; this.val = val; this.next = next; &#125;</span></span><br><span class="line"><span class="comment"> * &#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MySolution237</span> </span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">deleteNode</span><span class="params">(ListNode node)</span> </span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        ListNode pre = node;</span><br><span class="line">    	ListNode post = pre.next;</span><br><span class="line">    	</span><br><span class="line">    	<span class="keyword">while</span> (post.next!=<span class="keyword">null</span>)</span><br><span class="line">    	&#123;</span><br><span class="line">    		pre.val = post.val;</span><br><span class="line">    		pre = post;</span><br><span class="line">    		post = post.next;</span><br><span class="line">    	&#125;</span><br><span class="line">    	pre.val = post.val;</span><br><span class="line">    	pre.next = <span class="keyword">null</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -423,7 +329,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://yukief4fdh.github.io/2022/02/09/21_Easy_%E5%90%88%E5%B9%B6%E4%B8%A4%E4%B8%AA%E6%9C%89%E5%BA%8F%E9%93%BE%E8%A1%A8_LinkedList/">
+    <link itemprop="mainEntityOfPage" href="https://yukief4fdh.github.io/2022/02/09/234_Easy_%E5%9B%9E%E6%96%87%E9%93%BE%E8%A1%A8_LinkedList/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/yuki.gif">
@@ -436,7 +342,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2022/02/09/21_Easy_%E5%90%88%E5%B9%B6%E4%B8%A4%E4%B8%AA%E6%9C%89%E5%BA%8F%E9%93%BE%E8%A1%A8_LinkedList/" class="post-title-link" itemprop="url">21. 合并两个有序链表</a>
+          <a href="/2022/02/09/234_Easy_%E5%9B%9E%E6%96%87%E9%93%BE%E8%A1%A8_LinkedList/" class="post-title-link" itemprop="url">234. 回文链表</a>
         </h2>
 
         <div class="post-meta-container">
@@ -446,10 +352,16 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">Posted on</span>
-      
 
-      <time title="Created: 2022-02-09 15:16:54 / Modified: 17:12:32" itemprop="dateCreated datePublished" datetime="2022-02-09T15:16:54+09:00">2022-02-09</time>
+      <time title="Created: 2022-02-09 15:16:55" itemprop="dateCreated datePublished" datetime="2022-02-09T15:16:55+09:00">2022-02-09</time>
     </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">Edited on</span>
+        <time title="Modified: 2022-02-10 23:04:19" itemprop="dateModified" datetime="2022-02-10T23:04:19+09:00">2022-02-10</time>
+      </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
         <i class="far fa-folder"></i>
@@ -479,28 +391,26 @@
     
     <div class="post-body" itemprop="articleBody">
           <center>
-<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/merge-two-sorted-lists/"><b><font color = #5EB561>转载自Leet Code</font></b></a>
+<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/palindrome-linked-list/"><b><font color = #5EB561>转载自Leet Code</font></b></a>
 </center>
 <h3 id="题目描述">题目描述</h3>
-<p>将两个升序链表合并为一个新的 <strong>升序</strong> 链表并返回。 新链表是通过拼接给定的两个链表的所有节点组成的。 </p>
-<p>示例： &gt;输入：<code>1-&gt;2-&gt;4, 1-&gt;3-&gt;4</code> &gt;输出：<code>1-&gt;1-&gt;2-&gt;3-&gt;4-&gt;4</code> ---</p>
+<p>请判断一个链表是否为回文链表。</p>
+<p>示例 1: &gt;输入: <code>1-&gt;2</code> &gt;输出: <code>false</code></p>
+<p>示例 2: &gt;输入: <code>1-&gt;2-&gt;2-&gt;1</code> &gt;输出: <code>true</code></p>
+<p><strong>进阶</strong>：</p>
+<p>你能否用 <span class="math inline">\(O(n)\)</span> 时间复杂度和 <span class="math inline">\(O(1)\)</span> 空间复杂度解决此题？</p>
+<hr />
 <h3 id="我的代码"><font color=#808080>我的代码</font></h3>
-<p><span class="math inline">\(T(M,N) = O(M+N)\)</span>, <span class="math inline">\(S(M,N) = O(M+N)\)</span></p>
-<h2 id="section"><figure class="highlight java"><figcaption><span>&#123;.line-numbers&#125;</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Definition for singly-linked list.</span></span><br><span class="line"><span class="comment"> * public class ListNode &#123;</span></span><br><span class="line"><span class="comment"> *     int val;</span></span><br><span class="line"><span class="comment"> *     ListNode next;</span></span><br><span class="line"><span class="comment"> *     ListNode() &#123;&#125;</span></span><br><span class="line"><span class="comment"> *     ListNode(int val) &#123; this.val = val; &#125;</span></span><br><span class="line"><span class="comment"> *     ListNode(int val, ListNode next) &#123; this.val = val; this.next = next; &#125;</span></span><br><span class="line"><span class="comment"> * &#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MySolution21</span> </span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> ListNode <span class="title">mergeTwoLists</span><span class="params">(ListNode l1, ListNode l2)</span> </span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">    	ListNode newList = <span class="keyword">null</span>;</span><br><span class="line">    	ListNode p = <span class="keyword">null</span>;</span><br><span class="line">    	</span><br><span class="line">        ListNode p1 = l1; ListNode p2 = l2;</span><br><span class="line">        <span class="keyword">while</span> (p1!=<span class="keyword">null</span>&amp;&amp;p2!=<span class="keyword">null</span>)</span><br><span class="line">        &#123;</span><br><span class="line">        	<span class="keyword">int</span> val1 = p1.val; <span class="keyword">int</span> val2 = p2.val;</span><br><span class="line">        	</span><br><span class="line">        	<span class="keyword">if</span> (val1&lt;val2)</span><br><span class="line">        	&#123;</span><br><span class="line">        		<span class="keyword">if</span> (newList==<span class="keyword">null</span>)</span><br><span class="line">        		&#123;</span><br><span class="line">        			newList = <span class="keyword">new</span> ListNode(val1,<span class="keyword">null</span>);</span><br><span class="line">        			p = newList;</span><br><span class="line">        		&#125;</span><br><span class="line">        		<span class="keyword">else</span></span><br><span class="line">        		&#123;</span><br><span class="line">        			ListNode newNode = <span class="keyword">new</span> ListNode(val1,<span class="keyword">null</span>);</span><br><span class="line">        			p.next = newNode;</span><br><span class="line">        			p = newNode;</span><br><span class="line">        		&#125;</span><br><span class="line">        		p1 = p1.next;</span><br><span class="line">        	&#125;</span><br><span class="line">        	<span class="keyword">else</span></span><br><span class="line">        	&#123;</span><br><span class="line">        		<span class="keyword">if</span> (newList==<span class="keyword">null</span>)</span><br><span class="line">        		&#123;</span><br><span class="line">        			newList = <span class="keyword">new</span> ListNode(val2,<span class="keyword">null</span>);</span><br><span class="line">        			p = newList;</span><br><span class="line">        		&#125;</span><br><span class="line">        		<span class="keyword">else</span></span><br><span class="line">        		&#123;</span><br><span class="line">        			ListNode newNode = <span class="keyword">new</span> ListNode(val2,<span class="keyword">null</span>);</span><br><span class="line">        			p.next = newNode;</span><br><span class="line">        			p = newNode;</span><br><span class="line">        		&#125;</span><br><span class="line">        		p2 = p2.next;</span><br><span class="line">        	&#125;</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">while</span> (p1!=<span class="keyword">null</span>)</span><br><span class="line">        &#123;</span><br><span class="line">    		<span class="keyword">if</span> (newList==<span class="keyword">null</span>)</span><br><span class="line">    		&#123;</span><br><span class="line">    			newList = <span class="keyword">new</span> ListNode(p1.val,<span class="keyword">null</span>);</span><br><span class="line">    			p = newList;</span><br><span class="line">    		&#125;</span><br><span class="line">    		<span class="keyword">else</span></span><br><span class="line">    		&#123;</span><br><span class="line">    			ListNode newNode = <span class="keyword">new</span> ListNode(p1.val,<span class="keyword">null</span>);</span><br><span class="line">    			p.next = newNode;</span><br><span class="line">    			p = newNode;</span><br><span class="line">    		&#125;</span><br><span class="line">    		p1 = p1.next;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">while</span> (p2!=<span class="keyword">null</span>)</span><br><span class="line">        &#123;</span><br><span class="line">    		<span class="keyword">if</span> (newList==<span class="keyword">null</span>)</span><br><span class="line">    		&#123;</span><br><span class="line">    			newList = <span class="keyword">new</span> ListNode(p2.val,<span class="keyword">null</span>);</span><br><span class="line">    			p = newList;</span><br><span class="line">    		&#125;</span><br><span class="line">    		<span class="keyword">else</span></span><br><span class="line">    		&#123;</span><br><span class="line">    			ListNode newNode = <span class="keyword">new</span> ListNode(p2.val,<span class="keyword">null</span>);</span><br><span class="line">    			p.next = newNode;</span><br><span class="line">    			p = newNode;</span><br><span class="line">    		&#125;</span><br><span class="line">    		p2 = p2.next;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> newList;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></h2>
-<h3 id="方法一递归">方法一：递归</h3>
-<p><span class="math inline">\(T(M+N) = O(M+N)\)</span>, <span class="math inline">\(S(M+N) = O(M+N)\)</span></p>
-<p>可以递归地定义两个链表里的 <code>merge</code> 操作（忽略边界情况，比如空链表等）， 即链表头中较小的那个节点与剩下元素的 <code>merge</code> 操作结果合并： <span class="math display">\[
-\begin{cases}
-list1[0]+merge(list1[1:],list2), &amp;if\ list[0] &lt; list2[0]\\
-list2[0]+merge(list1,list2[1:]), &amp;otherwise
-\end{cases}
-\]</span></p>
-<p>将以上递归过程建模，并且考虑边界情况： 如果<code>l1</code>或者<code>l2</code>一开始就是空链表，那么没有任何操作需要合并，返回非空链表即可； 否则，需要判断<code>l1</code>和<code>l2</code>哪一个链表的头节点更小，然后递归地决定下一个添加到结果中的节点， 若两个链表中有一个为空则递归结束。</p>
-<h2 id="section-1"><figure class="highlight java"><figcaption><span>&#123;.line-numbers&#125;</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution21</span></span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> ListNode <span class="title">mergeTwoLists</span><span class="params">(ListNode l1, ListNode l2)</span> </span></span><br><span class="line"><span class="function">	</span>&#123;</span><br><span class="line">		<span class="keyword">if</span> (l1 == <span class="keyword">null</span>)  <span class="keyword">return</span> l2;</span><br><span class="line">		<span class="keyword">if</span> (l2 == <span class="keyword">null</span>)  <span class="keyword">return</span> l1;</span><br><span class="line">		</span><br><span class="line">		<span class="keyword">if</span> (l1.val &lt; l2.val) </span><br><span class="line">		&#123;</span><br><span class="line">		    l1.next = mergeTwoLists(l1.next, l2);</span><br><span class="line">		    <span class="keyword">return</span> l1;</span><br><span class="line">		&#125; </span><br><span class="line">		<span class="keyword">else</span> </span><br><span class="line">		&#123;</span><br><span class="line">		    l2.next = mergeTwoLists(l1, l2.next);</span><br><span class="line">		    <span class="keyword">return</span> l2;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></h2>
-<h3 id="方法二迭代">方法二：迭代</h3>
-<p><span class="math inline">\(T(M+N) = O(M+N)\)</span>, <span class="math inline">\(S(M+N) = O(1)\)</span></p>
-<p>利用哑节点<code>prevNode</code>和前置指针<code>prev</code>，不需要创建额外的新链表。</p>
-<figure class="highlight java"><figcaption><span>&#123;.line-numbers&#125;</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution21</span></span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> ListNode <span class="title">mergeTwoLists</span><span class="params">(ListNode l1, ListNode l2)</span> </span></span><br><span class="line"><span class="function">	</span>&#123;</span><br><span class="line">		ListNode prevNode = <span class="keyword">new</span> ListNode(-<span class="number">1</span>, <span class="keyword">null</span>);</span><br><span class="line">		ListNode prev = prevNode;</span><br><span class="line">		</span><br><span class="line">		<span class="keyword">while</span> (l1!=<span class="keyword">null</span>&amp;&amp;l2!=<span class="keyword">null</span>)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">if</span> (l1.val&lt;l2.val)</span><br><span class="line">			&#123;</span><br><span class="line">				prev.next = l1;</span><br><span class="line">				l1 = l1.next;</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">else</span> </span><br><span class="line">			&#123;</span><br><span class="line">				prev.next = l2;</span><br><span class="line">				l2 = l2.next;</span><br><span class="line">			&#125;</span><br><span class="line">			prev = prev.next;</span><br><span class="line">		&#125;</span><br><span class="line">		</span><br><span class="line">		<span class="keyword">if</span> (l1!=<span class="keyword">null</span>) prev.next = l1;</span><br><span class="line">		<span class="keyword">else</span> prev.next = l2;</span><br><span class="line">		</span><br><span class="line">		<span class="keyword">return</span> prevNode.next;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><span class="math inline">\(T(N) = O(N)\)</span>, <span class="math inline">\(S(N) = O(1)\)</span></p>
+<h2 id="section"><figure class="highlight java"><figcaption><span>&#123;.line-numbers&#125;</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Definition for singly-linked list.</span></span><br><span class="line"><span class="comment"> * public class ListNode &#123;</span></span><br><span class="line"><span class="comment"> *     int val;</span></span><br><span class="line"><span class="comment"> *     ListNode next;</span></span><br><span class="line"><span class="comment"> *     ListNode() &#123;&#125;</span></span><br><span class="line"><span class="comment"> *     ListNode(int val) &#123; this.val = val; &#125;</span></span><br><span class="line"><span class="comment"> *     ListNode(int val, ListNode next) &#123; this.val = val; this.next = next; &#125;</span></span><br><span class="line"><span class="comment"> * &#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MySolution234</span> </span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">isPalindrome</span><span class="params">(ListNode head)</span> </span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">    	<span class="keyword">if</span> (head==<span class="keyword">null</span>||head.next==<span class="keyword">null</span>) <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">    	<span class="keyword">if</span> (head.next.next==<span class="keyword">null</span>) <span class="keyword">return</span> head.val==head.next.val;</span><br><span class="line">    	</span><br><span class="line">    	ListNode p = head; <span class="keyword">int</span> length = <span class="number">0</span>;</span><br><span class="line">    	<span class="keyword">while</span> (p!=<span class="keyword">null</span>)</span><br><span class="line">    	&#123;</span><br><span class="line">    		length++; p = p.next; </span><br><span class="line">    	&#125;</span><br><span class="line">    	</span><br><span class="line">    	ListNode prev = head; ListNode post;</span><br><span class="line">    	<span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;length/<span class="number">2</span>; i++)</span><br><span class="line">    		prev = prev.next;</span><br><span class="line">    	p = prev.next; post = p.next;</span><br><span class="line">    	</span><br><span class="line">    	prev.next = <span class="keyword">null</span>; p.next = prev;</span><br><span class="line">    	<span class="keyword">while</span> (post!=<span class="keyword">null</span>)</span><br><span class="line">    	&#123;</span><br><span class="line">    		prev = p;</span><br><span class="line">    		p = post;</span><br><span class="line">    		post = post.next;</span><br><span class="line">    		p.next = prev;</span><br><span class="line">    	&#125;</span><br><span class="line">    	</span><br><span class="line">    	ListNode pointer = head;</span><br><span class="line">    	<span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;length/<span class="number">2</span>; i++)</span><br><span class="line">    	&#123;</span><br><span class="line">    		<span class="keyword">if</span> (p.val!=pointer.val) <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">    		p = p.next; pointer = pointer.next;</span><br><span class="line">    	&#125;</span><br><span class="line">    	<span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></h2>
+<h3 id="思路-递归">思路: 递归</h3>
+<p><span class="math inline">\(T(N) = O(N)\)</span>, <span class="math inline">\(S(N) = O(N)\)</span></p>
+<p>递归遍历节点的方式如下。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">function <span class="title">print_values_in_reverse</span><span class="params">(ListNode head)</span></span></span><br><span class="line"><span class="function">    <span class="keyword">if</span> head is NOT <span class="keyword">null</span></span></span><br><span class="line"><span class="function">        <span class="title">print_values_in_reverse</span><span class="params">(head.next)</span></span></span><br><span class="line"><span class="function">        print head.val</span></span><br></pre></td></tr></table></figure>
+<p>因此，如果我们能利用递归来反向遍历节点， 同时使用一个递归函数外面的变量向前迭代， 就可以判断链表是否为回文的。</p>
+<hr />
+<h3 id="代码">代码</h3>
+<figure class="highlight java"><figcaption><span>&#123;.line-numbers&#125;</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution234</span></span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">	ListNode frontPointer;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">isPalindrome</span><span class="params">(ListNode head)</span> </span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">    	frontPointer = head;</span><br><span class="line">    	<span class="keyword">return</span> recursivelyCheck(head);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">boolean</span> <span class="title">recursivelyCheck</span><span class="params">(ListNode backPointer)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">    	<span class="keyword">if</span> (backPointer!=<span class="keyword">null</span>) </span><br><span class="line">    	&#123;</span><br><span class="line">			<span class="comment">// 首先从这里开始back指针一直跑到尾节点(backPointer.next==null)</span></span><br><span class="line">    		<span class="keyword">if</span> (!recursivelyCheck(backPointer.next)) </span><br><span class="line">    			<span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">			<span class="comment">// back指针从尾节点开始取值，front指针从头节点开始取值</span></span><br><span class="line">    		<span class="keyword">if</span> (backPointer.val!=frontPointer.val) </span><br><span class="line">    			<span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">			<span class="comment">// back指针向上一层递归追溯之前向后迭代front指针</span></span><br><span class="line">    		frontPointer = frontPointer.next;</span><br><span class="line">    	&#125;</span><br><span class="line">		<span class="comment">// 递归到达边界(backPointer==null)，并返回true</span></span><br><span class="line">    	<span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -527,7 +437,7 @@ list2[0]+merge(list1,list2[1:]), &amp;otherwise
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://yukief4fdh.github.io/2022/02/09/20_Easy_%E6%9C%89%E6%95%88%E7%9A%84%E6%8B%AC%E5%8F%B7_Stack/">
+    <link itemprop="mainEntityOfPage" href="https://yukief4fdh.github.io/2022/02/09/232_Easy_%E7%94%A8%E6%A0%88%E5%AE%9E%E7%8E%B0%E9%98%9F%E5%88%97_Stack/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/yuki.gif">
@@ -540,7 +450,7 @@ list2[0]+merge(list1,list2[1:]), &amp;otherwise
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2022/02/09/20_Easy_%E6%9C%89%E6%95%88%E7%9A%84%E6%8B%AC%E5%8F%B7_Stack/" class="post-title-link" itemprop="url">20. 有效的括号</a>
+          <a href="/2022/02/09/232_Easy_%E7%94%A8%E6%A0%88%E5%AE%9E%E7%8E%B0%E9%98%9F%E5%88%97_Stack/" class="post-title-link" itemprop="url">232. 用栈实现队列</a>
         </h2>
 
         <div class="post-meta-container">
@@ -550,10 +460,16 @@ list2[0]+merge(list1,list2[1:]), &amp;otherwise
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">Posted on</span>
-      
 
-      <time title="Created: 2022-02-09 15:16:54 / Modified: 15:44:20" itemprop="dateCreated datePublished" datetime="2022-02-09T15:16:54+09:00">2022-02-09</time>
+      <time title="Created: 2022-02-09 15:16:55" itemprop="dateCreated datePublished" datetime="2022-02-09T15:16:55+09:00">2022-02-09</time>
     </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">Edited on</span>
+        <time title="Modified: 2022-02-10 23:01:36" itemprop="dateModified" datetime="2022-02-10T23:01:36+09:00">2022-02-10</time>
+      </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
         <i class="far fa-folder"></i>
@@ -583,23 +499,34 @@ list2[0]+merge(list1,list2[1:]), &amp;otherwise
     
     <div class="post-body" itemprop="articleBody">
           <center>
-<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/valid-parentheses/"><b><font color = #5EB561>转载自Leet Code</font></b></a>
+<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/implement-queue-using-stacks/"><b><font color = #5EB561>转载自Leet Code</font></b></a>
 </center>
 <h3 id="题目描述">题目描述</h3>
-<p>给定一个只包括 <code>'('</code>，<code>')'</code>，<code>'&#123;'</code>，<code>'&#125;'</code>，<code>['</code>，<code>']'</code>  的字符串，判断字符串是否有效。 有效字符串需满足：</p>
+<p>请你仅使用两个栈实现先入先出队列。队列应当支持一般队列的支持的所有操作（<code>push</code>、<code>pop</code>、<code>peek</code>、<code>empty</code>） - <code>void push(int x)</code> 将元素<code>x</code>推到队列的末尾 - <code>int pop()</code> 从队列的开头移除并返回元素 - <code>int peek()</code> 返回队列开头的元素 - <code>boolean empty()</code> 如果队列为空，返回 <code>true</code> ；否则，返回 <code>false</code></p>
+<p><strong>说明</strong>：</p>
 <ul>
-<li>左括号必须用相同类型的右括号闭合。</li>
-<li>左括号必须以正确的顺序闭合。</li>
+<li><p>你只能使用标准的栈操作 —— 也就是只有 <code>push to top</code>, <code>peek/pop from top</code>, <code>size</code>, 和 <code>is empty</code> 操作是合法的。</p></li>
+<li><p>你所使用的语言也许不支持栈。你可以使用 <code>list</code> 或者 <code>deque</code>（双端队列）来模拟一个栈，只要是标准的栈操作即可。</p></li>
 </ul>
-<p>注意空字符串可被认为是有效字符串。</p>
-<p>示例 1: &gt;输入: <code>"()"</code> &gt;输出: <code>true</code></p>
-<p>示例 2: &gt;输入: <code>"()[]&#123;&#125;"</code> &gt;输出: <code>true</code></p>
-<p>示例 3: &gt;输入: <code>"(]"</code> &gt;输出: <code>false</code></p>
-<p>示例 4: &gt;输入: <code>"([)]"</code> &gt;输出:<code>false</code></p>
-<p>示例 5: &gt;输入: <code>"&#123;[]&#125;"</code> &gt;输出: <code>true</code></p>
+<p><strong>示例</strong>：</p>
+<blockquote>
+<p>输入： <code>["MyQueue", "push", "push", "peek", "pop", "empty"]</code> <code>[[], [1], [2], [], [], []]</code> 输出： <code>[null, null, null, 1, 1, false]</code></p>
+</blockquote>
+<p><strong>解释</strong>：</p>
+<blockquote>
+<p>MyQueue myQueue = new MyQueue(); myQueue.push(1); // queue is: [1] myQueue.push(2); // queue is: [1, 2] (leftmost is front of the queue) myQueue.peek(); // return 1 myQueue.pop(); // return 1, queue is [2] myQueue.empty(); // return false</p>
+</blockquote>
+<p><strong>提示</strong>：</p>
+<ul>
+<li><code>1 &lt;= x &lt;= 9</code></li>
+<li>最多调用 <code>100</code> 次 <code>push</code>、<code>pop</code>、<code>peek</code> 和<code>empty</code></li>
+<li>假设所有操作都是有效的 （例如，一个空的队列不会调用 <code>pop</code> 或者 <code>peek</code> 操作）</li>
+</ul>
+<p><strong>进阶：</strong></p>
+<p>你能否实现每个操作均摊时间复杂度为<code>O(1)</code>的队列？ 换句话说，执行<code>n</code>个操作的总时间复杂度为<code>O(n)</code> ，即使其中一个操作可能花费较长时间。</p>
 <hr />
 <h3 id="我的代码"><font color=#808080>我的代码</font></h3>
-<figure class="highlight java"><figcaption><span>&#123;.line-numbers&#125;</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MySolution</span> </span>&#123;</span><br><span class="line">	Stack&lt;Character&gt; stack = <span class="keyword">new</span> Stack();</span><br><span class="line">	</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">isValid</span><span class="params">(String s)</span> </span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">    	<span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;s.length(); i++)</span><br><span class="line">    	&#123;</span><br><span class="line">    		<span class="keyword">char</span> ch = s.charAt(i);</span><br><span class="line">    		<span class="keyword">if</span> (ch==<span class="string">&#x27;(&#x27;</span>||ch==<span class="string">&#x27;&#123;&#x27;</span>||ch==<span class="string">&#x27;[&#x27;</span>) stack.push(ch);</span><br><span class="line">    		<span class="keyword">else</span> <span class="keyword">if</span> (!stack.isEmpty()&amp;&amp;(Match(stack.peek(),ch)))</span><br><span class="line">    				stack.pop();</span><br><span class="line">    		<span class="keyword">else</span> <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">    	&#125;</span><br><span class="line">    	<span class="keyword">if</span> (!stack.isEmpty()) <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">    	<span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line">	</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">Match</span><span class="params">(<span class="keyword">char</span> ch1, <span class="keyword">char</span> ch2)</span></span></span><br><span class="line"><span class="function">	</span>&#123;</span><br><span class="line">		<span class="keyword">if</span> (ch1==<span class="string">&#x27;(&#x27;</span>&amp;&amp;ch2==<span class="string">&#x27;)&#x27;</span>) <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">		<span class="keyword">if</span> (ch1==<span class="string">&#x27;&#123;&#x27;</span>&amp;&amp;ch2==<span class="string">&#x27;&#125;&#x27;</span>) <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">		<span class="keyword">if</span> (ch1==<span class="string">&#x27;[&#x27;</span>&amp;&amp;ch2==<span class="string">&#x27;]&#x27;</span>) <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">		<span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><figcaption><span>&#123;.line-numbers&#125;</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MyQueue232</span> </span>&#123;</span><br><span class="line">	Stack&lt;Integer&gt; stack;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/** Initialize your data structure here. */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">MyQueue232</span><span class="params">()</span> </span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">    	stack = <span class="keyword">new</span> Stack();</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">/** Push element x to the back of queue. */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">push</span><span class="params">(<span class="keyword">int</span> x)</span> </span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">    	Stack &lt;Integer&gt; tmp = <span class="keyword">new</span> Stack();</span><br><span class="line">    	<span class="keyword">while</span> (!stack.isEmpty()) tmp.push(stack.pop());</span><br><span class="line">    	stack.push(x);</span><br><span class="line">    	<span class="keyword">while</span>(!tmp.isEmpty())</span><br><span class="line">    		stack.push(tmp.pop());</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">/** Removes the element from in front of queue and returns that element. */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">pop</span><span class="params">()</span> </span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">    	<span class="keyword">return</span> stack.pop();</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">/** Get the front element. */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">peek</span><span class="params">()</span> </span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">    	<span class="keyword">return</span> stack.peek();</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">/** Returns whether the queue is empty. */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">empty</span><span class="params">()</span> </span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">    	<span class="keyword">return</span> stack.isEmpty();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Your MyQueue object will be instantiated and called as such:</span></span><br><span class="line"><span class="comment"> * MyQueue obj = new MyQueue();</span></span><br><span class="line"><span class="comment"> * obj.push(x);</span></span><br><span class="line"><span class="comment"> * int param_2 = obj.pop();</span></span><br><span class="line"><span class="comment"> * int param_3 = obj.peek();</span></span><br><span class="line"><span class="comment"> * boolean param_4 = obj.empty();</span></span><br><span class="line"><span class="comment"> */</span></span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -626,7 +553,7 @@ list2[0]+merge(list1,list2[1:]), &amp;otherwise
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://yukief4fdh.github.io/2022/02/09/14_Easy_%E6%9C%80%E9%95%BF%E5%85%AC%E5%85%B1%E5%89%8D%E7%BC%80_String/">
+    <link itemprop="mainEntityOfPage" href="https://yukief4fdh.github.io/2022/02/09/228_Easy_%E6%B1%87%E6%80%BB%E5%8C%BA%E9%97%B4_Array/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/yuki.gif">
@@ -639,7 +566,7 @@ list2[0]+merge(list1,list2[1:]), &amp;otherwise
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2022/02/09/14_Easy_%E6%9C%80%E9%95%BF%E5%85%AC%E5%85%B1%E5%89%8D%E7%BC%80_String/" class="post-title-link" itemprop="url">14. 最长公共前缀</a>
+          <a href="/2022/02/09/228_Easy_%E6%B1%87%E6%80%BB%E5%8C%BA%E9%97%B4_Array/" class="post-title-link" itemprop="url">228. 汇总区间</a>
         </h2>
 
         <div class="post-meta-container">
@@ -649,10 +576,127 @@ list2[0]+merge(list1,list2[1:]), &amp;otherwise
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">Posted on</span>
-      
 
-      <time title="Created: 2022-02-09 15:16:54 / Modified: 15:37:57" itemprop="dateCreated datePublished" datetime="2022-02-09T15:16:54+09:00">2022-02-09</time>
+      <time title="Created: 2022-02-09 15:16:55" itemprop="dateCreated datePublished" datetime="2022-02-09T15:16:55+09:00">2022-02-09</time>
     </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">Edited on</span>
+        <time title="Modified: 2022-02-10 22:59:00" itemprop="dateModified" datetime="2022-02-10T22:59:00+09:00">2022-02-10</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/LeetCode/" itemprop="url" rel="index"><span itemprop="name">LeetCode</span></a>
+        </span>
+          , 
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/LeetCode/Easy/" itemprop="url" rel="index"><span itemprop="name">Easy</span></a>
+        </span>
+          , 
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/LeetCode/Easy/Done/" itemprop="url" rel="index"><span itemprop="name">Done</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <center>
+<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/summary-ranges/"><b><font color = #5EB561>转载自Leet Code</font></b></a>
+</center>
+<h3 id="题目描述">题目描述</h3>
+<p>给定一个无重复元素的有序整数数组<code>nums</code>。 返回<strong>恰好覆盖数组中所有数字</strong>的<strong>最小有序</strong>区间范围列表。 也就是说，<code>nums</code>的每个元素都恰好被某个区间范围所覆盖， 并且不存在属于某个范围但不属于<code>nums</code>的数字<code>x</code>。 列表中的每个区间范围<code>[a,b]</code>应该按如下格式输出：</p>
+<ul>
+<li><code>"a-&gt;b"</code>，如果<code>a != b</code></li>
+<li><code>"a"</code>，如果<code>a == b</code> </li>
+</ul>
+<p>示例 1： &gt;输入：<code>nums = [0,1,2,4,5,7]</code> &gt;输出：<code>["0-&gt;2","4-&gt;5","7"]</code> &gt; &gt;解释：区间范围是： &gt;[0,2] --&gt; "0-&gt;2" &gt;[4,5] --&gt; "4-&gt;5" &gt;[7,7] --&gt; "7"</p>
+<p>示例 2： &gt;输入：<code>nums = [0,2,3,4,6,8,9]</code> &gt;输出：<code>["0","2-&gt;4","6","8-&gt;9"]</code> &gt; &gt;解释：区间范围是： &gt;[0,0] --&gt; "0" &gt;[2,4] --&gt; "2-&gt;4" &gt;[6,6] --&gt; "6" &gt;[8,9] --&gt; "8-&gt;9"</p>
+<p>示例 3： &gt;输入：<code>nums = []</code> &gt;输出：<code>[]</code></p>
+<p>示例 4： &gt;输入：<code>nums = [-1]</code> &gt;输出：<code>["-1"]</code></p>
+<p>示例 5： &gt;输入：<code>nums = [0]</code> &gt;输出：<code>["0"]</code></p>
+<p><strong>提示</strong>：</p>
+<ul>
+<li><code>0 &lt;= nums.length &lt;= 20</code></li>
+<li><code>-231 &lt;= nums[i] &lt;= 231 - 1</code></li>
+<li><code>nums</code> 中的所有值都 互不相同</li>
+<li><code>nums</code> 按升序排列</li>
+</ul>
+<hr />
+<h3 id="我的代码"><font color=#808080>我的代码</font></h3>
+<figure class="highlight java"><figcaption><span>&#123;.line-numbers&#125;</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MySolution228</span> </span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">   <span class="function"><span class="keyword">public</span> List&lt;String&gt; <span class="title">summaryRanges</span><span class="params">(<span class="keyword">int</span>[] nums)</span> </span>&#123;</span><br><span class="line">    	List&lt;String&gt; list = <span class="keyword">new</span> LinkedList();</span><br><span class="line">    	<span class="keyword">if</span> (nums.length&lt;<span class="number">1</span>) <span class="keyword">return</span> list;</span><br><span class="line">    	</span><br><span class="line">    	<span class="keyword">int</span> pre = nums[<span class="number">0</span>]; String strPre= Integer.toString(pre);</span><br><span class="line">    	<span class="keyword">int</span> tail = nums[<span class="number">0</span>]; String strTail = <span class="keyword">null</span>;</span><br><span class="line">    	</span><br><span class="line">    	<span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">1</span>; i&lt;nums.length; i++)</span><br><span class="line">    	&#123;</span><br><span class="line">    		<span class="keyword">if</span> (nums[i]==tail+<span class="number">1</span>)</span><br><span class="line">    		&#123;</span><br><span class="line">    			tail=nums[i];</span><br><span class="line">    			strTail = Integer.toString(tail);</span><br><span class="line">    		&#125;</span><br><span class="line">    		<span class="keyword">else</span></span><br><span class="line">    		&#123;</span><br><span class="line">    			<span class="keyword">if</span> (strTail!=<span class="keyword">null</span>)</span><br><span class="line">    				list.add(strPre+<span class="string">&quot;-&gt;&quot;</span>+strTail);</span><br><span class="line">    			<span class="keyword">else</span> </span><br><span class="line">    				list.add(strPre);</span><br><span class="line">    			</span><br><span class="line">    			pre = nums[i]; strPre = Integer.toString(pre); </span><br><span class="line">    			tail = nums[i]; strTail = <span class="keyword">null</span>;</span><br><span class="line">    		&#125;</span><br><span class="line">    	&#125;</span><br><span class="line">    	</span><br><span class="line">		<span class="keyword">if</span> (strTail!=<span class="keyword">null</span>)</span><br><span class="line">			list.add(strPre+<span class="string">&quot;-&gt;&quot;</span>+strTail);</span><br><span class="line">		<span class="keyword">else</span> </span><br><span class="line">			list.add(strPre);</span><br><span class="line">    	</span><br><span class="line">    	<span class="keyword">return</span> list;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://yukief4fdh.github.io/2022/02/09/225_Easy_%E7%94%A8%E9%98%9F%E5%88%97%E5%AE%9E%E7%8E%B0%E6%A0%88_Stack/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/yuki.gif">
+      <meta itemprop="name" content="CHEN XUEYI">
+      <meta itemprop="description" content="Call me Yuki (JPN) or Chloe (ENG).<br> Nice to meet you :)<br><hr style="margin:3px;"> Tokyo Institute of Technology (M1)<br> Rearch Interest: Visualization">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Yuki's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2022/02/09/225_Easy_%E7%94%A8%E9%98%9F%E5%88%97%E5%AE%9E%E7%8E%B0%E6%A0%88_Stack/" class="post-title-link" itemprop="url">225. 用队列实现栈</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2022-02-09 15:16:55" itemprop="dateCreated datePublished" datetime="2022-02-09T15:16:55+09:00">2022-02-09</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">Edited on</span>
+        <time title="Modified: 2022-02-10 22:56:28" itemprop="dateModified" datetime="2022-02-10T22:56:28+09:00">2022-02-10</time>
+      </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
         <i class="far fa-folder"></i>
@@ -682,43 +726,31 @@ list2[0]+merge(list1,list2[1:]), &amp;otherwise
     
     <div class="post-body" itemprop="articleBody">
           <center>
-<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/longest-common-prefix/"><b><font color = #5EB561>转载自Leet Code</font></b></a>
+<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/implement-stack-using-queues/"><b><font color = #5EB561>转载自Leet Code</font></b></a>
 </center>
 <h3 id="题目描述">题目描述</h3>
-<p>编写一个函数来查找字符串数组中的最长公共前缀。 如果不存在公共前缀，返回空字符串 <code>""</code>。</p>
-<p>示例 1: &gt;输入: <code>["flower","flow","flight"]</code> &gt;输出: <code>"fl"</code></p>
-<p>示例 2: &gt;输入: <code>["dog","racecar","car"]</code> &gt;输出: <code>""</code> &gt;解释: 输入不存在公共前缀。</p>
-<p><strong>提示：</strong></p>
+<p>请你仅使用两个队列实现一个后入先出（LIFO）的栈， 并支持普通栈的全部四种操作（<code>push</code>、<code>top</code>、<code>pop</code> 和 <code>empty</code>）。</p>
+<p>实现 <code>MyStack</code> 类：</p>
 <ul>
-<li><code>1 &lt;= strs.length &lt;= 200</code></li>
-<li><code>0 &lt;= strs[i].length &lt;= 200</code></li>
-<li><code>strs[i]</code> 仅由小写英文字母组成</li>
+<li><code>void push(int x)</code> 将元素 <code>x</code> 压入栈顶。</li>
+<li><code>int pop()</code> 移除并返回栈顶元素。</li>
+<li><code>int top()</code> 返回栈顶元素。</li>
+<li><code>boolean empty()</code> 如果栈是空的，返回 <code>true</code> ；否则，返回 <code>false</code> 。</li>
+</ul>
+<p>注意：</p>
+<ul>
+<li>你只能使用队列的基本操作 —— 也就是 <code>push to back</code>、<code>peek/pop from front</code>、<code>size</code> 和 <code>is empty</code> 这些操作。</li>
+<li>你所使用的语言也许不支持队列。 你可以使用<code>list</code> （列表）或者 <code>deque</code>（双端队列）来模拟一个队列 , 只要是标准的队列操作即可。</li>
 </ul>
 <hr />
 <h3 id="我的代码"><font color=#808080>我的代码</font></h3>
-<p><span class="math inline">\(T(M,N) = O(MN)\)</span>, <span class="math inline">\(S(N) = O(1)\)</span></p>
-<h2 id="section"><figure class="highlight java"><figcaption><span>&#123;.line-numbers&#125;</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MySolution14</span> </span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">longestCommonPrefix</span><span class="params">(String[] strs)</span> </span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">    	String pre = <span class="string">&quot;&quot;</span>;</span><br><span class="line">    	<span class="keyword">if</span> (strs.length&lt;=<span class="number">0</span>) <span class="keyword">return</span> <span class="string">&quot;&quot;</span>;</span><br><span class="line">    	</span><br><span class="line">    	<span class="keyword">boolean</span> flag = <span class="keyword">true</span>;</span><br><span class="line">    	<span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>; flag; i++)</span><br><span class="line">    	&#123;</span><br><span class="line">    		<span class="keyword">if</span> (i&gt;=strs[<span class="number">0</span>].length()) <span class="keyword">break</span>;</span><br><span class="line">    		<span class="keyword">char</span> ch = strs[<span class="number">0</span>].charAt(i);</span><br><span class="line">    		<span class="keyword">for</span> (<span class="keyword">int</span> j=<span class="number">0</span>; j&lt;strs.length; j++)</span><br><span class="line">    		&#123;</span><br><span class="line">    			<span class="keyword">if</span> (i&gt;=strs[j].length()||ch!=strs[j].charAt(i)) </span><br><span class="line">    			&#123;</span><br><span class="line">    				flag = <span class="keyword">false</span>; <span class="keyword">break</span>;</span><br><span class="line">    			&#125;</span><br><span class="line">    		&#125;</span><br><span class="line">    		<span class="keyword">if</span> (flag)</span><br><span class="line">    			pre+=ch+<span class="string">&quot;&quot;</span>;</span><br><span class="line">    	&#125;</span><br><span class="line">    	<span class="keyword">return</span> pre;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></h2>
-<h3 id="方法一-分治法">方法一: 分治法</h3>
-<p><span class="math inline">\(T(M,N) = O(M,N)\)</span>, <span class="math inline">\(S(M,N) = O(MlogN)\)</span></p>
-<p>注意到LCP的计算满足结合律，有以下的结论： <span class="math display">\[LCP(S_1...S_n)=LCP(LCP(S_1...S_k),LCP(S_{k+1}...S_n))\]</span></p>
-<p>其中<span class="math inline">\(LCP(S_1...S_n)\)</span>是字符串<span class="math inline">\(S_1...S_n\)</span>的最长公共前缀, <span class="math inline">\(1 &lt; k &lt; n\)</span>。</p>
-<p>基于上述结论，可以使用分治法得到字符串数组中的最长公共前缀： 将问题<span class="math inline">\(LCP(S_i...S_j)\)</span>分解为两个子问题: <span class="math inline">\(LCP(S_i...S_{mid})\)</span>和<span class="math inline">\(LCP(S_{mid+1}...S_j)\)</span>，其中<span class="math inline">\(mid=\frac {i+j}{2}\)</span>. 对两个子问题分别求解，然后对两个子问题的解计算最长公共前缀，即为原问题的解。</p>
-<p>时空复杂度：</p>
-<ul>
-<li><span class="math inline">\(T(M,N) = O(MN)\)</span>，其中<span class="math inline">\(M\)</span>是<code>strs</code>数组中字符串的平均长度，<span class="math inline">\(N\)</span>是字符串的数量； 递推式: <span class="math inline">\(T(N)=2·T(\frac N2)+O(M)\)</span>.</li>
-<li><span class="math inline">\(S(M,N) = O(MlogN)\)</span>，其中<span class="math inline">\(M\)</span>是<code>strs</code>数组中字符串的平均长度，N是字符串的数量； 主要取决于递归调用的层数，层数最大为<span class="math inline">\(logN\)</span>，每层需要<span class="math inline">\(M\)</span>的空间来存储返回结果。</li>
-</ul>
-<h2 id="section-1"><figure class="highlight java"><figcaption><span>&#123;.line-numbers&#125;</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution14</span> </span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">longestCommonPrefix</span><span class="params">(String[] strs)</span> </span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">    	<span class="keyword">if</span> (strs==<span class="keyword">null</span>||strs.length==<span class="number">0</span>) <span class="keyword">return</span> <span class="string">&quot;&quot;</span>;</span><br><span class="line">    	<span class="keyword">else</span> <span class="keyword">return</span> longestCommonPrefix(strs, <span class="number">0</span>, strs.length-<span class="number">1</span>); </span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">longestCommonPrefix</span><span class="params">(String[] strs, <span class="keyword">int</span> start, <span class="keyword">int</span> end)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">    	<span class="keyword">if</span> (start==end) <span class="keyword">return</span> strs[start];</span><br><span class="line">    	</span><br><span class="line">    	<span class="keyword">int</span> mid = start+(end-start)/<span class="number">2</span>;</span><br><span class="line">    	String lcpLeft = longestCommonPrefix(strs, start, mid);</span><br><span class="line">    	String lcpRight = longestCommonPrefix(strs, mid+<span class="number">1</span>, end);</span><br><span class="line">    	<span class="keyword">return</span> commonPrefix(lcpLeft, lcpRight);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">commonPrefix</span><span class="params">(String lcpLeft, String lcpRight)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">    	<span class="keyword">int</span> minLength = Math.min(lcpLeft.length(), lcpRight.length());</span><br><span class="line">    	<span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;minLength; i++)</span><br><span class="line">    		<span class="keyword">if</span> (lcpLeft.charAt(i)!=lcpRight.charAt(i))</span><br><span class="line">    			<span class="keyword">return</span> lcpLeft.substring(<span class="number">0</span>,i);</span><br><span class="line">    	<span class="keyword">return</span> lcpLeft.substring(<span class="number">0</span>,minLength);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></h2>
-<h3 id="方法二-二分查找">方法二: 二分查找</h3>
-<p><span class="math inline">\(T(M,N) = O(MNlogM)\)</span>, <span class="math inline">\(S(M,N) = O(1)\)</span></p>
-<p>显然，最长公共前缀的长度不会超过字符串数组strs中最短字符串的长度<em>minLength</em>。 可以在[0,<em>minLength</em>]的范围内通过二分查找得到最长公共前缀的长度。</p>
-<p>每次取查找范围的中间值<em>mid</em>，判断每个字符串的长度为<em>mid</em>的前缀是否相同。 若相同，则最长公共前缀的长度一定大于等于<em>mid</em>； 否则，最长公共前缀的长度一定小于<em>mid</em>； 通过上述方式每次将查找范围缩小一半，直到得到最长公共前缀的长度。</p>
-<p>时空复杂度：</p>
-<ul>
-<li><span class="math inline">\(T(M,N) = O(MNlogM)\)</span>，其中<span class="math inline">\(M\)</span>是<code>strs</code>数组中字符串的平均长度，<span class="math inline">\(N\)</span>是字符串的数量； 二分查找的迭代执行次数是<span class="math inline">\(O(logM)\)</span>，每次迭代最多需要比较<span class="math inline">\(MN\)</span>个字符，因此总的时间复杂度是<span class="math inline">\(O(MNlogM)\)</span>。</li>
-<li><span class="math inline">\(S(M,N) = O(1)\)</span>。</li>
-</ul>
-<figure class="highlight java"><figcaption><span>&#123;.line-numbers&#125;</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution14</span> </span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">longestCommonPrefix</span><span class="params">(String[] strs)</span> </span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">    	<span class="keyword">if</span> (strs==<span class="keyword">null</span>||strs.length==<span class="number">0</span>) <span class="keyword">return</span> <span class="string">&quot;&quot;</span>;</span><br><span class="line">    	<span class="keyword">else</span> <span class="keyword">return</span> longestCommonPrefix(strs, <span class="number">0</span>, strs.length-<span class="number">1</span>); </span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">longestCommonPrefix</span><span class="params">(String[] strs, <span class="keyword">int</span> start, <span class="keyword">int</span> end)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">    	<span class="keyword">if</span> (start==end) <span class="keyword">return</span> strs[start];</span><br><span class="line">    	</span><br><span class="line">    	<span class="keyword">int</span> mid = start+(end-start)/<span class="number">2</span>;</span><br><span class="line">    	String lcpLeft = longestCommonPrefix(strs, start, mid);</span><br><span class="line">    	String lcpRight = longestCommonPrefix(strs, mid+<span class="number">1</span>, end);</span><br><span class="line">    	<span class="keyword">return</span> commonPrefix(lcpLeft, lcpRight);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">commonPrefix</span><span class="params">(String lcpLeft, String lcpRight)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">    	<span class="keyword">int</span> minLength = Math.min(lcpLeft.length(), lcpRight.length());</span><br><span class="line">    	<span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;minLength; i++)</span><br><span class="line">    		<span class="keyword">if</span> (lcpLeft.charAt(i)!=lcpRight.charAt(i))</span><br><span class="line">    			<span class="keyword">return</span> lcpLeft.substring(<span class="number">0</span>,i);</span><br><span class="line">    	<span class="keyword">return</span> lcpLeft.substring(<span class="number">0</span>,minLength);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><figcaption><span>&#123;.line-numbers&#125;</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MyStack225</span> </span>&#123;</span><br><span class="line">	LinkedList&lt;Integer&gt; list;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/** Initialize your data structure here. */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">MyStack225</span><span class="params">()</span> </span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">    	list = <span class="keyword">new</span> LinkedList();</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">/** Push element x onto stack. */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">push</span><span class="params">(<span class="keyword">int</span> x)</span> </span>&#123;</span><br><span class="line">    	list.add(x);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">/** Removes the element on top of the stack and returns that element. */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">pop</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    	<span class="keyword">int</span> []tmp = <span class="keyword">new</span> <span class="keyword">int</span>[list.size()];</span><br><span class="line">    	<span class="keyword">for</span> (<span class="keyword">int</span> i=tmp.length-<span class="number">1</span>; i&gt;=<span class="number">0</span>; i--)</span><br><span class="line">    		tmp[i] = list.removeFirst();</span><br><span class="line">    	<span class="keyword">int</span> val = tmp[<span class="number">0</span>];</span><br><span class="line">    	<span class="keyword">if</span> (tmp.length-<span class="number">1</span>&gt;=<span class="number">0</span>)</span><br><span class="line">    		<span class="keyword">for</span> (<span class="keyword">int</span> i=tmp.length-<span class="number">1</span>; i&gt;<span class="number">0</span>; i--)</span><br><span class="line">    			list.add(tmp[i]);</span><br><span class="line">    	<span class="keyword">return</span> val;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">/** Get the top element. */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">top</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    	<span class="keyword">int</span> []tmp = <span class="keyword">new</span> <span class="keyword">int</span>[list.size()];</span><br><span class="line">    	<span class="keyword">for</span> (<span class="keyword">int</span> i=tmp.length-<span class="number">1</span>; i&gt;=<span class="number">0</span>; i--)</span><br><span class="line">    		tmp[i] = list.removeFirst();</span><br><span class="line">    	<span class="keyword">int</span> val = tmp[<span class="number">0</span>];</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i=tmp.length-<span class="number">1</span>; i&gt;=<span class="number">0</span>; i--)</span><br><span class="line">			list.add(tmp[i]);</span><br><span class="line">    	<span class="keyword">return</span> val;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">/** Returns whether the stack is empty. */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">empty</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    	<span class="keyword">return</span> list.isEmpty();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Your MyStack object will be instantiated and called as such:</span></span><br><span class="line"><span class="comment"> * MyStack obj = new MyStack();</span></span><br><span class="line"><span class="comment"> * obj.push(x);</span></span><br><span class="line"><span class="comment"> * int param_2 = obj.pop();</span></span><br><span class="line"><span class="comment"> * int param_3 = obj.top();</span></span><br><span class="line"><span class="comment"> * boolean param_4 = obj.empty();</span></span><br><span class="line"><span class="comment"> */</span></span><br></pre></td></tr></table></figure>
+<hr />
+<h3 id="方法原地修改">方法：原地修改</h3>
+<p>可以在向队列加入新元素之前，先记录队列原本的长度<code>n</code>， 然后在加入新元素之后<code>poll</code>出前面的<code>n</code>个旧元素依次排到新元素后面。</p>
+<hr />
+<h3 id="代码">代码</h3>
+<figure class="highlight java"><figcaption><span>&#123;.line-numbers&#125;</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MyStack225</span> </span>&#123;</span><br><span class="line">	LinkedList&lt;Integer&gt; list;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/** Initialize your data structure here. */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">MyStack225</span><span class="params">()</span> </span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">    	list = <span class="keyword">new</span> LinkedList();</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">/** Push element x onto stack. */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">push</span><span class="params">(<span class="keyword">int</span> x)</span> </span>&#123;</span><br><span class="line">    	<span class="keyword">int</span> n = list.size();</span><br><span class="line">    	list.add(x);</span><br><span class="line">    	<span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;n; i++)</span><br><span class="line">    		list.add(list.poll()); </span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">/** Removes the element on top of the stack and returns that element. */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">pop</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    	<span class="keyword">return</span> list.poll();</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">/** Get the top element. */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">top</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    	<span class="keyword">return</span> list.peek();</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">/** Returns whether the stack is empty. */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">empty</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    	<span class="keyword">return</span> list.isEmpty();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Your MyStack object will be instantiated and called as such:</span></span><br><span class="line"><span class="comment"> * MyStack obj = new MyStack();</span></span><br><span class="line"><span class="comment"> * obj.push(x);</span></span><br><span class="line"><span class="comment"> * int param_2 = obj.pop();</span></span><br><span class="line"><span class="comment"> * int param_3 = obj.top();</span></span><br><span class="line"><span class="comment"> * boolean param_4 = obj.empty();</span></span><br><span class="line"><span class="comment"> */</span></span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -738,7 +770,7 @@ list2[0]+merge(list1,list2[1:]), &amp;otherwise
 
 
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/7/"><i class="fa fa-angle-left" aria-label="Previous page"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/7/">7</a><span class="page-number current">8</span><a class="page-number" href="/page/9/">9</a><span class="space">&hellip;</span><a class="page-number" href="/page/11/">11</a><a class="extend next" rel="next" href="/page/9/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
+    <a class="extend prev" rel="prev" href="/page/7/"><i class="fa fa-angle-left" aria-label="Previous page"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/7/">7</a><span class="page-number current">8</span><a class="page-number" href="/page/9/">9</a><span class="space">&hellip;</span><a class="page-number" href="/page/17/">17</a><a class="extend next" rel="next" href="/page/9/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
   </nav>
 
 </div>

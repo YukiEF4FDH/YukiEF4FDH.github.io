@@ -85,9 +85,9 @@
   <ul class="main-menu menu">
         <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a></li>
         <li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a></li>
-        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags<span class="badge">22</span></a></li>
+        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags<span class="badge">26</span></a></li>
         <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories<span class="badge">13</span></a></li>
-        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives<span class="badge">52</span></a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives<span class="badge">82</span></a></li>
         
             
   <li class="menu-item menu-item-docs"><a href="/docs/" rel="section"><i class="fa fa-book fa-fw"></i>Docs</a></li>
@@ -142,7 +142,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">52</span>
+          <span class="site-state-item-count">82</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -153,7 +153,7 @@
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">22</span>
+        <span class="site-state-item-count">26</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
@@ -205,7 +205,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://yukief4fdh.github.io/2022/02/09/13_Easy_%E7%BD%97%E9%A9%AC%E6%95%B0%E5%AD%97%E8%BD%AC%E6%95%B4%E6%95%B0_String/">
+    <link itemprop="mainEntityOfPage" href="https://yukief4fdh.github.io/2022/02/09/219_Easy_%E5%AD%98%E5%9C%A8%E9%87%8D%E5%A4%8D%E5%85%83%E7%B4%A0II_Array/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/yuki.gif">
@@ -218,7 +218,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2022/02/09/13_Easy_%E7%BD%97%E9%A9%AC%E6%95%B0%E5%AD%97%E8%BD%AC%E6%95%B4%E6%95%B0_String/" class="post-title-link" itemprop="url">13. 罗马数字转整数</a>
+          <a href="/2022/02/09/219_Easy_%E5%AD%98%E5%9C%A8%E9%87%8D%E5%A4%8D%E5%85%83%E7%B4%A0II_Array/" class="post-title-link" itemprop="url">219. 存在重复元素 II</a>
         </h2>
 
         <div class="post-meta-container">
@@ -228,10 +228,16 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">Posted on</span>
-      
 
-      <time title="Created: 2022-02-09 15:16:54 / Modified: 15:32:06" itemprop="dateCreated datePublished" datetime="2022-02-09T15:16:54+09:00">2022-02-09</time>
+      <time title="Created: 2022-02-09 15:16:55" itemprop="dateCreated datePublished" datetime="2022-02-09T15:16:55+09:00">2022-02-09</time>
     </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">Edited on</span>
+        <time title="Modified: 2022-02-10 22:52:28" itemprop="dateModified" datetime="2022-02-10T22:52:28+09:00">2022-02-10</time>
+      </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
         <i class="far fa-folder"></i>
@@ -261,35 +267,22 @@
     
     <div class="post-body" itemprop="articleBody">
           <center>
-<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/roman-to-integer/"><b><font color = #5EB561>转载自Leet Code</font></b></a>
+<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/contains-duplicate-ii/"><b><font color = #5EB561>转载自Leet Code</font></b></a>
 </center>
 <h3 id="题目描述">题目描述</h3>
-<p>罗马数字包含以下七种字符: <code>I</code>， <code>V</code>， <code>X</code>， <code>L</code>，<code>C</code>，<code>D</code> 和 <code>M</code>。</p>
-<p><span class="math display">\[
-\begin{array}{c|lcr}
-字符 &amp; I &amp; V &amp; X &amp; L &amp; C &amp; D &amp; M\\
-\hline
-数值 &amp; 1 &amp; 5 &amp; 10 &amp; 50 &amp; 100 &amp; 500 &amp; 1000\\
-\end{array}
-\]</span></p>
-<p>例如， 罗马数字 2 写做 <code>II</code> ，即为两个并列的 1。12 写做 <code>XII</code> ，即为 <code>X</code> + <code>II</code> 。 27 写做  <code>XXVII</code>, 即为 <code>XX</code> + <code>V</code> + <code>II</code> 。</p>
-<p>通常情况下，罗马数字中小的数字在大的数字的右边。但也存在特例，例如 4 不写做 <code>IIII</code>，而是 <code>IV</code>。数字 1 在数字 5 的左边，所表示的数等于大数 5 减小数 1 得到的数值 4 。同样地，数字 9 表示为 <code>IX</code>。这个特殊的规则只适用于以下六种情况：</p>
+<p>给定一个整数数组和一个整数 <code>k</code>， 判断数组中是否存在两个不同的索引 <code>i</code> 和 <code>j</code> ，使得<code>nums [i] = nums [j]</code>， 并且 <code>i</code> 和 <code>j</code> 的差的 <strong>绝对值</strong> 至多为 <code>k</code>。</p>
+<p>示例 1: &gt;输入: <code>nums = [1,2,3,1], k = 3</code> &gt;输出: <code>true</code></p>
+<p>示例 2: &gt;输入: <code>nums = [1,0,1,1], k = 1</code> &gt;输出: <code>true</code></p>
+<p>示例 3: &gt;输入: <code>nums = [1,2,3,1,2,3], k = 2</code> &gt;输出: <code>false</code></p>
+<p><strong>提示：</strong></p>
 <ul>
-<li><code>I</code> 可以放在 <code>V</code> (5) 和 <code>X</code> (10) 的左边，来表示 4 和 9。</li>
-<li><code>X</code> 可以放在 <code>L</code> (50) 和 <code>C</code> (100) 的左边，来表示 40 和 90。</li>
-<li><code>C</code> 可以放在 <code>D</code> (500) 和 <code>M</code> (1000) 的左边，来表示 400 和 900。</li>
+<li><code>1 &lt;= nums.length &lt;= 105</code></li>
+<li><code>-109 &lt;= nums[i] &lt;= 109</code></li>
 </ul>
-<p>给定一个罗马数字，将其转换成整数。输入确保在 1 到 3999 的范围内。</p>
-<p>示例 1: &gt;输入: <code>"III"</code> &gt;输出: <code>3</code></p>
-<p>示例 2: &gt;输入: <code>"IV"</code> &gt;输出: <code>4</code></p>
-<p>示例 3: &gt;输入: <code>"IX"</code> &gt;输出: <code>9</code></p>
-<p>示例 4: &gt;输入: <code>"LVIII"</code> &gt;输出: <code>58</code> &gt;解释: <code>L = 50, V= 5, III = 3.</code></p>
-<p>示例 5: &gt;输入: <code>"MCMXCIV"</code> &gt;输出: <code>1994</code> &gt;解释: M = 1000, CM = 900, XC = 90, IV = 4.</p>
-<p>提示： &gt;- 题目所给测试用例皆符合罗马数字书写规则，不会出现跨位等情况。 &gt;- <code>IC</code> 和 <code>IM</code> 这样的例子并不符合题目要求，<code>49</code> 应该写作 <code>XLIX</code>，<code>999</code> 应该写作 <code>CMXCIX</code> 。 &gt;- 关于罗马数字的详尽书写规则，可以参考 <a target="_blank" rel="noopener" href="https://b2b.partcommunity.com/community/knowledge/zh_CN/detail/10753/%E7%BD%97%E9%A9%AC%E6%95%B0%E5%AD%97#knowledge_article">罗马数字 - Mathematics</a>。</p>
 <hr />
 <h3 id="我的代码"><font color=#808080>我的代码</font></h3>
-<p><span class="math inline">\(T(N) = O(N)\)</span>, <span class="math inline">\(S(N) = O(1)\)</span></p>
-<figure class="highlight java"><figcaption><span>&#123;.line-numbers&#125;</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MySolution13</span> </span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">	HashMap&lt;Character, Integer&gt; map;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">romanToInt</span><span class="params">(String s)</span> </span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">    	map = <span class="keyword">new</span> HashMap();</span><br><span class="line">    	map.put(<span class="string">&#x27;I&#x27;</span>, <span class="number">1</span>);  map.put(<span class="string">&#x27;V&#x27;</span>, <span class="number">5</span>); map.put(<span class="string">&#x27;X&#x27;</span>, <span class="number">10</span>); </span><br><span class="line">    	map.put(<span class="string">&#x27;L&#x27;</span>, <span class="number">50</span>); map.put(<span class="string">&#x27;C&#x27;</span>, <span class="number">100</span>); map.put(<span class="string">&#x27;D&#x27;</span>, <span class="number">500</span>);</span><br><span class="line">    	map.put(<span class="string">&#x27;M&#x27;</span>, <span class="number">1000</span>);</span><br><span class="line">    	</span><br><span class="line">    	<span class="keyword">int</span> ans = <span class="number">0</span>; <span class="keyword">int</span> i=<span class="number">0</span>;</span><br><span class="line">    	<span class="keyword">for</span> ( ;i&lt;s.length()-<span class="number">1</span>; i++)</span><br><span class="line">    	&#123;</span><br><span class="line">    		<span class="keyword">if</span> (i+<span class="number">1</span>&lt;s.length()&amp;&amp;map.get(s.charAt(i))&lt;map.get(s.charAt(i+<span class="number">1</span>)))</span><br><span class="line">    			ans-=map.get(s.charAt(i));</span><br><span class="line">    		<span class="keyword">else</span> ans+=map.get(s.charAt(i));</span><br><span class="line">    	&#125;</span><br><span class="line">    	<span class="keyword">if</span> (i&lt;s.length()) ans+=map.get(s.charAt(i));</span><br><span class="line">    	</span><br><span class="line">    	<span class="keyword">return</span> ans;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><span class="math inline">\(T(N) = O(N)\)</span>, <span class="math inline">\(S(N) = O(min(n,k))\)</span></p>
+<figure class="highlight java"><figcaption><span>&#123;.line-numbers&#125;</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MySolution219</span> </span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">containsNearbyDuplicate</span><span class="params">(<span class="keyword">int</span>[] nums, <span class="keyword">int</span> k)</span> </span></span><br><span class="line"><span class="function">	</span>&#123;</span><br><span class="line">    	HashMap&lt;Integer, Integer&gt; map = <span class="keyword">new</span> HashMap();</span><br><span class="line">    	</span><br><span class="line">    	<span class="keyword">for</span> (<span class="keyword">int</span> j=<span class="number">0</span>; j&lt;nums.length; j++)</span><br><span class="line">    	&#123;</span><br><span class="line">    		<span class="keyword">if</span> (map.keySet().contains(nums[j])&amp;&amp;Math.abs(map.get(nums[j])-j)&lt;=k)</span><br><span class="line">    			<span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">    		map.put(nums[j], j);</span><br><span class="line">    	&#125;</span><br><span class="line">    	<span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -316,7 +309,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://yukief4fdh.github.io/2022/02/09/11_Medium_%E7%9B%9B%E6%9C%80%E5%A4%9A%E6%B0%B4%E7%9A%84%E5%AE%B9%E5%99%A8_Array/">
+    <link itemprop="mainEntityOfPage" href="https://yukief4fdh.github.io/2022/02/09/217_Easy_%E5%AD%98%E5%9C%A8%E9%87%8D%E5%A4%8D%E5%85%83%E7%B4%A0_Array/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/yuki.gif">
@@ -329,7 +322,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2022/02/09/11_Medium_%E7%9B%9B%E6%9C%80%E5%A4%9A%E6%B0%B4%E7%9A%84%E5%AE%B9%E5%99%A8_Array/" class="post-title-link" itemprop="url">11. 盛最多水的容器</a>
+          <a href="/2022/02/09/217_Easy_%E5%AD%98%E5%9C%A8%E9%87%8D%E5%A4%8D%E5%85%83%E7%B4%A0_Array/" class="post-title-link" itemprop="url">217. 存在重复元素</a>
         </h2>
 
         <div class="post-meta-container">
@@ -339,10 +332,16 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">Posted on</span>
-      
 
-      <time title="Created: 2022-02-09 15:16:54 / Modified: 15:28:04" itemprop="dateCreated datePublished" datetime="2022-02-09T15:16:54+09:00">2022-02-09</time>
+      <time title="Created: 2022-02-09 15:16:55" itemprop="dateCreated datePublished" datetime="2022-02-09T15:16:55+09:00">2022-02-09</time>
     </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">Edited on</span>
+        <time title="Modified: 2022-02-10 21:48:07" itemprop="dateModified" datetime="2022-02-10T21:48:07+09:00">2022-02-10</time>
+      </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
         <i class="far fa-folder"></i>
@@ -353,11 +352,11 @@
         </span>
           , 
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/LeetCode/Medium/" itemprop="url" rel="index"><span itemprop="name">Medium</span></a>
+          <a href="/categories/LeetCode/Easy/" itemprop="url" rel="index"><span itemprop="name">Easy</span></a>
         </span>
           , 
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/LeetCode/Medium/Failed/" itemprop="url" rel="index"><span itemprop="name">Failed</span></a>
+          <a href="/categories/LeetCode/Easy/Done/" itemprop="url" rel="index"><span itemprop="name">Done</span></a>
         </span>
     </span>
 
@@ -372,150 +371,22 @@
     
     <div class="post-body" itemprop="articleBody">
           <center>
-<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/container-with-most-water/"><b><font color = "orange">转载自Leet Code</font></b></a>
+<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/contains-duplicate/"><b><font color = #5EB561>转载自Leet Code</font></b></a>
 </center>
 <h3 id="题目描述">题目描述</h3>
-<p>给你<code>n</code>个非负整数 <span class="math inline">\(a_1\)</span>, <span class="math inline">\(a_2\)</span>, ..., <span class="math inline">\(a_n\)</span>，每个数代表坐标中的一个点 <span class="math inline">\((i, a_i)\)</span>。 在坐标内画<code>n</code>条垂直线，垂直线<code>i</code>的两个端点分别为 <span class="math inline">\((i, a_i)\)</span> 和 <span class="math inline">\((i, 0)\)</span>。 找出其中的两条线，使得它们与<code>x</code>轴共同构成的容器可以容纳最多的水。</p>
-<p>你不可以倾斜容器。</p>
-<p><strong>示例1：</strong></p>
-<center>
-<img src="https://gyazo.com/def52c67af64f4cba2034a51e6b99492.png" style="zoom: 80%;" />
-</center>
-<blockquote>
-<p><strong>输入</strong>：<code>height = [1,8,6,2,5,4,8,3,7]</code> <strong>输出</strong>：<code>49</code> <strong>解释</strong>：图中垂直线代表输入数组 <code>[1,8,6,2,5,4,8,3,7]</code>。在此情况下，容器能够容纳水（表示为蓝色部分）的最大值为 <code>49</code>。</p>
-</blockquote>
-<p><strong>示例2：</strong> &gt;<strong>输入</strong>：<code>height = [1,1]</code> &gt;<strong>输出</strong>：<code>1</code></p>
-<p><strong>示例3：</strong> &gt;<strong>输入</strong>：<code>height = [4,3,2,1,4]</code> &gt;<strong>输出</strong>：<code>16</code></p>
-<p><strong>示例4：</strong> &gt;<strong>输入</strong>：<code>height = [1,2,1]</code> &gt;<strong>输出</strong>：<code>2</code></p>
-<p><strong>提示：</strong> - <code>n = height.length</code> - <code>2 &lt;= n &lt;= 3 * 104</code> - <code>0 &lt;= height[i] &lt;= 3 * 104</code></p>
-<hr />
-<h3 id="我的代码-timeout"><font color=#808080>我的代码 (Timeout)</font></h3>
-<p>思路：试图基于“一次遍历”的想法来做，也就是随着每次新读入一个bar就去检查一次最优解； 但是面积由高(maxHeight)×宽(i-j)共同决定， 而每次新读入的这个bar的宽都会增加1 (因为i后移了)， 所以每次都得去找离最新读入的bar最远又最高的那个。不太好确定。</p>
-<p><span class="math inline">\(T(N) = O(N)\)</span>, <span class="math inline">\(S(Height) = O(Height)\)</span></p>
-<h2 id="section"><figure class="highlight java"><figcaption><span>&#123;.line-numbers&#125;</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MySolution11</span></span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">maxArea</span><span class="params">(<span class="keyword">int</span>[] height)</span> </span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">    	<span class="keyword">if</span> (height.length&lt;=<span class="number">1</span>) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    	<span class="keyword">int</span> maxHeight = height[<span class="number">0</span>]; <span class="keyword">int</span> maxIndex = <span class="number">0</span>;</span><br><span class="line">    	<span class="keyword">int</span> maxVal = -<span class="number">1</span>;</span><br><span class="line">    	</span><br><span class="line">    	<span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">1</span>; i&lt;height.length; i++)</span><br><span class="line">    	&#123;</span><br><span class="line">    		<span class="keyword">int</span> newHeight = height[i];</span><br><span class="line">    		<span class="keyword">if</span> (newHeight&gt;maxHeight)</span><br><span class="line">    		&#123;</span><br><span class="line">    			maxHeight = newHeight;</span><br><span class="line">    			maxIndex = i;</span><br><span class="line">    		&#125;</span><br><span class="line">    		<span class="keyword">for</span> (<span class="keyword">int</span> j=<span class="number">0</span>; j&lt;i&amp;&amp;j&lt;=maxIndex; j++)</span><br><span class="line">    		&#123;</span><br><span class="line">    			<span class="keyword">int</span> minH = height[j]&lt;newHeight?height[j]:newHeight;</span><br><span class="line">    			<span class="keyword">int</span> w = i - j;</span><br><span class="line">    			maxVal = maxVal&lt;(minH*w)?(minH*w):maxVal;</span><br><span class="line">    		&#125;</span><br><span class="line">    	&#125;</span><br><span class="line">    	<span class="keyword">return</span> maxVal;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></h2>
-<h3 id="方法双指针">方法：双指针</h3>
-<p><span class="math inline">\(T(N) = O(N)\)</span>, <span class="math inline">\(S(N) = O(1)\)</span></p>
-<p>首先将双指针分别指向数组的头和尾。得到一个初始的容水量。 然后每次都移动一个指针——移动height较小的那个指针，试图得到一个更大的容水量。 直到两个指针重叠。</p>
-<p><strong>证明:</strong> &gt; 双指针代表了什么？</p>
-<p>双指针 代表的是可以作为容器边界的所有位置的范围。 一开始双指针指向一头一尾，表示数组中的所有位置都可以作为容器的边界。 在这之后，我们每将小指针移动一个位置，就代表我们认为这个指针不可能再作为容器的边界了。</p>
-<blockquote>
-<p>为什么移动小指针？——定量证明</p>
-</blockquote>
-<p>假设一开始左右指针指向的数字分别是 <span class="math inline">\(x\)</span> 和 <span class="math inline">\(y\)</span>, 然后我们假设 <span class="math inline">\(x ≤ y\)</span>. 同时，两指针之间的距离为 <span class="math inline">\(t\)</span>.则此时容器的容量为: <span class="math display">\[min(x,y)*t = x*t\]</span> 此时我们可以断定，如果我们保持左指针不变，则无论右指针移动到哪里 (注意这里右指针只能往左移动——因为我们还处在第一步，两个指针都还在边界处)，容水量都不会超过 <span class="math inline">\(x*t\)</span> 了: 假设我们左移右指针，此时指向的数是 <span class="math inline">\(y_1\)</span>、两指针之间的距离是 <span class="math inline">\(t_1\)</span>. 则显然有 <span class="math inline">\(t_1 &lt; t\)</span>, 且 <span class="math inline">\(min(x, y_1) ≤ min(x, y)\)</span>: - 若 <span class="math inline">\(y_1≤y\)</span> 则 <span class="math inline">\(min(x,y_1) ≤ min(x,y)\)</span>; - 若 <span class="math inline">\(y_1&lt;y\)</span> 则 <span class="math inline">\(min(x,y_1) = x = min(x,y)\)</span>;</p>
-<p>因此有: <span class="math display">\[min(x,y_t) * t_t &lt; min(x,y) * t\]</span> 即，无论我们怎么移动右指针，得到的容量都小于移动前的容量。 此时，我们应该<strong>舍弃这个旧的左指针 (小指针) ，然后将左指针右移一个位置</strong>，才有可能会作为新的边界。</p>
-<p>通过这种做法，我们将问题的规模减小了1，得到了一个新的、规模减小了的数组的左右边界。 因此，我们可以继续像考虑第一步的时候一样考虑这个问题: - 求出当前双指针对应的容器容量； - 因为小指针今后不能再作为边界了，所以将其丢弃并移动到新的位置。</p>
-<figure class="highlight java"><figcaption><span>&#123;.line-numbers&#125;</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution11</span> </span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">maxArea</span><span class="params">(<span class="keyword">int</span>[] height)</span> </span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">    	<span class="keyword">if</span> (height.length&lt;=<span class="number">1</span>) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    	<span class="keyword">int</span> maxVal = -<span class="number">1</span>;</span><br><span class="line"></span><br><span class="line">    	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>, j = height.length-<span class="number">1</span>; i&lt;j; )</span><br><span class="line">    	&#123;</span><br><span class="line">    		<span class="keyword">int</span> h = Math.min(height[i], height[j]);</span><br><span class="line">    		<span class="keyword">int</span> w = j - i;</span><br><span class="line">    		maxVal = Math.max(maxVal, h*w);</span><br><span class="line">    		<span class="keyword">if</span> (height[i]&lt;height[j]) i++; <span class="keyword">else</span> j--;</span><br><span class="line">    	&#125;</span><br><span class="line">    	<span class="keyword">return</span> maxVal;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://yukief4fdh.github.io/2022/02/09/2_Medium_%E4%B8%A4%E6%95%B0%E7%9B%B8%E5%8A%A0/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/yuki.gif">
-      <meta itemprop="name" content="CHEN XUEYI">
-      <meta itemprop="description" content="Call me Yuki (JPN) or Chloe (ENG).<br> Nice to meet you :)<br><hr style="margin:3px;"> Tokyo Institute of Technology (M1)<br> Rearch Interest: Visualization">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Yuki's Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2022/02/09/2_Medium_%E4%B8%A4%E6%95%B0%E7%9B%B8%E5%8A%A0/" class="post-title-link" itemprop="url">2. 两数相加</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-      
-
-      <time title="Created: 2022-02-09 15:16:54 / Modified: 15:23:43" itemprop="dateCreated datePublished" datetime="2022-02-09T15:16:54+09:00">2022-02-09</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/LeetCode/" itemprop="url" rel="index"><span itemprop="name">LeetCode</span></a>
-        </span>
-          , 
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/LeetCode/Medium/" itemprop="url" rel="index"><span itemprop="name">Medium</span></a>
-        </span>
-          , 
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/LeetCode/Medium/Done/" itemprop="url" rel="index"><span itemprop="name">Done</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <center>
-<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/add-two-numbers/"><b><font color = "orange">转载自Leet Code</font></b></a>
-</center>
-<h4 id="题目描述">题目描述</h4>
-<p>给定两个<strong>非空链表</strong>，表示两个非负整数。</p>
-<p>每位数字按照<strong>逆序</strong>存储，每个节点只能存储<strong>一位</strong>数字。</p>
-<p>请你将两个数相加，并且以相同形式返回一个表示和的链表。</p>
-<p>你可以假设除了数字 0 之外，这两个数都不会以 0 开头。</p>
-<p><strong>示例1:</strong></p>
-<blockquote>
-<p>输入：<code>l1 = [2,4,3], l2 = [5,6,4]</code> 输出：<code>[7,0,8]</code></p>
-</blockquote>
-<p><strong>示例2</strong>:</p>
-<blockquote>
-<p>输入：<code>l1 = [0], l2 = [0]</code> 输出：<code>[0]</code></p>
-</blockquote>
-<p><strong>示例3:</strong></p>
-<blockquote>
-<p>输入：<code>l1 = [9,9,9,9,9,9,9], l2 = [9,9,9,9]</code> 输出：<code>[8,9,9,9,0,0,0,1]</code></p>
-</blockquote>
-<p><strong>提示:</strong></p>
+<p>给定一个整数数组，判断是否存在重复元素。 如果任意一值在数组中出现至少两次，函数返回<code>true</code>。 如果数组中每个元素都不相同，则返回<code>false</code>。</p>
+<p>示例 1: &gt;输入: <code>[1,2,3,1]</code> &gt;输出: <code>true</code></p>
+<p>示例 2: &gt;输入: <code>[1,2,3,4]</code> &gt;输出: <code>false</code></p>
+<p>示例 3: &gt;输入: <code>[1,1,1,3,3,4,3,2,4,2]</code> &gt;输出: <code>true</code></p>
+<p><strong>提示：</strong></p>
 <ul>
-<li>每个链表中的节点数在范围 <code>[1, 100]</code> 内;</li>
-<li><code>0 &lt;= Node.val &lt;= 9</code>;</li>
-<li>题目数据保证列表表示的数字不含前导零;</li>
+<li><code>1 &lt;= nums.length &lt;= 105</code></li>
+<li><code>-109 &lt;= nums[i] &lt;= 109</code></li>
 </ul>
 <hr />
-<h4 id="我的代码">我的代码</h4>
-<p>$T(N) = O(max(M,N)), S(N) = O(1); $</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MySolution2</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> ListNode <span class="title">addTwoNumbers</span><span class="params">(ListNode l1, ListNode l2)</span> </span>&#123;</span><br><span class="line">    	ListNode p1 = l1; ListNode p2 = l2;</span><br><span class="line">    	</span><br><span class="line">    	<span class="keyword">int</span> add = <span class="number">0</span>;</span><br><span class="line">    	ListNode ansP = <span class="keyword">null</span>; ListNode tailP = <span class="keyword">null</span>;</span><br><span class="line">    	<span class="keyword">while</span> (p1!=<span class="keyword">null</span>&amp;&amp;p2!=<span class="keyword">null</span>)</span><br><span class="line">    	&#123;</span><br><span class="line">    		<span class="keyword">int</span> sum = p1.val+p2.val+add;</span><br><span class="line">    		<span class="keyword">int</span> val = sum%<span class="number">10</span>; add = sum/<span class="number">10</span>;</span><br><span class="line">    		ListNode newP = <span class="keyword">new</span> ListNode(val);</span><br><span class="line">    		</span><br><span class="line">    		<span class="keyword">if</span> (ansP==<span class="keyword">null</span>) &#123;</span><br><span class="line">                ansP = newP;tailP = ansP;</span><br><span class="line">            &#125;</span><br><span class="line">    		<span class="keyword">else</span> &#123;</span><br><span class="line">    			tailP.next = newP; tailP = newP;</span><br><span class="line">    		&#125;</span><br><span class="line">            p1=p1.next; p2=p2.next;</span><br><span class="line">    	&#125;</span><br><span class="line">		ListNode node =  p1!=<span class="keyword">null</span>?p1:p2;</span><br><span class="line">    	<span class="keyword">while</span> (node!=<span class="keyword">null</span>)</span><br><span class="line">    	&#123;</span><br><span class="line">    		<span class="keyword">int</span> val;</span><br><span class="line">    		<span class="keyword">if</span> (add==<span class="number">0</span>)</span><br><span class="line">    			val = node.val;</span><br><span class="line">    		<span class="keyword">else</span>&#123;</span><br><span class="line">        		<span class="keyword">int</span> sum = node.val+add;</span><br><span class="line">        		val = sum%<span class="number">10</span>; add = sum/<span class="number">10</span>;</span><br><span class="line">    		&#125;</span><br><span class="line"></span><br><span class="line">    		ListNode newP = <span class="keyword">new</span> ListNode(val);</span><br><span class="line">			tailP.next = newP; tailP = newP;</span><br><span class="line">            node = node.next;</span><br><span class="line">    	&#125;</span><br><span class="line">    	<span class="keyword">if</span> (add!=<span class="number">0</span>) </span><br><span class="line">        &#123;</span><br><span class="line">    		<span class="keyword">int</span> val = add;</span><br><span class="line">    		ListNode newP = <span class="keyword">new</span> ListNode(val);</span><br><span class="line">			tailP.next = newP; tailP = newP;</span><br><span class="line">    	&#125;</span><br><span class="line">    	<span class="keyword">return</span> ansP;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="我的代码"><font color=#808080>我的代码</font></h3>
+<p><span class="math inline">\(T(N) = O(N)\)</span>, <span class="math inline">\(S(N) = O(N)\)</span></p>
+<figure class="highlight java"><figcaption><span>&#123;.line-numbers&#125;</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MySolution217</span></span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">containsDuplicate</span><span class="params">(<span class="keyword">int</span>[] nums)</span> </span></span><br><span class="line"><span class="function">	</span>&#123;</span><br><span class="line">    	HashSet&lt;Integer&gt; set = <span class="keyword">new</span> HashSet();</span><br><span class="line">    	<span class="keyword">for</span> (<span class="keyword">int</span> num:nums)</span><br><span class="line">    	&#123;</span><br><span class="line">    		<span class="keyword">if</span> (set.contains(num)) <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">    		<span class="keyword">else</span> set.add(num);</span><br><span class="line">    	&#125;</span><br><span class="line">    	<span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -542,7 +413,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://yukief4fdh.github.io/2022/02/09/1_Easy_%E4%B8%A4%E6%95%B0%E4%B9%8B%E5%92%8C_Array/">
+    <link itemprop="mainEntityOfPage" href="https://yukief4fdh.github.io/2022/02/09/206_Easy_%E5%8F%8D%E8%BD%AC%E9%93%BE%E8%A1%A8_LinkedList/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/yuki.gif">
@@ -555,7 +426,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2022/02/09/1_Easy_%E4%B8%A4%E6%95%B0%E4%B9%8B%E5%92%8C_Array/" class="post-title-link" itemprop="url">1. 两数之和</a>
+          <a href="/2022/02/09/206_Easy_%E5%8F%8D%E8%BD%AC%E9%93%BE%E8%A1%A8_LinkedList/" class="post-title-link" itemprop="url">206. 反转链表</a>
         </h2>
 
         <div class="post-meta-container">
@@ -565,10 +436,16 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">Posted on</span>
-      
 
-      <time title="Created: 2022-02-09 15:16:54 / Modified: 15:21:37" itemprop="dateCreated datePublished" datetime="2022-02-09T15:16:54+09:00">2022-02-09</time>
+      <time title="Created: 2022-02-09 15:16:55" itemprop="dateCreated datePublished" datetime="2022-02-09T15:16:55+09:00">2022-02-09</time>
     </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">Edited on</span>
+        <time title="Modified: 2022-02-10 21:45:49" itemprop="dateModified" datetime="2022-02-10T21:45:49+09:00">2022-02-10</time>
+      </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
         <i class="far fa-folder"></i>
@@ -598,24 +475,27 @@
     
     <div class="post-body" itemprop="articleBody">
           <center>
-<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/two-sum/"><b><font color = #5EB561>转载自Leet Code</font></b></a>
+<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/reverse-linked-list/"><b><font color = #5EB561>转载自Leet Code</font></b></a>
 </center>
 <h3 id="题目描述">题目描述</h3>
-<p>给定一个整数数组<code>nums</code>和一个目标值<code>target</code>，请你在该数组中找出和为目标值的那<strong>两个</strong>整数，并返回他们的数组下标。 你可以假设每种输入只会对应一个答案。但是，数组中同一个元素不能使用两遍。</p>
-<p>示例: &gt;给定 <code>nums = [2, 7, 11, 15]</code>,<code>target = 9</code> &gt; &gt;因为 nums[<strong>0</strong>] + nums[<strong>1</strong>] = 2 + 7 = 9 &gt;所以返回 [<strong>0, 1</strong>] ---</p>
-<h3 id="我的代码"><font color=#808080>我的代码</font></h3>
-<p><span class="math inline">\(T(N) = O(N^2)\)</span>, <span class="math inline">\(S(n) = O(1)\)</span></p>
-<figure class="highlight java"><figcaption><span>&#123;.line-numbers&#125;</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MySolution</span></span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">int</span>[] twoSum(<span class="keyword">int</span>[] nums, <span class="keyword">int</span> target) </span><br><span class="line">    &#123;</span><br><span class="line">    	<span class="keyword">int</span> i1 = <span class="number">0</span>; <span class="keyword">int</span> num1; <span class="keyword">int</span> i2 = <span class="number">0</span>; <span class="keyword">int</span> num2; <span class="keyword">boolean</span> found = <span class="keyword">false</span>;</span><br><span class="line">    	</span><br><span class="line">    	<span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;nums.length-<span class="number">1</span>; i++)</span><br><span class="line">    	&#123;</span><br><span class="line">            i1 = i; num1 = nums[i];</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j=i+<span class="number">1</span>; j&lt;nums.length; j++)</span><br><span class="line">            &#123;</span><br><span class="line">                i2 = j; num2 = nums[j];</span><br><span class="line">                <span class="keyword">if</span> (num1+num2==target)</span><br><span class="line">                &#123;</span><br><span class="line">                    found = <span class="keyword">true</span>; <span class="keyword">break</span>;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span> (found) <span class="keyword">break</span>;</span><br><span class="line">    	&#125;</span><br><span class="line">    	<span class="keyword">int</span> []ans = &#123;i1, i2&#125;;</span><br><span class="line">    	<span class="keyword">return</span> ans;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>反转一个单链表。</p>
+<p>示例: &gt;输入: <code>1-&gt;2-&gt;3-&gt;4-&gt;5-&gt;NULL</code> &gt;输出: <code>5-&gt;4-&gt;3-&gt;2-&gt;1-&gt;NULL</code></p>
+<p>进阶: - 你可以迭代或递归地反转链表。你能否用两种方法解决这道题？</p>
 <hr />
-<h3 id="方法一两遍哈希表">方法一：两遍哈希表</h3>
+<h3 id="我的代码-迭代"><font color=#808080>我的代码 (迭代)</font></h3>
+<p><span class="math inline">\(T(N) = O(N)\)</span>, <span class="math inline">\(S(N) = O(1)\)</span></p>
+<h2 id="section"><figure class="highlight java"><figcaption><span>&#123;.line-numbers&#125;</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Definition for singly-linked list.</span></span><br><span class="line"><span class="comment"> * public class ListNode &#123;</span></span><br><span class="line"><span class="comment"> *     int val;</span></span><br><span class="line"><span class="comment"> *     ListNode next;</span></span><br><span class="line"><span class="comment"> *     ListNode() &#123;&#125;</span></span><br><span class="line"><span class="comment"> *     ListNode(int val) &#123; this.val = val; &#125;</span></span><br><span class="line"><span class="comment"> *     ListNode(int val, ListNode next) &#123; this.val = val; this.next = next; &#125;</span></span><br><span class="line"><span class="comment"> * &#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MySolution206</span> </span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> ListNode <span class="title">reverseList</span><span class="params">(ListNode head)</span> </span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">    	<span class="keyword">if</span> (head==<span class="keyword">null</span>||head.next==<span class="keyword">null</span>) <span class="keyword">return</span> head;</span><br><span class="line">    	</span><br><span class="line">    	ListNode prev = head; ListNode p = head.next; ListNode post = p.next;</span><br><span class="line">    	prev.next = <span class="keyword">null</span>; p.next = prev;</span><br><span class="line">    	</span><br><span class="line">    	<span class="keyword">while</span> (post!=<span class="keyword">null</span>)</span><br><span class="line">    	&#123;</span><br><span class="line">    		prev = p;</span><br><span class="line">    		p = post;</span><br><span class="line">    		post = post.next;</span><br><span class="line">    		p.next = prev;</span><br><span class="line">    	&#125;</span><br><span class="line">    	<span class="keyword">return</span> p;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></h2>
+<h3 id="方法递归">方法：递归</h3>
 <p><span class="math inline">\(T(N) = O(N)\)</span>, <span class="math inline">\(S(N) = O(N)\)</span></p>
-<p>把元素到下标的map放进哈希表。 遍历数组，算出当前元素与target之间的gap，查找该gap是否在map的keySet里。 有的话取出它俩对应的val返回。 (由于哈希表的性质，不会发生返回相同下标的情况。)</p>
-<figure class="highlight java"><figcaption><span>&#123;.line-numbers&#125;</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span></span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">int</span>[] twoSum(<span class="keyword">int</span>[] nums, <span class="keyword">int</span> target) </span><br><span class="line">    &#123;</span><br><span class="line">    	HashMap&lt;Integer, Integer&gt; map = <span class="keyword">new</span> HashMap();</span><br><span class="line">    	</span><br><span class="line">    	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;nums.length; i++)</span><br><span class="line">            map.put(nums[i], i); <span class="comment">// 相同元素只保留后面那个下标 之后从数组头开始遍历</span></span><br><span class="line"></span><br><span class="line">    	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;nums.length; i++)</span><br><span class="line">    	&#123;</span><br><span class="line">            <span class="keyword">int</span> gap = target-nums[i];</span><br><span class="line">            <span class="keyword">if</span> (map.containsKey(gap)&amp;&amp;map.get(gap)!=i)</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="keyword">int</span> []ans = &#123;map.get(gap), i&#125;;</span><br><span class="line">                <span class="keyword">return</span> ans;</span><br><span class="line">            &#125;</span><br><span class="line">    	&#125;</span><br><span class="line">    	<span class="keyword">return</span> <span class="keyword">null</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>其关键在于反向工作：假设列表的其余部分已经被反转，现在我们应该如何反转它前面的部分？ 假设列表为：</p>
+<p><span class="math display">\[n_1→...→n_{k-1}→n_k→n_{k+1}→...→n_m→∅\]</span></p>
+<p>设从节点<code>nk+1</code>到<code>nm</code>已经被翻转，而我们正处于<code>nk</code>。</p>
+<p><span class="math display">\[n_1→...→n_{k-1}→n_k→n_{k+1}←...←n_m\]</span></p>
+<p>我们希望<code>nk+1</code>的下一个节点指向<code>nk</code>。 因此，<code>nk.next.next = nk</code>。 注意边界情况：<code>n1</code>的下一个必须指向<code>∅</code>。</p>
+<p>(在第一次触及到递归边界，即<code>head==null</code>或<code>head.next==null</code>时， <code>p</code>被第一次赋值为该链表的末节点，即作为新链表的头节点； 在此之后每次递归向上传递的<code>p</code>其实都不会再更新， 每次递归仅仅是向前退一个节点到达<code>nk</code>， 然后将<code>nk+1</code>的下一个节点指向<code>nk</code>、将<code>nk</code>的下一个节点置空为<code>null</code>。)</p>
 <hr />
-<h3 id="方法二-一遍哈希表">方法二: 一遍哈希表</h3>
-<p><span class="math inline">\(T(N) = O(N)\)</span>, <span class="math inline">\(S(N) = O(N)\)</span></p>
-<p>事实证明，我们可以一次完成。 在进行迭代并将元素插入到表中的同时， 我们还会回过头来检查表中是否已经存在当前元素所对应的目标元素。 如果它存在，那我们已经找到了对应解，并立即将其返回。</p>
-<figure class="highlight java"><figcaption><span>&#123;.line-numbers&#125;</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span></span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">int</span>[] twoSum(<span class="keyword">int</span>[] nums, <span class="keyword">int</span> target) </span><br><span class="line">    &#123;</span><br><span class="line">    	HashMap&lt;Integer, Integer&gt; map = <span class="keyword">new</span> HashMap();</span><br><span class="line">    	</span><br><span class="line">    	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;nums.length; i++)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">int</span> gap = target-nums[i];</span><br><span class="line">            <span class="keyword">if</span> (map.containsKey(gap)&amp;&amp;map.get(gap)!=i)</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="keyword">int</span> []ans = &#123;map.get(gap), i&#125;;</span><br><span class="line">                <span class="keyword">return</span> ans;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="comment">// 这句必须在查找gap的后面 避免需要相同元素的情况下返回null</span></span><br><span class="line">            map.put(nums[i], i);</span><br><span class="line">        &#125;</span><br><span class="line">    	<span class="keyword">return</span> <span class="keyword">null</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="代码">代码</h3>
+<figure class="highlight java"><figcaption><span>&#123;.line-numbers&#125;</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution206</span> </span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> ListNode <span class="title">reverseList</span><span class="params">(ListNode head)</span> </span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (head == <span class="keyword">null</span> || head.next == <span class="keyword">null</span>) <span class="keyword">return</span> head;</span><br><span class="line">        </span><br><span class="line">        ListNode p = reverseList(head.next);</span><br><span class="line">        head.next.next = head;</span><br><span class="line">        head.next = <span class="keyword">null</span>;</span><br><span class="line">        <span class="keyword">return</span> p;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -642,7 +522,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://yukief4fdh.github.io/2022/02/08/Offer35_Medium_%E5%A4%8D%E6%9D%82%E9%93%BE%E8%A1%A8%E7%9A%84%E5%A4%8D%E5%88%B6/">
+    <link itemprop="mainEntityOfPage" href="https://yukief4fdh.github.io/2022/02/09/203_Easy_%E7%A7%BB%E9%99%A4%E9%93%BE%E8%A1%A8%E5%85%83%E7%B4%A0_LinkedList/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/yuki.gif">
@@ -655,7 +535,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2022/02/08/Offer35_Medium_%E5%A4%8D%E6%9D%82%E9%93%BE%E8%A1%A8%E7%9A%84%E5%A4%8D%E5%88%B6/" class="post-title-link" itemprop="url">剑指 Offer 35. 复杂链表的复制</a>
+          <a href="/2022/02/09/203_Easy_%E7%A7%BB%E9%99%A4%E9%93%BE%E8%A1%A8%E5%85%83%E7%B4%A0_LinkedList/" class="post-title-link" itemprop="url">203. 移除链表元素</a>
         </h2>
 
         <div class="post-meta-container">
@@ -666,14 +546,14 @@
       </span>
       <span class="post-meta-item-text">Posted on</span>
 
-      <time title="Created: 2022-02-08 18:46:11" itemprop="dateCreated datePublished" datetime="2022-02-08T18:46:11+09:00">2022-02-08</time>
+      <time title="Created: 2022-02-09 15:16:55" itemprop="dateCreated datePublished" datetime="2022-02-09T15:16:55+09:00">2022-02-09</time>
     </span>
       <span class="post-meta-item">
         <span class="post-meta-item-icon">
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2022-02-09 15:14:52" itemprop="dateModified" datetime="2022-02-09T15:14:52+09:00">2022-02-09</time>
+        <time title="Modified: 2022-02-10 21:42:05" itemprop="dateModified" datetime="2022-02-10T21:42:05+09:00">2022-02-10</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -685,11 +565,11 @@
         </span>
           , 
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/LeetCode/Medium/" itemprop="url" rel="index"><span itemprop="name">Medium</span></a>
+          <a href="/categories/LeetCode/Easy/" itemprop="url" rel="index"><span itemprop="name">Easy</span></a>
         </span>
           , 
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/LeetCode/Medium/Half-done/" itemprop="url" rel="index"><span itemprop="name">Half-done</span></a>
+          <a href="/categories/LeetCode/Easy/Done/" itemprop="url" rel="index"><span itemprop="name">Done</span></a>
         </span>
     </span>
 
@@ -704,68 +584,156 @@
     
     <div class="post-body" itemprop="articleBody">
           <center>
-<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/fu-za-lian-biao-de-fu-zhi-lcof/"><b><font color = "orange">转载自Leet Code《剑指Offer》</font></b></a>
+<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/remove-linked-list-elements/"><b><font color = #5EB561>转载自Leet Code</font></b></a>
 </center>
 <h3 id="题目描述">题目描述</h3>
-<p>请实现 <code>copyRandomList</code> 函数，复制一个复杂链表。在复杂链表中，每个节点除了有一个 <code>next</code> 指针指向下一个节点，还有一个 <code>random</code> 指针指向链表中的任意节点或者 <code>null</code>。</p>
-<p><strong>示例</strong>： <img src="https://gyazo.com/09f474b06c1646a0965131c0647427a3.png" /></p>
+<p>删除链表中等于给定值 <code>val</code> 的所有节点。</p>
+<p><strong>示例:</strong></p>
 <blockquote>
-<p>输入：<code>head = [[7,null],[13,0],[11,4],[10,2],[1,0]]</code> 输出：<code>[[7,null],[13,0],[11,4],[10,2],[1,0]]</code></p>
-</blockquote>
-<p><img src="https://gyazo.com/08d0d19a173119b42b4b763d8b574110.png" /></p>
-<blockquote>
-<p>输入：<code>head = [[1,1],[2,1]]</code> 输出：<code>[[1,1],[2,1]]</code></p>
-</blockquote>
-<p><img src="https://gyazo.com/7c5bc8bec9e558ac8cfa9633af559ec2.png" /></p>
-<blockquote>
-<p>输入：<code>head = [[3,null],[3,0],[3,null]]</code> 输出：<code>[[3,null],[3,0],[3,null]]</code></p>
-</blockquote>
-<blockquote>
-<p>输入：<code>head = []</code> 输出：<code>[]</code></p>
+<p>输入: <code>1-&gt;2-&gt;6-&gt;3-&gt;4-&gt;5-&gt;6, val = 6</code> 输出: <code>1-&gt;2-&gt;3-&gt;4-&gt;5</code></p>
 </blockquote>
 <p><strong>提示：</strong></p>
 <ul>
-<li><code>-10000 &lt;= Node.val &lt;= 10000</code></li>
-<li><code>Node.random</code> 为空（<code>null</code>）或指向链表中的节点。</li>
-<li>节点数目不超过 <code>1000</code> 。</li>
+<li>列表中的节点数目在范围 <code>[0, 104]</code> 内</li>
+<li><code>1 &lt;= Node.val &lt;= 50</code></li>
+<li><code>0 &lt;= val &lt;= 50</code></li>
 </ul>
-<hr />
-<h3 id="我的思路"><font color=#808080>我的思路</font></h3>
-<p>由于链表中的值不唯一、链表只能从前往后依次遍历，再加上<code>random</code>可能指向当前节点的前方/后方/<code>null</code>的特性， 考虑使用<code>map</code>和哈希表来实现。 思路是，考虑在常规链表复制 (一次遍历) 的基础上，如何复制<code>random</code>指针。</p>
-<p>由于原始链表的每个节点和常规链表的每个节点都会对应新的数据域， 且链表复制的时候对于<code>random</code>部分，本质上是需要对链表内的各个节点之间的联系进行复制， 因此希望由<code>i</code>找到原始节点、由</p>
-<p>在常规复制链表时，会对链表进行一次遍历。在遍历的同时：</p>
-<ul>
-<li>在<code>map1</code>内记录原始节点<code>p</code>对应的原始<code>random</code>节点；</li>
-<li>在<code>map2</code>内记录原始节点<code>p</code>对应的下标<code>i</code>；</li>
-<li>在哈希表<code>map3</code>记录下标<code>i</code>对应的原始节点<code>p</code>；</li>
-<li>在哈希表<code>map4</code>记录下标<code>i</code>对应的新节点<code>p</code>。</li>
-</ul>
-<p>区分<code>map3</code>和<code>map4</code>的原因是链表节点指向的是数据域 (某个地址) 的特性。</p>
-<p>当常规复制完成后，再回到新的链表头复制<code>random</code>部分。 对于第<code>i</code>个新节点<code>p</code>，由哈希表<code>map3</code>找到原链表中对应的第<code>i</code>个原始节点<code>map3[i]</code>，再通过<code>map1</code>找到其对应的原始<code>random</code>节点。 如果原始<code>random</code>节点不指向<code>null</code>的话，则先由<code>map2</code>找到原始<code>random</code>节点对应的下标<code>i</code>， 再由<code>map4</code>找到其对应的新的<code>random</code>节点<code>map4[i]</code>，就是新节点<code>p</code>的<code>random</code>指针应该指向的地方。</p>
 <hr />
 <h3 id="我的代码"><font color=#808080>我的代码</font></h3>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MySolutionOffer35</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> Node <span class="title">copyRandomList</span><span class="params">(Node head)</span> </span>&#123;</span><br><span class="line">		</span><br><span class="line">		<span class="keyword">int</span> N = <span class="number">1000</span>;</span><br><span class="line"></span><br><span class="line">		<span class="keyword">if</span> (head==<span class="keyword">null</span>) </span><br><span class="line">			<span class="keyword">return</span> <span class="keyword">null</span>;</span><br><span class="line">		</span><br><span class="line">	     Node newHead = <span class="keyword">null</span>;</span><br><span class="line">	     Node p = head; Node pre = newHead;</span><br><span class="line">	     </span><br><span class="line">	     HashMap&lt;Node, Node&gt; map1 = <span class="keyword">new</span> HashMap();</span><br><span class="line">	     HashMap&lt;Node, Integer&gt; map2 = <span class="keyword">new</span> HashMap();</span><br><span class="line">	     Node []map3 = <span class="keyword">new</span> Node[N];</span><br><span class="line">	     Node []map4 = <span class="keyword">new</span> Node[N];</span><br><span class="line">	     </span><br><span class="line">	     <span class="keyword">int</span> i = <span class="number">0</span>;</span><br><span class="line">	     <span class="keyword">while</span> (p!=<span class="keyword">null</span>)</span><br><span class="line">	     &#123;</span><br><span class="line">	    	 map1.put(p, p.random);</span><br><span class="line">	    	 map2.put(p, i); </span><br><span class="line">	    	 map3[i] = p;</span><br><span class="line">	    	 </span><br><span class="line">	    	 <span class="keyword">if</span> (newHead==<span class="keyword">null</span>) </span><br><span class="line">	    	 &#123;</span><br><span class="line">	    		 newHead = <span class="keyword">new</span> Node(p.val);</span><br><span class="line">	    		 pre = newHead;</span><br><span class="line">			 &#125;</span><br><span class="line">	    	 <span class="keyword">else</span></span><br><span class="line">	    	 &#123;</span><br><span class="line">	    		 pre.next = <span class="keyword">new</span> Node(p.val);</span><br><span class="line">	    		 pre = pre.next;</span><br><span class="line">	    	 &#125;</span><br><span class="line">	    	 map4[i] = pre;</span><br><span class="line">	    	 </span><br><span class="line">	    	 p = p.next; i+=<span class="number">1</span>;</span><br><span class="line">	     &#125;</span><br><span class="line">	     pre.next = <span class="keyword">null</span>;</span><br><span class="line">	     </span><br><span class="line">	     p = newHead; </span><br><span class="line">	     i = <span class="number">0</span>;</span><br><span class="line">	     </span><br><span class="line">	     <span class="keyword">while</span> (p!=<span class="keyword">null</span>)</span><br><span class="line">	     &#123;</span><br><span class="line">            Node randomNode = map1.get(map3[i]);</span><br><span class="line">	    	<span class="keyword">if</span>(randomNode==<span class="keyword">null</span>)</span><br><span class="line">	    		p.random = <span class="keyword">null</span>;</span><br><span class="line">	    	<span class="keyword">else</span> </span><br><span class="line">	    	&#123;</span><br><span class="line">	    		<span class="keyword">int</span> randomI = map2.get(randomNode);</span><br><span class="line">	    		p.random = map4[randomI];</span><br><span class="line">	    	&#125;</span><br><span class="line">	        p = p.next; </span><br><span class="line">	        i++;</span><br><span class="line">	     &#125;</span><br><span class="line">	     </span><br><span class="line">	     <span class="keyword">return</span> newHead;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><span class="math inline">\(T(N) = O(N)\)</span>, <span class="math inline">\(S(N) = O(1)\)</span></p>
+<figure class="highlight java"><figcaption><span>&#123;.line-numbers&#125;</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Definition for singly-linked list.</span></span><br><span class="line"><span class="comment"> * public class ListNode &#123;</span></span><br><span class="line"><span class="comment"> *     int val;</span></span><br><span class="line"><span class="comment"> *     ListNode next;</span></span><br><span class="line"><span class="comment"> *     ListNode() &#123;&#125;</span></span><br><span class="line"><span class="comment"> *     ListNode(int val) &#123; this.val = val; &#125;</span></span><br><span class="line"><span class="comment"> *     ListNode(int val, ListNode next) &#123; this.val = val; this.next = next; &#125;</span></span><br><span class="line"><span class="comment"> * &#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MySolution203</span> </span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> ListNode <span class="title">removeElements</span><span class="params">(ListNode head, <span class="keyword">int</span> val)</span> </span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">    	<span class="keyword">while</span> (head!=<span class="keyword">null</span>&amp;&amp;head.val==val)</span><br><span class="line">    		head = head.next;</span><br><span class="line">    	<span class="keyword">if</span> (head==<span class="keyword">null</span>) <span class="keyword">return</span> head;</span><br><span class="line">    	</span><br><span class="line">    	ListNode prev = head; ListNode p = head.next;</span><br><span class="line">    	<span class="keyword">while</span> (p!=<span class="keyword">null</span>)</span><br><span class="line">    	&#123;</span><br><span class="line">    		<span class="keyword">if</span> (p.val==val)</span><br><span class="line">    		&#123;</span><br><span class="line">    			prev.next = p.next;</span><br><span class="line">    			p = p.next;</span><br><span class="line">    		&#125;</span><br><span class="line">    		<span class="keyword">else</span> </span><br><span class="line">    		&#123;</span><br><span class="line">    			prev = p;</span><br><span class="line">    			p = p.next;</span><br><span class="line">    		&#125;</span><br><span class="line">    	&#125;</span><br><span class="line">    	<span class="keyword">return</span> head;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://yukief4fdh.github.io/2022/02/09/169_Easy_%E5%A4%9A%E6%95%B0%E5%85%83%E7%B4%A0_Array/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/yuki.gif">
+      <meta itemprop="name" content="CHEN XUEYI">
+      <meta itemprop="description" content="Call me Yuki (JPN) or Chloe (ENG).<br> Nice to meet you :)<br><hr style="margin:3px;"> Tokyo Institute of Technology (M1)<br> Rearch Interest: Visualization">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Yuki's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2022/02/09/169_Easy_%E5%A4%9A%E6%95%B0%E5%85%83%E7%B4%A0_Array/" class="post-title-link" itemprop="url">169. 多数元素</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2022-02-09 15:16:55" itemprop="dateCreated datePublished" datetime="2022-02-09T15:16:55+09:00">2022-02-09</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">Edited on</span>
+        <time title="Modified: 2022-02-10 21:39:57" itemprop="dateModified" datetime="2022-02-10T21:39:57+09:00">2022-02-10</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/LeetCode/" itemprop="url" rel="index"><span itemprop="name">LeetCode</span></a>
+        </span>
+          , 
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/LeetCode/Easy/" itemprop="url" rel="index"><span itemprop="name">Easy</span></a>
+        </span>
+          , 
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/LeetCode/Easy/Half-done/" itemprop="url" rel="index"><span itemprop="name">Half-done</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <center>
+<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/majority-element/"><b><font color = #5EB561>转载自Leet Code</font></b></a>
+</center>
+<h3 id="题目描述">题目描述</h3>
+<p>给定一个大小为<span class="math inline">\(n\)</span>的数组，找到其中的多数元素。 多数元素是指在数组中出现次数<strong>大于</strong> <span class="math inline">\(⌊ n/2 ⌋\)</span> 的元素。 你可以假设数组是非空的，并且给定的数组总是存在多数元素。</p>
+<p>示例 1: &gt;输入:<code>[3,2,3]</code> &gt;输出: <code>3</code></p>
+<p>示例 2: &gt;输入:<code>[2,2,1,1,1,2,2]</code> &gt;输出: <code>2</code></p>
+<p><strong>进阶：</strong></p>
+<ul>
+<li>尝试设计时间复杂度为 <span class="math inline">\(O(n)\)</span>、空间复杂度为 <span class="math inline">\(O(1)\)</span> 的算法解决此问题。</li>
+</ul>
 <hr />
-<h3 id="方法一回溯-哈希表">方法一：回溯 + 哈希表</h3>
-<p><strong>思路</strong>：利用回溯的方式，让每个节点的拷贝操作相互独立。</p>
-<p>对于当前节点，首先对其进行拷贝， 然后进行「当前节点的后继节点」和「当前节点的随机指针指向的节点」拷贝， 拷贝完成后将创建的新节点的指针返回，即可完成当前节点的两指针的赋值。</p>
-<p>具体地，用哈希表记录每一个节点对应新节点的创建情况。 遍历时，检查「当前节点的后继节点」和「当前节点的随机指针指向的节点」的创建情况。 如果这两个节点中的任何一个节点的新节点没有被创建，都立刻递归地进行创建。 当拷贝完成，回溯到当前层时，即可完成当前节点的指针赋值。</p>
-<p>注意一个节点可能被多个其他节点指向，因此可能递归地多次尝试拷贝某个节点。 为了防止重复拷贝，需要首先检查当前节点是否被拷贝过。 如果已经拷贝过，可以直接从哈希表中取出拷贝后的节点的指针并返回即可。</p>
-<p>在实际代码中，我们需要特别判断给定节点为空节点的情况。</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution1</span> </span>&#123;</span><br><span class="line">    Map&lt;Node, Node&gt; cachedNode = <span class="keyword">new</span> HashMap&lt;Node, Node&gt;();</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> Node <span class="title">copyRandomList</span><span class="params">(Node head)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (head == <span class="keyword">null</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">null</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (!cachedNode.containsKey(head)) &#123;</span><br><span class="line">            Node headNew = <span class="keyword">new</span> Node(head.val);</span><br><span class="line">            cachedNode.put(head, headNew);</span><br><span class="line">            headNew.next = copyRandomList(head.next);</span><br><span class="line">            headNew.random = copyRandomList(head.random);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> cachedNode.get(head);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p><strong>时间复杂度</strong>: <span class="math inline">\(O(N)\)</span>. 对于每个节点，我们至多访问其「后继节点」和「随机指针指向的节点」各一次，均摊每个点至多被访问两次。</p>
-<p><strong>空间复杂度</strong>: <span class="math inline">\(O(N)\)</span>. 哈希表的空间开销。</p>
+<h3 id="我的代码-1-排序"><font color=#808080>我的代码 1: 排序</font></h3>
+<p><span class="math inline">\(T(N) = O(NlogN)\)</span>, <span class="math inline">\(S(N) = O(N)\)</span></p>
+<h2 id="section"><figure class="highlight java"><figcaption><span>&#123;.line-numbers&#125;</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MySolution169_1</span> </span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">majorityElement</span><span class="params">(<span class="keyword">int</span>[] nums)</span> </span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">    	Arrays.sort(nums);</span><br><span class="line">    	<span class="keyword">if</span> (nums.length%<span class="number">2</span>==<span class="number">0</span>)</span><br><span class="line">    		<span class="keyword">return</span> nums[nums.length/<span class="number">2</span>-<span class="number">1</span>];</span><br><span class="line">    	<span class="keyword">else</span> <span class="keyword">return</span> nums[nums.length/<span class="number">2</span>];</span><br><span class="line">    	</span><br><span class="line">    	<span class="keyword">return</span> nums[nums.length/<span class="number">2</span>];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></h2>
+<h3 id="我的代码-2-哈希表"><font color=#808080>我的代码 2: 哈希表</font></h3>
+<p><span class="math inline">\(T(N) = O(N)\)</span>, <span class="math inline">\(S(N) = O(N)\)</span></p>
+<figure class="highlight java"><figcaption><span>&#123;.line-numbers&#125;</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MySolution169_2</span></span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">majorityElement</span><span class="params">(<span class="keyword">int</span>[] nums)</span> </span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">    	HashMap&lt;Integer, Integer&gt; map = <span class="keyword">new</span> HashMap();</span><br><span class="line">    	</span><br><span class="line">    	<span class="keyword">for</span> (<span class="keyword">int</span> num:nums)</span><br><span class="line">    	&#123;</span><br><span class="line">    		<span class="keyword">if</span> (!map.containsKey(num))</span><br><span class="line">    			map.put(num, <span class="number">1</span>);</span><br><span class="line">    		<span class="keyword">else</span> map.put(num, map.get(num)+<span class="number">1</span>);</span><br><span class="line">    		</span><br><span class="line">    		<span class="keyword">if</span> (map.get(num)&gt;nums.length/<span class="number">2</span>)</span><br><span class="line">    			<span class="keyword">return</span> num;</span><br><span class="line">    	&#125;</span><br><span class="line">    	</span><br><span class="line">    	<span class="keyword">return</span> -<span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <hr />
-<h3 id="方法二迭代-节点拆分">方法二：迭代 + 节点拆分</h3>
-<p><strong>思路</strong>：希望省去方法一当中哈希表所消耗的空间。</p>
-<p>首先，将该链表中每一个节点拆分为两个相连的节点。 例如，对于链表<span class="math inline">\(A→B→C\)</span>， 我们可以将其拆分为<span class="math inline">\(A→A&#39;→B→B&#39;→C→C&#39;\)</span>。 即，对于任意一个原节点<span class="math inline">\(S\)</span>，其拷贝节点 <span class="math inline">\(S&#39;\)</span> 即为其后继节点。</p>
-<p>这样，我们可以直接找到每一个拷贝节点 <span class="math inline">\(S&#39;\)</span> 的随机指针应当指向的节点， 即为其原节点 <span class="math inline">\(S\)</span> 的随机指针指向的节点 <span class="math inline">\(T\)</span> 的后继节点 <span class="math inline">\(T&#39;\)</span> 。</p>
-<p>需要注意原节点的随机指针可能为空。</p>
-<p>当完成了拷贝节点 <span class="math inline">\(S&#39;\)</span> 的随机指针 <span class="math inline">\(T&#39;\)</span> 的赋值， 就只需要将这个链表按照原节点 <span class="math inline">\(S\)</span> 与拷贝节点 <span class="math inline">\(S&#39;\)</span> 的种类进行拆分即可，只需要遍历一次。</p>
-<p>同样需要注意最后一个拷贝节点的后继节点为空的情况。</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution2</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> Node <span class="title">copyRandomList</span><span class="params">(Node head)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (head == <span class="keyword">null</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">null</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span> (Node node = head; node != <span class="keyword">null</span>; node = node.next.next) &#123;</span><br><span class="line">            Node nodeNew = <span class="keyword">new</span> Node(node.val);</span><br><span class="line">            nodeNew.next = node.next;</span><br><span class="line">            node.next = nodeNew;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span> (Node node = head; node != <span class="keyword">null</span>; node = node.next.next) &#123;</span><br><span class="line">            Node nodeNew = node.next;</span><br><span class="line">            nodeNew.random = (node.random != <span class="keyword">null</span>) ? node.random.next : <span class="keyword">null</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        Node headNew = head.next;</span><br><span class="line">        <span class="keyword">for</span> (Node node = head; node != <span class="keyword">null</span>; node = node.next) &#123;</span><br><span class="line">            Node nodeNew = node.next;</span><br><span class="line">            node.next = node.next.next;</span><br><span class="line">            nodeNew.next = (nodeNew.next != <span class="keyword">null</span>) ? nodeNew.next.next : <span class="keyword">null</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> headNew;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p><strong>时间复杂度</strong>：<span class="math inline">\(O(N)\)</span>. 只需要遍历三次。(如果在计算拷贝节点的随机指针的同时计算其后继指针，则只需要遍历两次。)</p>
-<p><strong>空间复杂度</strong>：<span class="math inline">\(O(1)\)</span>. 注意返回值不计入空间复杂度的计算。</p>
+<h3 id="方法一-分治法">方法一: 分治法</h3>
+<p><span class="math inline">\(T(N) = O(NlogN)\)</span>, <span class="math inline">\(S(N) = O(logN)\)</span></p>
+<p>如果元素<code>num</code>是数组<code>nums</code>的众数， 那么将<code>nums</code>分为两部分时，<code>num</code>必定至少是其中某一部分的众数。</p>
+<p>用反证法对这一结论进行证明： 设l为左半部分的长度，<code>r</code>是右半部分的长度， 假设<code>num</code>既不是左半部分的众数，也不是右半部分的众数， 那么<code>num</code>的出现次数将小于<code>(l/2+r/2)</code>次； 又由于<code>(l/2+r/2)≤(l+r)/2</code>，说明<code>num</code>也不是数组<code>nums</code>的众数，因此出现了矛盾。 可见结论是正确的。</p>
+<p>因此，可以将数组分为左右两部分， 分别求出左半部分的众数<code>num1</code>和右半部分的众数<code>num2</code>， 再在<code>num1</code>和<code>num2</code>之间选出正确的那个众数。</p>
+<p>通过递归的分治算法来求解。 当所有子问题的长度都是1时，这唯一一个数显然就是众数，直接返回； 当回溯后区间长度大于1时， 若左右子区间的众数相同，则合并后区间的众数显然就是这个值； 若左右子区间的众数不同，则需要比较两个众数在合并后整个区间内的出现次数来决定取谁。</p>
+<hr />
+<h3 id="代码">代码</h3>
+<figure class="highlight java"><figcaption><span>&#123;.line-numbers&#125;</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution169</span></span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">majorityElement</span><span class="params">(<span class="keyword">int</span>[] nums)</span> </span></span><br><span class="line"><span class="function">	</span>&#123;</span><br><span class="line">    	<span class="keyword">return</span> split(nums,<span class="number">0</span>,nums.length-<span class="number">1</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">findVal</span> <span class="params">(<span class="keyword">int</span> []nums, <span class="keyword">int</span> head, <span class="keyword">int</span> tail, <span class="keyword">int</span> val1, <span class="keyword">int</span> val2)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">    	<span class="keyword">int</span> count1=<span class="number">0</span>, count2=<span class="number">0</span>;</span><br><span class="line">    	</span><br><span class="line">    	<span class="keyword">for</span> (<span class="keyword">int</span> i=head; i&lt;=tail; i++)</span><br><span class="line">    	&#123;</span><br><span class="line">    		<span class="keyword">if</span> (val1==nums[i]) count1++;</span><br><span class="line">    		<span class="keyword">else</span> <span class="keyword">if</span> (val2==nums[i]) count2++;</span><br><span class="line">    	&#125;</span><br><span class="line">    	</span><br><span class="line">    	<span class="keyword">return</span> count1&gt;count2?val1:val2;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">split</span><span class="params">(<span class="keyword">int</span> []nums, <span class="keyword">int</span> head, <span class="keyword">int</span> tail)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">    	<span class="keyword">if</span> (head==tail) <span class="keyword">return</span> nums[head];</span><br><span class="line">    	</span><br><span class="line">    	<span class="keyword">int</span> mid = head+(tail-head)/<span class="number">2</span>;</span><br><span class="line">    	<span class="keyword">int</span> leftVal = split(nums, head, mid);</span><br><span class="line">    	<span class="keyword">int</span> rightVal = split(nums, mid+<span class="number">1</span>, tail);</span><br><span class="line">    	</span><br><span class="line">    	<span class="keyword">if</span> (leftVal==rightVal) <span class="keyword">return</span> leftVal;</span><br><span class="line">    	</span><br><span class="line">    	<span class="keyword">else</span> <span class="keyword">return</span> findVal(nums, head, tail, leftVal, rightVal);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>时空复杂度</strong></p>
+<ul>
+<li>时间复杂度<span class="math inline">\(O(NlogN)\)</span>: 函数<code>split()</code>会求解两个长度为<span class="math inline">\(\frac {n}{2}\)</span>的子问题，并做两次长度为<span class="math inline">\(n\)</span>的线性扫描。因此分治算法的时间复杂度可以表示为<span class="math inline">\(2T(\frac {n}{2})+2n\)</span>. 根据主定理，本题的时间复杂度为<span class="math display">\[T(n)=\Theta(n^{log_ba}logn)=\Theta(n^{log_22}logn)=\Theta(nlogn)\]</span></li>
+<li>空间复杂度<span class="math inline">\(O(1)\)</span>.</li>
+</ul>
+<hr />
+<h3 id="方法二摩尔投票法boyer-moore">方法二：摩尔投票法Boyer-Moore</h3>
+<p><span class="math inline">\(T(N) = O(N)\)</span>, <span class="math inline">\(S(N) = O(1)\)</span></p>
+<p>如果我们把众数记为<code>+1</code>，其他数记为<code>-1</code>，将它们全部加起来，和显然大于<code>0</code>。</p>
+<p>维护一个候选众数<code>candidate</code>和其出现次数<code>count</code>。初始<code>candidate</code>任意，<code>count</code>为<code>0</code>. 遍历<code>nums</code>中的元素。在判断<code>nums[i]</code>之前，若<code>count</code>为<code>0</code>则将<code>nums</code>设置为<code>candidate</code>。 若<code>nums[i]</code>与<code>candidate</code>相等，则<code>count</code>加<code>1</code>； 若<code>nums[i]</code>与<code>candidate</code>不等，则<code>count</code>减<code>1</code>； 遍历结束后的<code>candidate</code>就是众数。</p>
+<p>摩尔投票算法的正确性较难证明，可以通过一个例子来理解. <code>nums</code>为数组，<code>candidate</code>为候选众数，<code>count</code>为候选众数的出现次数(非负)， <code>value</code>为目前为止真正的众数比非众数多出现的次数 (如果<code>nums[i]</code>是真正的众数则加<code>1</code>，否则减<code>1</code>)。 nums: [7, 7, 5, 7, 5, 1 | 5, 7 | 5, 5, 7, 7 | 7, 7, 7, 7] candidate: 7 7 7 7 7 7 5 5 5 5 5 5 7 7 7 7 count: 1 2 1 2 1 0 1 0 1 2 1 0 1 2 3 4 value: 1 2 1 2 1 0 -1 0 -1 -2 -1 0 1 2 3 4</p>
+<p>可以发现 当<code>candidate</code>就是众数时<code>count</code>和<code>value</code>相等，否则它们互为相反数。 这是因为： 我们将候选众数<code>candidate</code>保持不变的连续的遍历称为「一段」。 在同一段中，<code>count</code>的值根据<code>candidate</code>是否等于<code>nums[i]</code>进行加减。 那么如果<code>candidate</code>就是众数，则在这一段中，<code>count</code>和<code>value</code>的变化是同步的； 如果<code>candidate</code>不是众数，则在这一段中，<code>count</code>和<code>value</code>的变化是相反的。</p>
+<p>由于<code>value</code>的值与真正的众数绑定， 并且它表示「目前为止真正的众数比非众数多出现的次数」， 因此在遍历的最后，<code>value</code>的值是正数。</p>
+<p>即在最后一次遍历后，<code>count</code>非负、<code>value</code>为正数， 因此它们不会互为相反数，只可能相等。 可见在最后的「一段」中，<code>count</code>和<code>value</code>的变化是同步的， 即<code>candidate</code>绑定的候选众数就是真正的众数。</p>
+<hr />
+<h3 id="代码-1">代码</h3>
+<figure class="highlight java"><figcaption><span>&#123;.line-numbers&#125;</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution169</span> </span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">majorityElement</span><span class="params">(<span class="keyword">int</span>[] nums)</span> </span></span><br><span class="line"><span class="function">	</span>&#123;</span><br><span class="line">		<span class="keyword">int</span> candidate = <span class="number">0</span>; <span class="keyword">int</span> count = <span class="number">0</span>;</span><br><span class="line">    	</span><br><span class="line">    	<span class="keyword">for</span> (<span class="keyword">int</span> num:nums)</span><br><span class="line">    	&#123;</span><br><span class="line">    		<span class="keyword">if</span> (count==<span class="number">0</span>) candidate  = num;</span><br><span class="line">    		</span><br><span class="line">    		<span class="keyword">if</span> (candidate==num) count+=<span class="number">1</span>;</span><br><span class="line">    		<span class="keyword">else</span> count-=<span class="number">1</span>;</span><br><span class="line">    	&#125;</span><br><span class="line">    	</span><br><span class="line">    	<span class="keyword">return</span> candidate;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -785,7 +753,7 @@
 
 
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/8/"><i class="fa fa-angle-left" aria-label="Previous page"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/8/">8</a><span class="page-number current">9</span><a class="page-number" href="/page/10/">10</a><a class="page-number" href="/page/11/">11</a><a class="extend next" rel="next" href="/page/10/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
+    <a class="extend prev" rel="prev" href="/page/8/"><i class="fa fa-angle-left" aria-label="Previous page"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/8/">8</a><span class="page-number current">9</span><a class="page-number" href="/page/10/">10</a><span class="space">&hellip;</span><a class="page-number" href="/page/17/">17</a><a class="extend next" rel="next" href="/page/10/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
   </nav>
 
 </div>

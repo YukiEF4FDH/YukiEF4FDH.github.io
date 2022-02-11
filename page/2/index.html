@@ -85,9 +85,9 @@
   <ul class="main-menu menu">
         <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a></li>
         <li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a></li>
-        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags<span class="badge">22</span></a></li>
+        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags<span class="badge">26</span></a></li>
         <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories<span class="badge">13</span></a></li>
-        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives<span class="badge">52</span></a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives<span class="badge">82</span></a></li>
         
             
   <li class="menu-item menu-item-docs"><a href="/docs/" rel="section"><i class="fa fa-book fa-fw"></i>Docs</a></li>
@@ -142,7 +142,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">52</span>
+          <span class="site-state-item-count">82</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -153,7 +153,7 @@
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">22</span>
+        <span class="site-state-item-count">26</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
@@ -205,7 +205,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://yukief4fdh.github.io/2022/02/09/268_Easy_%E4%B8%A2%E5%A4%B1%E7%9A%84%E6%95%B0%E5%AD%97_Array/">
+    <link itemprop="mainEntityOfPage" href="https://yukief4fdh.github.io/2022/02/09/1544_Easy_%E6%95%B4%E7%90%86%E5%AD%97%E7%AC%A6%E4%B8%B2_Stack/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/yuki.gif">
@@ -218,7 +218,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2022/02/09/268_Easy_%E4%B8%A2%E5%A4%B1%E7%9A%84%E6%95%B0%E5%AD%97_Array/" class="post-title-link" itemprop="url">268. 丢失的数字</a>
+          <a href="/2022/02/09/1544_Easy_%E6%95%B4%E7%90%86%E5%AD%97%E7%AC%A6%E4%B8%B2_Stack/" class="post-title-link" itemprop="url">1544. 整理字符串</a>
         </h2>
 
         <div class="post-meta-container">
@@ -236,148 +236,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2022-02-10 23:12:31" itemprop="dateModified" datetime="2022-02-10T23:12:31+09:00">2022-02-10</time>
-      </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/LeetCode/" itemprop="url" rel="index"><span itemprop="name">LeetCode</span></a>
-        </span>
-          , 
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/LeetCode/Easy/" itemprop="url" rel="index"><span itemprop="name">Easy</span></a>
-        </span>
-          , 
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/LeetCode/Easy/Half-done/" itemprop="url" rel="index"><span itemprop="name">Half-done</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <center>
-<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/missing-number/"><b><font color = #5EB561>转载自Leet Code</font></b></a>
-</center>
-<h3 id="题目描述">题目描述</h3>
-<p>给定一个包含 <code>[0, n] </code>中 <code>n</code> 个数的数组 <code>nums</code> ，找出 <code>[0, n]</code> 这个范围内没有出现在数组中的那个数。</p>
-<p>示例 1： &gt;输入：<code>nums = [3,0,1]</code> &gt;输出：<code>2</code> &gt;解释：n = 3，因为有 3 个数字，所以所有的数字都在范围 [0,3] 内。2 是丢失的数字，因为它没有出现在 nums 中。</p>
-<p>示例 2： &gt;输入：<code>nums = [0,1]</code> &gt;输出：<code>2</code> &gt;解释：n = 2，因为有 2 个数字，所以所有的数字都在范围 [0,2] 内。2 是丢失的数字，因为它没有出现在 nums 中。</p>
-<p>示例 3： &gt;输入：<code>nums = [9,6,4,2,3,5,7,0,1]</code> &gt;输出：<code>8</code> &gt;解释：n = 9，因为有 9 个数字，所以所有的数字都在范围 [0,9] 内。8 是丢失的数字，因为它没有出现在 nums 中。</p>
-<p>示例 4：</p>
-<blockquote>
-<p>输入：<code>nums = [0]</code> 输出：<code>1</code> 解释：n = 1，因为有 1 个数字，所以所有的数字都在范围 [0,1] 内。1 是丢失的数字，因为它没有出现在 nums 中。</p>
-</blockquote>
-<p><strong>提示：</strong></p>
-<ul>
-<li><code>n == nums.length</code></li>
-<li><code>1 &lt;= n &lt;= 104</code></li>
-<li><code>0 &lt;= nums[i] &lt;= n</code></li>
-<li><code>nums</code> 中的所有数字都 <strong>独一无二</strong></li>
-</ul>
-<p><strong>进阶</strong>：</p>
-<p>你能否实现线性时间复杂度、仅使用额外常数空间的算法解决此问题?</p>
-<hr />
-<h3 id="我的代码-1-排序"><font color=#808080>我的代码 1: 排序</font></h3>
-<p><span class="math inline">\(T(N) = O(NlogN)\)</span>, <span class="math inline">\(S(N) = O(1)\)</span></p>
-<h2 id="section"><figure class="highlight java"><figcaption><span>&#123;.line-numbers&#125;</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MySolution268_1</span> </span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">missingNumber</span><span class="params">(<span class="keyword">int</span>[] nums)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">    	Arrays.sort(nums);</span><br><span class="line">    	</span><br><span class="line">    	<span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;nums.length; i++)</span><br><span class="line">    		<span class="keyword">if</span> (nums[i]!=i)</span><br><span class="line">    			<span class="keyword">return</span> i;</span><br><span class="line">    	<span class="keyword">return</span> nums.length;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></h2>
-<h3 id="我的代码-2-数学"><font color=#808080>我的代码 2: 数学</font></h3>
-<p><span class="math inline">\(T(N) = O(N)\)</span>, <span class="math inline">\(S(N) = O(1)\)</span></p>
-<figure class="highlight java"><figcaption><span>&#123;.line-numbers&#125;</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MySolution268_2</span> </span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">missingNumber</span><span class="params">(<span class="keyword">int</span>[] nums)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">    	<span class="keyword">int</span> sum = (<span class="number">0</span>+nums.length)*(nums.length+<span class="number">1</span>)/<span class="number">2</span>;</span><br><span class="line">    	</span><br><span class="line">    	<span class="keyword">int</span> numsSum = <span class="number">0</span>;</span><br><span class="line">    	<span class="keyword">for</span> (<span class="keyword">int</span> num:nums) numsSum+=num;</span><br><span class="line">    	</span><br><span class="line">    	<span class="keyword">return</span> numsSum-sum;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<hr />
-<h3 id="方法-位运算">方法: 位运算</h3>
-<p><span class="math inline">\(T(N) = O(N)\)</span>, <span class="math inline">\(S(N) = O(1)\)</span></p>
-<p>由于异或运算(XOR)满足结合律， 并且对一个数进行两次完全相同的异或运算则会得到原来的数， 因此可以通过异或运算得到缺失的数字。</p>
-<p>数组<code>nums</code>中有<code>n</code>个数，并且缺失的数字在<code>[0…n]</code>中。 因此我们可以先计算<code>[0…n]</code>的异或值，再将结果对数组<code>nums</code>中的每一个数<code>nums[i]</code>进行一次异或运算。 没有缺失的数字在<code>[0…n]</code>和数组<code>nums</code>中各出现过一次，因此异或之后得到<code>0</code>； 而缺失的数字只在<code>[0…n]</code>中出现了一次，在数组<code>nums</code>中没有出现，因此异或的结果就是这个缺失的数字。</p>
-<p>由于<code>[0…n]</code>正好是这个数组<code>nums</code>的下标加上<code>n</code>，因此可以用一次循环完成所有的异或运算。 可以将结果的初始值设为<code>n</code>，再对数组中的每一个数以及它的下标进行一个异或运算。</p>
-<p>例如：</p>
-<p><span class="math display">\[
-\begin{array}{c|lcr}
-下标 &amp; 0 &amp; 1 &amp; 2 &amp; 3\\
-\hline
-数字 &amp; 0 &amp; 1 &amp; 3 &amp; 4 \\
-\end{array}
-\]</span></p>
-<p><span class="math display">\[
-\begin{aligned}
-missing
-&amp; = 4 \land (0 \land 0) \land (1 \land 1) \land (2 \land 3) \land (3 \land 4) \\
-&amp; = (4 \land 4) \land (0 \land 0) \land (1 \land 1) \land (3 \land 3) \land 2 \\
-&amp; = 0 \land 0 \land 0 \land 0 \land 2 \\
-&amp; = 2
-\end{aligned}
-\]</span></p>
-<hr />
-<h3 id="代码">代码</h3>
-<figure class="highlight java"><figcaption><span>&#123;.line-numbers&#125;</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution268</span> </span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">missingNumber</span><span class="params">(<span class="keyword">int</span>[] nums)</span> </span></span><br><span class="line"><span class="function">	</span>&#123;</span><br><span class="line">        <span class="keyword">int</span> missing = nums.length;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; nums.length; i++) </span><br><span class="line">		&#123;</span><br><span class="line">            missing ^= i ^ nums[i];</span><br><span class="line">			<span class="comment">//missing  = missing ^ (i ^ nums[i])</span></span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> missing;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://yukief4fdh.github.io/2022/02/09/237_Easy_%E5%88%A0%E9%99%A4%E9%93%BE%E8%A1%A8%E4%B8%AD%E7%9A%84%E8%8A%82%E7%82%B9_LinkedList/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/yuki.gif">
-      <meta itemprop="name" content="CHEN XUEYI">
-      <meta itemprop="description" content="Call me Yuki (JPN) or Chloe (ENG).<br> Nice to meet you :)<br><hr style="margin:3px;"> Tokyo Institute of Technology (M1)<br> Rearch Interest: Visualization">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Yuki's Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2022/02/09/237_Easy_%E5%88%A0%E9%99%A4%E9%93%BE%E8%A1%A8%E4%B8%AD%E7%9A%84%E8%8A%82%E7%82%B9_LinkedList/" class="post-title-link" itemprop="url">237. 删除链表中的节点</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2022-02-09 15:16:55" itemprop="dateCreated datePublished" datetime="2022-02-09T15:16:55+09:00">2022-02-09</time>
-    </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2022-02-10 23:08:35" itemprop="dateModified" datetime="2022-02-10T23:08:35+09:00">2022-02-10</time>
+        <time title="Modified: 2022-02-11 15:16:32" itemprop="dateModified" datetime="2022-02-11T15:16:32+09:00">2022-02-11</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -408,377 +267,471 @@ missing
     
     <div class="post-body" itemprop="articleBody">
           <center>
-<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/delete-node-in-a-linked-list/"><b><font color = #5EB561>转载自Leet Code</font></b></a>
+<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/make-the-string-great/"><b><font color = #5EB561>转载自Leet Code</font></b></a>
 </center>
 <h3 id="题目描述">题目描述</h3>
-<p>请编写一个函数，用于 <strong>删除单链表中某个特定节点</strong> 。在设计函数时需要注意，你无法访问链表的头节点 <code>head</code> ，只能直接访问 <strong>要被删除的节点</strong> 。</p>
-<p>题目数据保证需要删除的节点 <strong>不是末尾节点</strong> 。</p>
-<p><strong>示例 1：</strong></p>
-<blockquote>
-<p>输入：<code>head = [4,5,1,9], node = 5</code> 输出：<code>[4,1,9]</code> 解释：指定链表中值为 5 的第二个节点，那么在调用了你的函数之后，该链表应变为 4 -&gt; 1 -&gt; 9</p>
-</blockquote>
-<p><strong>示例 2</strong>：</p>
-<blockquote>
-<p>输入：<code>head = [4,5,1,9], node = 1</code> 输出：<code>[4,5,9]</code> 解释：指定链表中值为 1 的第三个节点，那么在调用了你的函数之后，该链表应变为 4 -&gt; 5 -&gt; 9</p>
-</blockquote>
-<p><strong>示例 3</strong>：</p>
-<blockquote>
-<p>输入：<code>head = [1,2,3,4], node = 3</code> 输出：<code>[1,2,4]</code></p>
-</blockquote>
-<p><strong>示例 4</strong>：</p>
-<blockquote>
-<p>输入：<code>head = [0,1], node = 0</code> 输出：<code>[1]</code></p>
-</blockquote>
-<p><strong>示例 5</strong>：</p>
-<blockquote>
-<p>输入：<code>head = [-3,5,-99], node = -3</code> 输出：<code>[5,-99]</code></p>
-</blockquote>
-<p><strong>提示</strong>：</p>
-<ul>
-<li>链表中节点的数目范围是 <code>[2, 1000]</code></li>
-<li><code>-1000 &lt;= Node.val &lt;= 1000</code></li>
-<li>链表中每个节点的值都是唯一的</li>
-<li>需要删除的节点 <code>node</code> 是 链表中的一个有效节点 ，且 不是末尾节点</li>
-</ul>
+<p>给你一个由大小写英文字母组成的字符串 <code>s</code> 。 一个整理好的字符串中，两个相邻字符 <code>s[i]</code> 和 <code>s[i+1]</code>，其中 <code>0&lt;= i &lt;= s.length-2</code> ，要满足如下条件: 若 <code>s[i]</code> 是小写字符，则 <code>s[i+1]</code> 不可以是相同的大写字符。 若 <code>s[i]</code> 是大写字符，则 <code>s[i+1]</code> 不可以是相同的小写字符。 请你将字符串整理好，每次你都可以从字符串中选出满足上述条件的 <strong>两个相邻</strong> 字符并删除，直到字符串整理好为止。 请返回整理好的 <strong>字符串</strong> 。题目保证在给出的约束条件下，测试样例对应的答案是唯一的。 注意：空字符串也属于整理好的字符串，尽管其中没有任何字符。</p>
+<p>示例 1： &gt;输入：<code>s = "leEeetcode"</code> &gt;输出：<code>"leetcode"</code> &gt;解释：无论你第一次选的是 <code>i = 1</code> 还是 <code>i = 2</code>，都会使 <code>"leEeetcode"</code> 缩减为 <code>"leetcode"</code> 。</p>
+<p>示例 2： &gt;输入：<code>s = "abBAcC"</code> &gt;输出：<code>""</code> &gt;解释：存在多种不同情况，但所有的情况都会导致相同的结果。例如： &gt;<code>"abBAcC" --&gt; "aAcC" --&gt; "cC" --&gt; ""</code> &gt;<code>"abBAcC" --&gt; "abBA" --&gt; "aA" --&gt; ""</code></p>
+<p>示例 3： &gt;输入：<code>s = "s"</code> &gt;输出：<code>"s"</code></p>
+<p>提示： - <code>1 &lt;= s.length &lt;= 100</code> - <code>s</code> 只包含小写和大写英文字母</p>
 <hr />
 <h3 id="我的代码"><font color=#808080>我的代码</font></h3>
-<p><span class="math inline">\(T(N) = O(1)\)</span>, <span class="math inline">\(S(N) = O(1)\)</span></p>
-<figure class="highlight java"><figcaption><span>&#123;.line-numbers&#125;</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Definition for singly-linked list.</span></span><br><span class="line"><span class="comment"> * public class ListNode &#123;</span></span><br><span class="line"><span class="comment"> *     int val;</span></span><br><span class="line"><span class="comment"> *     ListNode next;</span></span><br><span class="line"><span class="comment"> *     ListNode() &#123;&#125;</span></span><br><span class="line"><span class="comment"> *     ListNode(int val) &#123; this.val = val; &#125;</span></span><br><span class="line"><span class="comment"> *     ListNode(int val, ListNode next) &#123; this.val = val; this.next = next; &#125;</span></span><br><span class="line"><span class="comment"> * &#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MySolution237</span> </span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">deleteNode</span><span class="params">(ListNode node)</span> </span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        ListNode pre = node;</span><br><span class="line">    	ListNode post = pre.next;</span><br><span class="line">    	</span><br><span class="line">    	<span class="keyword">while</span> (post.next!=<span class="keyword">null</span>)</span><br><span class="line">    	&#123;</span><br><span class="line">    		pre.val = post.val;</span><br><span class="line">    		pre = post;</span><br><span class="line">    		post = post.next;</span><br><span class="line">    	&#125;</span><br><span class="line">    	pre.val = post.val;</span><br><span class="line">    	pre.next = <span class="keyword">null</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://yukief4fdh.github.io/2022/02/09/234_Easy_%E5%9B%9E%E6%96%87%E9%93%BE%E8%A1%A8_LinkedList/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/yuki.gif">
-      <meta itemprop="name" content="CHEN XUEYI">
-      <meta itemprop="description" content="Call me Yuki (JPN) or Chloe (ENG).<br> Nice to meet you :)<br><hr style="margin:3px;"> Tokyo Institute of Technology (M1)<br> Rearch Interest: Visualization">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Yuki's Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2022/02/09/234_Easy_%E5%9B%9E%E6%96%87%E9%93%BE%E8%A1%A8_LinkedList/" class="post-title-link" itemprop="url">234. 回文链表</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2022-02-09 15:16:55" itemprop="dateCreated datePublished" datetime="2022-02-09T15:16:55+09:00">2022-02-09</time>
-    </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2022-02-10 23:04:19" itemprop="dateModified" datetime="2022-02-10T23:04:19+09:00">2022-02-10</time>
-      </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/LeetCode/" itemprop="url" rel="index"><span itemprop="name">LeetCode</span></a>
-        </span>
-          , 
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/LeetCode/Easy/" itemprop="url" rel="index"><span itemprop="name">Easy</span></a>
-        </span>
-          , 
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/LeetCode/Easy/Half-done/" itemprop="url" rel="index"><span itemprop="name">Half-done</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <center>
-<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/palindrome-linked-list/"><b><font color = #5EB561>转载自Leet Code</font></b></a>
-</center>
-<h3 id="题目描述">题目描述</h3>
-<p>请判断一个链表是否为回文链表。</p>
-<p>示例 1: &gt;输入: <code>1-&gt;2</code> &gt;输出: <code>false</code></p>
-<p>示例 2: &gt;输入: <code>1-&gt;2-&gt;2-&gt;1</code> &gt;输出: <code>true</code></p>
-<p><strong>进阶</strong>：</p>
-<p>你能否用 <span class="math inline">\(O(n)\)</span> 时间复杂度和 <span class="math inline">\(O(1)\)</span> 空间复杂度解决此题？</p>
-<hr />
-<h3 id="我的代码"><font color=#808080>我的代码</font></h3>
-<p><span class="math inline">\(T(N) = O(N)\)</span>, <span class="math inline">\(S(N) = O(1)\)</span></p>
-<h2 id="section"><figure class="highlight java"><figcaption><span>&#123;.line-numbers&#125;</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Definition for singly-linked list.</span></span><br><span class="line"><span class="comment"> * public class ListNode &#123;</span></span><br><span class="line"><span class="comment"> *     int val;</span></span><br><span class="line"><span class="comment"> *     ListNode next;</span></span><br><span class="line"><span class="comment"> *     ListNode() &#123;&#125;</span></span><br><span class="line"><span class="comment"> *     ListNode(int val) &#123; this.val = val; &#125;</span></span><br><span class="line"><span class="comment"> *     ListNode(int val, ListNode next) &#123; this.val = val; this.next = next; &#125;</span></span><br><span class="line"><span class="comment"> * &#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MySolution234</span> </span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">isPalindrome</span><span class="params">(ListNode head)</span> </span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">    	<span class="keyword">if</span> (head==<span class="keyword">null</span>||head.next==<span class="keyword">null</span>) <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">    	<span class="keyword">if</span> (head.next.next==<span class="keyword">null</span>) <span class="keyword">return</span> head.val==head.next.val;</span><br><span class="line">    	</span><br><span class="line">    	ListNode p = head; <span class="keyword">int</span> length = <span class="number">0</span>;</span><br><span class="line">    	<span class="keyword">while</span> (p!=<span class="keyword">null</span>)</span><br><span class="line">    	&#123;</span><br><span class="line">    		length++; p = p.next; </span><br><span class="line">    	&#125;</span><br><span class="line">    	</span><br><span class="line">    	ListNode prev = head; ListNode post;</span><br><span class="line">    	<span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;length/<span class="number">2</span>; i++)</span><br><span class="line">    		prev = prev.next;</span><br><span class="line">    	p = prev.next; post = p.next;</span><br><span class="line">    	</span><br><span class="line">    	prev.next = <span class="keyword">null</span>; p.next = prev;</span><br><span class="line">    	<span class="keyword">while</span> (post!=<span class="keyword">null</span>)</span><br><span class="line">    	&#123;</span><br><span class="line">    		prev = p;</span><br><span class="line">    		p = post;</span><br><span class="line">    		post = post.next;</span><br><span class="line">    		p.next = prev;</span><br><span class="line">    	&#125;</span><br><span class="line">    	</span><br><span class="line">    	ListNode pointer = head;</span><br><span class="line">    	<span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;length/<span class="number">2</span>; i++)</span><br><span class="line">    	&#123;</span><br><span class="line">    		<span class="keyword">if</span> (p.val!=pointer.val) <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">    		p = p.next; pointer = pointer.next;</span><br><span class="line">    	&#125;</span><br><span class="line">    	<span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></h2>
-<h3 id="思路-递归">思路: 递归</h3>
 <p><span class="math inline">\(T(N) = O(N)\)</span>, <span class="math inline">\(S(N) = O(N)\)</span></p>
-<p>递归遍历节点的方式如下。</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">function <span class="title">print_values_in_reverse</span><span class="params">(ListNode head)</span></span></span><br><span class="line"><span class="function">    <span class="keyword">if</span> head is NOT <span class="keyword">null</span></span></span><br><span class="line"><span class="function">        <span class="title">print_values_in_reverse</span><span class="params">(head.next)</span></span></span><br><span class="line"><span class="function">        print head.val</span></span><br></pre></td></tr></table></figure>
-<p>因此，如果我们能利用递归来反向遍历节点， 同时使用一个递归函数外面的变量向前迭代， 就可以判断链表是否为回文的。</p>
+<figure class="highlight java"><figcaption><span>&#123;.line-numbers&#125;</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MySolution1544</span> </span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">makeGood</span><span class="params">(String s)</span> </span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">    	Stack&lt;Character&gt; stack = <span class="keyword">new</span> Stack();</span><br><span class="line">    	</span><br><span class="line">    	<span class="keyword">for</span> (<span class="keyword">char</span> ch:s.toCharArray())</span><br><span class="line">    	&#123;</span><br><span class="line">    		<span class="keyword">if</span> (stack.isEmpty()) </span><br><span class="line">    			stack.push(ch);</span><br><span class="line">    		<span class="keyword">else</span> <span class="keyword">if</span> ((Character.isLowerCase(ch)&amp;&amp;Character.isUpperCase(stack.peek())&amp;&amp;ch==Character.toLowerCase(stack.peek()))||</span><br><span class="line">    				(Character.isUpperCase(ch)&amp;&amp;Character.isLowerCase(stack.peek())&amp;&amp;ch==Character.toUpperCase(stack.peek())))</span><br><span class="line">    			stack.pop();</span><br><span class="line">    		<span class="keyword">else</span> </span><br><span class="line">    			stack.push(ch);</span><br><span class="line">    	&#125;</span><br><span class="line">    	</span><br><span class="line">    	StringBuilder sb = <span class="keyword">new</span> StringBuilder();</span><br><span class="line">    	<span class="keyword">while</span> (!stack.isEmpty())</span><br><span class="line">    		sb.append(stack.pop());</span><br><span class="line">    	<span class="keyword">return</span> sb.reverse().toString();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://yukief4fdh.github.io/2022/02/09/1441_Easy_%E7%94%A8%E6%A0%88%E6%93%8D%E4%BD%9C%E6%9E%84%E5%BB%BA%E6%95%B0%E7%BB%84_Stack/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/yuki.gif">
+      <meta itemprop="name" content="CHEN XUEYI">
+      <meta itemprop="description" content="Call me Yuki (JPN) or Chloe (ENG).<br> Nice to meet you :)<br><hr style="margin:3px;"> Tokyo Institute of Technology (M1)<br> Rearch Interest: Visualization">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Yuki's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2022/02/09/1441_Easy_%E7%94%A8%E6%A0%88%E6%93%8D%E4%BD%9C%E6%9E%84%E5%BB%BA%E6%95%B0%E7%BB%84_Stack/" class="post-title-link" itemprop="url">1441. 用栈操作构建数组</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2022-02-09 15:16:55" itemprop="dateCreated datePublished" datetime="2022-02-09T15:16:55+09:00">2022-02-09</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">Edited on</span>
+        <time title="Modified: 2022-02-11 15:15:14" itemprop="dateModified" datetime="2022-02-11T15:15:14+09:00">2022-02-11</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/LeetCode/" itemprop="url" rel="index"><span itemprop="name">LeetCode</span></a>
+        </span>
+          , 
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/LeetCode/Easy/" itemprop="url" rel="index"><span itemprop="name">Easy</span></a>
+        </span>
+          , 
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/LeetCode/Easy/Done/" itemprop="url" rel="index"><span itemprop="name">Done</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <center>
+<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/build-an-array-with-stack-operations/"><b><font color = #5EB561>转载自Leet Code</font></b></a>
+</center>
+<h3 id="题目描述">题目描述</h3>
+<p>给你一个目标数组<code>target</code>和一个整数<code>n</code>。 每次迭代，需要从<code>list = &#123;1,2,3..., n&#125;</code>中依序读取一个数字。</p>
+<p>请使用下述操作来构建目标数组<code>target</code>：</p>
+<ul>
+<li><strong>Push</strong>：从<code>list</code>中读取一个新元素，并将其推入数组中。</li>
+<li><strong>Pop</strong>：删除数组中的最后一个元素。</li>
+<li>如果目标数组构建完成，就停止读取更多元素。</li>
+</ul>
+<p>题目数据保证目标数组严格递增，并且只包含<code>1</code>到<code>n</code>之间的数字。 请返回构建目标数组所用的操作序列。 题目数据保证答案是唯一的。</p>
+<p>示例 1： &gt;输入：<code>target = [1,3]</code>, <code>n = 3</code> &gt;输出：<code>["Push","Push","Pop","Push"]</code> &gt;解释： &gt;读取 <code>1</code> 并自动推入数组 -&gt; <code>[1]</code> &gt;读取 <code>2</code> 并自动推入数组，然后删除它 -&gt; <code>[1]</code> &gt;读取 <code>3</code> 并自动推入数组 -&gt; <code>[1,3]</code></p>
+<p>示例 2： &gt;输入：<code>target = [1,2,3], n = 3</code> &gt;输出：<code>["Push","Push","Push"]</code></p>
+<p>示例 3： &gt;输入：<code>target = [1,2]</code>, <code>n = 4</code> &gt;输出：<code>["Push","Push"]</code> &gt;解释：只需要读取前 <code>2</code> 个数字就可以停止。</p>
+<p>示例 4： &gt;输入：<code>target = [2,3,4], n = 4</code> &gt;输出：<code>["Push","Pop","Push","Push","Push"]</code></p>
+<p>提示： - <code>1 &lt;= target.length &lt;= 100</code> - <code>1 &lt;= target[i] &lt;= 100</code> - <code>1 &lt;= n &lt;= 100</code> - <code>target</code>是严格递增的</p>
+<hr />
+<h3 id="我的代码"><font color=#808080>我的代码</font></h3>
+<p><span class="math inline">\(T(N) = O(N)\)</span>, <span class="math inline">\(S(N) = O(N)\)</span></p>
+<figure class="highlight java"><figcaption><span>&#123;.line-numbers&#125;</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MySolution1441</span> </span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> List&lt;String&gt; <span class="title">buildArray</span><span class="params">(<span class="keyword">int</span>[] target, <span class="keyword">int</span> n)</span> </span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">    	List&lt;String&gt; ans = <span class="keyword">new</span> LinkedList();</span><br><span class="line">    	Stack&lt;Integer&gt; stack = <span class="keyword">new</span> Stack();</span><br><span class="line">    	</span><br><span class="line">    	<span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>, count=<span class="number">1</span>; i&lt;target.length; )</span><br><span class="line">    	&#123;</span><br><span class="line">    		<span class="keyword">if</span> (target[i]==count)</span><br><span class="line">    		&#123;</span><br><span class="line">    			ans.add(<span class="string">&quot;Push&quot;</span>);</span><br><span class="line">    			count++;</span><br><span class="line">    			i++;</span><br><span class="line">    		&#125;</span><br><span class="line">    		<span class="keyword">else</span></span><br><span class="line">    		&#123;</span><br><span class="line">        		<span class="keyword">while</span> (target[i]&gt;count)</span><br><span class="line">        		&#123;</span><br><span class="line">        			ans.add(<span class="string">&quot;Push&quot;</span>); ans.add(<span class="string">&quot;Pop&quot;</span>);</span><br><span class="line">        			count++;</span><br><span class="line">        		&#125;</span><br><span class="line">    		&#125;</span><br><span class="line">    	&#125;</span><br><span class="line">    	</span><br><span class="line">    	<span class="keyword">return</span> ans;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://yukief4fdh.github.io/2022/02/09/1436_Easy_%E6%97%85%E8%A1%8C%E7%BB%88%E7%82%B9%E7%AB%99/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/yuki.gif">
+      <meta itemprop="name" content="CHEN XUEYI">
+      <meta itemprop="description" content="Call me Yuki (JPN) or Chloe (ENG).<br> Nice to meet you :)<br><hr style="margin:3px;"> Tokyo Institute of Technology (M1)<br> Rearch Interest: Visualization">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Yuki's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2022/02/09/1436_Easy_%E6%97%85%E8%A1%8C%E7%BB%88%E7%82%B9%E7%AB%99/" class="post-title-link" itemprop="url">1436. 旅行终点站</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2022-02-09 15:16:55" itemprop="dateCreated datePublished" datetime="2022-02-09T15:16:55+09:00">2022-02-09</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">Edited on</span>
+        <time title="Modified: 2022-02-11 15:13:29" itemprop="dateModified" datetime="2022-02-11T15:13:29+09:00">2022-02-11</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/LeetCode/" itemprop="url" rel="index"><span itemprop="name">LeetCode</span></a>
+        </span>
+          , 
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/LeetCode/Easy/" itemprop="url" rel="index"><span itemprop="name">Easy</span></a>
+        </span>
+          , 
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/LeetCode/Easy/Half-done/" itemprop="url" rel="index"><span itemprop="name">Half-done</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <center>
+<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/destination-city/"><b><font color = #5EB561>转载自Leet Code</font></b></a>
+</center>
+<h4 id="题目描述">题目描述</h4>
+<p>给定一份旅游线路图，其中的旅行线路用数组<code>paths</code>表示，</p>
+<p>其中<code>paths[i] = [cityAi, cityBi]</code>表示该线路将会从<code>cityAi</code>直达<code>cityBi</code>。</p>
+<p>请找出这次旅行的终点站，即没有任何可以通往其他城市的线路的城市。</p>
+<p>(测试数据保证会形成一条不存在循环的线路，因此恰有一个旅行终点站。)</p>
+<p><strong>示例1:</strong></p>
+<blockquote>
+<p>输入: <code>paths = [["London","New York"],["New York","Lima"],["Lima","Sao Paulo"]]</code></p>
+<p>输出: <code>"Sao Paulo"</code></p>
+</blockquote>
+<p><strong>示例2:</strong></p>
+<blockquote>
+<p>输入: <code>paths = [["B","C"],["D","B"],["C","A"]]</code></p>
+<p>输出: <code>"A"</code></p>
+</blockquote>
+<p><strong>示例3:</strong></p>
+<blockquote>
+<p>输入：<code>paths = [["A","Z"]]</code> 输出：<code>"Z"</code></p>
+</blockquote>
+<p><strong>提示</strong>：</p>
+<ul>
+<li><code>1 &lt;= paths.length &lt;= 100</code></li>
+<li><code>paths[i].length == 2</code></li>
+<li><code>1 &lt;= cityAi.length, cityBi.length &lt;= 10</code></li>
+<li><code>cityAi != cityBi</code></li>
+<li>所有字符串均由大小写英文字母和空格字符组成。</li>
+</ul>
+<hr />
+<h4 id="我的代码">我的代码</h4>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MySolution1436</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">destCity</span><span class="params">(List&lt;List&lt;String&gt;&gt; paths)</span> </span>&#123;</span><br><span class="line">    	HashSet&lt;String&gt; set = <span class="keyword">new</span> HashSet(); <span class="comment">// HashMap-&gt;Set</span></span><br><span class="line">    	HashSet&lt;String&gt; ans = <span class="keyword">new</span> HashSet();</span><br><span class="line">    	<span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;paths.size(); i++)</span><br><span class="line">    	&#123;</span><br><span class="line">    		String key = paths.get(i).get(<span class="number">0</span>);</span><br><span class="line">    		set.add(key);</span><br><span class="line">    		<span class="keyword">if</span> (ans.contains(key)) ans.remove(key); </span><br><span class="line">    		</span><br><span class="line">    		String val = paths.get(i).get(<span class="number">1</span>);</span><br><span class="line">    		<span class="keyword">if</span> (!set.contains(val)) &#123;</span><br><span class="line">    			ans.add(val);</span><br><span class="line">    			set.add(val);</span><br><span class="line">    		&#125;</span><br><span class="line">    	&#125;</span><br><span class="line">    	<span class="keyword">return</span> ans.iterator().next();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<hr />
+<h4 id="方法哈希表">方法：哈希表</h4>
+<p>根据定义，终点站不可能出现在<code>cityAi</code>中，而必然出现在<code>cityBi</code>中。</p>
+<p>因此可以遍历<code>cityBi</code>、返回不在<code>cityAi</code>中的城市。</p>
+<p><strong>实现:</strong> 先把所有<code>cityAi</code> 存在哈希表中，然后遍历<code>cityBi</code>并查询<code>cityBi</code>是否存在于哈希表中。</p>
+<hr />
+<h4 id="代码">代码</h4>
+<p><span class="math inline">\(T(N) = O(MN), S(N) = O(MN); (N: 数组paths的长度; M: 最长的paths[i]的长度)\)</span></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution1436</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">destCity</span><span class="params">(List&lt;List&lt;String&gt;&gt; paths)</span> </span>&#123;</span><br><span class="line">    	String str = <span class="string">&quot;&quot;</span>;</span><br><span class="line">    	HashSet&lt;String&gt; set = <span class="keyword">new</span> HashSet();</span><br><span class="line">    	<span class="keyword">for</span> (List&lt;String&gt; list:paths)</span><br><span class="line">    		set.add(list.get(<span class="number">0</span>));</span><br><span class="line">    	<span class="keyword">for</span> (List&lt;String&gt; list:paths) &#123;</span><br><span class="line">    		<span class="keyword">if</span> (!set.contains(list.get(<span class="number">1</span>))) &#123;</span><br><span class="line">    			str = list.get(<span class="number">1</span>); <span class="keyword">break</span>;</span><br><span class="line">			&#125;</span><br><span class="line">    	&#125;</span><br><span class="line">    	<span class="keyword">return</span> str;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://yukief4fdh.github.io/2022/02/09/1290_Easy_%E4%BA%8C%E8%BF%9B%E5%88%B6%E9%93%BE%E8%A1%A8%E8%BD%AC%E6%95%B4%E6%95%B0_LinkedList/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/yuki.gif">
+      <meta itemprop="name" content="CHEN XUEYI">
+      <meta itemprop="description" content="Call me Yuki (JPN) or Chloe (ENG).<br> Nice to meet you :)<br><hr style="margin:3px;"> Tokyo Institute of Technology (M1)<br> Rearch Interest: Visualization">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Yuki's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2022/02/09/1290_Easy_%E4%BA%8C%E8%BF%9B%E5%88%B6%E9%93%BE%E8%A1%A8%E8%BD%AC%E6%95%B4%E6%95%B0_LinkedList/" class="post-title-link" itemprop="url">1290. 二进制链表转整数</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2022-02-09 15:16:55" itemprop="dateCreated datePublished" datetime="2022-02-09T15:16:55+09:00">2022-02-09</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">Edited on</span>
+        <time title="Modified: 2022-02-11 15:11:38" itemprop="dateModified" datetime="2022-02-11T15:11:38+09:00">2022-02-11</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/LeetCode/" itemprop="url" rel="index"><span itemprop="name">LeetCode</span></a>
+        </span>
+          , 
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/LeetCode/Easy/" itemprop="url" rel="index"><span itemprop="name">Easy</span></a>
+        </span>
+          , 
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/LeetCode/Easy/Done/" itemprop="url" rel="index"><span itemprop="name">Done</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <center>
+<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/convert-binary-number-in-a-linked-list-to-integer/"><b><font color = #5EB561>转载自Leet Code</font></b></a>
+</center>
+<h3 id="题目描述">题目描述</h3>
+<p>给你一个单链表的引用结点 <code>head</code>。链表中每个结点的值不是 0 就是 1。 已知此链表是一个整数数字的二进制表示形式。 请你返回该链表所表示数字的 <strong>十进制值</strong> 。</p>
+<p>示例 1：</p>
+<center>
+<img src="https://gyazo.com/09e39a1c3d0a1ab36505f60aeb69aff2.png" style="zoom:67%;" />
+</center>
+<blockquote>
+<p>输入：<code>head = [1,0,1]</code> 输出：<code>5</code> 解释：二进制数 (101) 转化为十进制数 (5)</p>
+</blockquote>
+<p>示例 2： &gt;输入：<code>head = [0]</code> &gt;输出：<code>0</code></p>
+<p>示例 3： &gt;输入：<code>head = [1]</code> &gt;输出：<code>1</code></p>
+<p>示例 4： &gt;输入：<code>head = [1,0,0,1,0,0,1,1,1,0,0,0,0,0,0]</code> &gt;输出：<code>18880</code></p>
+<p>示例 5： &gt;输入：<code>head = [0,0]</code> &gt;输出：<code>0</code></p>
+<p>提示： - 链表不为空。 - 链表的结点总数不超过 <code>30</code>。 - 每个结点的值不是 <code>0</code> 就是 <code>1</code>。</p>
+<hr />
+<h3 id="我的代码"><font color=#808080>我的代码</font></h3>
+<p><span class="math inline">\(T(N) = O(N)\)</span>, <span class="math inline">\(S(N) = O(1)\)</span></p>
+<figure class="highlight java"><figcaption><span>&#123;.line-numbers&#125;</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Definition for singly-linked list.</span></span><br><span class="line"><span class="comment"> * public class ListNode &#123;</span></span><br><span class="line"><span class="comment"> *     int val;</span></span><br><span class="line"><span class="comment"> *     ListNode next;</span></span><br><span class="line"><span class="comment"> *     ListNode() &#123;&#125;</span></span><br><span class="line"><span class="comment"> *     ListNode(int val) &#123; this.val = val; &#125;</span></span><br><span class="line"><span class="comment"> *     ListNode(int val, ListNode next) &#123; this.val = val; this.next = next; &#125;</span></span><br><span class="line"><span class="comment"> * &#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MySolution1290</span> // 其实一次遍历就可以了…</span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">getDecimalValue</span><span class="params">(ListNode head)</span> </span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">    	<span class="keyword">int</span> power = <span class="number">0</span>; <span class="keyword">boolean</span> meetOne = <span class="keyword">false</span>;</span><br><span class="line">    	<span class="keyword">for</span> (ListNode p = head; p.next!=<span class="keyword">null</span>; p=p.next)</span><br><span class="line">    	&#123;</span><br><span class="line">    		<span class="keyword">if</span> (!meetOne&amp;&amp;p.val==<span class="number">0</span>) head = head.next;</span><br><span class="line">    		<span class="keyword">else</span> <span class="keyword">if</span> (!meetOne&amp;&amp;p.val==<span class="number">1</span>) meetOne = <span class="keyword">true</span>;</span><br><span class="line">    		</span><br><span class="line">    		<span class="keyword">if</span> (meetOne) power++;</span><br><span class="line">    	&#125;</span><br><span class="line">    	</span><br><span class="line">    	<span class="keyword">int</span> ans = <span class="number">0</span>;</span><br><span class="line">    	<span class="keyword">for</span> (ListNode p = head; p!=<span class="keyword">null</span>; p=p.next)</span><br><span class="line">    	&#123;</span><br><span class="line">    		<span class="keyword">if</span> (p.val!=<span class="number">0</span>)</span><br><span class="line">    			ans+=(<span class="keyword">int</span>)Math.pow(<span class="number">2</span>, power);</span><br><span class="line">    		power--;</span><br><span class="line">    	&#125;</span><br><span class="line">    	</span><br><span class="line">    	<span class="keyword">return</span> ans;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://yukief4fdh.github.io/2022/02/09/1047_Easy_%E5%88%A0%E9%99%A4%E5%AD%97%E7%AC%A6%E4%B8%B2%E4%B8%AD%E7%9A%84%E6%89%80%E6%9C%89%E7%9B%B8%E9%82%BB%E9%87%8D%E5%A4%8D%E9%A1%B9_Stack/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/yuki.gif">
+      <meta itemprop="name" content="CHEN XUEYI">
+      <meta itemprop="description" content="Call me Yuki (JPN) or Chloe (ENG).<br> Nice to meet you :)<br><hr style="margin:3px;"> Tokyo Institute of Technology (M1)<br> Rearch Interest: Visualization">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Yuki's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2022/02/09/1047_Easy_%E5%88%A0%E9%99%A4%E5%AD%97%E7%AC%A6%E4%B8%B2%E4%B8%AD%E7%9A%84%E6%89%80%E6%9C%89%E7%9B%B8%E9%82%BB%E9%87%8D%E5%A4%8D%E9%A1%B9_Stack/" class="post-title-link" itemprop="url">1047. 删除字符串中的所有相邻重复项</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2022-02-09 15:16:55" itemprop="dateCreated datePublished" datetime="2022-02-09T15:16:55+09:00">2022-02-09</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">Edited on</span>
+        <time title="Modified: 2022-02-11 15:09:32" itemprop="dateModified" datetime="2022-02-11T15:09:32+09:00">2022-02-11</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/LeetCode/" itemprop="url" rel="index"><span itemprop="name">LeetCode</span></a>
+        </span>
+          , 
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/LeetCode/Easy/" itemprop="url" rel="index"><span itemprop="name">Easy</span></a>
+        </span>
+          , 
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/LeetCode/Easy/Half-done/" itemprop="url" rel="index"><span itemprop="name">Half-done</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <center>
+<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/remove-all-adjacent-duplicates-in-string/"><b><font color = #5EB561>转载自Leet Code</font></b></a>
+</center>
+<h3 id="题目描述">题目描述</h3>
+<p>给出由小写字母组成的字符串<code>S</code>，重复项删除操作会选择两个相邻且相同的字母，并删除它们。 在<code>S</code>上反复执行重复项删除操作，直到无法继续删除。 在完成所有重复项删除操作后返回最终的字符串。答案保证唯一。</p>
+<p>示例： &gt;输入：<code>"abbaca"</code> &gt;输出：<code>"ca"</code> &gt;解释： &gt;例如，在<code>"abbaca"</code>中，我们可以删除<code>"bb"</code>由于两字母相邻且相同，这是此时唯一可以执行删除操作的重复项。之后我们得到字符串<code>"aaca"</code>，其中又只有<code>"aa"</code>可以执行重复项删除操作，所以最后的字符串为<code>"ca"</code>。</p>
+<p>提示：</p>
+<ul>
+<li>`1 &lt;= S.length &lt;= 20000``</li>
+<li>`<code>S</code>仅由小写英文字母组成。</li>
+</ul>
+<hr />
+<h3 id="我的代码"><font color=#808080>我的代码</font></h3>
+<p><span class="math inline">\(T(N) = O(N)\)</span>, <span class="math inline">\(S(N) = O(N)\)</span></p>
+<figure class="highlight java"><figcaption><span>&#123;.line-numbers&#125;</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MySolution1047</span> </span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">	Stack&lt;Character&gt; stack = <span class="keyword">new</span> Stack();</span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">removeDuplicates</span><span class="params">(String S)</span> </span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">    	String ans = <span class="string">&quot;&quot;</span>;</span><br><span class="line">    	<span class="keyword">for</span> (<span class="keyword">char</span> ch:S.toCharArray())</span><br><span class="line">    	&#123;</span><br><span class="line">    		<span class="keyword">if</span> (stack.isEmpty()||stack.peek()!=ch)</span><br><span class="line">    			stack.push(ch);</span><br><span class="line">    		<span class="keyword">else</span> </span><br><span class="line">    			<span class="keyword">while</span> (!stack.isEmpty()&amp;&amp;stack.peek()==ch)</span><br><span class="line">    				stack.pop();</span><br><span class="line">    	&#125;</span><br><span class="line">    	</span><br><span class="line">    	<span class="keyword">char</span> []arr = <span class="keyword">new</span> <span class="keyword">char</span>[stack.size()];</span><br><span class="line">    	<span class="keyword">for</span> (<span class="keyword">int</span> i=stack.size()-<span class="number">1</span>; i&gt;=<span class="number">0</span>; i--)</span><br><span class="line">    		arr[i]=stack.pop();</span><br><span class="line">    	<span class="keyword">for</span> (<span class="keyword">char</span> ch:arr)</span><br><span class="line">    		ans+=ch;</span><br><span class="line">    	<span class="keyword">return</span> ans;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<hr />
+<h3 id="思路stringbuilder">思路:StringBuilder</h3>
+<p><span class="math inline">\(T(N) = O(N)\)</span>, <span class="math inline">\(S(N) = O(N)\)</span></p>
 <hr />
 <h3 id="代码">代码</h3>
-<figure class="highlight java"><figcaption><span>&#123;.line-numbers&#125;</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution234</span></span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">	ListNode frontPointer;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">isPalindrome</span><span class="params">(ListNode head)</span> </span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">    	frontPointer = head;</span><br><span class="line">    	<span class="keyword">return</span> recursivelyCheck(head);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">boolean</span> <span class="title">recursivelyCheck</span><span class="params">(ListNode backPointer)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">    	<span class="keyword">if</span> (backPointer!=<span class="keyword">null</span>) </span><br><span class="line">    	&#123;</span><br><span class="line">			<span class="comment">// 首先从这里开始back指针一直跑到尾节点(backPointer.next==null)</span></span><br><span class="line">    		<span class="keyword">if</span> (!recursivelyCheck(backPointer.next)) </span><br><span class="line">    			<span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">			<span class="comment">// back指针从尾节点开始取值，front指针从头节点开始取值</span></span><br><span class="line">    		<span class="keyword">if</span> (backPointer.val!=frontPointer.val) </span><br><span class="line">    			<span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">			<span class="comment">// back指针向上一层递归追溯之前向后迭代front指针</span></span><br><span class="line">    		frontPointer = frontPointer.next;</span><br><span class="line">    	&#125;</span><br><span class="line">		<span class="comment">// 递归到达边界(backPointer==null)，并返回true</span></span><br><span class="line">    	<span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://yukief4fdh.github.io/2022/02/09/232_Easy_%E7%94%A8%E6%A0%88%E5%AE%9E%E7%8E%B0%E9%98%9F%E5%88%97_Stack/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/yuki.gif">
-      <meta itemprop="name" content="CHEN XUEYI">
-      <meta itemprop="description" content="Call me Yuki (JPN) or Chloe (ENG).<br> Nice to meet you :)<br><hr style="margin:3px;"> Tokyo Institute of Technology (M1)<br> Rearch Interest: Visualization">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Yuki's Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2022/02/09/232_Easy_%E7%94%A8%E6%A0%88%E5%AE%9E%E7%8E%B0%E9%98%9F%E5%88%97_Stack/" class="post-title-link" itemprop="url">232. 用栈实现队列</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2022-02-09 15:16:55" itemprop="dateCreated datePublished" datetime="2022-02-09T15:16:55+09:00">2022-02-09</time>
-    </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2022-02-10 23:01:36" itemprop="dateModified" datetime="2022-02-10T23:01:36+09:00">2022-02-10</time>
-      </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/LeetCode/" itemprop="url" rel="index"><span itemprop="name">LeetCode</span></a>
-        </span>
-          , 
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/LeetCode/Easy/" itemprop="url" rel="index"><span itemprop="name">Easy</span></a>
-        </span>
-          , 
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/LeetCode/Easy/Done/" itemprop="url" rel="index"><span itemprop="name">Done</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <center>
-<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/implement-queue-using-stacks/"><b><font color = #5EB561>转载自Leet Code</font></b></a>
-</center>
-<h3 id="题目描述">题目描述</h3>
-<p>请你仅使用两个栈实现先入先出队列。队列应当支持一般队列的支持的所有操作（<code>push</code>、<code>pop</code>、<code>peek</code>、<code>empty</code>） - <code>void push(int x)</code> 将元素<code>x</code>推到队列的末尾 - <code>int pop()</code> 从队列的开头移除并返回元素 - <code>int peek()</code> 返回队列开头的元素 - <code>boolean empty()</code> 如果队列为空，返回 <code>true</code> ；否则，返回 <code>false</code></p>
-<p><strong>说明</strong>：</p>
-<ul>
-<li><p>你只能使用标准的栈操作 —— 也就是只有 <code>push to top</code>, <code>peek/pop from top</code>, <code>size</code>, 和 <code>is empty</code> 操作是合法的。</p></li>
-<li><p>你所使用的语言也许不支持栈。你可以使用 <code>list</code> 或者 <code>deque</code>（双端队列）来模拟一个栈，只要是标准的栈操作即可。</p></li>
-</ul>
-<p><strong>示例</strong>：</p>
-<blockquote>
-<p>输入： <code>["MyQueue", "push", "push", "peek", "pop", "empty"]</code> <code>[[], [1], [2], [], [], []]</code> 输出： <code>[null, null, null, 1, 1, false]</code></p>
-</blockquote>
-<p><strong>解释</strong>：</p>
-<blockquote>
-<p>MyQueue myQueue = new MyQueue(); myQueue.push(1); // queue is: [1] myQueue.push(2); // queue is: [1, 2] (leftmost is front of the queue) myQueue.peek(); // return 1 myQueue.pop(); // return 1, queue is [2] myQueue.empty(); // return false</p>
-</blockquote>
-<p><strong>提示</strong>：</p>
-<ul>
-<li><code>1 &lt;= x &lt;= 9</code></li>
-<li>最多调用 <code>100</code> 次 <code>push</code>、<code>pop</code>、<code>peek</code> 和<code>empty</code></li>
-<li>假设所有操作都是有效的 （例如，一个空的队列不会调用 <code>pop</code> 或者 <code>peek</code> 操作）</li>
-</ul>
-<p><strong>进阶：</strong></p>
-<p>你能否实现每个操作均摊时间复杂度为<code>O(1)</code>的队列？ 换句话说，执行<code>n</code>个操作的总时间复杂度为<code>O(n)</code> ，即使其中一个操作可能花费较长时间。</p>
-<hr />
-<h3 id="我的代码"><font color=#808080>我的代码</font></h3>
-<figure class="highlight java"><figcaption><span>&#123;.line-numbers&#125;</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MyQueue232</span> </span>&#123;</span><br><span class="line">	Stack&lt;Integer&gt; stack;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/** Initialize your data structure here. */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">MyQueue232</span><span class="params">()</span> </span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">    	stack = <span class="keyword">new</span> Stack();</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">/** Push element x to the back of queue. */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">push</span><span class="params">(<span class="keyword">int</span> x)</span> </span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">    	Stack &lt;Integer&gt; tmp = <span class="keyword">new</span> Stack();</span><br><span class="line">    	<span class="keyword">while</span> (!stack.isEmpty()) tmp.push(stack.pop());</span><br><span class="line">    	stack.push(x);</span><br><span class="line">    	<span class="keyword">while</span>(!tmp.isEmpty())</span><br><span class="line">    		stack.push(tmp.pop());</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">/** Removes the element from in front of queue and returns that element. */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">pop</span><span class="params">()</span> </span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">    	<span class="keyword">return</span> stack.pop();</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">/** Get the front element. */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">peek</span><span class="params">()</span> </span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">    	<span class="keyword">return</span> stack.peek();</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">/** Returns whether the queue is empty. */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">empty</span><span class="params">()</span> </span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">    	<span class="keyword">return</span> stack.isEmpty();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Your MyQueue object will be instantiated and called as such:</span></span><br><span class="line"><span class="comment"> * MyQueue obj = new MyQueue();</span></span><br><span class="line"><span class="comment"> * obj.push(x);</span></span><br><span class="line"><span class="comment"> * int param_2 = obj.pop();</span></span><br><span class="line"><span class="comment"> * int param_3 = obj.peek();</span></span><br><span class="line"><span class="comment"> * boolean param_4 = obj.empty();</span></span><br><span class="line"><span class="comment"> */</span></span><br></pre></td></tr></table></figure>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://yukief4fdh.github.io/2022/02/09/228_Easy_%E6%B1%87%E6%80%BB%E5%8C%BA%E9%97%B4_Array/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/yuki.gif">
-      <meta itemprop="name" content="CHEN XUEYI">
-      <meta itemprop="description" content="Call me Yuki (JPN) or Chloe (ENG).<br> Nice to meet you :)<br><hr style="margin:3px;"> Tokyo Institute of Technology (M1)<br> Rearch Interest: Visualization">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Yuki's Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2022/02/09/228_Easy_%E6%B1%87%E6%80%BB%E5%8C%BA%E9%97%B4_Array/" class="post-title-link" itemprop="url">228. 汇总区间</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2022-02-09 15:16:55" itemprop="dateCreated datePublished" datetime="2022-02-09T15:16:55+09:00">2022-02-09</time>
-    </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2022-02-10 22:59:00" itemprop="dateModified" datetime="2022-02-10T22:59:00+09:00">2022-02-10</time>
-      </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/LeetCode/" itemprop="url" rel="index"><span itemprop="name">LeetCode</span></a>
-        </span>
-          , 
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/LeetCode/Easy/" itemprop="url" rel="index"><span itemprop="name">Easy</span></a>
-        </span>
-          , 
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/LeetCode/Easy/Done/" itemprop="url" rel="index"><span itemprop="name">Done</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <center>
-<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/summary-ranges/"><b><font color = #5EB561>转载自Leet Code</font></b></a>
-</center>
-<h3 id="题目描述">题目描述</h3>
-<p>给定一个无重复元素的有序整数数组<code>nums</code>。 返回<strong>恰好覆盖数组中所有数字</strong>的<strong>最小有序</strong>区间范围列表。 也就是说，<code>nums</code>的每个元素都恰好被某个区间范围所覆盖， 并且不存在属于某个范围但不属于<code>nums</code>的数字<code>x</code>。 列表中的每个区间范围<code>[a,b]</code>应该按如下格式输出：</p>
-<ul>
-<li><code>"a-&gt;b"</code>，如果<code>a != b</code></li>
-<li><code>"a"</code>，如果<code>a == b</code> </li>
-</ul>
-<p>示例 1： &gt;输入：<code>nums = [0,1,2,4,5,7]</code> &gt;输出：<code>["0-&gt;2","4-&gt;5","7"]</code> &gt; &gt;解释：区间范围是： &gt;[0,2] --&gt; "0-&gt;2" &gt;[4,5] --&gt; "4-&gt;5" &gt;[7,7] --&gt; "7"</p>
-<p>示例 2： &gt;输入：<code>nums = [0,2,3,4,6,8,9]</code> &gt;输出：<code>["0","2-&gt;4","6","8-&gt;9"]</code> &gt; &gt;解释：区间范围是： &gt;[0,0] --&gt; "0" &gt;[2,4] --&gt; "2-&gt;4" &gt;[6,6] --&gt; "6" &gt;[8,9] --&gt; "8-&gt;9"</p>
-<p>示例 3： &gt;输入：<code>nums = []</code> &gt;输出：<code>[]</code></p>
-<p>示例 4： &gt;输入：<code>nums = [-1]</code> &gt;输出：<code>["-1"]</code></p>
-<p>示例 5： &gt;输入：<code>nums = [0]</code> &gt;输出：<code>["0"]</code></p>
-<p><strong>提示</strong>：</p>
-<ul>
-<li><code>0 &lt;= nums.length &lt;= 20</code></li>
-<li><code>-231 &lt;= nums[i] &lt;= 231 - 1</code></li>
-<li><code>nums</code> 中的所有值都 互不相同</li>
-<li><code>nums</code> 按升序排列</li>
-</ul>
-<hr />
-<h3 id="我的代码"><font color=#808080>我的代码</font></h3>
-<figure class="highlight java"><figcaption><span>&#123;.line-numbers&#125;</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MySolution228</span> </span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">   <span class="function"><span class="keyword">public</span> List&lt;String&gt; <span class="title">summaryRanges</span><span class="params">(<span class="keyword">int</span>[] nums)</span> </span>&#123;</span><br><span class="line">    	List&lt;String&gt; list = <span class="keyword">new</span> LinkedList();</span><br><span class="line">    	<span class="keyword">if</span> (nums.length&lt;<span class="number">1</span>) <span class="keyword">return</span> list;</span><br><span class="line">    	</span><br><span class="line">    	<span class="keyword">int</span> pre = nums[<span class="number">0</span>]; String strPre= Integer.toString(pre);</span><br><span class="line">    	<span class="keyword">int</span> tail = nums[<span class="number">0</span>]; String strTail = <span class="keyword">null</span>;</span><br><span class="line">    	</span><br><span class="line">    	<span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">1</span>; i&lt;nums.length; i++)</span><br><span class="line">    	&#123;</span><br><span class="line">    		<span class="keyword">if</span> (nums[i]==tail+<span class="number">1</span>)</span><br><span class="line">    		&#123;</span><br><span class="line">    			tail=nums[i];</span><br><span class="line">    			strTail = Integer.toString(tail);</span><br><span class="line">    		&#125;</span><br><span class="line">    		<span class="keyword">else</span></span><br><span class="line">    		&#123;</span><br><span class="line">    			<span class="keyword">if</span> (strTail!=<span class="keyword">null</span>)</span><br><span class="line">    				list.add(strPre+<span class="string">&quot;-&gt;&quot;</span>+strTail);</span><br><span class="line">    			<span class="keyword">else</span> </span><br><span class="line">    				list.add(strPre);</span><br><span class="line">    			</span><br><span class="line">    			pre = nums[i]; strPre = Integer.toString(pre); </span><br><span class="line">    			tail = nums[i]; strTail = <span class="keyword">null</span>;</span><br><span class="line">    		&#125;</span><br><span class="line">    	&#125;</span><br><span class="line">    	</span><br><span class="line">		<span class="keyword">if</span> (strTail!=<span class="keyword">null</span>)</span><br><span class="line">			list.add(strPre+<span class="string">&quot;-&gt;&quot;</span>+strTail);</span><br><span class="line">		<span class="keyword">else</span> </span><br><span class="line">			list.add(strPre);</span><br><span class="line">    	</span><br><span class="line">    	<span class="keyword">return</span> list;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><figcaption><span>&#123;.line-numbers&#125;</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution1047</span> </span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">removeDuplicates</span><span class="params">(String S)</span> </span></span><br><span class="line"><span class="function">	</span>&#123;</span><br><span class="line">        StringBuilder sb = <span class="keyword">new</span> StringBuilder();</span><br><span class="line">        <span class="keyword">int</span> sbLength = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">char</span> ch : S.toCharArray()) </span><br><span class="line">		&#123;</span><br><span class="line">            <span class="keyword">if</span> (sbLength != <span class="number">0</span> &amp;&amp; ch == sb.charAt(sbLength - <span class="number">1</span>))</span><br><span class="line">                sb.deleteCharAt(sbLength-- - <span class="number">1</span>);</span><br><span class="line">            <span class="keyword">else</span> </span><br><span class="line">			&#123;</span><br><span class="line">                sb.append(ch);</span><br><span class="line">                sbLength++;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> sb.toString();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -798,7 +751,7 @@ missing
 
 
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left" aria-label="Previous page"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/11/">11</a><a class="extend next" rel="next" href="/page/3/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
+    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left" aria-label="Previous page"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/17/">17</a><a class="extend next" rel="next" href="/page/3/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
   </nav>
 
 </div>
