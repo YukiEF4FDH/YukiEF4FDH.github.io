@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width">
 <meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 5.4.0">
+<meta name="generator" content="Hexo 5.4.2">
 
 
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-yuki.PNG">
@@ -87,7 +87,7 @@
         <li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a></li>
         <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags<span class="badge">28</span></a></li>
         <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories<span class="badge">15</span></a></li>
-        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives<span class="badge">85</span></a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives<span class="badge">86</span></a></li>
         
             
   <li class="menu-item menu-item-docs"><a href="/docs/" rel="section"><i class="fa fa-book fa-fw"></i>Docs</a></li>
@@ -142,7 +142,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">85</span>
+          <span class="site-state-item-count">86</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -205,7 +205,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://yukief4fdh.github.io/2022/02/09/LeetCode/415_Easy_%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%9B%B8%E5%8A%A0_String/">
+    <link itemprop="mainEntityOfPage" href="https://yukief4fdh.github.io/2023/05/24/LeetCode/58_Easy_%E6%9C%80%E5%90%8E%E4%B8%80%E4%B8%AA%E5%8D%95%E8%AF%8D%E7%9A%84%E9%95%BF%E5%BA%A6_String/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/yuki.gif">
@@ -218,7 +218,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2022/02/09/LeetCode/415_Easy_%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%9B%B8%E5%8A%A0_String/" class="post-title-link" itemprop="url">415. 字符串相加</a>
+          <a href="/2023/05/24/LeetCode/58_Easy_%E6%9C%80%E5%90%8E%E4%B8%80%E4%B8%AA%E5%8D%95%E8%AF%8D%E7%9A%84%E9%95%BF%E5%BA%A6_String/" class="post-title-link" itemprop="url">58. 最后一个单词的长度</a>
         </h2>
 
         <div class="post-meta-container">
@@ -229,14 +229,14 @@
       </span>
       <span class="post-meta-item-text">Posted on</span>
 
-      <time title="Created: 2022-02-09 15:16:55" itemprop="dateCreated datePublished" datetime="2022-02-09T15:16:55+09:00">2022-02-09</time>
+      <time title="Created: 2023-05-24 19:22:36" itemprop="dateCreated datePublished" datetime="2023-05-24T19:22:36+09:00">2023-05-24</time>
     </span>
       <span class="post-meta-item">
         <span class="post-meta-item-icon">
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2022-02-11 17:29:19" itemprop="dateModified" datetime="2022-02-11T17:29:19+09:00">2022-02-11</time>
+        <time title="Modified: 2022-02-11 17:25:14" itemprop="dateModified" datetime="2022-02-11T17:25:14+09:00">2022-02-11</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -267,13 +267,19 @@
     
     <div class="post-body" itemprop="articleBody">
           <center>
-<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/add-strings/"><b><font color = #5EB561>转载自Leet Code</font></b></a>
+<a
+target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/length-of-last-word/"><b><font color = #5EB561>转载自Leet
+Code</font></b></a>
 </center>
 <h3 id="题目描述">题目描述</h3>
-<p>给定两个字符串形式的非负整数 <code>num1</code> 和<code>num2</code> ，计算它们的和。</p>
+<p>给定一个仅包含大小写字母和空格<code>' '</code>的字符串<code>s</code>，返回其最后一个单词的长度。
+如果字符串从左向右滚动显示，那么最后一个单词就是最后出现的单词。
+如果不存在最后一个单词，请返回 <code>0</code> 。
+说明：一个单词是指仅由字母组成、不包含任何空格字符的
+<strong>最大子字符串</strong>。</p>
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/2022/02/09/LeetCode/415_Easy_%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%9B%B8%E5%8A%A0_String/#more" rel="contents">
+              <a class="btn" href="/2023/05/24/LeetCode/58_Easy_%E6%9C%80%E5%90%8E%E4%B8%80%E4%B8%AA%E5%8D%95%E8%AF%8D%E7%9A%84%E9%95%BF%E5%BA%A6_String/#more" rel="contents">
                 Read more &raquo;
               </a>
             </div>
@@ -304,7 +310,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://yukief4fdh.github.io/2022/02/09/LeetCode/414_Easy_%E7%AC%AC%E4%B8%89%E5%A4%A7%E7%9A%84%E6%95%B0_Array/">
+    <link itemprop="mainEntityOfPage" href="https://yukief4fdh.github.io/2023/05/24/LeetCode/557_Easy_%E5%8F%8D%E8%BD%AC%E5%AD%97%E7%AC%A6%E4%B8%B2%E4%B8%AD%E7%9A%84%E5%8D%95%E8%AF%8DIII_String/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/yuki.gif">
@@ -317,7 +323,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2022/02/09/LeetCode/414_Easy_%E7%AC%AC%E4%B8%89%E5%A4%A7%E7%9A%84%E6%95%B0_Array/" class="post-title-link" itemprop="url">414. 第三大的数</a>
+          <a href="/2023/05/24/LeetCode/557_Easy_%E5%8F%8D%E8%BD%AC%E5%AD%97%E7%AC%A6%E4%B8%B2%E4%B8%AD%E7%9A%84%E5%8D%95%E8%AF%8DIII_String/" class="post-title-link" itemprop="url">557. 反转字符串中的单词 III</a>
         </h2>
 
         <div class="post-meta-container">
@@ -328,14 +334,14 @@
       </span>
       <span class="post-meta-item-text">Posted on</span>
 
-      <time title="Created: 2022-02-09 15:16:55" itemprop="dateCreated datePublished" datetime="2022-02-09T15:16:55+09:00">2022-02-09</time>
+      <time title="Created: 2023-05-24 19:22:36" itemprop="dateCreated datePublished" datetime="2023-05-24T19:22:36+09:00">2023-05-24</time>
     </span>
       <span class="post-meta-item">
         <span class="post-meta-item-icon">
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2022-02-11 17:29:13" itemprop="dateModified" datetime="2022-02-11T17:29:13+09:00">2022-02-11</time>
+        <time title="Modified: 2022-02-11 17:30:18" itemprop="dateModified" datetime="2022-02-11T17:30:18+09:00">2022-02-11</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -351,7 +357,7 @@
         </span>
           , 
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/LeetCode/Easy/Failed/" itemprop="url" rel="index"><span itemprop="name">Failed</span></a>
+          <a href="/categories/LeetCode/Easy/Done/" itemprop="url" rel="index"><span itemprop="name">Done</span></a>
         </span>
     </span>
 
@@ -366,13 +372,15 @@
     
     <div class="post-body" itemprop="articleBody">
           <center>
-<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/third-maximum-number/"><b><font color = #5EB561>转载自Leet Code</font></b></a>
+<a
+target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/reverse-words-in-a-string-iii/"><b><font color = #5EB561>转载自Leet
+Code</font></b></a>
 </center>
 <h3 id="题目描述">题目描述</h3>
-<p>给定一个非空数组，返回此数组中第三大的数。 如果不存在，则返回数组中最大的数。要求算法时间复杂度必须是<span class="math inline">\(O(n)\)</span>​。</p>
+<p>给定一个字符串，你需要反转字符串中每个单词的字符顺序，同时仍保留空格和单词的初始顺序。</p>
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/2022/02/09/LeetCode/414_Easy_%E7%AC%AC%E4%B8%89%E5%A4%A7%E7%9A%84%E6%95%B0_Array/#more" rel="contents">
+              <a class="btn" href="/2023/05/24/LeetCode/557_Easy_%E5%8F%8D%E8%BD%AC%E5%AD%97%E7%AC%A6%E4%B8%B2%E4%B8%AD%E7%9A%84%E5%8D%95%E8%AF%8DIII_String/#more" rel="contents">
                 Read more &raquo;
               </a>
             </div>
@@ -403,7 +411,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://yukief4fdh.github.io/2022/02/09/LeetCode/405_Easy_%E6%95%B0%E5%AD%97%E8%BD%AC%E6%8D%A2%E4%B8%BA%E5%8D%81%E5%85%AD%E8%BF%9B%E5%88%B6%E6%95%B0/">
+    <link itemprop="mainEntityOfPage" href="https://yukief4fdh.github.io/2023/05/24/LeetCode/551_Easy_%E5%AD%A6%E7%94%9F%E5%87%BA%E5%8B%A4%E8%AE%B0%E5%BD%95I_String/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/yuki.gif">
@@ -416,7 +424,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2022/02/09/LeetCode/405_Easy_%E6%95%B0%E5%AD%97%E8%BD%AC%E6%8D%A2%E4%B8%BA%E5%8D%81%E5%85%AD%E8%BF%9B%E5%88%B6%E6%95%B0/" class="post-title-link" itemprop="url">405. 数字转换为十六进制数</a>
+          <a href="/2023/05/24/LeetCode/551_Easy_%E5%AD%A6%E7%94%9F%E5%87%BA%E5%8B%A4%E8%AE%B0%E5%BD%95I_String/" class="post-title-link" itemprop="url">551. 学生出勤记录 I</a>
         </h2>
 
         <div class="post-meta-container">
@@ -427,14 +435,119 @@
       </span>
       <span class="post-meta-item-text">Posted on</span>
 
-      <time title="Created: 2022-02-09 15:16:55" itemprop="dateCreated datePublished" datetime="2022-02-09T15:16:55+09:00">2022-02-09</time>
+      <time title="Created: 2023-05-24 19:22:36" itemprop="dateCreated datePublished" datetime="2023-05-24T19:22:36+09:00">2023-05-24</time>
     </span>
       <span class="post-meta-item">
         <span class="post-meta-item-icon">
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2022-02-11 17:29:08" itemprop="dateModified" datetime="2022-02-11T17:29:08+09:00">2022-02-11</time>
+        <time title="Modified: 2022-02-11 17:30:08" itemprop="dateModified" datetime="2022-02-11T17:30:08+09:00">2022-02-11</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/LeetCode/" itemprop="url" rel="index"><span itemprop="name">LeetCode</span></a>
+        </span>
+          , 
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/LeetCode/Easy/" itemprop="url" rel="index"><span itemprop="name">Easy</span></a>
+        </span>
+          , 
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/LeetCode/Easy/Done/" itemprop="url" rel="index"><span itemprop="name">Done</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <center>
+<a
+target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/student-attendance-record-i/"><b><font color = #5EB561>转载自Leet
+Code</font></b></a>
+</center>
+<h3 id="题目描述">题目描述</h3>
+<p>给定一个字符串来代表一个学生的出勤记录，这个记录仅包含以下三个字符：
+- '<strong>A</strong>' : Absent，缺勤 - '<strong>L</strong>' :
+Late，迟到 - '<strong>P</strong>' : Present，到场</p>
+<p>如果一个学生的出勤记录中<strong>不超过一个'A'(缺勤)</strong>并且<strong>不超过两个连续的'L'(迟到)</strong>,那么这个学生会被奖赏。
+你需要根据这个学生的出勤记录判断他是否会被奖赏。</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2023/05/24/LeetCode/551_Easy_%E5%AD%A6%E7%94%9F%E5%87%BA%E5%8B%A4%E8%AE%B0%E5%BD%95I_String/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://yukief4fdh.github.io/2023/05/24/LeetCode/541_Easy_%E5%8F%8D%E8%BD%AC%E5%AD%97%E7%AC%A6%E4%B8%B2II_String/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/yuki.gif">
+      <meta itemprop="name" content="CHEN XUEYI">
+      <meta itemprop="description" content="Call me Yuki (JPN) or Chloe (ENG).<br> Nice to meet you :)<br><hr style="margin:3px;"> Tokyo Institute of Technology (M1)<br> Rearch Interest: Visualization">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Yuki's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2023/05/24/LeetCode/541_Easy_%E5%8F%8D%E8%BD%AC%E5%AD%97%E7%AC%A6%E4%B8%B2II_String/" class="post-title-link" itemprop="url">541. 反转字符串 II</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2023-05-24 19:22:36" itemprop="dateCreated datePublished" datetime="2023-05-24T19:22:36+09:00">2023-05-24</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">Edited on</span>
+        <time title="Modified: 2022-02-11 17:30:01" itemprop="dateModified" datetime="2022-02-11T17:30:01+09:00">2022-02-11</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -465,14 +578,20 @@
     
     <div class="post-body" itemprop="articleBody">
           <center>
-<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/convert-a-number-to-hexadecimal/"><b><font color = #5EB561>转载自Leet Code</font></b></a>
+<a
+target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/reverse-string-ii/"><b><font color = #5EB561>转载自Leet
+Code</font></b></a>
 </center>
-<h4 id="题目描述">题目描述</h4>
-<p>给定一个整数，编写一个算法将这个数转换为十六进制数。</p>
-<p>对于负整数，通常使用 <a target="_blank" rel="noopener" href="https://baike.baidu.com/item/补码/6854613?fr=aladdin">补码运算</a> 方法。</p>
+<h3 id="题目描述">题目描述</h3>
+<p>给定一个字符串 <code>s</code> 和一个整数
+<code>k</code>，你需要对从字符串开头算起的每隔 <code>2k</code>
+个字符的前 <code>k</code> 个字符进行反转。 如果剩余字符少于
+<code>k</code> 个，则将剩余字符全部反转。 如果剩余字符小于
+<code>2k</code> 但大于或等于 <code>k</code> 个，则反转前 <code>k</code>
+个字符，其余字符保持原样。</p>
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/2022/02/09/LeetCode/405_Easy_%E6%95%B0%E5%AD%97%E8%BD%AC%E6%8D%A2%E4%B8%BA%E5%8D%81%E5%85%AD%E8%BF%9B%E5%88%B6%E6%95%B0/#more" rel="contents">
+              <a class="btn" href="/2023/05/24/LeetCode/541_Easy_%E5%8F%8D%E8%BD%AC%E5%AD%97%E7%AC%A6%E4%B8%B2II_String/#more" rel="contents">
                 Read more &raquo;
               </a>
             </div>
@@ -503,7 +622,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://yukief4fdh.github.io/2022/02/09/LeetCode/387_Easy_%E5%AD%97%E7%AC%A6%E4%B8%B2%E4%B8%AD%E7%9A%84%E7%AC%AC%E4%B8%80%E4%B8%AA%E5%94%AF%E4%B8%80%E5%AD%97%E7%AC%A6_String/">
+    <link itemprop="mainEntityOfPage" href="https://yukief4fdh.github.io/2023/05/24/LeetCode/53_Easy_%E6%9C%80%E5%A4%A7%E5%AD%90%E5%BA%8F%E5%92%8C_Array/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/yuki.gif">
@@ -516,7 +635,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2022/02/09/LeetCode/387_Easy_%E5%AD%97%E7%AC%A6%E4%B8%B2%E4%B8%AD%E7%9A%84%E7%AC%AC%E4%B8%80%E4%B8%AA%E5%94%AF%E4%B8%80%E5%AD%97%E7%AC%A6_String/" class="post-title-link" itemprop="url">387. 字符串中的第一个唯一字符</a>
+          <a href="/2023/05/24/LeetCode/53_Easy_%E6%9C%80%E5%A4%A7%E5%AD%90%E5%BA%8F%E5%92%8C_Array/" class="post-title-link" itemprop="url">53. 最大子序和</a>
         </h2>
 
         <div class="post-meta-container">
@@ -527,14 +646,14 @@
       </span>
       <span class="post-meta-item-text">Posted on</span>
 
-      <time title="Created: 2022-02-09 15:16:55" itemprop="dateCreated datePublished" datetime="2022-02-09T15:16:55+09:00">2022-02-09</time>
+      <time title="Created: 2023-05-24 19:22:36" itemprop="dateCreated datePublished" datetime="2023-05-24T19:22:36+09:00">2023-05-24</time>
     </span>
       <span class="post-meta-item">
         <span class="post-meta-item-icon">
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2022-02-11 17:28:59" itemprop="dateModified" datetime="2022-02-11T17:28:59+09:00">2022-02-11</time>
+        <time title="Modified: 2022-02-11 17:25:08" itemprop="dateModified" datetime="2022-02-11T17:25:08+09:00">2022-02-11</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -550,7 +669,7 @@
         </span>
           , 
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/LeetCode/Easy/Done/" itemprop="url" rel="index"><span itemprop="name">Done</span></a>
+          <a href="/categories/LeetCode/Easy/Failed/" itemprop="url" rel="index"><span itemprop="name">Failed</span></a>
         </span>
     </span>
 
@@ -565,112 +684,16 @@
     
     <div class="post-body" itemprop="articleBody">
           <center>
-<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/first-unique-character-in-a-string/"><b><font color = #5EB561>转载自Leet Code</font></b></a>
+<a
+target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/maximum-subarray/"><b><font color = #5EB561>转载自Leet
+Code</font></b></a>
 </center>
 <h3 id="题目描述">题目描述</h3>
-<p>给定一个字符串 <code>s</code> ，找到 它的第一个不重复的字符，并返回它的索引 。 如果不存在，则返回 <code>-1</code> 。</p>
+<p>给定一个整数数组<code>nums</code>，
+找到一个具有最大和的连续子数组（子数组最少包含一个元素），返回其最大和。</p>
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/2022/02/09/LeetCode/387_Easy_%E5%AD%97%E7%AC%A6%E4%B8%B2%E4%B8%AD%E7%9A%84%E7%AC%AC%E4%B8%80%E4%B8%AA%E5%94%AF%E4%B8%80%E5%AD%97%E7%AC%A6_String/#more" rel="contents">
-                Read more &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://yukief4fdh.github.io/2022/02/09/LeetCode/383_Easy_%E8%B5%8E%E9%87%91%E4%BF%A1_String/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/yuki.gif">
-      <meta itemprop="name" content="CHEN XUEYI">
-      <meta itemprop="description" content="Call me Yuki (JPN) or Chloe (ENG).<br> Nice to meet you :)<br><hr style="margin:3px;"> Tokyo Institute of Technology (M1)<br> Rearch Interest: Visualization">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Yuki's Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2022/02/09/LeetCode/383_Easy_%E8%B5%8E%E9%87%91%E4%BF%A1_String/" class="post-title-link" itemprop="url">383. 赎金信</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2022-02-09 15:16:55" itemprop="dateCreated datePublished" datetime="2022-02-09T15:16:55+09:00">2022-02-09</time>
-    </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2022-02-11 17:28:52" itemprop="dateModified" datetime="2022-02-11T17:28:52+09:00">2022-02-11</time>
-      </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/LeetCode/" itemprop="url" rel="index"><span itemprop="name">LeetCode</span></a>
-        </span>
-          , 
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/LeetCode/Easy/" itemprop="url" rel="index"><span itemprop="name">Easy</span></a>
-        </span>
-          , 
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/LeetCode/Easy/Done/" itemprop="url" rel="index"><span itemprop="name">Done</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <center>
-<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/ransom-note/"><b><font color = #5EB561>转载自Leet Code</font></b></a>
-</center>
-<h3 id="题目描述">题目描述</h3>
-<p>给定一个赎金信 (<code>ransom</code>) 字符串和一个杂志(<code>magazine</code>)字符串， 判断第一个字符串 <code>ransom</code> 能不能由第二个字符串 <code>magazines</code> 里面的字符构成。 如果可以构成，返回 <code>true</code> ；否则返回 <code>false</code>。 (题目说明：为了不暴露赎金信字迹，要从杂志上搜索各个需要的字母，组成单词来表达意思。 杂志字符串中的每个字符只能在赎金信字符串中使用一次。)</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2022/02/09/LeetCode/383_Easy_%E8%B5%8E%E9%87%91%E4%BF%A1_String/#more" rel="contents">
+              <a class="btn" href="/2023/05/24/LeetCode/53_Easy_%E6%9C%80%E5%A4%A7%E5%AD%90%E5%BA%8F%E5%92%8C_Array/#more" rel="contents">
                 Read more &raquo;
               </a>
             </div>
@@ -694,7 +717,7 @@
 
 
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/5/"><i class="fa fa-angle-left" aria-label="Previous page"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><span class="page-number current">6</span><a class="page-number" href="/page/7/">7</a><span class="space">&hellip;</span><a class="page-number" href="/page/17/">17</a><a class="extend next" rel="next" href="/page/7/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
+    <a class="extend prev" rel="prev" href="/page/5/"><i class="fa fa-angle-left" aria-label="Previous page"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><span class="page-number current">6</span><a class="page-number" href="/page/7/">7</a><span class="space">&hellip;</span><a class="page-number" href="/page/18/">18</a><a class="extend next" rel="next" href="/page/7/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
   </nav>
 
 </div>
@@ -706,7 +729,7 @@
 
 <div class="copyright">
   &copy; 
-  <span itemprop="copyrightYear">2022</span>
+  <span itemprop="copyrightYear">2024</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>

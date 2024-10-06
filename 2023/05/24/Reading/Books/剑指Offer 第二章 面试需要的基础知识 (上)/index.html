@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.2">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-yuki.PNG">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-yuki.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-yuki.png">
+  <link rel="mask-icon" href="/images/logo-yuki.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/all.min.css" integrity="sha256-2H3fkXt6FEmrReK448mDVGKb3WW2ZZw35gI7vqHOE4Y=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"yukief4fdh.github.io","root":"/","images":"/images","scheme":"Gemini","version":"8.7.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/js/config.js"></script>
+<meta name="description" content="第二章 面试需要的基础知识 (上) 2.1 面试官谈到 “C++的&#x3D;&#x3D;基础知识&#x3D;&#x3D;，如面向对象的特性、构造函数、析构函数、动态绑定等，能够反映出应聘者是否善于&#x3D;&#x3D;把握问题本质&#x3D;&#x3D;，有没有&#x3D;&#x3D;耐心深入一个问题&#x3D;&#x3D;。另外还有常用的&#x3D;&#x3D;设计模式、UML图&#x3D;&#x3D;等，这些都能体现应聘者是否有&#x3D;&#x3D;软件工程方面的经验&#x3D;&#x3D;。” ——王海波（Autodesk，软件工程师） “对基础知识的考查我特别重视C++">
+<meta property="og:type" content="article">
+<meta property="og:title" content="《剑指Offer》第二章 笔记(上)">
+<meta property="og:url" content="https://yukief4fdh.github.io/2023/05/24/Reading/Books/%E5%89%91%E6%8C%87Offer%20%E7%AC%AC%E4%BA%8C%E7%AB%A0%20%E9%9D%A2%E8%AF%95%E9%9C%80%E8%A6%81%E7%9A%84%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%20(%E4%B8%8A)/index.html">
+<meta property="og:site_name" content="Yuki&#39;s Blog">
+<meta property="og:description" content="第二章 面试需要的基础知识 (上) 2.1 面试官谈到 “C++的&#x3D;&#x3D;基础知识&#x3D;&#x3D;，如面向对象的特性、构造函数、析构函数、动态绑定等，能够反映出应聘者是否善于&#x3D;&#x3D;把握问题本质&#x3D;&#x3D;，有没有&#x3D;&#x3D;耐心深入一个问题&#x3D;&#x3D;。另外还有常用的&#x3D;&#x3D;设计模式、UML图&#x3D;&#x3D;等，这些都能体现应聘者是否有&#x3D;&#x3D;软件工程方面的经验&#x3D;&#x3D;。” ——王海波（Autodesk，软件工程师） “对基础知识的考查我特别重视C++">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="c:/Users/Yuki_/AppData/Roaming/Typora/typora-user-images/image-20220112021628361.png">
+<meta property="og:image" content="c:/Users/Yuki_/Desktop/照片%202022-1-12%2014%2044%2029.jpg">
+<meta property="og:image" content="c:/Users/Yuki_/AppData/Roaming/Typora/typora-user-images/image-20220112160437064.png">
+<meta property="og:image" content="c:/Users/Yuki_/AppData/Roaming/Typora/typora-user-images/image-20220112161741218.png">
+<meta property="article:published_time" content="2023-05-24T10:22:36.095Z">
+<meta property="article:modified_time" content="2022-02-11T08:33:09.938Z">
+<meta property="article:author" content="CHEN XUEYI">
+<meta property="article:tag" content="剑指Offer">
+<meta property="article:tag" content="读书笔记">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="c:/Users/Yuki_/AppData/Roaming/Typora/typora-user-images/image-20220112021628361.png">
+
+
+<link rel="canonical" href="https://yukief4fdh.github.io/2023/05/24/Reading/Books/%E5%89%91%E6%8C%87Offer%20%E7%AC%AC%E4%BA%8C%E7%AB%A0%20%E9%9D%A2%E8%AF%95%E9%9C%80%E8%A6%81%E7%9A%84%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%20(%E4%B8%8A)/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"https://yukief4fdh.github.io/2023/05/24/Reading/Books/%E5%89%91%E6%8C%87Offer%20%E7%AC%AC%E4%BA%8C%E7%AB%A0%20%E9%9D%A2%E8%AF%95%E9%9C%80%E8%A6%81%E7%9A%84%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%20(%E4%B8%8A)/","path":"2023/05/24/Reading/Books/剑指Offer 第二章 面试需要的基础知识 (上)/","title":"《剑指Offer》第二章 笔记(上)"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>《剑指Offer》第二章 笔记(上) | Yuki's Blog</title>
+  
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">Yuki's Blog</h1>
+      <i class="logo-line"></i>
+    </a>
+      <img class="custom-logo-image" src="/uploads/test.png" alt="Yuki's Blog">
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a></li>
+        <li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a></li>
+        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags<span class="badge">28</span></a></li>
+        <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories<span class="badge">15</span></a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives<span class="badge">86</span></a></li>
+        
+            
+  <li class="menu-item menu-item-docs"><a href="/docs/" rel="section"><i class="fa fa-book fa-fw"></i>Docs</a></li>
+
+
+      
+        <li class="menu-item menu-item-schedule"><a href="/schedule/" rel="section"><i class="fa fa-calendar fa-fw"></i>Schedule</a></li>
+        <li class="menu-item menu-item-sitemap"><a href="/sitemap.xml" rel="section"><i class="fa fa-sitemap fa-fw"></i>Sitemap</a></li>
+        <li class="menu-item menu-item-commonweal"><a href="/404/" rel="section"><i class="fa fa-heartbeat fa-fw"></i>Commonweal 404</a></li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AC%AC%E4%BA%8C%E7%AB%A0-%E9%9D%A2%E8%AF%95%E9%9C%80%E8%A6%81%E7%9A%84%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86-%E4%B8%8A"><span class="nav-number">1.</span> <span class="nav-text">第二章 面试需要的基础知识
+(上)</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%9D%A2%E8%AF%95%E5%AE%98%E8%B0%88%E5%88%B0"><span class="nav-number">1.1.</span> <span class="nav-text">2.1 面试官谈到</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80"><span class="nav-number">1.2.</span> <span class="nav-text">2.2 编程语言</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#c"><span class="nav-number">1.2.1.</span> <span class="nav-text">2.2.1 C++</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%9D%A2%E8%AF%95%E9%A2%981-%E8%B5%8B%E5%80%BC%E8%BF%90%E7%AE%97%E7%AC%A6%E5%87%BD%E6%95%B0"><span class="nav-number">1.2.1.1.</span> <span class="nav-text">面试题1: 赋值运算符函数</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#c-1"><span class="nav-number">1.2.2.</span> <span class="nav-text">2.2.2 C</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%9D%A2%E8%AF%95%E9%A2%982-%E5%AE%9E%E7%8E%B0singleton%E6%A8%A1%E5%BC%8F"><span class="nav-number">1.2.2.1.</span> <span class="nav-text">面试题2: 实现Singleton模式</span></a></li></ol></li></ol></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-overview">
+            <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="CHEN XUEYI"
+      src="/images/yuki.gif">
+  <p class="site-author-name" itemprop="name">CHEN XUEYI</p>
+  <div class="site-description" itemprop="description">Call me Yuki (JPN) or Chloe (ENG).<br> Nice to meet you :)<br><hr style="margin:3px;"> Tokyo Institute of Technology (M1)<br> Rearch Interest: Visualization</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">86</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">15</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">28</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author site-overview-item animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/YukiEF4FDH" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;YukiEF4FDH" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="/xueyichen_980221@outlook.com" title="E-Mail → xueyichen_980221@outlook.com"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://twitter.com/YukiEF4FDH" title="Twitter → https:&#x2F;&#x2F;twitter.com&#x2F;YukiEF4FDH" rel="noopener" target="_blank"><i class="fab fa-twitter fa-fw"></i>Twitter</a>
+      </span>
+  </div>
+
+
+
+          </div>
+        </div>
+      </div>
+
+      <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=591027&auto=1&height=66"></iframe>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button" aria-label="Back to top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://yukief4fdh.github.io/2023/05/24/Reading/Books/%E5%89%91%E6%8C%87Offer%20%E7%AC%AC%E4%BA%8C%E7%AB%A0%20%E9%9D%A2%E8%AF%95%E9%9C%80%E8%A6%81%E7%9A%84%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%20(%E4%B8%8A)/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/yuki.gif">
+      <meta itemprop="name" content="CHEN XUEYI">
+      <meta itemprop="description" content="Call me Yuki (JPN) or Chloe (ENG).<br> Nice to meet you :)<br><hr style="margin:3px;"> Tokyo Institute of Technology (M1)<br> Rearch Interest: Visualization">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Yuki's Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          《剑指Offer》第二章 笔记(上)
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2023-05-24 19:22:36" itemprop="dateCreated datePublished" datetime="2023-05-24T19:22:36+09:00">2023-05-24</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">Edited on</span>
+        <time title="Modified: 2022-02-11 17:33:09" itemprop="dateModified" datetime="2022-02-11T17:33:09+09:00">2022-02-11</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Reading/" itemprop="url" rel="index"><span itemprop="name">Reading</span></a>
+        </span>
+          , 
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Reading/Books/" itemprop="url" rel="index"><span itemprop="name">Books</span></a>
+        </span>
+          , 
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Reading/Books/Computer-Science/" itemprop="url" rel="index"><span itemprop="name">Computer Science</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <h1 id="第二章-面试需要的基础知识-上">第二章 面试需要的基础知识
+(上)</h1>
+<h2 id="面试官谈到">2.1 面试官谈到</h2>
+<p>“C++的==基础知识==，如面向对象的特性、构造函数、析构函数、动态绑定等，能够反映出应聘者是否善于==把握问题本质==，有没有==耐心深入一个问题==。另外还有常用的==设计模式、UML图==等，这些都能体现应聘者是否有==软件工程方面的经验==。”
+——王海波（Autodesk，软件工程师）</p>
+<p>“对基础知识的考查我特别重视C++中对==内存的使用管理==。我觉得内存管理是C++程序员特别要注意的，因为内存的使用和管理会影响程序的效率和稳定性。”
+——蓝诚（Autodesk，软件工程师）</p>
+<p>“基础知识反映了一个人的基本能力和基础素质，是以后工作中最核心的能力要求。我一般考查：（1）==数据结构和算法==；（2）==编程能力==；（3）部分==数学知识==，如概率；（4）==问题的分析和推理==能力。”
+——张晓禹（百度，技术经理）</p>
+<p>“我比较重视四块基础知识：（1）==编程基本功==（特别喜欢字符串处理这一类的问题）；（2）==并发控制==；（3）==算法、复杂度==；（4）==语言的基本概念==。”
+——张珺（百度，高级软件工程师）</p>
+<p>“我会考查编程基础、计算机系统基础知识、算法以及设计能力。这些是一个软件工程师的最基本的东西，这些方面表现出色的人，我们一般认为是有发展潜力的。”
+——韩伟东（盛大，高级研究员）</p>
+<p>“（1）==对OS的理解程度==。这些知识对于工作中常遇到的==内存管理、文件操作、程序性能、多线程、程序安全==等有重要帮助。对于OS理解比较深入的人对于偏底层的工作上手一般比较快。（2）对于一门==编程语言的掌握程度==。一个热爱编程的人应该会对某种语言有比较深入的了解。通常这样的人对于新的编程语言上手也比较快，而且理解比较深入。（3）常用的==算法和数据结构==。不了解这些的程序员基本只能写写‘Hello
+World’。” ——陈黎明（微软，SDE II）</p>
+<span id="more"></span>
+<h2 id="编程语言">2.2 编程语言</h2>
+<p>面试官要么==直接问语言的语法==，要么要求应聘者==用一种语言解决一个问题==并由此考察其对语言的熟练程度。</p>
+<p>不同公司开发用的语言不尽相同，例如： 底层开发 (如驱动)
+更习惯用C，Linux下有很多用C++的，Windows下很多用C#的，跨平台开发可能更喜欢Java，
+苹果相关的开发可能是Objective
+C，还有用脚本语言如Perl、Python开发短小精致的小应用的公司。</p>
+<p>本书: C++/C#。</p>
+<h3 id="c">2.2.1 C++</h3>
+<p>总的来说，不管应聘者去什么公司求职，都应该在一定程度上掌握C++。</p>
+<p>通常语言面试会有三种类型。</p>
+<p><strong>第一种类型</strong>：面试官直接询问对==C++概念==的理解。
+例如，对C++关键字的理解程度:</p>
+<blockquote>
+<p>在C++中，有哪4个与类型转换相关的关键字？这些关键字各有什么特点，应该在什么场合下使用？</p>
+</blockquote>
+<p>例如，<code>sizeof</code>的概念:</p>
+<blockquote>
+<p><strong>面试官：</strong>定义一个空的类型，里面没有任何成员变量和成员函数。对该类型求<code>sizeof</code>，得到的结果是多少？
+<strong>应聘者：</strong>答案是<code>1</code>。
+<strong>面试官：</strong>为什么不是<code>0</code>？
+<strong>应聘者：</strong>空类型的实例中不包含任何信息，本来求<code>sizeof</code>应该是0，但是当我们声明该类型的实例的时候，它必须在内存中占有一定的空间，否则无法使用这些实例。至于占用多少内存，由编译器决定。Visual
+Studio中每个空类型的实例占用1字节的空间。
+<strong>面试官：</strong>如果在该类型中添加一个构造函数和析构函数，再对该类型求<code>sizeof</code>，得到的结果又是多少？
+<strong>应聘者：</strong>和前面一样，还是<code>1</code>。调用构造函数和析构函数只需要知道函数的地址即可，而这些函数的地址只与类型相关，而与类型的实例无关，编译器也不会因为这两个函数而在实例内添加任何额外的信息。
+<strong>面试官：</strong>那如果把析构函数标记为虚函数呢？
+<strong>应聘者：</strong>C++的编译器一旦发现一个类型中有虚拟函数，就会为该类型生成虚函数表，并在该类型的每一个实例中添加一个指向虚函数表的指针。在32位的机器上，一个指针占4字节的空间，因此求<code>sizeof</code>得到<code>4</code>；如果是64位的机器，一个指针占8字节的空间，因此求<code>sizeof</code>则得到<code>8</code>。</p>
+</blockquote>
+<p><strong>第二种类型</strong>：面试官要求应聘者==分析一段代码的运行结果==。
+所给的代码一般包含==复杂微妙的语法特性==，要求应聘者对C++考点有着非常透彻的理解。
+例如，给出如下的代码并提供三个选项: A. 编译错误; B.
+编译成功，运行时崩溃; C. 编译运行正常，输出<code>10</code>:</p>
+<p><img src="C:\Users\Yuki_\AppData\Roaming\Typora\typora-user-images\image-20220112021628361.png" alt="image-20220112021628361" style="zoom: 33%;" /></p>
+<blockquote>
+<p>在上面的代码中，<code>A (A other)</code>传入的参数<code>other</code>是<code>A</code>的一个实例。
+由于是传值参数，将形参复制到实参会调用复制构造函数。
+因此，如果允许复制构造函数传值
+(像这个例子中这样)，就会在复制构造函数中调用复制构造函数，
+从而形成永无休止的递归调用、导致栈溢出。</p>
+<p>因此，C++的标准不允许复制构造函数传递参数。在Visual
+Studio中将编译出错。
+要解决这个问题，可以将构造函数修改为<code>A (const A&amp;other)</code>，即将传值参数改成常量引用。</p>
+</blockquote>
+<p><strong>第三种类型</strong>：要求应聘者写代码来==定义一个类型==或者==实现类型中的成员函数==。
+考察C++语法的代码题经常围绕在==构造函数==、==析构函数==和==运算符重载==中。</p>
+<p>推荐的C++书单 (根据情况选择阅读的顺序):</p>
+<ul>
+<li>《Effective C++》。适合面试前的C++突击。</li>
+<li>《C++ Primer》。对C++语法的全面了解。</li>
+<li>《Inside C++ Object Model》 。深入了解C++对象的内部。</li>
+<li>《The C++ Programming Language》。全面深入掌握C++。</li>
+</ul>
+<h4 id="面试题1-赋值运算符函数">面试题1: 赋值运算符函数</h4>
+<p>如下为类型<code>CMyString</code>的声明，请为该类型添加赋值运算符函数。</p>
+<center>
+<p><img src="C:\Users\Yuki_\Desktop\照片 2022-1-12 14 44 29.jpg" alt="照片 2022-1-12 14 44 29" style="zoom:33%;" /></p>
+<p>当面试官要求应聘者定义一个赋值运算符函数时，他会关注以下几点:</p>
+<ul>
+<li><strong>是否将返回值的类型声明为该类型的引用，并在函数结束前返回实例自身的引用
+(即 <code>*this</code>)</strong>。 只有返回一个引用
+(而不是<code>void</code>)，才允许连续赋值。
+例如，对3个<code>CMyString</code>对象<code>str1</code>、<code>str2</code>、<code>str3</code>的连续赋值操作<code>str1=str2=str3</code>将不能通过编译。</li>
+<li><strong>是否将传入的参数类型声明为常量引用</strong>。
+如果传入的参数不是引用而是实例，那么从形参到实参会调用一次复制构造函数，产生消耗。
+同时，由于在该赋值运算符函数内不会改变传入的实例的状态，因此应该为传入的引用参数加上<code>const</code>关键字。</li>
+<li><strong>是否释放实例自身已有的内存</strong>。
+如果在分配新内存之前忘记释放自身已有的空间，则会造成内存泄漏。</li>
+<li><strong>是否判断传入的参数和当前的实例 (<code>*this</code>)
+是不是同一实例</strong>。 如果是同一实例，则不进行赋值操作而直接返回。
+如果事先不判断的话会在释放实例自身内存的时候造成严重的隐患:
+传入的参数的内存也可能被释放。</li>
+</ul>
+<blockquote>
+<p><strong>经典的解法 (初级程序员)</strong></p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">CMyString&amp; CMyString::<span class="keyword">operator</span> =(<span class="keyword">const</span> CMyString &amp;str)</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">if</span> (<span class="keyword">this</span>==&amp;str)</span><br><span class="line">        <span class="keyword">return</span> *<span class="keyword">this</span>;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">delete</span> []m_pData;</span><br><span class="line">    m_pData = <span class="literal">NULL</span>;</span><br><span class="line">    </span><br><span class="line">    m_pData = <span class="keyword">new</span> <span class="keyword">char</span>[<span class="built_in">strlen</span>(str.m_pData)+<span class="number">1</span>];</span><br><span class="line">    <span class="built_in">strcpy</span>(m_pData,str.m_pData);</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> *<span class="keyword">this</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</blockquote>
+<blockquote>
+<p><strong>考虑异常安全性的解法 (高级程序员)</strong></p>
+<p>上一个解法中，我们在分配内存之前先用<code>delete</code>释放了实例<code>m_pData</code>的内存。
+如果此时内存不足导致<code>new char</code>抛出异常，<code>m_pData</code>将是一个空指针，这样非常容易导致程序崩溃。
+即，一旦在赋值运算符函数内部抛出一个异常，<code>CMyString</code>的实例将不再保持有效的状态，
+这违背了==异常安全性 (Exception Safety)== 原则。</p>
+<p>在赋值运算符函数中实现异常安全性的方法有两种。
+第一种，是先用<code>new</code>分配新的内容、再用<code>delete</code>释放已有的内容。
+这样只有在分配内容成功后再释放原来的内容，当分配内存失败时能确保原来的实例不被修改。
+第二种，是先创建一个临时的实例，再交换临时实例和原来的实例。代码如下。</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">CMyString&amp; CMyString::<span class="keyword">operator</span> =(<span class="keyword">const</span> CMyString &amp;str)</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">if</span> (<span class="keyword">this</span> != &amp;str)</span><br><span class="line">    &#123;</span><br><span class="line">        CMyString <span class="built_in">strTemp</span>(str);</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">char</span>* pTemp = strTemp.m_pData;</span><br><span class="line">        strTemp.m_pData = m_pData;</span><br><span class="line">        m_pData = pTemp;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> *<span class="keyword">this</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>由于临时实例<code>strTemp</code>是一个局部变量，程序运行到<code>if</code>外时也就离开了该变量的作用域，
+从而自动调用<code>strTemp</code>的析构函数，将<code>strTemp.m_pData</code>所指向的内存释放掉。
+由于<code>strTemp.m_pData</code>所指向的内存就是实例之前<code>m_pData</code>的内存，这就相当于自动调用析构函数释放实例的内存。</p>
+</blockquote>
+<blockquote>
+<p><strong>测试用例</strong></p>
+<ul>
+<li>将一个CMyString的实例赋值给另一个实例。</li>
+<li>将一个CMyString的实例赋值给他自己。</li>
+<li>连续赋值。</li>
+</ul>
+</blockquote>
+<blockquote>
+<p><strong>本题考点</strong></p>
+<ul>
+<li>考察对C++的基础语法的理解，如运算符函数、常量引用等。</li>
+<li>考察对内存泄漏的理解。</li>
+<li>对高级C++程序员，还考察对代码异常安全性的理解。</li>
+</ul>
+</blockquote>
+<h3 id="c-1">2.2.2 C</h3>
+<p>C#是微软在推出开发平台.NET时同步推出的编程语言。</p>
+<p>C#可以看做是一门==以C++为基础==发展起来的一种托管语言，因此其很多关键字甚至语法都和C++相似。
+因此需要着重关注==C#与C++不同的语法特点==。 例如:</p>
+<blockquote>
+<p><strong>面试官</strong>：C++中可以用struct和class来定义类型。这两种类型有什么区别？
+<strong>应聘者</strong>：如果没有标明成员函数或者成员变量的访问权限级别，在struct中默认的是public，而在class中默认的是private。
+<strong>面试官</strong>：那在C#中呢？
+<strong>应聘者</strong>：C#和C++不一样。在C#中如果没有标明成员函数或者成员变量的访问权限级别，struct和class中都是private的。struct和class的区别是struct定义的是值类型，值类型的实例在栈上分配内存；而class定义的是引用类型，引用类型的实例在堆上分配内存。</p>
+</blockquote>
+<p>和C++不同的是，C#中可以定义一个<code>Finalizer</code>和<code>Dispose</code>方法以释放资源。
+<code>Finalizer</code>方法: 写法和C++析构函数一样都是后面跟类型名字。
+但C++析构函数的调用时机是确定的，C#的<code>Finalizer</code>在运行时(CLR)做垃圾回收时才会被调用。
+也就是说<code>Finalizer</code>的调用时机由运行时决定，因此对程序员来说是不确定的。</p>
+<p>C#和C++的每个类型都有构造函数，但C#中可以为类型定义一个特殊的构造函数:
+静态构造函数。 特点:
+在类型第一次被使用之前由运行时自动调用，而且保证只被调用一次。
+关于静态构造函数的面试题例如:</p>
+<center>
+<img src="C:\Users\Yuki_\AppData\Roaming\Typora\typora-user-images\image-20220112160437064.png" alt="image-20220112160437064" style="zoom: 33%;" />
+</center>
+<blockquote>
+<p>首先执行的是B的静态构造函数。
+静态构造函数先初始化类型的静态变量，再执行函数体内的语句。
+因此此处先打印<code>a1</code>再打印<code>a3</code>.</p>
+<p>接下来执行的是<code>B b = new B()</code>，即调用<code>B</code>的普通构造函数。
+普通构造函数首先初始化成员变量，再执行函数体内的语句。
+因此此处先打印<code>a2</code>再打印<code>a4</code>。</p>
+<p>因此，上述代码运行的输出的四行分别是<code>a1</code>, <code>a3</code>,
+<code>a2</code>和<code>a4</code>.</p>
+</blockquote>
+<p>除了关注C#和C++的不同之处之外，还需要格外关注==C#的一些特有的功能==。
+例如反射、应用程序域 (AppDomain) 等。 关于反射和应用程序域的例子:</p>
+<p><img src="C:\Users\Yuki_\AppData\Roaming\Typora\typora-user-images\image-20220112161741218.png" alt="image-20220112161741218" style="zoom: 80%;" /></p>
+<blockquote>
+<p>上述代码首先创建一个名为<code>NewDomain</code>的应用程序域，
+并在该域中利用反射机制创建类型<code>A</code>的一个实例和类型<code>B</code>的一个实例。</p>
+<p><code>A</code>继承自<code>MarshalByRefObject</code>，而<code>B</code>不是。
+虽然<code>A</code>和<code>B</code>这两个类型的结构一样，但由于基类不同，在跨越应用领域边界时表现出的行为将非常不同。</p>
+<p>先讨论<code>A</code>。
+由于<code>A</code>继承自<code>MarshalByRefObject</code>，那么<code>a</code>实际上只是在默认的域中的一个代理实例
+(Proxy)，
+它指向位于<code>NewDomain</code>域中的<code>A</code>的一个实例。
+当调用<code>a</code>的方法<code>SetNumber</code>时，是在<code>NewDomain</code>域中调用这个方法，
+它将修改<code>NewDomain</code>域中的静态变量<code>A.Number</code>的值并设置为<code>20</code>.
+而由于静态变量在每个应用程序域中都有一份独立的拷贝，
+修改<code>NewDomain</code>域中的静态变量<code>A.Number</code> 对
+默认域中的静态变量<code>A.Number</code>不会有任何影响。
+由于<code>Console.WriteLine</code>是在默认域中输出<code>A.Number</code>，因此输出的依然是<code>10.</code></p>
+<p>然后讨论<code>B</code>。
+由于<code>B</code>只是从<code>Object</code>继承而来的类型，它的实例穿越应用程序域的边界时，将会完整地复制实例。
+尽管上述代码试图在<code>NewDomain</code>域中生成<code>B</code>的实例，但会把实例<code>b</code>复制到默认域。
+此时调用方法<code>b.SetNumber</code>也是在默认域上进行，它将修改默认域上的<code>A.Number</code>并设为<code>20</code>。
+再在默认的域上调用<code>Console.WriteLine</code>时，它将输出<code>20</code>。</p>
+</blockquote>
+<p>推荐的C#书单 (根据情况选择阅读的顺序):</p>
+<ul>
+<li>《Professional C#》。在附录中详细说明了C#和其他语言的区别。</li>
+<li>《CLR Via C#》(Jeffery
+Richter)。深入介绍了C#语言，同时对CLR和.NET做了全面的剖析。</li>
+</ul>
+<h4 id="面试题2-实现singleton模式">面试题2: 实现Singleton模式</h4>
+<p>设计一个类，我们只能生成该类的一个实例。</p>
+<p>只能生成一个实例的类 即实现了==Singleton (单例) 模式==的类型。
+这是一个与==设计模式==相关的问题，设计模式在面向对象程序设计的面试中很重要。
+在常用的模式中，Singleton是唯一一个能够用短短几十行代码完整实现的模式。
+因此，写一个Singleton的类型是一个很常见的面试题。</p>
+<blockquote>
+<p><strong>不好的解法一: 只适用于单线程环境。</strong>
+由于要求只能生成一个实例，因此我们必须把构造函数设为私有函数以禁止他人创建实例。
+可以定义一个静态的实例，在需要的时候创建该实例。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">public sealed class Singleton1</span><br><span class="line">&#123;</span><br><span class="line">    private Singleton1()</span><br><span class="line">    &#123;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    private static Singleton1 instance = null;</span><br><span class="line">  	private static Singleton1 Instance</span><br><span class="line">    &#123;</span><br><span class="line">        get</span><br><span class="line">        &#123;</span><br><span class="line">            if (instance == null)</span><br><span class="line">                instance = new Singleton1();</span><br><span class="line">            </span><br><span class="line">            return instance;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>上述代码在<code>Singleton</code>的静态属性<code>Instance</code>中，只有在<code>instance</code>为<code>null</code>时才创建一个实例，以避免重复创建。
+同时把构造函数定义为私有函数，这样就能确保只创建一个实例。</p>
+<p>问题：如果两个线程同时运行到判断<code>instance</code>是否为<code>null</code>的<code>if</code>语句，并且<code>instance</code>的确没有创建时，
+那么两个线程都会创建一个实例，此时类型<code>Singleton1</code>就不再满足单例模式的要求了。</p>
+</blockquote>
+<blockquote>
+<p><strong>不好的解法二: 虽然在多线程环境中工作，但效率不高。</strong>
+为了保证在多线程环境下我们还是只能得到类型的一个实例，需要加上一个同步锁。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">public sealed class Singleton2</span><br><span class="line">&#123;    </span><br><span class="line">    private Singleton2()    </span><br><span class="line">    &#123;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    private static readonly object syncObj = new Object();</span><br><span class="line">    </span><br><span class="line">    private static Singleton2 instance = null;    </span><br><span class="line">    private static Singleton2 Instance    </span><br><span class="line">    &#123;        </span><br><span class="line">        get        </span><br><span class="line">        &#123;</span><br><span class="line">            lock (syncObj)</span><br><span class="line">            &#123;</span><br><span class="line">                if (instance == null)</span><br><span class="line">                instance = new Singleton2();</span><br><span class="line">            &#125;</span><br><span class="line">            </span><br><span class="line">            return instance;        </span><br><span class="line">        &#125;    </span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>还是假设有两个线程同时想创建一个实例。
+由于在一个时刻只有一个线程能得到同步锁，当第一个线程加上锁时，第二个线程只能等待。
+当第一个线程发现实例还没有创建时，它创建出一个实例。
+接着第一个线程释放同步锁，此时第二个线程可以加上同步锁，并运行接下来的代码。
+这个时候由于实例已经被第一个线程创建出来了，第二个线程就不会重复创建实例了。</p>
+<p>问题:
+每次通过属性<code>Instance</code>得到<code>Singleton2</code>的实例，都会试图加上一个同步锁，
+而加锁是一个非常耗时的操作，应该尽量避免。</p>
+</blockquote>
+<blockquote>
+<p><strong>可行的解法：加同步锁前后两次判断实例是否已经存在</strong>
+实际上，我们只是在实例还未创建之前需要加锁，以保证只有一个线程创建出实例。
+如果实例已经创建，则没有必要再加锁了。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">public sealed class Singleton3</span><br><span class="line">&#123;    </span><br><span class="line">     private Singleton3()    </span><br><span class="line">     &#123;</span><br><span class="line">     &#125;</span><br><span class="line"></span><br><span class="line">     private static readonly object syncObj = new Object();</span><br><span class="line"></span><br><span class="line">     private static Singleton3 instance = null;    </span><br><span class="line">     private static Singleton3 Instance    </span><br><span class="line">     &#123;        </span><br><span class="line">         get        </span><br><span class="line">         &#123;</span><br><span class="line">             if (instance==null)</span><br><span class="line">             &#123;</span><br><span class="line">                 lock (syncObj)</span><br><span class="line">                 &#123;</span><br><span class="line">                     if (instance == null)</span><br><span class="line">                     instance = new Singleton3();</span><br><span class="line">                 &#125;</span><br><span class="line">             &#125;</span><br><span class="line">             </span><br><span class="line">             return instance;        </span><br><span class="line">         &#125;    </span><br><span class="line">     &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><code>Singleton3</code>的实现比较复杂，容易出错。还可以进一步优化。</p>
+</blockquote>
+<blockquote>
+<p><strong>强烈推荐的解法一：利用静态构造函数</strong>
+C#语法中有一个函数能够确保只会调用一次，就是静态构造函数。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">public sealed class Singleton4</span><br><span class="line">&#123;    </span><br><span class="line">  private Singleton4()    </span><br><span class="line">  &#123;</span><br><span class="line">  &#125;</span><br><span class="line">  private static Singleton4 instance = new Singleton4();</span><br><span class="line">  private static Singleton4 Instance    </span><br><span class="line">  &#123;        </span><br><span class="line">      get        </span><br><span class="line">      &#123;</span><br><span class="line">          return instance;        </span><br><span class="line">      &#125;    </span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>在初始化静态变量<code>instance</code>时创建一个实例，而C#在调用静态构造函数时初始化静态变量。
+由于运行时能保证只调用一次静态构造函数，也就保证只初始化一次<code>instance</code>。</p>
+<p>但是，C#中调用静态构造函数的时机不是由程序员决定的，
+而是当运行时发现第一次使用一个类型的时候自动调用该类型的静态构造函数。
+即，在<code>Singleton4</code>中，实例<code>instance</code>并不是在第一次调用<code>Singleton4.Instance</code>的时候创建的，
+而是在第一次用到<code>Singleton4</code>的时候就会被创建
+(比如调用<code>Singleton4</code>中的静态方法时，此时不需要创建实例)。</p>
+<p>因此，如果按照<code>Singleton4</code>的方法实现单例模式，可能过早创建实例而降低了内存的使用效率。</p>
+</blockquote>
+<blockquote>
+<p><strong>强烈推荐的解法二：实现按需创建实例</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">public sealed class Singleton5</span><br><span class="line">&#123;    </span><br><span class="line">  private Singleton5()    </span><br><span class="line">  &#123;</span><br><span class="line">  &#125;</span><br><span class="line">  private static Singleton5 Instance    </span><br><span class="line">  &#123;        </span><br><span class="line">      get        </span><br><span class="line">      &#123;</span><br><span class="line">          return Nested.instance;</span><br><span class="line">      &#125;    </span><br><span class="line">  &#125;</span><br><span class="line">  class Nested</span><br><span class="line">  &#123;</span><br><span class="line">      static Nested()</span><br><span class="line">      &#123;</span><br><span class="line">      &#125;</span><br><span class="line">      internal static readonly Singleton5 instance = new Singleton5();</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>在上述<code>Singleton5</code>的代码中，其内部定义了一个私有类型<code>Nested</code>。
+当第一次用到这个嵌套类型的时候，会调用静态构造函数创建<code>Singleton5</code>的实例<code>instance</code>。
+而私有类型<code>Nested</code>只在属性<code>Singleton5.Instance</code>中被用到。</p>
+<p>因此，当我们第一次试图通过属性<code>Singleton5.Instance</code>得到<code>Singleton5</code>的实例时，
+会自动调用私有类型<code>Nested</code>的静态构造函数创建实例<code>instance</code>。
+而如果我们不调用属性<code>Singleton5.Instance</code>，
+就不会触发运行时调用<code>Nested</code>，也就不会创建实例，做到了真正的按需创建，提高了空间的使用效率。</p>
+</blockquote>
+<blockquote>
+<p><strong>本题考点</strong></p>
+<ul>
+<li>考察对单例 (Singleton) 模式的理解。</li>
+<li>考察对C#的基础语法的理解，如静态构造函数等。</li>
+<li>考察对多线程编辑的理解。</li>
+</ul>
+</blockquote>
+<p><strong>本题扩展: </strong>
+前面的5中单例模式的实现标记类为<code>sealed</code>，表示它们不能作为其他类的基类。
+现在，我们要求定义一个表示总统的类型<code>President</code>,并可以从该类型继承出<code>FrenchPresident</code>和<code>AmericanPresident</code>等类型。
+这些派生类都只能产生一个实例。 该如何设计实现这些类型？</p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E5%89%91%E6%8C%87Offer/" rel="tag"># 剑指Offer</a>
+              <a href="/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/" rel="tag"># 读书笔记</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2023/05/24/Reading/Books/%E5%89%91%E6%8C%87Offer%20%E7%AC%AC%E4%B8%80%E7%AB%A0%20%E9%9D%A2%E8%AF%95%E7%9A%84%E6%B5%81%E7%A8%8B/" rel="prev" title="《剑指Offer》第一章 笔记">
+                  <i class="fa fa-chevron-left"></i> 《剑指Offer》第一章 笔记
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2023/05/24/Reading/Books/%E5%89%91%E6%8C%87Offer%20%E7%AC%AC%E4%BA%8C%E7%AB%A0%20%E9%9D%A2%E8%AF%95%E9%9C%80%E8%A6%81%E7%9A%84%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%20(%E4%B8%8B)/" rel="next" title="《剑指Offer》第二章 笔记(下)">
+                  《剑指Offer》第二章 笔记(下) <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2024</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">CHEN XUEYI</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a>
+  </div><script color="100,100,100" opacity="0.7" zIndex="-1" count="99" src="https://cdn.jsdelivr.net/npm/canvas-nest.js@1/dist/canvas-nest.js"></script>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+  
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">false</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"all","js":{"url":"https://cdn.jsdelivr.net/npm/mathjax@3.2.0/es5/tex-mml-chtml.js","integrity":"sha256-r+3itOMtGGjap0x+10hu6jW/gZCzxHsoKrOd7gyRSGY="}}</script>
+<script src="/js/third-party/math/mathjax.js"></script>
+
+
+
+</body>
+</html>
